@@ -1,0 +1,43 @@
+
+Integer Radix Sort
+     99999999 Keys
+     16 Processors
+     Radix = 2048
+     Max key = 99999999
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        2545969          784294         1496569
+    1        2539567          723952         1456232
+    2        2551298          768393         1306296
+    3        2499360          664325         1441151
+    4        2527482          765266         1345876
+    5        2552113          760645         1448446
+    6        2551776          744508         1548637
+    7        2547626          739820         1510765
+    8        2551663          787668         1375179
+    9        2546416          767480         1310880
+   10        2547272          731593         1542386
+   11        2527177          736415         1307137
+   12        2491710          720212         1227307
+   13        2499715          708790         1270600
+   14        2539635          758879         1486845
+   15        2515587          751999         1135243
+  Avg        2533398          744640         1388097
+  Min        2491710          664325         1135243
+  Max        2552113          787668         1548637
+
+
+                 TIMING INFORMATION
+Start time                        : 1412785012636714
+Initialization finish time        : 1412785021406125
+Overall finish time               : 1412785023952094
+Total time with initialization    :         11315380
+Total time without initialization :          2545969
+
+
+                  TESTING RESULTS
+PASSED: All keys in place.
+

@@ -1,0 +1,178 @@
+#!/usr/bin/env python
+
+import os
+import time
+import sys
+import multiprocessing as m
+import xml.etree.ElementTree as ET
+import copy
+import datetime
+
+path = os.path.dirname(os.path.realpath(__file__))  + '/..'
+sys.path.insert(0, path)
+
+import common.imports.utils as u
+import common.imports.constants as c
+import common.imports.dmtcp_utils as du
+
+def setup_for_restart(chkptdir):
+	fp = open(chkptdir + '/dmtcp_env.txt', 'w')
+	fp.write('STATFILE=$STATFILE\n')
+	fp.write('STATGEN=$STATGEN\n')
+        fp.close()
+
+def get_runnable_instance_map(appinstancedir):
+	print appinstancedir
+        runnable_instance_map = {}
+        for instance in os.listdir(appinstancedir):
+                runnable_instance_map.update(u.getidcmdpairbyxml(appinstancedir + '/' + instance))
+        return runnable_instance_map
+
+def main():
+
+	CHKPTDIR = None
+	APPINSTANCEDIR = None
+
+	if (len(sys.argv) == 1) or (sys.argv[1] == ''):
+		u.logerr('INVALID ARGUMENT SUPPLIED!!!')
+		sys.exit(0)
+
+	if (sys.argv[1] == '-s') or (sys.argv[1] == '--seq'):
+		CHKPTDIR = c.SEQ_DMTCP_CHKPTS_DIR
+		APPINSTANCEDIR = c.SEQ_DMTCP_APP_INSTANCE_DIR
+	elif (sys.argv[1] == '-p') or (sys.argv[1] == '--parallel'):
+                CHKPTDIR = c.PARALLEL_DMTCP_CHKPTS_DIR
+                APPINSTANCEDIR = c.PARALLEL_DMTCP_APP_INSTANCE_DIR
+
+	if os.path.isdir(CHKPTDIR):
+		os.rename(CHKPTDIR, CHKPTDIR + '.' + u.gettimestamp().replace(' ', '_'))
+		u.loginfo('chkpt dir archieved')
+	os.mkdir(CHKPTDIR)
+
+	runnable = get_runnable_instance_map(APPINSTANCEDIR)
+
+	if (sys.argv[1] == '-p') or (sys.argv[1] == '--parallel'):
+
+		app_thread_pid = {}
+
+		for app in runnable:
+			tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
+			root = tree.getroot()
+			app_thread_pid.update({app: [int(root.findall('THREADS')[0].text), None]})
+
+		cpu = m.cpu_count()
+
+		while len(app_thread_pid) > 0:
+
+			next_runnable_app_list = []
+			local_copy = copy.deepcopy(app_thread_pid)
+
+			while len(local_copy) > 0:
+				maxthreadapp = None
+				maxthread = -1
+				for app in local_copy:
+					if local_copy[app][0] > maxthread:
+						maxthreadapp = app
+						maxthread = local_copy[app][0]
+
+				if(cpu - local_copy[maxthreadapp][0]) >= 0:
+					cpu -= local_copy[maxthreadapp][0]
+					next_runnable_app_list.append(maxthreadapp)
+
+				local_copy.pop(maxthreadapp)
+
+			for app in next_runnable_app_list:
+				
+				if app_thread_pid[app][1] == None:
+				
+					key = app
+					u.loginfo('[Starting ' + key + ' : ' + runnable[key] + ']')
+					os.mkdir(CHKPTDIR + '/' + str(key))
+					u.execcmd('touch ' + CHKPTDIR + '/' + str(key) + '/command')
+					u.execcmd('echo \"' + runnable[key] + '\" >> ' + CHKPTDIR + '/' + str(key) + '/command')
+					chkptnum = 0
+
+					if len(u.listonlydir(CHKPTDIR + '/' + str(key))) > 0:
+						chkptnum = int(max(u.listonlydir(CHKPTDIR + '/' + str(key)))) + 1
+					else:
+						chkptnum = 1
+
+					chkptnum = 1
+
+					if not os.path.isdir(CHKPTDIR + '/' + str(key) + '/' + str(chkptnum)):
+						os.mkdir(CHKPTDIR + '/' + str(key) + '/' + str(chkptnum))
+
+					port = None
+					cwd = u.getcwd()
+
+					if (sys.argv[1] == '-p') or (sys.argv[1] == '--parallel'):
+						setup_for_restart(CHKPTDIR + '/' + str(key) + '/' + str(chkptnum))
+
+					u.chdir(CHKPTDIR + '/' + str(key) + '/' + str(chkptnum))
+					os.system('cp ' + c.BASE + '/random.in .')
+					port = u.getopenport()
+
+					u.loginfo('Launching App: ' + str(key))
+
+					a = du.launch(runnable[key], '--with-plugin myplug', '--newcoordinator', '--port ' + str(port), '--modify-env', '--daemon', '-i 15', {'STATFILE': '', 'STATGEN' : 'LAUNCH'})
+					#a = du.launch(runnable[key], '--with-plugin myplug', '--newcoordinator', None, '--modify-env', '--daemon', '-i 60', {'STATFILE': '', 'STATGEN' : 'LAUNCH'})
+					u.loginfo('after launch: ' + str(key))
+					u.chdir(cwd)
+					app_thread_pid[key][1] = a
+
+			flag = True
+
+			while flag:
+
+				for app in app_thread_pid.items():
+					if (app[1][1] != None) and (app[1][1].poll() == 0):
+						cpu += app[1][0]
+						app_thread_pid.pop(app[0])
+						flag = False
+						u.loginfo('App Finished: ' + str(app[0]))
+				if flag:
+					time.sleep(1)
+
+	elif (sys.argv[1] == '-s') or (sys.argv[1] == '--seq'):
+
+		for key in runnable.keys():
+			u.loginfo('[Starting ' + key + ' : ' + runnable[key] + ']')
+			os.mkdir(CHKPTDIR + '/' + str(key))
+			u.execcmd('touch ' + CHKPTDIR + '/' + str(key) + '/command')
+			u.execcmd('echo \"' + runnable[key] + '\" >> ' + CHKPTDIR + '/' + str(key) + '/command')
+			chkptnum = 0
+
+			if len(u.listonlydir(CHKPTDIR + '/' + str(key))) > 0:
+				chkptnum = int(max(u.listonlydir(CHKPTDIR + '/' + str(key)))) + 1
+			else:
+				chkptnum = 1
+
+			chkptnum = 1
+
+			if not os.path.isdir(CHKPTDIR + '/' + str(key) + '/' + str(chkptnum)):
+				os.mkdir(CHKPTDIR + '/' + str(key) + '/' + str(chkptnum))
+
+			port = None
+			cwd = u.getcwd()
+
+			if (sys.argv[1] == '-p') or (sys.argv[1] == '--parallel'):
+				setup_for_restart(CHKPTDIR + '/' + str(key) + '/' + str(chkptnum))
+
+			u.chdir(CHKPTDIR + '/' + str(key) + '/' + str(chkptnum))
+			os.system('cp ' + c.BASE + '/random.in .')
+			port = u.getopenport()
+
+			du.launch(runnable[key], None, '--newcoordinator ', '--port ' + str(port), None, '--daemon', None, None)
+			time.sleep(60)
+			du.chkpt('--port ' + str(port), '-b')
+			u.loginfo('after checkpoint')
+			du.kill('--port ' + str(port))
+			u.loginfo('after kill')
+			u.chdir(cwd)
+
+if __name__ == '__main__':
+	c.LOGGER = 'init_app_and_chkpt_5.log'
+	u.loginfo('Begin Time:  ' + u.gettimestamp())
+	main()
+	u.loginfo('End Time:  ' + u.gettimestamp())
+

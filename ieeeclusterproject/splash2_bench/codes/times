@@ -1,0 +1,168 @@
+TIMING:
+16	2500000	1.00e-06	5
+Time Step 0
+Processor 0
+	Total Time = 14318500
+Processor 1
+	Total Time = 14362257
+Processor 2
+	Total Time = 14305209
+Processor 3
+	Total Time = 14390397
+Processor 4
+	Total Time = 14300883
+Processor 5
+	Total Time = 14357436
+Processor 6
+	Total Time = 14302416
+Processor 7
+	Total Time = 14291777
+Processor 8
+	Total Time = 14346043
+Processor 9
+	Total Time = 14303171
+Processor 10
+	Total Time = 14378044
+Processor 11
+	Total Time = 14330843
+Processor 12
+	Total Time = 14341678
+Processor 13
+	Total Time = 14292710
+Processor 14
+	Total Time = 14298479
+Processor 15
+	Total Time = 14314838
+Time Step 1
+Processor 0
+	Total Time = 7416597
+Processor 1
+	Total Time = 7374941
+Processor 2
+	Total Time = 7423700
+Processor 3
+	Total Time = 7354576
+Processor 4
+	Total Time = 7445465
+Processor 5
+	Total Time = 7373185
+Processor 6
+	Total Time = 7416416
+Processor 7
+	Total Time = 7426966
+Processor 8
+	Total Time = 7386459
+Processor 9
+	Total Time = 7399402
+Processor 10
+	Total Time = 7336137
+Processor 11
+	Total Time = 7417686
+Processor 12
+	Total Time = 7389706
+Processor 13
+	Total Time = 7433105
+Processor 14
+	Total Time = 7422658
+Processor 15
+	Total Time = 7419663
+Time Step 2
+Processor 0
+	Total Time = 7361500
+Processor 1
+	Total Time = 7364088
+Processor 2
+	Total Time = 7377251
+Processor 3
+	Total Time = 7376928
+Processor 4
+	Total Time = 7359168
+Processor 5
+	Total Time = 7384203
+Processor 6
+	Total Time = 7398610
+Processor 7
+	Total Time = 7386216
+Processor 8
+	Total Time = 7398728
+Processor 9
+	Total Time = 7393753
+Processor 10
+	Total Time = 7363378
+Processor 11
+	Total Time = 7360540
+Processor 12
+	Total Time = 7385953
+Processor 13
+	Total Time = 7383850
+Processor 14
+	Total Time = 7376770
+Processor 15
+	Total Time = 7367912
+Time Step 3
+Processor 0
+	Total Time = 7230432
+Processor 1
+	Total Time = 7239102
+Processor 2
+	Total Time = 7219481
+Processor 3
+	Total Time = 7226656
+Processor 4
+	Total Time = 7248158
+Processor 5
+	Total Time = 7235801
+Processor 6
+	Total Time = 7200465
+Processor 7
+	Total Time = 7226193
+Processor 8
+	Total Time = 7209515
+Processor 9
+	Total Time = 7212613
+Processor 10
+	Total Time = 7228524
+Processor 11
+	Total Time = 7198410
+Processor 12
+	Total Time = 7233356
+Processor 13
+	Total Time = 7229835
+Processor 14
+	Total Time = 7263630
+Processor 15
+	Total Time = 7228321
+Time Step 4
+Processor 0
+	Total Time = 7179868
+Processor 1
+	Total Time = 7193228
+Processor 2
+	Total Time = 7208370
+Processor 3
+	Total Time = 7190250
+Processor 4
+	Total Time = 7182475
+Processor 5
+	Total Time = 7179270
+Processor 6
+	Total Time = 7218759
+Processor 7
+	Total Time = 7206121
+Processor 8
+	Total Time = 7181416
+Processor 9
+	Total Time = 7232251
+Processor 10
+	Total Time = 7205206
+Processor 11
+	Total Time = 7204921
+Processor 12
+	Total Time = 7188153
+Processor 13
+	Total Time = 7196485
+Processor 14
+	Total Time = 7165916
+Processor 15
+	Total Time = 7194640
+END

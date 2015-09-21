@@ -1,0 +1,6 @@
+- clean completed
+- find next runnable from stats and rules
+- checkpoint unnecessary app (if running)
+- move from running folder to queued
+- move from queued to running
+- start app (if not running)

@@ -1,0 +1,390 @@
+/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 3,905,403,184,453 cycles                    #    0.000 GHz                     [49.99%]
+ 3,371,791,923,703 instructions              #    0.86  insns per cycle         [50.00%]
+   790,851,350,301 cache-references                                             [49.99%]
+       165,892,357 cache-misses              #    0.021 % of all cache refs     [50.01%]
+   191,935,839,087 branches                                                     [50.00%]
+     9,484,669,043 branch-misses             #    4.94% of all branches         [50.01%]
+
+    3000.628240507 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 3,912,593,322,792 cycles                    #    0.000 GHz                     [50.01%]
+ 3,372,028,282,218 instructions              #    0.86  insns per cycle         [49.99%]
+   791,025,447,679 cache-references                                             [49.98%]
+       163,309,090 cache-misses              #    0.021 % of all cache refs     [50.00%]
+   191,922,342,912 branches                                                     [50.01%]
+     9,485,047,878 branch-misses             #    4.94% of all branches         [50.02%]
+
+    3000.801381119 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 3,903,302,363,069 cycles                    #    0.000 GHz                     [50.00%]
+ 3,368,238,257,368 instructions              #    0.86  insns per cycle         [50.00%]
+   790,288,421,894 cache-references                                             [50.01%]
+       176,121,837 cache-misses              #    0.022 % of all cache refs     [50.00%]
+   192,136,188,514 branches                                                     [50.00%]
+     9,482,014,855 branch-misses             #    4.94% of all branches         [49.99%]
+
+    3001.101374361 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 3,898,791,413,429 cycles                    #    0.000 GHz                     [50.01%]
+ 3,388,950,024,108 instructions              #    0.87  insns per cycle         [49.99%]
+   795,043,771,135 cache-references                                             [50.00%]
+       171,073,632 cache-misses              #    0.022 % of all cache refs     [49.99%]
+   193,082,063,585 branches                                                     [50.01%]
+     9,536,844,436 branch-misses             #    4.94% of all branches         [50.00%]
+
+    3001.233953458 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 3,900,087,624,967 cycles                    #    0.000 GHz                     [50.02%]
+ 3,397,964,967,558 instructions              #    0.87  insns per cycle         [50.00%]
+   796,987,240,314 cache-references                                             [50.00%]
+       163,384,522 cache-misses              #    0.021 % of all cache refs     [49.98%]
+   193,341,164,528 branches                                                     [50.00%]
+     9,557,087,232 branch-misses             #    4.94% of all branches         [50.00%]
+
+    3001.884352211 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 4,552,603,800,863 cycles                    #    0.000 GHz                     [49.99%]
+ 4,187,072,431,600 instructions              #    0.92  insns per cycle         [50.02%]
+   826,141,392,023 cache-references                                             [50.02%]
+       431,219,498 cache-misses              #    0.052 % of all cache refs     [50.01%]
+   261,123,390,831 branches                                                     [49.98%]
+     5,282,984,611 branch-misses             #    2.02% of all branches         [49.98%]
+
+    3002.152461728 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 4,583,140,191,519 cycles                    #    0.000 GHz                     [49.99%]
+ 4,203,231,707,914 instructions              #    0.92  insns per cycle         [49.97%]
+   829,457,789,222 cache-references                                             [49.98%]
+       439,514,560 cache-misses              #    0.053 % of all cache refs     [50.02%]
+   262,520,119,364 branches                                                     [50.03%]
+     5,304,367,483 branch-misses             #    2.02% of all branches         [50.02%]
+
+    3002.589392571 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 4,626,144,715,844 cycles                    #    0.000 GHz                     [49.99%]
+ 4,266,154,745,779 instructions              #    0.92  insns per cycle         [50.00%]
+   841,758,923,618 cache-references                                             [50.02%]
+       489,426,916 cache-misses              #    0.058 % of all cache refs     [50.01%]
+   267,655,724,197 branches                                                     [50.00%]
+     5,320,455,531 branch-misses             #    1.99% of all branches         [49.98%]
+
+    3006.840215749 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 4,621,057,310,819 cycles                    #    0.000 GHz                     [50.00%]
+ 4,272,214,520,881 instructions              #    0.92  insns per cycle         [50.01%]
+   842,755,669,543 cache-references                                             [50.01%]
+       460,145,348 cache-misses              #    0.055 % of all cache refs     [50.00%]
+   268,825,946,866 branches                                                     [49.99%]
+     5,299,896,220 branch-misses             #    1.97% of all branches         [49.99%]
+
+    3007.723113923 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 4,791,717,411,400 cycles                    #    0.000 GHz                     [50.01%]
+ 4,431,060,244,209 instructions              #    0.92  insns per cycle         [50.01%]
+   874,553,044,889 cache-references                                             [49.99%]
+       450,173,821 cache-misses              #    0.051 % of all cache refs     [49.99%]
+   281,030,176,495 branches                                                     [49.99%]
+     5,476,174,816 branch-misses             #    1.95% of all branches         [50.01%]
+
+    3033.283977399 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 4,203,829,739,266 cycles                    #    0.000 GHz                     [50.01%]
+ 3,671,314,688,183 instructions              #    0.87  insns per cycle         [50.02%]
+   861,124,090,261 cache-references                                             [50.02%]
+       174,160,317 cache-misses              #    0.020 % of all cache refs     [49.99%]
+   208,842,728,882 branches                                                     [49.98%]
+    10,326,038,403 branch-misses             #    4.94% of all branches         [49.99%]
+
+    3139.800816929 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 4,160,610,609,130 cycles                    #    0.000 GHz                     [49.97%]
+ 3,595,383,023,109 instructions              #    0.86  insns per cycle         [49.99%]
+   843,422,164,934 cache-references                                             [49.99%]
+       173,638,626 cache-misses              #    0.021 % of all cache refs     [50.03%]
+   204,544,506,287 branches                                                     [50.02%]
+    10,114,161,890 branch-misses             #    4.94% of all branches         [50.01%]
+
+    3139.818766138 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 4,131,524,641,446 cycles                    #    0.000 GHz                     [49.98%]
+ 3,608,726,440,006 instructions              #    0.87  insns per cycle         [50.02%]
+   846,354,466,501 cache-references                                             [50.01%]
+       166,225,361 cache-misses              #    0.020 % of all cache refs     [50.02%]
+   205,041,445,207 branches                                                     [49.99%]
+    10,147,068,878 branch-misses             #    4.95% of all branches         [49.99%]
+
+    3139.881725712 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 4,188,334,569,027 cycles                    #    0.000 GHz                     [50.00%]
+ 3,618,811,148,401 instructions              #    0.86  insns per cycle         [49.97%]
+   848,648,513,181 cache-references                                             [49.98%]
+       165,864,518 cache-misses              #    0.020 % of all cache refs     [50.01%]
+   205,581,757,538 branches                                                     [50.03%]
+    10,173,646,184 branch-misses             #    4.95% of all branches         [50.02%]
+
+    3140.040401827 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,063,722,773,940 cycles                    #    0.000 GHz                     [50.01%]
+ 4,678,470,348,807 instructions              #    0.92  insns per cycle         [49.99%]
+   920,716,181,713 cache-references                                             [50.00%]
+       470,837,052 cache-misses              #    0.051 % of all cache refs     [49.99%]
+   289,526,989,843 branches                                                     [50.01%]
+     5,835,426,843 branch-misses             #    2.02% of all branches         [50.00%]
+
+    3140.764004239 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,245,917,864,886 cycles                    #    0.000 GHz                     [49.97%]
+ 4,863,371,371,674 instructions              #    0.93  insns per cycle         [49.99%]
+   957,864,585,425 cache-references                                             [50.01%]
+       505,875,781 cache-misses              #    0.053 % of all cache refs     [50.03%]
+   305,284,889,572 branches                                                     [50.01%]
+     5,987,208,054 branch-misses             #    1.96% of all branches         [50.00%]
+
+    3140.849151880 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,105,644,663,889 cycles                    #    0.000 GHz                     [50.00%]
+ 4,727,973,207,074 instructions              #    0.93  insns per cycle         [49.99%]
+   931,054,135,797 cache-references                                             [49.99%]
+       476,144,729 cache-misses              #    0.051 % of all cache refs     [50.01%]
+   295,807,392,936 branches                                                     [50.01%]
+     5,834,740,331 branch-misses             #    1.97% of all branches         [50.01%]
+
+    3140.911054972 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,090,880,204,802 cycles                    #    0.000 GHz                     [50.00%]
+ 4,711,239,808,607 instructions              #    0.93  insns per cycle         [49.99%]
+   927,118,478,169 cache-references                                             [49.97%]
+       528,629,100 cache-misses              #    0.057 % of all cache refs     [50.00%]
+   292,553,033,990 branches                                                     [50.02%]
+     5,826,245,645 branch-misses             #    1.99% of all branches         [50.03%]
+
+    3141.006514138 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,108,238,877,791 cycles                    #    0.000 GHz                     [50.02%]
+ 4,737,832,249,836 instructions              #    0.93  insns per cycle         [50.00%]
+   932,514,740,935 cache-references                                             [50.00%]
+       464,916,673 cache-misses              #    0.050 % of all cache refs     [49.99%]
+   295,565,987,325 branches                                                     [50.00%]
+     5,832,784,013 branch-misses             #    1.97% of all branches         [50.01%]
+
+    3141.037018554 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 4,987,263,923,114 cycles                    #    0.000 GHz                     [50.01%]
+ 4,388,088,025,019 instructions              #    0.88  insns per cycle         [50.01%]
+ 1,029,492,816,217 cache-references                                             [50.01%]
+       207,731,382 cache-misses              #    0.020 % of all cache refs     [49.99%]
+   249,601,461,028 branches                                                     [49.99%]
+    12,344,316,645 branch-misses             #    4.95% of all branches         [49.99%]
+
+    3169.412741587 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 2,915,424,918,087 cycles                    #    0.000 GHz                     [50.00%]
+ 2,559,532,704,579 instructions              #    0.88  insns per cycle         [50.00%]
+   600,221,568,967 cache-references                                             [50.01%]
+       114,760,424 cache-misses              #    0.019 % of all cache refs     [50.01%]
+   145,695,696,645 branches                                                     [50.01%]
+     7,182,905,359 branch-misses             #    4.93% of all branches         [50.00%]
+
+    1200.272347962 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 2,916,979,838,896 cycles                    #    0.000 GHz                     [50.01%]
+ 2,561,317,785,655 instructions              #    0.88  insns per cycle         [50.02%]
+   600,685,642,402 cache-references                                             [50.00%]
+       114,569,989 cache-misses              #    0.019 % of all cache refs     [49.99%]
+   145,784,916,319 branches                                                     [49.98%]
+     7,188,986,312 branch-misses             #    4.93% of all branches         [50.00%]
+
+    1200.278637691 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 2,964,852,255,844 cycles                    #    0.000 GHz                     [50.01%]
+ 2,575,515,926,776 instructions              #    0.87  insns per cycle         [49.99%]
+   604,072,782,879 cache-references                                             [50.01%]
+       118,493,864 cache-misses              #    0.020 % of all cache refs     [49.99%]
+   146,748,896,026 branches                                                     [50.01%]
+     7,230,513,965 branch-misses             #    4.93% of all branches         [49.99%]
+
+    1200.287542635 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 2,916,203,629,351 cycles                    #    0.000 GHz                     [49.99%]
+ 2,530,122,269,318 instructions              #    0.87  insns per cycle         [49.98%]
+   593,434,232,196 cache-references                                             [50.00%]
+       120,078,085 cache-misses              #    0.020 % of all cache refs     [50.01%]
+   144,294,953,701 branches                                                     [50.02%]
+     7,103,287,603 branch-misses             #    4.92% of all branches         [50.01%]
+
+    1200.322858211 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 2,953,494,097,377 cycles                    #    0.000 GHz                     [49.99%]
+ 2,588,097,587,418 instructions              #    0.88  insns per cycle         [50.03%]
+   606,982,913,714 cache-references                                             [50.01%]
+       115,600,752 cache-misses              #    0.019 % of all cache refs     [50.01%]
+   147,354,998,257 branches                                                     [49.97%]
+     7,263,999,885 branch-misses             #    4.93% of all branches         [49.99%]
+
+    1200.316497202 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 3,891,900,246,526 cycles                    #    0.000 GHz                     [50.01%]
+ 3,681,775,690,805 instructions              #    0.95  insns per cycle         [50.01%]
+   724,958,177,807 cache-references                                             [50.01%]
+       340,644,063 cache-misses              #    0.047 % of all cache refs     [49.99%]
+   232,952,801,447 branches                                                     [49.99%]
+     4,439,651,576 branch-misses             #    1.91% of all branches         [49.99%]
+
+    1201.019333653 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 3,871,387,752,212 cycles                    #    0.000 GHz                     [50.00%]
+ 3,655,379,576,359 instructions              #    0.94  insns per cycle         [49.99%]
+   719,664,107,651 cache-references                                             [50.01%]
+       297,079,854 cache-misses              #    0.041 % of all cache refs     [50.00%]
+   230,468,317,451 branches                                                     [50.01%]
+     4,436,540,625 branch-misses             #    1.93% of all branches         [50.00%]
+
+    1201.037108637 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 3,891,025,299,049 cycles                    #    0.000 GHz                     [50.00%]
+ 3,674,209,397,539 instructions              #    0.94  insns per cycle         [50.01%]
+   723,733,593,167 cache-references                                             [50.00%]
+       279,927,989 cache-misses              #    0.039 % of all cache refs     [50.00%]
+   232,623,128,267 branches                                                     [49.99%]
+     4,455,280,710 branch-misses             #    1.92% of all branches         [50.00%]
+
+    1201.034545833 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 3,872,012,653,323 cycles                    #    0.000 GHz                     [50.01%]
+ 3,663,952,269,636 instructions              #    0.95  insns per cycle         [50.04%]
+   722,200,636,247 cache-references                                             [50.01%]
+       344,462,962 cache-misses              #    0.048 % of all cache refs     [49.99%]
+   234,467,609,937 branches                                                     [49.97%]
+     4,417,263,094 branch-misses             #    1.88% of all branches         [49.99%]
+
+    1201.037806583 seconds time elapsed
+
+/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 3,914,982,958,420 cycles                    #    0.000 GHz                     [50.01%]
+ 3,691,725,999,936 instructions              #    0.94  insns per cycle         [50.00%]
+   727,167,803,142 cache-references                                             [50.01%]
+       292,141,353 cache-misses              #    0.040 % of all cache refs     [49.99%]
+   234,666,555,004 branches                                                     [50.01%]
+     4,439,280,880 branch-misses             #    1.89% of all branches         [50.00%]
+
+    1201.045234424 seconds time elapsed
+

@@ -1,0 +1,6 @@
+<APPDATA ID='41' NAME='RADIX' TYPE='MEM'>
+        <THREADS>2</THREADS>
+        <BASE>8</BASE>
+        <KEYS>140000000</KEYS>
+        <MAXVAL>15</MAXVAL>
+</APPDATA>

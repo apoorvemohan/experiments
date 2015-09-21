@@ -1,0 +1,1000 @@
+  829  make clean
+  830  vi lu.C 
+  831  make
+  832  ./LU 
+  833  ./LU  -h
+  834  cd ..
+  835  ls
+  836  cd ..
+  837  ls
+  838  cd radix/
+  839  ls
+  840  make clean
+  841  grep -R MALLOC .
+  842  vi radix.C 
+  843  make clean
+  844  make
+  845  ls
+  846  ./RADIX -h
+  847  RADIX -p1 -n262144 -r1024 -m524288
+  848  ./RADIX -p1 -n262144 -r1024 -m524288
+  849  ./RADIX -p1 -n26214400 -r1024 -m524288
+  850  ./RADIX -p4 -n26214400 -r1024 -m524288
+  851  cd ..
+  852  ls
+  853  cd ..
+  854  ls
+  855  cd ..
+  856  cd splash2_benchmark-1.0/
+  857  ls
+  858  cd codes/
+  859  ls
+  860  cd kernels/
+  861  ls
+  862  cd radix/
+  863  ls
+  864  ./RADIX -h
+  865  ./RADIX -p16 -n99999999 -r2048 -m99999999 -s  -t  
+  866  perf stat ./RADIX -p16 -n99999999 -r2048 -m99999999 -s  -t  
+  867  perf list
+  868  perf stat ./RADIX -p16 -n99999999 -r2048 -m99999999 -s  -t  > radix.output
+  869  cd ..
+  870  ls
+  871  cd lu/
+  872  ls
+  873  cd contiguous_blocks/
+  874  ls
+  875  ./LU -h
+  876  ./LU -p16 256 -n4096 -c -s -t 
+  877  ./LU -p16 -b256 -n -c -s -t 
+  878  ./LU -p16 -b8 -n -c -s -t 
+  879  ./LU -p16 -b4 -n -c -s -t 
+  880  ./LU -p16 -b4 -n4096 -c -s -t 
+  881  a = `perf stat ./LU -p16 -b8 -n4096 -c -s -t` 
+  882  (perf stat ./LU -p16 -b8 -n4096 -c -s -t) > lu.output
+  883  cat lu.output 
+  884  rm lu.output 
+  885  perf stat ./LU -p16 -b8 -n4096 -c -s -t &
+  886  top
+  887  cd ../
+  888  cd non_contiguous_blocks/
+  889  perf stat ./LU -p16 -b8 -n4096 -c -s -t &
+  890  top
+  891  perf stats
+  892  perf list
+  893  perf stat ./LU -p16 -b8 -n4096 -c -s -t &
+  894  cd ../non_contiguous_blocks/
+  895  perf stat ./LU -p16 -b8 -n4096 -c -s -t &
+  896  top
+  897  cd splash2_benchmark-1.0/
+  898  ls
+  899  cd codes/
+  900  ls
+  901  cd kernels/
+  902  ls
+  903  perf stat
+  904  perf list
+  905  cat LU.nc.out 
+  906  cat LU.c.out 
+  907  cat RADIX.out 
+  908  top
+  909  cd splash2_benchmark-1.0/codes/kernels/
+  910  cd lu/
+  911  ls
+  912  vi README.lu 
+  913  cd ../
+  914  cd radix/
+  915  ls
+  916  ./RADIX -h
+  917  ./RADIX -p16 -n9999999999 -r10 -m9
+  918  ./RADIX -p16 -n9999999999 -r8 -m7
+  919  perf stat ./RADIX -p16 -n9999999999 -r8 -m7
+  920  perf stat ./RADIX -p16 -n9999999999 -r8 -m7 &
+  921  top
+  922  top -n5 | grep apoorve
+  923  top -u apoorve
+  924  top -u apoorve -n1
+  925  kill -9 23651
+  926  kill -9 23667
+  927  kill -9 23670
+  928  top -u apoorve
+  929  kill -9 24193
+  930  top -u apoorve
+  931  kill -9 24192
+  932  top -u apoorve
+  933  perf stat ./RADIX -p16 -n9999999999 -r8 -m7
+  934  top -u apoorve
+  935  kill -9 24206
+  936  top -u apoorve
+  937  kill -9 24206
+  938  top -u apoorve
+  939  kill -9 24203
+  940  top -u apoorve
+  941  ls
+  942  cd ../..
+  943  cd ..//
+  944  ls
+  945  vi infinite.c
+  946  gcc infinite.c 
+  947  perf stat ./a.out &
+  948  top
+  949  top -u apoorve
+  950  kill ps -ef | grep a.out
+  951  ps -ef | grep a.out
+  952  kill -9 24903
+  953  top -u apoorve
+  954  ls
+  955  cd codes/
+  956  ls
+  957  cd apps/
+  958  ls
+  959  cd fmm
+  960  ls
+  961  ./FMM inputs/input.256 
+  962  ./FMM < inputs/input.256 
+  963  `./FMM < inputs/input.256` > out
+  964  a = `./FMM < inputs/input.256`
+  965  `./FMM < inputs/input.256`
+  966  perf stat ./FMM < inputs/input.256
+  967  perf stat ./FMM < inputs/input.256 >> out
+  968  perf stat ./FMM < inputs/input.256 1>out
+  969  cat out
+  970  perf stat ./FMM < inputs/input.256 > out 2>&1
+  971  cat out
+  972  rm out
+  973  perf stat ./FMM < inputs/input.256 > out 2>&1
+  974  cat out
+  975  cd ../../kernels/
+  976  ls
+  977  test.sh
+  978  vi test.sh
+  979  ls
+  980  ls lu
+  981  ls
+  982  vi test.sh
+  983  cd radix/
+  984  ./RADIX -h
+  985  cat "RADIX -p1 -n262144 -r1024 -m524288" >> ../test.sh 
+  986  echo "RADIX -p1 -n262144 -r1024 -m524288" >> ../test.sh 
+  987  cd ../
+  988  ccd lu/
+  989  cd lu
+  990  ls
+  991  cd non_contiguous_blocks/n
+  992  cd non_contiguous_blocks/
+  993  ./LU -h
+  994  echo ""options:
+  995  Default: LU -n128 -p1 -b16
+  996  echo "options:" >> ../../test.sh 
+  997  Default: LU -n128 -p1 -b16
+  998  ./LU -h
+  999  cd ../../
+ 1000  vi test.sh 
+ 1001  cd -
+ 1002  cd ../contiguous_blocks/
+ 1003  ./LU -h
+ 1004  cd ..
+ 1005  ls
+ 1006  cd ..
+ 1007  ls
+ 1008  cd radix/
+ 1009  ls
+ 1010  ./RADIX -h
+ 1011  cd ..
+ 1012  ls
+ 1013  vi test.sh 
+ 1014  ls lu >> test.sh 
+ 1015  ls radix/ > test.sh 
+ 1016  vi test.sh 
+ 1017  >test.sh 
+ 1018  ls lu
+ 1019  vi test.sh 
+ 1020  chmod +x test.sh 
+ 1021  ./test.sh 
+ 1022  ls
+ 1023  top
+ 1024  top -u apoorve
+ 1025  ls
+ 1026  cd radix/
+ 1027  ls
+ 1028  vi radix.output 
+ 1029  cd ../lu/contiguous_blocks/
+ 1030  ls
+ 1031  vi LU.c.out 
+ 1032  cd ../
+ 1033  ls
+ 1034  cd non_contiguous_blocks/
+ 1035  ls
+ 1036  vi LU.nc.out 
+ 1037  cd ../
+ 1038  ls
+ 1039  cd ..
+ 1040  cd radix/
+ 1041  ls
+ 1042  vi RADIX.out 
+ 1043  mv RADIX.out ../.
+ 1044  mv ../lu/non_contiguous_blocks/LU.nc.out ../
+ 1045  mv ../lu/contiguous_blocks/LU.c.out ../
+ 1046  cd ..
+ 1047  ls
+ 1048  rm LU.c.out 
+ 1049  rm LU.nc.out 
+ 1050  rm RADIX.out 
+ 1051  vi test.sh 
+ 1052  ./test.sh 
+ 1053  top
+ 1054  top -u apoorve
+ 1055  ls
+ 1056  vi RADIX.out 
+ 1057  ls
+ 1058  vi test.sh 
+ 1059  cd LU
+ 1060  cd lu
+ 1061  ls
+ 1062  vi README.lu 
+ 1063  cd ..
+ 1064  ls
+ 1065  vi test.sh 
+ 1066  vi radix/README.radix 
+ 1067  cd splash2_benchmark-1.0/
+ 1068  ls
+ 1069  cd codes/
+ 1070  ls
+ 1071  cd kernels/
+ 1072  ls
+ 1073  vi RADIX.out 
+ 1074  perf list
+ 1075  ls
+ 1076  cd splash2_benchmark-1.0/
+ 1077  ls
+ 1078  cd cd codes/
+ 1079  cd codes/
+ 1080  ls
+ 1081  cd apps/
+ 1082  cd ..
+ 1083  cd kernels/
+ 1084  ls
+ 1085  cd ft
+ 1086  cd ftt
+ 1087  cd fft/
+ 1088  ls
+ 1089  ./FFT -h
+ 1090  vi README.fft 
+ 1091  ./ FFT -m999999998 -p16 -n65536 -l4
+ 1092  ./FFT -m999999998 -p16 -n65536 -l4
+ 1093  ./FFT -m99999998 -p16 -n65536 -l4
+ 1094  ./FFT -m9999998 -p16 -n65536 -l4
+ 1095  ./FFT -m999998 -p16 -n65536 -l4
+ 1096  ./FFT -m99998 -p16 -n65536 -l4
+ 1097  ./FFT -m99998 -p16 -n65536 -l4 -s -t 
+ 1098  ./FFT -m99998 -p16 -n65536 -l4 -s -t &
+ 1099  top
+ 1100  top -u apoorve
+ 1101  man top
+ 1102  top -u apoorve
+ 1103  kill -9 8388
+ 1104  kill -9 8390
+ 1105  top -u apoorve
+ 1106  cd ..
+ 1107  ls
+ 1108  cd cholesky/
+ 1109  ls
+ 1110  ./CHOLESKY -h
+ 1111  top
+ 1112  ls
+ 1113  cd ..
+ 1114  cd fft/
+ 1115  ls
+ 1116  perf stat ./FFT -m99998 -p16 -n65536 -l4 -s -t > FTT.out 2>&1 &
+ 1117  top
+ 1118  top -u apoorve
+ 1119  top
+ 1120  top - u apoorve
+ 1121  ls
+ 1122  cd splash2_benchmark-1.0/
+ 1123  ls
+ 1124  cd codes/
+ 1125  ls
+ 1126  cd kernels/
+ 1127  ls
+ 1128  c d fft/
+ 1129  cd fft/
+ 1130  ls
+ 1131  vi FTT.out
+ 1132  exit
+ 1133  ls
+ 1134  cd splash2_benchmark-1.0/
+ 1135  ls
+ 1136  cd ..
+ 1137  ls
+ 1138  scp -r splash2_benchmark-1.0 apoorve@login.ccs.neu.edu:/home/apoorve/research/.
+ 1139  ls
+ 1140  cd splash2_benchmark-1.0/
+ 1141  ls
+ 1142  cd codes/
+ 1143  ls
+ 1144  cd kernels/
+ 1145  ls
+ 1146  top -u apoorve
+ 1147  ls
+ 1148  cd fft/
+ 1149  ls
+ 1150  vi F
+ 1151  vi FTT.out 
+ 1152  rm FTT.out 
+ 1153  cd ..
+ 1154  ls
+ 1155  vi test.sh 
+ 1156  cd ..
+ 1157  cd kernels/fft/
+ 1158  ls
+ 1159  ./FFT -h
+ 1160  perf stat ./FTT -m99998 -n65536 -p16 -l64 -s -t > ../../FTT.out 2>&1 &
+ 1161  perf stat ./FTT -m99998 -n65536 -p16 -l64 -s -t > ../../FTT.out 2>&1
+ 1162  ls
+ 1163  perf stat ./FTT -m99998 -n65536 -p16 -l64 -s -t > ../../FTT.out 2>&1
+ 1164  cd ../..
+ 1165  ls
+ 1166  vi FTT.out 
+ 1167  cd -
+ 1168  ls
+ 1169  perf stat ./FFT -m99998 -n65536 -p16 -l64 -s -t > FFT.out 2>&1
+ 1170  perf stat ./FFT -m99998 -n65536 -p16 -l64 -s -t > FFT.out 2>&1 &
+ 1171  top -u apoorve
+ 1172  ls
+ 1173  cd ssp
+ 1174  cd splash2_benchmark-1.0/
+ 1175  ls
+ 1176  cd codes/
+ 1177  ls
+ 1178  rm FTT.out 
+ 1179  cd kernels/
+ 1180  ls
+ 1181  top -u apoorve
+ 1182  kill -9 27425
+ 1183  top
+ 1184  top -u apoorve
+ 1185  kill -9 27425
+ 1186  top -u apoorve
+ 1187  kill -9 27426
+ 1188  top -u apoorve
+ 1189  ps -ef | grep FFT
+ 1190  kill -9 27425
+ 1191  ps -ef | grep FFT
+ 1192  kill -9 27422
+ 1193  ps -ef | grep FFT
+ 1194  top -u apoorve
+ 1195  top
+ 1196  top -u apoorve
+ 1197  ls
+ 1198  cd cholesky/
+ 1199  ls
+ 1200  ./CHOLESKY -h
+ 1201  vi README.cholesky 
+ 1202  ./CHOLESKY -h
+ 1203  ./CHOLESKY -B5 -C16 -p16 -s -t
+ 1204  perf list
+ 1205  perf stat -e cpu-cycles./CHOLESKY -B5 -C16 -p16 -s -t
+ 1206  instructions
+ 1207  cache-references
+ 1208  cache-misses
+ 1209  branch-instructions
+ 1210  branch-misses
+ 1211  perf stat -e cpu-cycles:instructions:cache-references:cache-misses:branch-instructions:branch-misses:bus-cycles ./CHOLESKY -B5 -C16 -p16 -s -t
+ 1212  perf stat -e cycles:instructions:cache-references:cache-misses:branch-instructions:branch-misses:bus-cycles ./CHOLESKY -B5 -C16 -p16 -s -t
+ 1213  perf stat -e cycles:instructions:references:cache-misses:branch-instructions:branch-misses:bus-cycles ./CHOLESKY -B5 -C16 -p16 -s -t
+ 1214  perf list
+ 1215  perf stat -e cycles:instructions:cache-references:cache-misses:branches:branch-misses:bus-cycles ./CHOLESKY -B5 -C16 -p16 -s -t
+ 1216  perf list
+ 1217  perf stat -e cycles ./CHOLESKY -B5 -C16 -p16 -s -t
+ 1218  perf stat -e cycles:instructions ./CHOLESKY -B5 -C16 -p16 -s -t
+ 1219  perf stat -e cycles:instructions ls
+ 1220  perf stat -e cycles instructions ls
+ 1221  perf stat -e cycles,instructions ls
+ 1222  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses,bus-cycles ./CHOLESKY -B5 -C16 -p16 -s -t
+ 1223  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses,bus-cycles ./CHOLESKY -B5 -C16 -p16 -s -t &
+ 1224  top -u apoorve
+ 1225  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses,bus-cycles ./CHOLESKY -B5 -C16 -p16 -s -t 
+ 1226  ps -ef| grep CHOL
+ 1227  kill -9 27784
+ 1228  ps -ef| grep CHOL
+ 1229  kill -9 27970
+ 1230  kill -9 27974
+ 1231  kill -9 27979
+ 1232  ps -ef| grep CHOL
+ 1233  top -u apoorve
+ 1234  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses,bus-cycles ./CHOLESKY -B5 -C16 -p16 -s -t &
+ 1235  top -u apoorve
+ 1236  ps -ef| grep CHOL
+ 1237  kill -9 28004
+ 1238  ps -ef| grep CHOL
+ 1239  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses,bus-cycles ./CHOLESKY -B5 -C16 -p16 -s -t
+ 1240  ps -ef  |grep CHOL
+ 1241  kill -9 28141
+ 1242  kill -9 28465
+ 1243  ps -ef  |grep CHOL
+ 1244  kill -9 28144
+ 1245  ps -ef  |grep CHOL
+ 1246  ps -ef | grep apoorve
+ 1247  kill -9 28427
+ 1248  ps -ef | grep apoorve
+ 1249  kill -9 26975
+ 1250  ps -ef | grep apoorve
+ 1251  kill -9 27469
+ 1252  top -u apoorve
+ 1253  top
+ 1254  top -u apoorve
+ 1255  top
+ 1256  top -u apoorve
+ 1257  strace -p 28144
+ 1258  man strace
+ 1259  top
+ 1260  top -u apoorve
+ 1261  attach 28144
+ 1262  gdb
+ 1263  top -u apoorve
+ 1264  kill -9 27429
+ 1265  top -u apoorve
+ 1266  cd codes/top
+ 1267  top -u apoorve
+ 1268  ls
+ 1269  top -u apoorve
+ 1270  cd splash2_benchmark-1.0/
+ 1271  ls
+ 1272  cd codes/
+ 1273  ls
+ 1274  cd kernels/
+ 1275  ls
+ 1276  cd ..
+ 1277  ls
+ 1278  cd apps/
+ 1279  ls
+ 1280  cd barnes/
+ 1281  ls
+ 1282  vi input 
+ 1283  ./BARNES -h
+ 1284  vi input 
+ 1285  ./BARNES < input 
+ 1286  vi input 
+ 1287  ./BARNES < input 
+ 1288  top -u apoorve
+ 1289  kill -9 29100
+ 1290  top -u apoorve
+ 1291  ./BARNES < input &
+ 1292  top -u apoorve
+ 1293  ./BARNES < input > BARNES.out 2>&1 &
+ 1294  top -u apoorve
+ 1295  ls
+ 1296  perf stat ./BARNES < input > BARNES.out 2>&1 &
+ 1297  top -u apoorve
+ 1298  perf stat ./BARNES < input > BARNES.out 2>&1 &
+ 1299  top -u apooorve
+ 1300  top -u apoorve
+ 1301  kill -9 29104
+ 1302  kill -9 29110
+ 1303  top -u apoorve
+ 1304  top
+ 1305  top -u apoorve
+ 1306  top 
+ 1307  top -u apoorve
+ 1308  ls
+ 1309  cd splash2_benchmark-1.0/
+ 1310  ls
+ 1311  cd codes/
+ 1312  ls
+ 1313  cd apps/
+ 1314  ls
+ 1315  cd barnes/
+ 1316  ls
+ 1317  vi BARNES.out 
+ 1318  vi BARNES
+ 1319  perf stat ./BARNES < input
+ 1320  cd splash2_benchmark-1.0/
+ 1321  ls
+ 1322  cd codes/
+ 1323  ls
+ 1324  cd apps/
+ 1325  cd barnes/
+ 1326  ls
+ 1327  cd splash2_benchmark-1.0/
+ 1328  ls
+ 1329  cd codes/
+ 1330  ls
+ 1331  cd apps/
+ 1332  ls
+ 1333  cd barnes/
+ 1334  ls
+ 1335  vi input 
+ 1336  ./BARNES < input 
+ 1337  perf list | top -10
+ 1338  perf list |head -10
+ 1339  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses, bus-cycles ./BARNES < input 
+ 1340  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses,bus-cycles ./BARNES < input 
+ 1341  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < input 
+ 1342  vi input 
+ 1343  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < input 
+ 1344  vi input 
+ 1345  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < input 
+ 1346  vi input 
+ 1347  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < input 
+ 1348  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < input > BARNES.out.1 > 2>&1 &
+ 1349  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < input > BARNES.out.1 > 2>&1
+ 1350  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < input > BARNES.out.1
+ 1351  top -u apoorve
+ 1352  kill -9 804
+ 1353  top -u apoorve
+ 1354  kill -9 31967
+ 1355  top -u apoorve
+ 1356  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < input > BARNES.out.1 &
+ 1357  top -u apoorve
+ 1358  ls
+ 1359  cat BARNES.out.1 
+ 1360  top -u apoorve
+ 1361  rm BARNES.out.1 
+ 1362  rm BARNES.out
+ 1363  top -u apoorve
+ 1364  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < input > BARNES.out.1 &
+ 1365  top -u apoorve
+ 1366  vi BARNES.out.1 
+ 1367  cd ..
+ 1368  ls
+ 1369  cd ..
+ 1370  cd kernels/
+ 1371  ls
+ 1372  vi test.sh 
+ 1373  cd ../apps/barnes/
+ 1374  ls
+ 1375  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < input > BARNES.out.1 2>&1
+ 1376  vi BARNES.out.1 
+ 1377  cd ..
+ 1378  ls
+ 1379  cd fmm/
+ 1380  ls
+ 1381  vi inputs/input.16384 
+ 1382  ./FMM < inputs/input.16384 
+ 1383  ./FMM -h
+ 1384  exit
+ 1385  ls
+ 1386  top
+ 1387  top -u apoorve
+ 1388  top -H -u apoorve 
+ 1389  ps -e -T | grep FMM
+ 1390  ps -ef -T | grep FMM
+ 1391  top -H -u apoorve 
+ 1392  ps -e -T | grep FMM
+ 1393  ps -ef -T | grep FMM
+ 1394  top -H -u apoorve 
+ 1395  exit
+ 1396  cd splash2_benchmark-1.0/
+ 1397  ls
+ 1398  cd codes/
+ 1399  ls
+ 1400  vi test.sh 
+ 1401  echi $HOME
+ 1402  echo $HOME
+ 1403  echo ~
+ 1404  vi test.sh 
+ 1405  la
+ 1406  vi makefile
+ 1407  cd ..
+ 1408  ls
+ 1409  vi makefile
+ 1410  make all
+ 1411  rm makefile 
+ 1412  top
+ 1413  top -u apoorve
+ 1414  ls
+ 1415  top -u apoorve
+ 1416  ls
+ 1417  cd splash2_benchmark-1.0/
+ 1418  ls
+ 1419  cd codes/
+ 1420  ls
+ 1421  cat logfile.log 
+ 1422  tailf logfile.log 
+ 1423  ls
+ 1424  vi makefile 
+ 1425  make luc_radix LOGFILE=luc_radix
+ 1426  ls
+ 1427  tailf luc_radix.log 
+ 1428  ls
+ 1429  vi luc_radix.log 
+ 1430  ls
+ 1431  make luc LOGFILE=individual &
+ 1432  ls
+ 1433  rm logfile.log 
+ 1434  rm luc_radix.log 
+ 1435  ls
+ 1436  vi individual.log 
+ 1437  make lunc LOGFILE=individual;make radix LOGFILE=individual;make fmm LOGFILE=individual;make barnes LOGFILE=individual;
+ 1438  vi makefile 
+ 1439  ls
+ 1440  vi individual.log 
+ 1441  make fmm LOGFILE=individual;make barnes LOGFILE=individual;
+ 1442  vi individual.log 
+ 1443  make barnes_radix LOGFILE=barnes_radix
+ 1444  ls
+ 1445  vi barnes_radix.log 
+ 1446  vi makefile 
+ 1447  ls
+ 1448  exit
+ 1449  ls
+ 1450  cd splash2_benchmark-1.0/
+ 1451  ls
+ 1452  cd codes/
+ 1453  ls
+ 1454  cd kernels/
+ 1455  vi test.sh 
+ 1456  ls
+ 1457  rm RADIX.out 
+ 1458  rm LU.nc.out 
+ 1459  rm LU.c.out 
+ 1460  ls
+ 1461  ./test.sh 
+ 1462  top -u apoorve
+ 1463  kill -9 2626
+ 1464  kill -9 2627
+ 1465  kill -9 2628
+ 1466  top -u apoorve
+ 1467  ls
+ 1468  rm LU.c.out 
+ 1469  rm LU.nc.out 
+ 1470  rm RADIX.out 
+ 1471  cat test.sh 
+ 1472  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < ../../kernel/BARNES.out > BARNES.out.1 2>&1
+ 1473  vi test.sh 
+ 1474  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < input > ../../kernel/BARNES.out.1 2>&1 &
+ 1475  top -u apoorve
+ 1476  top -u apoorveperf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < input > ../../kernel/BARNES.out.1 2>&1
+ 1477  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < input > ../../kernel/BARNES.out.1 2>&1
+ 1478  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < ../apps/barnes/input > ../../kernel/BARNES.out.1 2>&1
+ 1479  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < ../apps/barnes/input > ../../kernel/BARNES.out 2>&1
+ 1480  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < ../apps/barnes/input
+ 1481  vi test.sh 
+ 1482  ./test.sh 
+ 1483  top -u apoorve
+ 1484  vi test.sh 
+ 1485  ./test.sh 
+ 1486  vi test.sh 
+ 1487  ./test.sh 
+ 1488  top -u apoorve
+ 1489  lls
+ 1490  vi test.sh 
+ 1491  ./test.sh 
+ 1492  top -u apoorve
+ 1493  kill -9 2987
+ 1494  kill -9 2990
+ 1495  top -u apoorve
+ 1496  kill -9 2987
+ 1497  top -u apoorve
+ 1498  ls
+ 1499  mv test.sh ..
+ 1500  cd ..
+ 1501  ls
+ 1502  vi test.sh 
+ 1503  cd apps/barnes/
+ 1504  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./BARNES < input > ../../BARNES.out 2>&1
+ 1505  top -u apoorve
+ 1506  kill -9 3091
+ 1507  kill -9 3094
+ 1508  top -u apoorve
+ 1509  kill -9 2986
+ 1510  top -u apoorve
+ 1511  cd ../../
+ 1512  ls
+ 1513  vi test.sh 
+ 1514  rm BARNES.out 
+ 1515  ./test.sh 
+ 1516  top -u apoorve
+ 1517  ./test.sh 
+ 1518  ls
+ 1519  vi test.sh 
+ 1520  ./test.sh 
+ 1521  top -u apoorve
+ 1522  top
+ 1523  ls
+ 1524  cd apps/
+ 1525  ls
+ 1526  cd volrend/
+ 1527  ls
+ 1528  cd ..
+ 1529  ls
+ 1530  cd ocean/
+ 1531  ls
+ 1532  cd ..
+ 1533  ls
+ 1534  cd raytrace/
+ 1535  ls
+ 1536  cd ..
+ 1537  ls
+ 1538  cd water-spatial/
+ 1539  ls
+ 1540  vi test.sh 
+ 1541  vi input 
+ 1542  ./WATER-SPATIAL -h
+ 1543  vi water.C 
+ 1544  vi input 
+ 1545  cat input 
+ 1546  head -20 water.C
+ 1547  vi input 
+ 1548  ./WATER-SPATIAL < input 
+ 1549  vi input 
+ 1550  ./WATER-SPATIAL < input 
+ 1551  vi input 
+ 1552  ./WATER-SPATIAL < input 
+ 1553  vi input 
+ 1554  ./WATER-SPATIAL < input 
+ 1555  cd ..
+ 1556  ls
+ 1557  cd water-nsquared/
+ 1558  ls
+ 1559  ./WATER-NSQUARED < input 
+ 1560  ./WATER-NSQUARED -h
+ 1561  vi water.C 
+ 1562  vi input 
+ 1563  ./WATER-NSQUARED < input 
+ 1564  gdb WATER-NSQUARED 
+ 1565  vi initia.C
+ 1566  gdb WATER-NSQUARED 
+ 1567  vi initia.C
+ 1568  gdb WATER-NSQUARED 
+ 1569  vi initia.C
+ 1570  gdb WATER-NSQUARED 
+ 1571  cd ..
+ 1572  ls
+ 1573  cd fmm/
+ 1574  vi inputs/input.16384 
+ 1575  ./FMM -h
+ 1576  cat inputs/input.16384 
+ 1577  vi inputs/input.16384 
+ 1578  ./FMM < inputs/input.16384 
+ 1579  vi inputs/input.16384 
+ 1580  ./FMM < inputs/input.16384 
+ 1581  vi inputs/input.16384 
+ 1582  ./FMM < inputs/input.16384 
+ 1583  top -u apoorve
+ 1584  kill -9 4371
+ 1585  top -u apoorve
+ 1586  ls
+ 1587  ./FMM < inputs/input.16384 &
+ 1588  top -u apoorve
+ 1589  cd ..
+ 1590  ls
+ 1591  vi BARNES.out 
+ 1592  vi LU.nc.out 
+ 1593  vi LU.c.out 
+ 1594  vi RADIX.out 
+ 1595  vi test.sh 
+ 1596  ps -ef  | grep FMM
+ 1597  cd apps/fmm/
+ 1598  cd ../..
+ 1599  ls apps/fmm/inputs/
+ 1600  vi test.sh 
+ 1601  cd apps/fmm/
+ 1602  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./FMM < inputs/input.16384 > ../../FMM.out
+ 1603  top -u apoorve
+ 1604  kill -9 4755
+ 1605  kill -9 4758
+ 1606  top -u apoorve
+ 1607  vi ../../test.sh 
+ 1608  perf stat -e cycles,instructions,cache-references,cache-misses,branches,branch-misses ./FMM < inputs/input.16384 > ../../FMM.out 2>&1
+ 1609  vi ../../FMM.out 
+ 1610  vi inputs/input.16384 
+ 1611  perf stat ./FMM < inputs/input.16384 
+ 1612  ls
+ 1613  cd ../..
+ 1614  vi test.sh 
+ 1615  vi makefile
+ 1616  vi makefile 
+ 1617  make ls
+ 1618  make test
+ 1619  vi makefile 
+ 1620  make test
+ 1621  vi makefile 
+ 1622  make test
+ 1623  vi makefile 
+ 1624  make test
+ 1625  vi makefile 
+ 1626  make test 
+ 1627  vi makefile 
+ 1628  make test 
+ 1629  top
+ 1630  ls
+ 1631  make test 
+ 1632  top -u apoorve
+ 1633  kill -9 5999
+ 1634  top -u apoorve
+ 1635  make test 
+ 1636  top -u apoorve
+ 1637  vi  makefile 
+ 1638  make luc lunc
+ 1639  ls -l
+ 1640  make luc lunc
+ 1641  vi  makefile 
+ 1642  make luc lunc
+ 1643  vi  makefile 
+ 1644  make all
+ 1645  vi  makefile 
+ 1646  make all
+ 1647  vi  makefile 
+ 1648  ls
+ 1649  rm BARNES.out 
+ 1650  rm FMM.out 
+ 1651  rm LU.nc.out 
+ 1652  rm LU.c.out 
+ 1653  rm RADIX.out 
+ 1654  ls
+ 1655  make luc
+ 1656  vi makefile 
+ 1657  make luc
+ 1658  vi makefile 
+ 1659  make luc
+ 1660  vi makefile 
+ 1661  make luc
+ 1662  cd /home/apoorve/splash2_benchmark-1.0/codes/kernel/lu/contiguous_blocks
+ 1663  ls
+ 1664  vi makefile 
+ 1665  make luc
+ 1666  top -u apoorve
+ 1667  vi makefile 
+ 1668  make luc
+ 1669  top -u apoorve
+ 1670  ls
+ 1671  vi LU.c.out 
+ 1672  vi makefile 
+ 1673  make luc
+ 1674  ls
+ 1675  rm LU.c.out 
+ 1676  ls
+ 1677  make luc
+ 1678  cat LU.c.out 
+ 1679  vi makefile 
+ 1680  q
+ 1681  vi makefile 
+ 1682  mv makefile makefile.bak
+ 1683  ls
+ 1684  vi makefile
+ 1685  vi makefile.bak 
+ 1686  vi makefile
+ 1687  make 
+ 1688  vi makefile
+ 1689  make 
+ 1690  ls
+ 1691  kernels/fft/FFT < kernels/fft/inputs/input.256
+ 1692  kernels/fft/FFT < /home/apoorve/splash2_benchmark-1.0/codes/kernels/fft/inputs.input.256
+ 1693  kernels/fft/FFT < /home/apoorve/splash2_benchmark-1.0/codes/kernels/fft/inputs/input.256
+ 1694  ls  /home/apoorve/splash2_benchmark-1.0/codes/kernels/fft
+ 1695  ls
+ 1696  cd kernels/
+ 1697  ls
+ 1698  cd fft/
+ 1699  ls
+ 1700  cd ..
+ 1701  ls
+ 1702  cd apps/
+ 1703  ls
+ 1704  cd ..
+ 1705  ls
+ 1706  cd codes/
+ 1707  ls
+ 1708  vi makefile
+ 1709  q!
+ 1710  ls
+ 1711  cd apps/
+ 1712  ls
+ 1713  cd ..
+ 1714  apps/fmm/FMM < apps/fmm/inputs/input.256 
+ 1715  rm makefile
+ 1716  mv makefile.bak makefile
+ 1717  vi makefile 
+ 1718  ls
+ 1719  cat LU.c.out 
+ 1720  rm LU.c.out 
+ 1721  make luc
+ 1722  top
+ 1723  top -u apoorve
+ 1724  vi makefile 
+ 1725  ls
+ 1726  top -u apoorvbe
+ 1727  top -u apoorve
+ 1728  ls
+ 1729  vi LU.c.out 
+ 1730  echo -e "#################again##########" >> LU.c.out; make luc
+ 1731  vi LU.c.out 
+ 1732  tailf LU.c.out 
+ 1733  rm LU.c.out 
+ 1734  vi makefile 
+ 1735  make luc
+ 1736  ls
+ 1737  vi LU.c.out 
+ 1738  rm LU.c.out 
+ 1739  ls
+ 1740  vi makefile 
+ 1741  mv makefile makefile.bak
+ 1742  vi makefile
+ 1743  make test LOGFILE=hello
+ 1744  ls
+ 1745  vi hello.log 
+ 1746  rm hello.log 
+ 1747  rm makefile
+ 1748  vi makefile
+ 1749  ls
+ 1750  mv makefile.bak makefile
+ 1751  vi makefile 
+ 1752  make luc
+ 1753  top -u apoorve
+ 1754  top
+ 1755  top -u apoorve
+ 1756  kill -9 9475
+ 1757  top
+ 1758  top -u apoorve
+ 1759  top -H -u apoorve
+ 1760  top
+ 1761  top -u apoorve
+ 1762  q
+ 1763  top -H -u apoorve
+ 1764  top -u apoorve
+ 1765  top
+ 1766  top -H
+ 1767  vi makefile 
+ 1768  top -H
+ 1769  top
+ 1770  vi makefile 
+ 1771  top
+ 1772  top -u apoorve
+ 1773  top
+ 1774  vi makefile 
+ 1775  make luc
+ 1776  vi logfile.log 
+ 1777  vi makefile 
+ 1778  ls
+ 1779  rm individual.log 
+ 1780  rm logfile.log 
+ 1781  rm barnes_radix.log 
+ 1782  ls
+ 1783  make luc
+ 1784  top -u apooorve
+ 1785  top -u apoorve
+ 1786  kill -9 11776
+ 1787  ls
+ 1788  top -u apoorve
+ 1789  kill -9 11774
+ 1790  top -u apoorve
+ 1791  ls
+ 1792  rm logfile.log 
+ 1793  make luc &
+ 1794  top
+ 1795  vi logfile.log 
+ 1796  make luc &
+ 1797  top
+ 1798  vi logfile.log 
+ 1799  vi makefile 
+ 1800  make lunc &
+ 1801  top
+ 1802  ls
+ 1803  l
+ 1804  cd codes/
+ 1805  ls
+ 1806  vi logfile.log 
+ 1807  make lunc &
+ 1808  top
+ 1809  exit
+ 1810  l
+ 1811  cd splash2_benchmark-1.0/
+ 1812  ls
+ 1813  cd codes/
+ 1814  ls
+ 1815  vi logfile.log 
+ 1816  make lu &
+ 1817  vi makefile 
+ 1818  make luc &
+ 1819  top
+ 1820  vi logfile.log 
+ 1821  exit
+ 1822  cd splash2_benchmark-1.0/l
+ 1823  cd splash2_benchmark-1.0/
+ 1824  ls
+ 1825  cd codes/
+ 1826  ls
+ 1827  rm logfile.log 
+ 1828  history > history.file

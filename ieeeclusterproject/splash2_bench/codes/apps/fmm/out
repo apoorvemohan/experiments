@@ -1,0 +1,37 @@
+Sysconf CALL: 4096
+Particle array: eb1000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+----------------------------Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        16071          92         207          36        3127       12450           0          80          78
+
+                                   TIMING INFORMATION
+Start time                        : 1412788842404384
+Initialization finish time        : 1412788842425358
+Overall finish time               : 1412788842441429
+Total time with initialization    :            37045
+Total time without initialization :            16071
+
+Total time for steps 3 to 5 :        16071
+
+
+ Performance counter stats for './FMM':
+
+         38.422270 task-clock                #    0.985 CPUs utilized          
+                 2 context-switches          #    0.052 K/sec                  
+                 1 cpu-migrations            #    0.026 K/sec                  
+               336 page-faults               #    0.009 M/sec                  
+        36,812,472 cycles                    #    0.958 GHz                     [57.08%]
+         1,475,972 stalled-cycles-frontend   #    4.01% frontend cycles idle    [62.46%]
+        27,103,191 stalled-cycles-backend    #   73.63% backend  cycles idle    [66.74%]
+        62,851,068 instructions              #    1.71  insns per cycle        
+                                             #    0.43  stalled cycles per insn [58.52%]
+         1,831,969 branches                  #   47.680 M/sec                   [48.11%]
+            72,416 branch-misses             #    3.95% of all branches         [37.62%]
+
+       0.039021133 seconds time elapsed
+

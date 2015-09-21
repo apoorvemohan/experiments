@@ -1,0 +1,520 @@
+
+Integer Radix Sort
+     115500000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        1163250          579529          364191
+    1        1154387          570223          551148
+    2        1166512          582465          368709
+    3        1139219          555518          347678
+    4        1153998          570155          367639
+    5        1166549          582334          560048
+    6        1154375          570214          520200
+    7        1166242          582422          365758
+    8        1154432          570158          565402
+    9        1166475          582301          395970
+   10        1151112          567335          582963
+   11        1154437          570174          535911
+   12        1153725          569863          582526
+   13        1166107          582200          351379
+   14        1166152          582238          360208
+   15        1154180          569815          371623
+  Avg        1158197          574184          449460
+  Min        1139219          555518          347678
+  Max        1166549          582465          582963
+
+
+                 TIMING INFORMATION
+Start time                        : 1415131596047943
+Initialization finish time        : 1415131601532796
+Overall finish time               : 1415131602696046
+Total time with initialization    :          6648103
+Total time without initialization :          1163250
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n115500000 -r8 -m7 -s':
+
+   178,252,643,726 cycles                    #    0.000 GHz                     [49.98%]
+    55,477,576,520 instructions              #    0.31  insns per cycle         [50.01%]
+     9,980,558,959 cache-references                                             [50.03%]
+        20,263,978 cache-misses              #    0.203 % of all cache refs     [50.06%]
+     1,849,721,340 branches                                                     [50.04%]
+        13,229,160 branch-misses             #    0.72% of all branches         [50.02%]
+           463,931 page-faults                                                 
+
+       7.041513406 seconds time elapsed
+
+
+Integer Radix Sort
+     115500000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        1071382          615362          351257
+    1        1071221          615315          316680
+    2        1075489          619553          318166
+    3        1070889          615217          442672
+    4        1071246          615236          325386
+    5        1067043          611369          439970
+    6        1071254          615242          331542
+    7        1071317          615317          331363
+    8        1075119          619274          313384
+    9        1075435          619286          343946
+   10        1075435          619389          321565
+   11        1075123          619282          312280
+   12        1071044          615295          308138
+   13        1070901          615118          312642
+   14        1071121          615195          315502
+   15        1071158          615105          320037
+  Avg        1072199          616285          337783
+  Min        1067043          611369          308138
+  Max        1075489          619553          442672
+
+
+                 TIMING INFORMATION
+Start time                        : 1415131603108685
+Initialization finish time        : 1415131608612917
+Overall finish time               : 1415131609684299
+Total time with initialization    :          6575614
+Total time without initialization :          1071382
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n115500000 -r8 -m7 -s':
+
+   175,083,027,623 cycles                    #    0.000 GHz                     [50.02%]
+    54,875,824,171 instructions              #    0.31  insns per cycle         [50.03%]
+     9,762,881,447 cache-references                                             [50.03%]
+        12,568,296 cache-misses              #    0.129 % of all cache refs     [50.03%]
+     1,732,007,373 branches                                                     [50.02%]
+         7,642,714 branch-misses             #    0.44% of all branches         [50.02%]
+           464,679 page-faults                                                 
+
+       6.938187304 seconds time elapsed
+
+
+Integer Radix Sort
+     115500000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        1270393          609703          405284
+    1        1257920          597536          358723
+    2        1250135          589703          367230
+    3        1278039          617566          372303
+    4        1274300          613537          574122
+    5        1273977          613557          362634
+    6        1256098          595333          577546
+    7        1258337          597521          611828
+    8        1278033          617509          384871
+    9        1270541          609530          654693
+   10        1278086          617503          394073
+   11        1270454          609552          649613
+   12        1278497          617413          656336
+   13        1270103          609544          381499
+   14        1277900          617330          659790
+   15        1273961          613334          659092
+  Avg        1269798          609136          504352
+  Min        1250135          589703          358723
+  Max        1278497          617566          659790
+
+
+                 TIMING INFORMATION
+Start time                        : 1415131610065229
+Initialization finish time        : 1415131615612830
+Overall finish time               : 1415131616883223
+Total time with initialization    :          6817994
+Total time without initialization :          1270393
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n115500000 -r8 -m7 -s':
+
+   180,666,419,259 cycles                    #    0.000 GHz                     [49.98%]
+    55,835,665,767 instructions              #    0.31  insns per cycle         [50.02%]
+    10,091,854,611 cache-references                                             [50.10%]
+        23,153,236 cache-misses              #    0.229 % of all cache refs     [50.07%]
+     1,923,915,309 branches                                                     [50.03%]
+        15,773,866 branch-misses             #    0.82% of all branches         [49.96%]
+           461,479 page-faults                                                 
+
+       7.214473473 seconds time elapsed
+
+
+Integer Radix Sort
+     115500000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        1176149          616354          547907
+    1        1177743          617424          341455
+    2        1156267          596407          547552
+    3        1176342          616280          329626
+    4        1144382          584377          325118
+    5        1175562          615554          326679
+    6        1177942          617448          392274
+    7        1177607          617383          342035
+    8        1177300          617316          324569
+    9        1175918          615480          389847
+   10        1152442          592342          335895
+   11        1152228          592245          323461
+   12        1176177          616188          325146
+   13        1177758          617398          342241
+   14        1144733          584176          359409
+   15        1177398          617110          328932
+  Avg        1168497          608343          367634
+  Min        1144382          584176          323461
+  Max        1177942          617448          547907
+
+
+                 TIMING INFORMATION
+Start time                        : 1415131617298471
+Initialization finish time        : 1415131622800975
+Overall finish time               : 1415131623977124
+Total time with initialization    :          6678653
+Total time without initialization :          1176149
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n115500000 -r8 -m7 -s':
+
+   176,279,278,083 cycles                    #    0.000 GHz                     [49.96%]
+    55,015,578,814 instructions              #    0.31  insns per cycle         [49.98%]
+     9,819,490,331 cache-references                                             [50.07%]
+        14,795,198 cache-misses              #    0.151 % of all cache refs     [50.09%]
+     1,763,968,497 branches                                                     [50.07%]
+         8,910,006 branch-misses             #    0.51% of all branches         [49.98%]
+           463,733 page-faults                                                 
+
+       7.061893855 seconds time elapsed
+
+
+Integer Radix Sort
+     115500000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        1428346          684177          399017
+    1        1431930          687374          705784
+    2        1431425          687252          396357
+    3        1431383          687130          434579
+    4        1434279          689541          736835
+    5        1433705          689628          743310
+    6        1436178          691871          571208
+    7        1433850          689598          422544
+    8        1431535          687092          705735
+    9        1435565          691381          362092
+   10        1436570          691779          730866
+   11        1431526          687109          690557
+   12        1436599          691795          738410
+   13        1433620          689526          741750
+   14        1436430          691597          717196
+   15        1433749          689343          379638
+  Avg        1433543          689137          592242
+  Min        1428346          684177          362092
+  Max        1436599          691871          743310
+
+
+                 TIMING INFORMATION
+Start time                        : 1415131624378861
+Initialization finish time        : 1415131629952130
+Overall finish time               : 1415131631380476
+Total time with initialization    :          7001615
+Total time without initialization :          1428346
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n115500000 -r8 -m7 -s':
+
+   184,347,653,016 cycles                    #    0.000 GHz                     [50.01%]
+    56,379,781,832 instructions              #    0.31  insns per cycle         [50.06%]
+    10,274,624,537 cache-references                                             [50.07%]
+        28,546,509 cache-misses              #    0.278 % of all cache refs     [50.04%]
+     2,024,235,989 branches                                                     [49.99%]
+        20,219,453 branch-misses             #    1.00% of all branches         [49.98%]
+           464,402 page-faults                                                 
+
+       7.383606888 seconds time elapsed
+
+
+Integer Radix Sort
+     115500000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        1161135          603498          541507
+    1        1137070          579628          357446
+    2        1166857          609550          541946
+    3        1141150          583491          506689
+    4        1166934          609469          362070
+    5        1160896          603477          343313
+    6        1148954          591295          376208
+    7        1149225          591519          537763
+    8        1148723          591389          556241
+    9        1166886          609469          337191
+   10        1156915          599543          330359
+   11        1166953          609477          343841
+   12        1166950          609381          369866
+   13        1160860          603409          333342
+   14        1157020          599329          363958
+   15        1166913          609253          337519
+  Avg        1157715          600199          408704
+  Min        1137070          579628          330359
+  Max        1166953          609550          556241
+
+
+                 TIMING INFORMATION
+Start time                        : 1415131631780828
+Initialization finish time        : 1415131637432936
+Overall finish time               : 1415131638594071
+Total time with initialization    :          6813243
+Total time without initialization :          1161135
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n115500000 -r8 -m7 -s':
+
+   177,629,087,641 cycles                    #    0.000 GHz                     [49.95%]
+    55,410,329,112 instructions              #    0.31  insns per cycle         [50.03%]
+     9,932,781,689 cache-references                                             [50.10%]
+        18,084,522 cache-misses              #    0.182 % of all cache refs     [50.10%]
+     1,838,395,817 branches                                                     [50.02%]
+        11,412,676 branch-misses             #    0.62% of all branches         [49.95%]
+           465,910 page-faults                                                 
+
+       7.182023884 seconds time elapsed
+
+
+Integer Radix Sort
+     115500000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        1197245          590386          426075
+    1        1197137          590391          356570
+    2        1192174          585274          448870
+    3        1180792          573928          423204
+    4        1197196          590423          378831
+    5        1195819          588999          382490
+    6        1192329          585234          510870
+    7        1192060          585202          410343
+    8        1197329          590384          465824
+    9        1187965          581208          376732
+   10        1197349          590419          458437
+   11        1196342          589092          587910
+   12        1195851          588942          381118
+   13        1196373          589024          557851
+   14        1191937          584994          588660
+   15        1195957          588920          606138
+  Avg        1193991          587051          459995
+  Min        1180792          573928          356570
+  Max        1197349          590423          606138
+
+
+                 TIMING INFORMATION
+Start time                        : 1415131638979986
+Initialization finish time        : 1415131644623707
+Overall finish time               : 1415131645820952
+Total time with initialization    :          6840966
+Total time without initialization :          1197245
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n115500000 -r8 -m7 -s':
+
+   178,305,999,327 cycles                    #    0.000 GHz                     [49.97%]
+    55,432,522,571 instructions              #    0.31  insns per cycle         [50.03%]
+     9,976,828,484 cache-references                                             [50.10%]
+        20,085,856 cache-misses              #    0.201 % of all cache refs     [50.08%]
+     1,849,319,146 branches                                                     [50.02%]
+        13,148,093 branch-misses             #    0.71% of all branches         [49.95%]
+           463,122 page-faults                                                 
+
+       7.217196815 seconds time elapsed
+
+
+Integer Radix Sort
+     115500000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        1036685          657246          322276
+    1        1041391          661996          300309
+    2        1047915          668668          373731
+    3        1044958          665689          378604
+    4        1047985          668700          292925
+    5        1045262          665918          295206
+    6        1047963          668585          297244
+    7        1048051          668607          301356
+    8        1047854          668661          293070
+    9        1036546          657233          293099
+   10        1041322          662075          292365
+   11        1047998          668731          292713
+   12        1036632          657115          326666
+   13        1048144          668680          304319
+   14        1048027          668513          298082
+   15        1048055          668428          308030
+  Avg        1044674          665303          310625
+  Min        1036546          657115          292365
+  Max        1048144          668731          378604
+
+
+                 TIMING INFORMATION
+Start time                        : 1415131646214590
+Initialization finish time        : 1415131651713659
+Overall finish time               : 1415131652750344
+Total time with initialization    :          6535754
+Total time without initialization :          1036685
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n115500000 -r8 -m7 -s':
+
+   176,541,354,245 cycles                    #    0.000 GHz                     [50.08%]
+    54,460,842,176 instructions              #    0.31  insns per cycle         [50.03%]
+     9,644,174,317 cache-references                                             [49.97%]
+        10,057,141 cache-misses              #    0.104 % of all cache refs     [49.96%]
+     1,641,332,818 branches                                                     [50.01%]
+         5,893,013 branch-misses             #    0.36% of all branches         [50.08%]
+           457,350 page-faults                                                 
+
+       6.918805567 seconds time elapsed
+
+
+Integer Radix Sort
+     115500000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        1326134          639404          396765
+    1        1345893          659235          380702
+    2        1334821          647736          599406
+    3        1346255          659207          560799
+    4        1352828          665757          577605
+    5        1346359          659215          632539
+    6        1350365          663159          670386
+    7        1350229          663086          632012
+    8        1334860          647708          667076
+    9        1350183          663154          458320
+   10        1350448          663297          654830
+   11        1352502          665732          394346
+   12        1349879          663128          672199
+   13        1349995          663183          390149
+   14        1352453          665534          393845
+   15        1352375          665467          686088
+  Avg        1346599          659625          547942
+  Min        1326134          639404          380702
+  Max        1352828          665757          686088
+
+
+                 TIMING INFORMATION
+Start time                        : 1415131653151383
+Initialization finish time        : 1415131658704866
+Overall finish time               : 1415131660031000
+Total time with initialization    :          6879617
+Total time without initialization :          1326134
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n115500000 -r8 -m7 -s':
+
+   182,437,174,471 cycles                    #    0.000 GHz                     [50.03%]
+    55,951,665,130 instructions              #    0.31  insns per cycle         [50.05%]
+    10,135,491,633 cache-references                                             [50.06%]
+        24,993,594 cache-misses              #    0.247 % of all cache refs     [50.04%]
+     1,932,612,530 branches                                                     [50.00%]
+        17,218,909 branch-misses             #    0.89% of all branches         [49.97%]
+           466,454 page-faults                                                 
+
+       7.274440669 seconds time elapsed
+
+
+Integer Radix Sort
+     115500000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        1200135          666433          361065
+    1        1200123          666466          344686
+    2        1207908          674265          337623
+    3        1200170          666710          325170
+    4        1204175          670802          316200
+    5        1199799          666773          478473
+    6        1200371          666779          337048
+    7        1204259          670803          332233
+    8        1195732          662708          523272
+    9        1207469          674210          311504
+   10        1200374          666728          332927
+   11        1204333          670702          340387
+   12        1203841          670716          312875
+   13        1207706          674226          328416
+   14        1207355          674103          317467
+   15        1204561          670664          360064
+  Avg        1203019          669568          353713
+  Min        1195732          662708          311504
+  Max        1207908          674265          523272
+
+
+                 TIMING INFORMATION
+Start time                        : 1415131660444354
+Initialization finish time        : 1415131666101246
+Overall finish time               : 1415131667301381
+Total time with initialization    :          6857027
+Total time without initialization :          1200135
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n115500000 -r8 -m7 -s':
+
+   177,515,953,941 cycles                    #    0.000 GHz                     [50.00%]
+    54,974,011,304 instructions              #    0.31  insns per cycle         [50.02%]
+     9,787,336,298 cache-references                                             [50.08%]
+        13,708,778 cache-misses              #    0.140 % of all cache refs     [50.04%]
+     1,757,756,855 branches                                                     [50.03%]
+         8,663,612 branch-misses             #    0.49% of all branches         [49.98%]
+           465,380 page-faults                                                 
+
+       7.228488546 seconds time elapsed
+

@@ -1,0 +1,128 @@
+Sysconf CALL: 4096
+Particle array: 64e0a000
+rc: 0
+Creating a two cluster, non uniform distribution for 9200000 particles
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Starting FMM with 16 processors
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0     84885514     1544108     1219849      979393     7122664    67532818     3576444     1297427     1612712
+
+                                   TIMING INFORMATION
+Start time                        : 1413787816153535
+Initialization finish time        : 1413787921148217
+Overall finish time               : 1413788006033730
+Total time with initialization    :        189880195
+Total time without initialization :         85171628
+
+Total time for steps 3 to 5 :     85171628
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/fmm/FMM':
+
+ 3,944,576,022,497 cycles                    #    0.000 GHz                     [49.99%]
+ 4,468,995,417,679 instructions              #    1.13  insns per cycle         [49.99%]
+   941,228,992,704 cache-references                                             [50.01%]
+       164,181,554 cache-misses              #    0.017 % of all cache refs     [50.01%]
+   155,008,360,778 branches                                                     [50.01%]
+     3,826,430,520 branch-misses             #    2.47% of all branches         [50.00%]
+
+     192.869804721 seconds time elapsed
+
+Sysconf CALL: 4096
+Particle array: b5b5b000
+rc: 0
+Creating a two cluster, non uniform distribution for 9200000 particles
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Starting FMM with 16 processors
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0     85152902     1425573     1215979      946220     6977000    67529475     4009532     1288227     1760845
+
+                                   TIMING INFORMATION
+Start time                        : 1413788009048353
+Initialization finish time        : 1413788119643823
+Overall finish time               : 1413788204796725
+Total time with initialization    :        195748372
+Total time without initialization :         85179264
+
+Total time for steps 3 to 5 :     85179264
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/fmm/FMM':
+
+ 3,953,168,849,552 cycles                    #    0.000 GHz                     [50.00%]
+ 4,478,077,399,076 instructions              #    1.13  insns per cycle         [49.99%]
+   943,983,558,202 cache-references                                             [49.98%]
+       185,207,713 cache-misses              #    0.020 % of all cache refs     [50.00%]
+   156,476,840,844 branches                                                     [50.02%]
+     3,829,545,281 branch-misses             #    2.45% of all branches         [50.02%]
+
+     198.734149705 seconds time elapsed
+
+Sysconf CALL: 4096
+Particle array: dffa8000
+rc: 0
+Creating a two cluster, non uniform distribution for 9200000 particles
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Starting FMM with 16 processors
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0     83993899     1485877     1247290      945876     7178370    67773297     2898636     1110891     1353589
+
+                                   TIMING INFORMATION
+Start time                        : 1413788207807749
+Initialization finish time        : 1413788318781597
+Overall finish time               : 1413788402775492
+Total time with initialization    :        194967743
+Total time without initialization :         84144771
+
+Total time for steps 3 to 5 :     84144771
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/fmm/FMM':
+
+ 3,933,210,469,441 cycles                    #    0.000 GHz                     [50.00%]
+ 4,476,560,517,723 instructions              #    1.14  insns per cycle         [50.00%]
+   943,384,817,120 cache-references                                             [50.01%]
+       160,432,753 cache-misses              #    0.017 % of all cache refs     [50.00%]
+   156,411,459,684 branches                                                     [50.00%]
+     3,856,439,966 branch-misses             #    2.47% of all branches         [49.99%]
+
+     198.062214983 seconds time elapsed
+
+Sysconf CALL: 4096
+Particle array: be540000
+rc: 0
+Creating a two cluster, non uniform distribution for 9200000 particles
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Starting FMM with 16 processors
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0     84201435     1519843     1270622     1000033     7132277    67774735     2518128     1248919     1736812
+
+                                   TIMING INFORMATION
+Start time                        : 1413788405891282
+Initialization finish time        : 1413788511557265
+Overall finish time               : 1413788595758699
+Total time with initialization    :        189867417
+Total time without initialization :         84265902
+
+Total time for steps 3 to 5 :     84265902
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/fmm/FMM':
+
+ 3,942,143,378,894 cycles                    #    0.000 GHz                     [50.00%]
+ 4,473,516,372,470 instructions              #    1.13  insns per cycle         [50.01%]
+   942,484,862,236 cache-references                                             [50.01%]
+       154,313,325 cache-misses              #    0.016 % of all cache refs     [50.00%]
+   155,759,531,317 branches                                                     [49.99%]
+     3,847,993,496 branch-misses             #    2.47% of all branches         [49.99%]
+
+     192.942611897 seconds time elapsed
+

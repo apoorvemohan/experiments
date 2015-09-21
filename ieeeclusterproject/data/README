@@ -1,0 +1,116 @@
+1. Below is the data format for all valid applications. A separate xml is to be placed for an app instace in the below format. Name of the xml should correspond with the ID of that xml.
+
+1.xml
+
+<APPDATA ID='1' NAME='RADIX'>
+	<THREADS>2</THREADS>
+	<BASE>16</BASE>
+	<KEYS>234349835</KEYS>
+	<MAXVAL>7</MAXVAL>
+</APPDATA>
+
+2.xml
+
+<APPDATA ID='2' NAME='LUC'>
+	<MATRIXSIZE>4096</MATRIXSIZE>
+	<THREADS>8</THREADS>
+	<BLOCKSIZE>16</BLOCKSIZE>
+</APPDATA>
+
+3.xml
+
+<APPDATA ID='3' NAME='LUNC'>
+        <MATRIXSIZE>4096</MATRIXSIZE>
+        <THREADS>4</THREADS>
+        <BLOCKSIZE>8</BLOCKSIZE>
+</APPDATA>
+
+52.xml
+
+<APPDATA ID='52' NAME='FMM'>
+	<CLUSTERTYPE></CLUSTERTYPE>
+	<DISTRIBUTIONTYPE></DISTRIBUTIONTYPE>
+	<PARTICLES></PARTICLES>
+	<PRECISION></PRECISION>
+	<THREADS></THREADS>
+	<TIMESTEPS></TIMESTEPS>
+	<STEPSURATION></STEPSURATION>
+	<SOFTPARAM></SOFTPARAM>
+	<PARTSCHEME></PARTSCHEME>
+</APPDATA>
+
+20.xml
+
+<APPDATA ID='20' NAME='OCEANC'>
+	<GRIDSIZE></GRIDSIZE>
+	<THREADS></THREADS>
+	<TOLERANCE></TOLERANCE>
+	<DISTANCE></DISTANCE>
+	<TIMESTEPS></TIMESTEPS>
+</APPDATA>
+
+6.xml
+
+<APPDATA ID='6' NAME='OCEANNC'>
+        <GRIDSIZE></GRIDSIZE>
+        <THREADS></THREADS>
+        <TOLERANCE></TOLERANCE>
+        <DISTANCE></DISTANCE>
+        <TIMESTEPS></TIMESTEPS>
+</APPDATA>
+
+74.xml
+
+<APPDATA ID='74' NAME='WATERNSQUARED'>
+	<TSTEP></TSTEP>
+	<NMOL></NMOL>
+	<NSTEP></NSTEP>
+	<NORDER></NORDER>
+	<NSAVE></NSAVE>
+	<NRST></NRST>
+	<NPRINT></NPRINT>
+	<NFMC></NFMC>
+	<THREADS></THREADS>
+	<CUTOFF></CUTOFF>
+</APPDATA>
+
+8.xml
+
+<APPDATA ID='8' NAME='PROBEBLOCKED'>
+	<GRIDX>512</GRIDX>
+	<GRIDY>512</GRIDY>
+	<GRIDZ>512</GRIDZ>
+	<BLOCKX>8</BLOCKX>
+	<BLOCKY>8</BLOCKY>
+	<BLOCKZ>8</BLOCKZ>
+	<TIMESTEPS>4</TIMESTEPS>
+</APPDATA>
+
+9.xml     
+
+<APPDATA ID='9' NAME='PROBEOBLIVIOUS'>
+        <GRIDX>512</GRIDX>
+        <GRIDY>512</GRIDY>
+        <GRIDZ>512</GRIDZ>
+        <BLOCKX>4</BLOCKX>
+        <BLOCKY>4</BLOCKY>
+        <BLOCKZ>4</BLOCKZ>
+        <TIMESTEPS>2</TIMESTEPS>
+</APPDATA>
+
+2. Below is the format for the groups of application to be run parallely. No group can have same instace of application repeated. Name of the group should correspond with the group ID.
+
+G1.xml
+
+<GROUP ID='G1'>
+	<APP>1</APP>
+	<APP>2</APP>
+	<APP>3</APP>
+</GROUP>
+
+G2.xml
+
+<GROUP ID='G2'>
+	<APP>2</APP>
+	<APP>4</APP>
+</GROUP>

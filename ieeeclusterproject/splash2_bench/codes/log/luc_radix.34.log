@@ -1,0 +1,522 @@
+
+Integer Radix Sort
+     2147483647 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       59233827        22686490        31306049
+    1       59163780        22616585        25604767
+    2       59171531        22623831        35451469
+    3       59167446        22619751        35286193
+    4       59183267        22635798        33694060
+    5       59195358        22647840        34004791
+    6       59207051        22659740        29450436
+    7       59191266        22643794        32896131
+    8       59180183        22632701        31644818
+    9       59183081        22635722        28637502
+   10       59175466        22627725        35065484
+   11       59186824        22639663        21462601
+   12       59155544        22607699        36538444
+   13       59207366        22659637        34740409
+   14       59159064        22611757        27357967
+   15       59199385        22651681        34143192
+  Avg       59185027        22637526        31705270
+  Min       59155544        22607699        21462601
+  Max       59233827        22686490        36538444
+
+
+                 TIMING INFORMATION
+Start time                        : 1414032235161363
+Initialization finish time        : 1414032857318115
+Overall finish time               : 1414032916551942
+Total time with initialization    :        681390579
+Total time without initialization :         59233827
+
+
+                  TESTING RESULTS
+PASSED: All keys in place.
+
+
+Integer Radix Sort
+     2147483647 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       61110627        24178873        30426588
+    1       61044523        24112524        31546453
+    2       61112190        24179998        32368783
+    3       61084049        24151616        36307155
+    4       61032138        24100351        30527361
+    5       61096198        24163768        36100316
+    6       61076199        24156365        23530197
+    7       61024528        24092359        32386122
+    8       61084437        24175338        27259148
+    9       61045762        24124597        31838313
+   10       61093222        24171923        34515296
+   11       61045319        24124650        36906383
+   12       61028346        24096344        31228231
+   13       61104744        24172330        35339034
+   14       61080455        24160302        27566057
+   15       61023533        24103472        26252416
+  Avg       61067892        24141551        31506116
+  Min       61023533        24092359        23530197
+  Max       61112190        24179998        36906383
+
+
+                 TIMING INFORMATION
+Start time                        : 1414032235161344
+Initialization finish time        : 1414032867306282
+Overall finish time               : 1414032928416909
+Total time with initialization    :        693255565
+Total time without initialization :         61110627
+
+
+                  TESTING RESULTS
+PASSED: All keys in place.
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/radix/RADIX -p16 -r8 -n2147483647 -m7 -s -t':
+
+ 3,276,964,485,008 cycles                    #    0.000 GHz                     [50.00%]
+ 1,099,511,730,647 instructions              #    0.34  insns per cycle         [50.00%]
+   199,158,051,316 cache-references                                             [50.00%]
+       182,546,445 cache-misses              #    0.092 % of all cache refs     [50.00%]
+    45,284,336,344 branches                                                     [50.01%]
+       125,806,272 branch-misses             #    0.28% of all branches         [50.00%]
+
+     799.338162677 seconds time elapsed
+
+
+Integer Radix Sort
+     2147483647 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       56720138        24691326        28043801
+    1       56732675        24703356        30784783
+    2       56773897        24744789        28512653
+    3       56700011        24671295        31989156
+    4       56712697        24683345        31372202
+    5       56739980        24711222        27254262
+    6       56704380        24675259        28406679
+    7       56729671        24711171        22585534
+    8       56712724        24683314        31575533
+    9       56709936        24691252        26612108
+   10       56729879        24711268        26182786
+   11       56724623        24695311        29399480
+   12       56692222        24663327        28088210
+   13       56724387        24695299        28145307
+   14       56693905        24675275        25943809
+   15       56724432        24695234        29058252
+  Avg       56720347        24693878        28372160
+  Min       56692222        24663327        22585534
+  Max       56773897        24744789        31989156
+
+
+                 TIMING INFORMATION
+Start time                        : 1414032235159904
+Initialization finish time        : 1414032874964805
+Overall finish time               : 1414032931684943
+Total time with initialization    :        696525039
+Total time without initialization :         56720138
+
+
+                  TESTING RESULTS
+PASSED: All keys in place.
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/radix/RADIX -p16 -r8 -n2147483647 -m7 -s -t':
+
+ 3,277,499,158,930 cycles                    #    0.000 GHz                     [50.01%]
+ 1,100,799,349,320 instructions              #    0.34  insns per cycle         [50.01%]
+   199,453,907,325 cache-references                                             [49.99%]
+       184,339,679 cache-misses              #    0.092 % of all cache refs     [49.99%]
+    45,532,900,972 branches                                                     [49.99%]
+       127,980,302 branch-misses             #    0.28% of all branches         [50.01%]
+
+     815.251487574 seconds time elapsed
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/radix/RADIX -p16 -r8 -n2147483647 -m7 -s -t':
+
+ 3,268,615,182,641 cycles                    #    0.000 GHz                     [50.01%]
+ 1,097,969,908,835 instructions              #    0.34  insns per cycle         [50.00%]
+   198,670,876,375 cache-references                                             [49.99%]
+       183,266,612 cache-misses              #    0.092 % of all cache refs     [50.00%]
+    44,940,139,068 branches                                                     [50.00%]
+       127,874,149 branch-misses             #    0.28% of all branches         [50.01%]
+
+     820.303074603 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     8032 by 8032 Matrix
+     16 Processors
+     8 by 8 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    1401061348           671        343786     818450668     582265473
+    1    1401061376           201        441303     820620609     579998019
+    2    1401061638           713        384059     805535467     595140147
+    3    1401061402           175        474014     808628901     591957052
+    4    1401061583           667        614159     818828357     581617111
+    5    1401061323           173        376743     829928457     570754695
+    6    1401061447           678        368002     841301377     559390115
+    7    1401061444           190        406289     820472135     580181567
+    8    1401061518           727        435532     800773751     599850210
+    9    1401061545           160        383241     801863508     598813363
+   10    1401061383           700        392329     813450065     587217035
+   11    1401061503           187        375162     815542596     585142329
+   12    1401061673           749        436571     815738217     584884783
+   13    1401061345           169        423099     797239621     603397174
+   14    1401061609           748        388273     853344874     547326396
+   15    1401061340           177        368056     815768255     584923542
+  Avg    1401061467           443        413164     817342929     583303688
+  Min    1401061323           160        343786     797239621     547326396
+  Max    1401061673           749        614159     853344874     603397174
+
+                            TIMING INFORMATION
+Start time                        : 1414032235157091
+Initialization finish time        : 1414032286892206
+Overall finish time               : 1414033687954139
+Total time with initialization    :       1452797048
+Total time without initialization :       1401061933
+
+                             TESTING RESULTS
+TEST PASSED
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/contiguous_blocks/LU -n8032 -p16 -b8 -c -s -t':
+
+ 4,534,602,417,881 cycles                    #    0.000 GHz                     [50.00%]
+ 4,860,549,114,750 instructions              #    1.07  insns per cycle         [49.99%]
+ 1,048,090,333,223 cache-references                                             [50.01%]
+       178,003,657 cache-misses              #    0.017 % of all cache refs     [50.00%]
+   320,991,360,277 branches                                                     [50.02%]
+     3,959,398,680 branch-misses             #    1.23% of all branches         [49.99%]
+
+    1462.743043535 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     8032 by 8032 Matrix
+     16 Processors
+     8 by 8 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    1403279210           691        347400     860919868     542010396
+    1    1403279205           188        442123     839759737     563075982
+    2    1403279207           684        416272     843511956     559349159
+    3    1403278998           190        459422     836069350     566748943
+    4    1403279207           781        361702     831641985     571273650
+    5    1403279121           185        399973     848475959     554401896
+    6    1403279162           702        386706     827507713     575382943
+    7    1403279084           154        355082     867044710     535829484
+    8    1403279117           698        414652     832043916     570818713
+    9    1403279319           174        357625     840177833     562742574
+   10    1403279085           755        482182     830240881     572554170
+   11    1403216435           175        401008     841789308     561024744
+   12    1403216401           704        383902     830261070     572569617
+   13    1403279244           160        482461     813910552     588884866
+   14    1403216448           673        435194     826416449     576363011
+   15    1403279151           299        504886     802629628     600143156
+  Avg    1403267400           451        414412     835775057     567073332
+  Min    1403216401           154        347400     802629628     535829484
+  Max    1403279319           781        504886     867044710     600143156
+
+                            TIMING INFORMATION
+Start time                        : 1414032235156163
+Initialization finish time        : 1414032285370751
+Overall finish time               : 1414033688650424
+Total time with initialization    :       1453494261
+Total time without initialization :       1403279673
+
+                             TESTING RESULTS
+TEST PASSED
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/contiguous_blocks/LU -n8032 -p16 -b8 -c -s -t':
+
+ 4,529,853,700,089 cycles                    #    0.000 GHz                     [50.00%]
+ 4,858,890,891,094 instructions              #    1.07  insns per cycle         [49.97%]
+ 1,047,551,534,762 cache-references                                             [49.99%]
+       172,375,437 cache-misses              #    0.016 % of all cache refs     [50.00%]
+   320,687,475,648 branches                                                     [50.03%]
+     3,955,454,772 branch-misses             #    1.23% of all branches         [50.01%]
+
+    1463.484192315 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     8032 by 8032 Matrix
+     16 Processors
+     8 by 8 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    1396771709           727        354288     811844878     584570913
+    1    1396771941           189        370806     828668192     567731612
+    2    1396771804           698        538503     820690947     575488543
+    3    1396771808           179        492965     838658951     557618561
+    4    1396771901           717        476263     838930550     557363201
+    5    1396771911           175        442607     803231691     593096245
+    6    1396771876           706        458474     819700892     576610579
+    7    1396771910           173        409705     806924095     589436681
+    8    1396771982           692        443833     815975407     580350742
+    9    1396771901           177        677517     839911479     556181496
+   10    1396771741           709        412668     824119500     572237635
+   11    1396771907           190        522789     788915299     607308330
+   12    1396771723           724        350486     785096494     611322780
+   13    1396771801           179        417332     823504920     572848098
+   14    1396771833           687        488335     807695308     588511638
+   15    1396772014           185        581636     817824025     578364984
+  Avg    1396771860           444        464888     816980789     579315127
+  Min    1396771709           173        350486     785096494     556181496
+  Max    1396772014           727        677517     839911479     611322780
+
+                            TIMING INFORMATION
+Start time                        : 1414032235162101
+Initialization finish time        : 1414032295817779
+Overall finish time               : 1414033692590131
+Total time with initialization    :       1457428030
+Total time without initialization :       1396772352
+
+                             TESTING RESULTS
+TEST PASSED
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/contiguous_blocks/LU -n8032 -p16 -b8 -c -s -t':
+
+ 4,531,953,561,284 cycles                    #    0.000 GHz                     [49.99%]
+ 4,859,565,413,018 instructions              #    1.07  insns per cycle         [50.02%]
+ 1,047,749,240,157 cache-references                                             [50.02%]
+       173,279,690 cache-misses              #    0.017 % of all cache refs     [50.01%]
+   320,784,253,275 branches                                                     [49.98%]
+     3,961,975,545 branch-misses             #    1.24% of all branches         [49.98%]
+
+    1466.132324562 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     8032 by 8032 Matrix
+     16 Processors
+     8 by 8 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    1402626772           757        402816     823812985     578409429
+    1    1402626658           183        405051     813709560     588494723
+    2    1402626593           682        367264     838951153     563306425
+    3    1402626774           200        366113     844436397     557822968
+    4    1402626676           709        401487     807932262     594291126
+    5    1402626840           196        397331     818565831     583662379
+    6    1402626573           694        445629     809945703     592233398
+    7    1402626566           170        337162     811904580     590349476
+    8    1402626607           705        401643     814978807     587216179
+    9    1402626624           193        365773     822050145     580209334
+   10    1402626600           950        426354     805324103     596873990
+   11    1402626514           189        629776     829154861     572840476
+   12    1402626504           722        446695     822095613     580082298
+   13    1402626612           197        385528     822016259     580223458
+   14    1402626616           695        343761     820426763     581854200
+   15    1402626596           182        370807     817875683     584364690
+  Avg    1402626633           464        405824     820198794     582014659
+  Min    1402626504           170        337162     805324103     557822968
+  Max    1402626840           950        629776     844436397     596873990
+
+                            TIMING INFORMATION
+Start time                        : 1414032235158752
+Initialization finish time        : 1414032291542664
+Overall finish time               : 1414033694170006
+Total time with initialization    :       1459011254
+Total time without initialization :       1402627342
+
+                             TESTING RESULTS
+TEST PASSED
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/contiguous_blocks/LU -n8032 -p16 -b8 -c -s -t':
+
+ 4,532,715,025,823 cycles                    #    0.000 GHz                     [50.00%]
+ 4,859,107,807,917 instructions              #    1.07  insns per cycle         [50.02%]
+ 1,047,675,026,260 cache-references                                             [50.01%]
+       172,952,004 cache-misses              #    0.017 % of all cache refs     [50.01%]
+   320,739,842,512 branches                                                     [49.99%]
+     3,953,453,472 branch-misses             #    1.23% of all branches         [49.99%]
+
+    1467.448160194 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     8032 by 8032 Matrix
+     16 Processors
+     8 by 8 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    1373622034           701        427751     806507873     566684987
+    1    1373622163           158        511748     799454709     573654313
+    2    1373622139           701        375222     813875763     559369179
+    3    1373622047           173        445462     801111375     572062797
+    4    1373622198           787        454472     794835220     578330577
+    5    1373622316           182        373151     810118620     563129160
+    6    1373621985           739        368068     811048217     562203776
+    7    1373622195           162        423985     826123140     547073693
+    8    1373622213          1268        432597     788271303     584915827
+    9    1373622109           164        360991     818273117     554986615
+   10    1373622011           721        732267     802552824     570334989
+   11    1373622022           192        449416     825303029     547868137
+   12    1373622093          1249        532687     817608310     555478566
+   13    1373621980           170        376236     776320071     596924220
+   14    1373622220           690        364007     798924801     574331517
+   15    1373622087           190        419913     797954706     575246027
+  Avg    1373622113           515        440498     805517692     567662149
+  Min    1373621980           158        360991     776320071     547073693
+  Max    1373622316          1268        732267     826123140     596924220
+
+                            TIMING INFORMATION
+Start time                        : 1414032235155472
+Initialization finish time        : 1414032322372586
+Overall finish time               : 1414033695995417
+Total time with initialization    :       1460839945
+Total time without initialization :       1373622831
+
+                             TESTING RESULTS
+TEST PASSED
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/contiguous_blocks/LU -n8032 -p16 -b8 -c -s -t':
+
+ 4,537,450,493,013 cycles                    #    0.000 GHz                     [50.00%]
+ 4,859,893,214,848 instructions              #    1.07  insns per cycle         [49.98%]
+ 1,047,869,782,578 cache-references                                             [49.98%]
+       177,435,113 cache-misses              #    0.017 % of all cache refs     [50.00%]
+   320,937,286,028 branches                                                     [50.02%]
+     3,962,585,761 branch-misses             #    1.23% of all branches         [50.02%]
+
+    1469.298541832 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     8032 by 8032 Matrix
+     16 Processors
+     8 by 8 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    1377812164           768        440554     800846914     576523063
+    1    1377812142           170        363493     820248969     557198220
+    2    1377812018           707        769004     790206491     586750519
+    3    1377812227           188        416358     796747722     580646708
+    4    1377812221           766        401067     826873687     550535396
+    5    1377812221           205        414722     817866601     559529476
+    6    1377812048           723        406222     815238414     562165419
+    7    1377812201           203        356846     819723001     557730893
+    8    1377812276         92777        431838     810475953     566810432
+    9    1377812092           173        398100     812275140     565137390
+   10    1377812150           771        455240     794853504     582501374
+   11    1377812343           189        442882     780329529     597038473
+   12    1377812177           785        457091     839684092     537668965
+   13    1377812130           184        370275     793113332     584327116
+   14    1377812199           706        385727     815673046     561748249
+   15    1377812304           190        385439     830708368     546717083
+  Avg    1377812182          6219        430929     810304048     567064298
+  Min    1377812018           170        356846     780329529     537668965
+  Max    1377812343         92777        769004     839684092     597038473
+
+                            TIMING INFORMATION
+Start time                        : 1414032235158311
+Initialization finish time        : 1414032318629851
+Overall finish time               : 1414033696442472
+Total time with initialization    :       1461284161
+Total time without initialization :       1377812621
+
+                             TESTING RESULTS
+TEST PASSED
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/contiguous_blocks/LU -n8032 -p16 -b8 -c -s -t':
+
+ 4,536,142,442,717 cycles                    #    0.000 GHz                     [50.00%]
+ 4,860,995,191,919 instructions              #    1.07  insns per cycle         [49.98%]
+ 1,048,256,532,324 cache-references                                             [50.00%]
+       181,503,950 cache-misses              #    0.017 % of all cache refs     [50.00%]
+   321,069,436,397 branches                                                     [50.02%]
+     3,965,312,345 branch-misses             #    1.24% of all branches         [50.00%]
+
+    1469.663956537 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     8032 by 8032 Matrix
+     16 Processors
+     8 by 8 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    1375447564           717        369970     824616432     550459582
+    1    1375447513           194        549983     792378380     582517739
+    2    1375447498           712        558775     825452450     549434361
+    3    1375447617           196        359006     814488293     560598930
+    4    1375447521           687        377913     795991931     579075786
+    5    1375447536           169        463742     788046535     586935856
+    6    1375447608           689        375921     813764621     561305128
+    7    1375447778           180        495611     810778342     564172410
+    8    1375447535           776        426384     813217235     561801919
+    9    1375447582           168        420144     802271499     572754518
+   10    1375447666           761        498948     801535274     573411475
+   11    1375447613           199        364417     802304162     572677543
+   12    1375447621           750        434824     809355342     565655451
+   13    1375447697           201        539595     839687222     535219459
+   14    1375447539           724        370183     804410367     570665043
+   15    1375447626           154        457785     785016738     589971762
+  Avg    1375447595           455        441450     807707176     567291060
+  Min    1375447498           154        359006     785016738     535219459
+  Max    1375447778           776        558775     839687222     589971762
+
+                            TIMING INFORMATION
+Start time                        : 1414032235154215
+Initialization finish time        : 1414032321064982
+Overall finish time               : 1414033696517042
+Total time with initialization    :       1461362827
+Total time without initialization :       1375452060
+
+                             TESTING RESULTS
+TEST PASSED
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/contiguous_blocks/LU -n8032 -p16 -b8 -c -s -t':
+
+ 4,532,944,149,451 cycles                    #    0.000 GHz                     [50.01%]
+ 4,860,138,681,765 instructions              #    1.07  insns per cycle         [50.00%]
+ 1,048,058,333,981 cache-references                                             [50.00%]
+       177,929,504 cache-misses              #    0.017 % of all cache refs     [49.99%]
+   320,914,864,306 branches                                                     [50.00%]
+     3,964,131,530 branch-misses             #    1.24% of all branches         [50.01%]
+
+    1470.053500875 seconds time elapsed
+

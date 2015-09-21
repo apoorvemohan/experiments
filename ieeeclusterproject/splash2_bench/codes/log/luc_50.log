@@ -1,0 +1,1800 @@
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    3985245829          1213        386920    3368574736     616282556
+
+                            TIMING INFORMATION
+Start time                        : 1414118902237863
+Initialization finish time        : 1414118928851387
+Overall finish time               : 1414122914097550
+Total time with initialization    :       4011859687
+Total time without initialization :       3985246163
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    3987773631          1235       1465169    3404557226     581593550
+
+                            TIMING INFORMATION
+Start time                        : 1414118902201778
+Initialization finish time        : 1414118926807397
+Overall finish time               : 1414122914581638
+Total time with initialization    :       4012379860
+Total time without initialization :       3987774241
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1305550.860272 task-clock                #    0.325 CPUs utilized          
+           348,328 context-switches          #    0.267 K/sec                  
+           219,581 cpu-migrations            #    0.168 K/sec                  
+         2,264,162 page-faults               #    0.002 M/sec                  
+ 2,341,711,272,256 cycles                    #    1.794 GHz                     [49.99%]
+    63,831,779,628 stalled-cycles-frontend   #    2.73% frontend cycles idle    [49.98%]
+ 1,311,823,304,081 stalled-cycles-backend    #   56.02% backend  cycles idle    [49.99%]
+ 2,318,000,537,524 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.02%]
+   131,338,041,278 branches                  #  100.600 M/sec                   [50.02%]
+     6,577,118,200 branch-misses             #    5.01% of all branches         [50.01%]
+
+    4012.500486710 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    3990097570          1185        857040    3428819473     560419461
+
+                            TIMING INFORMATION
+Start time                        : 1414118902187884
+Initialization finish time        : 1414118924809131
+Overall finish time               : 1414122914907068
+Total time with initialization    :       4012719184
+Total time without initialization :       3990097937
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1304985.478744 task-clock                #    0.325 CPUs utilized          
+           348,865 context-switches          #    0.267 K/sec                  
+           216,582 cpu-migrations            #    0.166 K/sec                  
+         2,126,479 page-faults               #    0.002 M/sec                  
+ 2,340,719,246,408 cycles                    #    1.794 GHz                     [50.05%]
+    63,475,476,801 stalled-cycles-frontend   #    2.71% frontend cycles idle    [49.98%]
+ 1,311,599,713,504 stalled-cycles-backend    #   56.03% backend  cycles idle    [49.96%]
+ 2,317,401,223,172 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [49.96%]
+   131,207,296,597 branches                  #  100.543 M/sec                   [50.03%]
+     6,547,489,496 branch-misses             #    4.99% of all branches         [50.04%]
+
+    4014.803989872 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    3989726090          1205        661861    3432952903     556109347
+
+                            TIMING INFORMATION
+Start time                        : 1414118902228223
+Initialization finish time        : 1414118927850683
+Overall finish time               : 1414122917577376
+Total time with initialization    :       4015349153
+Total time without initialization :       3989726693
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1309253.123993 task-clock                #    0.326 CPUs utilized          
+           348,771 context-switches          #    0.266 K/sec                  
+           215,343 cpu-migrations            #    0.164 K/sec                  
+         2,122,006 page-faults               #    0.002 M/sec                  
+ 2,348,276,829,152 cycles                    #    1.794 GHz                     [50.02%]
+    63,738,587,796 stalled-cycles-frontend   #    2.71% frontend cycles idle    [49.99%]
+ 1,318,810,441,359 stalled-cycles-backend    #   56.16% backend  cycles idle    [50.00%]
+ 2,317,635,303,334 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [49.99%]
+   131,254,465,955 branches                  #  100.251 M/sec                   [50.01%]
+     6,578,253,715 branch-misses             #    5.01% of all branches         [50.01%]
+
+    4015.587456311 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    3992158249          1197        405974    3425338131     566412264
+
+                            TIMING INFORMATION
+Start time                        : 1414118902275066
+Initialization finish time        : 1414118928376451
+Overall finish time               : 1414122920535331
+Total time with initialization    :       4018260265
+Total time without initialization :       3992158880
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1305596.592051 task-clock                #    0.325 CPUs utilized          
+           348,820 context-switches          #    0.267 K/sec                  
+           219,450 cpu-migrations            #    0.168 K/sec                  
+         2,226,673 page-faults               #    0.002 M/sec                  
+ 2,341,735,055,178 cycles                    #    1.794 GHz                     [50.00%]
+    63,837,786,140 stalled-cycles-frontend   #    2.73% frontend cycles idle    [49.97%]
+ 1,312,270,132,871 stalled-cycles-backend    #   56.04% backend  cycles idle    [49.97%]
+ 2,317,689,917,940 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.01%]
+   131,265,161,804 branches                  #  100.540 M/sec                   [50.03%]
+     6,548,358,485 branch-misses             #    4.99% of all branches         [50.03%]
+
+    4018.645526285 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1308924.349046 task-clock                #    0.325 CPUs utilized          
+           349,766 context-switches          #    0.267 K/sec                  
+           217,656 cpu-migrations            #    0.166 K/sec                  
+         1,846,260 page-faults               #    0.001 M/sec                  
+ 2,347,704,417,167 cycles                    #    1.794 GHz                     [50.02%]
+    63,389,681,885 stalled-cycles-frontend   #    2.70% frontend cycles idle    [50.01%]
+ 1,319,081,116,185 stalled-cycles-backend    #   56.19% backend  cycles idle    [49.96%]
+ 2,317,005,116,321 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [49.98%]
+   131,146,701,885 branches                  #  100.194 M/sec                   [50.00%]
+     6,550,984,648 branch-misses             #    5.00% of all branches         [50.04%]
+
+    4021.663724837 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4000549600          1214       1796828    3434310545     564440180
+
+                            TIMING INFORMATION
+Start time                        : 1414118902276890
+Initialization finish time        : 1414118926326597
+Overall finish time               : 1414122926876940
+Total time with initialization    :       4024600050
+Total time without initialization :       4000550343
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1306432.548962 task-clock                #    0.324 CPUs utilized          
+           349,000 context-switches          #    0.267 K/sec                  
+           217,038 cpu-migrations            #    0.166 K/sec                  
+         2,382,206 page-faults               #    0.002 M/sec                  
+ 2,343,209,146,660 cycles                    #    1.794 GHz                     [50.02%]
+    63,701,956,623 stalled-cycles-frontend   #    2.72% frontend cycles idle    [50.03%]
+ 1,313,453,208,196 stalled-cycles-backend    #   56.05% backend  cycles idle    [49.99%]
+ 2,318,403,325,612 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [49.98%]
+   131,375,786,872 branches                  #  100.561 M/sec                   [49.98%]
+     6,556,367,523 branch-misses             #    4.99% of all branches         [50.02%]
+
+    4026.298062780 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4007839071        137280       1338274    3371671454     634691657
+
+                            TIMING INFORMATION
+Start time                        : 1414118902342637
+Initialization finish time        : 1414118925069428
+Overall finish time               : 1414122932909254
+Total time with initialization    :       4030566617
+Total time without initialization :       4007839826
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1313613.322821 task-clock                #    0.326 CPUs utilized          
+           350,169 context-switches          #    0.267 K/sec                  
+           215,640 cpu-migrations            #    0.164 K/sec                  
+         2,188,815 page-faults               #    0.002 M/sec                  
+ 2,356,192,555,450 cycles                    #    1.794 GHz                     [49.99%]
+    64,395,642,195 stalled-cycles-frontend   #    2.73% frontend cycles idle    [50.02%]
+ 1,323,078,742,609 stalled-cycles-backend    #   56.15% backend  cycles idle    [49.99%]
+ 2,323,039,148,630 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.02%]
+   132,324,685,959 branches                  #  100.733 M/sec                   [49.99%]
+     6,567,571,878 branch-misses             #    4.96% of all branches         [50.01%]
+
+    4030.732354584 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4003727404          1230        692719    3400173751     602859288
+
+                            TIMING INFORMATION
+Start time                        : 1414118902229268
+Initialization finish time        : 1414118929695267
+Overall finish time               : 1414122933423428
+Total time with initialization    :       4031194160
+Total time without initialization :       4003728161
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1305082.384613 task-clock                #    0.324 CPUs utilized          
+           348,973 context-switches          #    0.267 K/sec                  
+           215,276 cpu-migrations            #    0.165 K/sec                  
+         1,568,946 page-faults               #    0.001 M/sec                  
+ 2,340,916,627,438 cycles                    #    1.794 GHz                     [50.02%]
+    63,586,898,600 stalled-cycles-frontend   #    2.72% frontend cycles idle    [49.98%]
+ 1,312,151,161,516 stalled-cycles-backend    #   56.05% backend  cycles idle    [49.99%]
+ 2,316,741,567,643 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [49.99%]
+   131,101,482,568 branches                  #  100.455 M/sec                   [50.03%]
+     6,573,150,891 branch-misses             #    5.01% of all branches         [50.02%]
+
+    4032.226311542 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4007973564        261335       1017452    3458991853     547702208
+
+                            TIMING INFORMATION
+Start time                        : 1414118902318212
+Initialization finish time        : 1414118931229409
+Overall finish time               : 1414122939203229
+Total time with initialization    :       4036885017
+Total time without initialization :       4007973820
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1307298.459829 task-clock                #    0.324 CPUs utilized          
+           350,465 context-switches          #    0.268 K/sec                  
+           216,752 cpu-migrations            #    0.166 K/sec                  
+         2,410,782 page-faults               #    0.002 M/sec                  
+ 2,344,918,525,740 cycles                    #    1.794 GHz                     [49.97%]
+    63,758,476,047 stalled-cycles-frontend   #    2.72% frontend cycles idle    [50.01%]
+ 1,315,150,406,763 stalled-cycles-backend    #   56.09% backend  cycles idle    [50.01%]
+ 2,318,258,900,339 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.04%]
+   131,347,604,279 branches                  #  100.473 M/sec                   [50.00%]
+     6,553,558,376 branch-misses             #    4.99% of all branches         [49.99%]
+
+    4039.083996635 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4005436447          1193        680764    3394934066     609820019
+
+                            TIMING INFORMATION
+Start time                        : 1414118902329557
+Initialization finish time        : 1414118937533326
+Overall finish time               : 1414122942970424
+Total time with initialization    :       4040640867
+Total time without initialization :       4005437098
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4008119565        177741       1162256    3391709897     615069313
+
+                            TIMING INFORMATION
+Start time                        : 1414118902265976
+Initialization finish time        : 1414118937302575
+Overall finish time               : 1414122945422644
+Total time with initialization    :       4043156668
+Total time without initialization :       4008120069
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1307131.604093 task-clock                #    0.323 CPUs utilized          
+           350,221 context-switches          #    0.268 K/sec                  
+           218,923 cpu-migrations            #    0.167 K/sec                  
+         1,771,955 page-faults               #    0.001 M/sec                  
+ 2,344,624,098,787 cycles                    #    1.794 GHz                     [49.98%]
+    63,375,302,171 stalled-cycles-frontend   #    2.70% frontend cycles idle    [50.01%]
+ 1,315,987,429,862 stalled-cycles-backend    #   56.13% backend  cycles idle    [50.01%]
+ 2,316,965,016,259 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.02%]
+   131,109,973,395 branches                  #  100.304 M/sec                   [49.99%]
+     6,547,420,742 branch-misses             #    4.99% of all branches         [50.00%]
+
+    4043.545379299 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1306792.974159 task-clock                #    0.323 CPUs utilized          
+           350,184 context-switches          #    0.268 K/sec                  
+           215,580 cpu-migrations            #    0.165 K/sec                  
+         2,571,920 page-faults               #    0.002 M/sec                  
+ 2,343,855,205,467 cycles                    #    1.794 GHz                     [50.00%]
+    63,819,624,590 stalled-cycles-frontend   #    2.72% frontend cycles idle    [50.01%]
+ 1,313,889,403,842 stalled-cycles-backend    #   56.06% backend  cycles idle    [49.98%]
+ 2,318,493,574,323 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.01%]
+   131,414,222,038 branches                  #  100.562 M/sec                   [49.99%]
+     6,556,573,010 branch-misses             #    4.99% of all branches         [50.02%]
+
+    4045.151869200 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4022961466          1341       2181557    3398657240     621968852
+
+                            TIMING INFORMATION
+Start time                        : 1414118902187208
+Initialization finish time        : 1414118926807581
+Overall finish time               : 1414122949769737
+Total time with initialization    :       4047582529
+Total time without initialization :       4022962156
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1315997.160469 task-clock                #    0.325 CPUs utilized          
+           350,851 context-switches          #    0.267 K/sec                  
+           214,579 cpu-migrations            #    0.163 K/sec                  
+         2,556,380 page-faults               #    0.002 M/sec                  
+ 2,360,474,562,407 cycles                    #    1.794 GHz                     [50.00%]
+    64,956,647,238 stalled-cycles-frontend   #    2.75% frontend cycles idle    [50.01%]
+ 1,326,531,674,893 stalled-cycles-backend    #   56.20% backend  cycles idle    [50.00%]
+ 2,323,807,775,922 instructions              #    0.98  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.00%]
+   132,427,105,968 branches                  #  100.629 M/sec                   [49.99%]
+     6,571,797,435 branch-misses             #    4.96% of all branches         [50.00%]
+
+    4048.152294418 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4011703153          1210        579603    3394547831     616574036
+
+                            TIMING INFORMATION
+Start time                        : 1414118902207610
+Initialization finish time        : 1414118939015773
+Overall finish time               : 1414122950719675
+Total time with initialization    :       4048512065
+Total time without initialization :       4011703902
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1307974.679617 task-clock                #    0.323 CPUs utilized          
+           350,467 context-switches          #    0.268 K/sec                  
+           215,994 cpu-migrations            #    0.165 K/sec                  
+         2,269,020 page-faults               #    0.002 M/sec                  
+ 2,346,071,495,956 cycles                    #    1.794 GHz                     [49.96%]
+    63,803,093,116 stalled-cycles-frontend   #    2.72% frontend cycles idle    [49.99%]
+ 1,316,396,677,858 stalled-cycles-backend    #   56.11% backend  cycles idle    [50.01%]
+ 2,318,002,443,827 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.05%]
+   131,312,643,195 branches                  #  100.394 M/sec                   [50.02%]
+     6,558,858,005 branch-misses             #    4.99% of all branches         [49.99%]
+
+    4048.623571454 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4017071248        336492        962235    3453125693     562646424
+
+                            TIMING INFORMATION
+Start time                        : 1414118902286354
+Initialization finish time        : 1414118934910735
+Overall finish time               : 1414122951982049
+Total time with initialization    :       4049695695
+Total time without initialization :       4017071314
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1309135.601918 task-clock                #    0.323 CPUs utilized          
+           349,769 context-switches          #    0.267 K/sec                  
+           224,322 cpu-migrations            #    0.171 K/sec                  
+         2,467,980 page-faults               #    0.002 M/sec                  
+ 2,348,202,198,381 cycles                    #    1.794 GHz                     [50.02%]
+    63,883,817,326 stalled-cycles-frontend   #    2.72% frontend cycles idle    [50.01%]
+ 1,318,160,394,351 stalled-cycles-backend    #   56.13% backend  cycles idle    [49.97%]
+ 2,318,493,498,169 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [49.98%]
+   131,446,031,170 branches                  #  100.407 M/sec                   [50.00%]
+     6,550,515,232 branch-misses             #    4.98% of all branches         [50.03%]
+
+    4050.850159523 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4014062398        197289        480864    3418550855     594833013
+
+                            TIMING INFORMATION
+Start time                        : 1414118902264383
+Initialization finish time        : 1414118944716132
+Overall finish time               : 1414122958779185
+Total time with initialization    :       4056514802
+Total time without initialization :       4014063053
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1308269.501342 task-clock                #    0.322 CPUs utilized          
+           350,369 context-switches          #    0.268 K/sec                  
+           223,104 cpu-migrations            #    0.171 K/sec                  
+         2,268,719 page-faults               #    0.002 M/sec                  
+ 2,346,540,696,338 cycles                    #    1.794 GHz                     [49.99%]
+    63,905,961,304 stalled-cycles-frontend   #    2.72% frontend cycles idle    [50.03%]
+ 1,316,699,261,332 stalled-cycles-backend    #   56.11% backend  cycles idle    [50.02%]
+ 2,318,239,746,335 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.01%]
+   131,348,066,000 branches                  #  100.398 M/sec                   [49.97%]
+     6,567,280,436 branch-misses             #    5.00% of all branches         [49.98%]
+
+    4057.754025845 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4023454461          1245        875805    3457796565     564780466
+
+                            TIMING INFORMATION
+Start time                        : 1414118902222219
+Initialization finish time        : 1414118959620348
+Overall finish time               : 1414122983075316
+Total time with initialization    :       4080853097
+Total time without initialization :       4023454968
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4022754038          1232        580561    3454740234     567380951
+
+                            TIMING INFORMATION
+Start time                        : 1414118902193125
+Initialization finish time        : 1414118960627226
+Overall finish time               : 1414122983382046
+Total time with initialization    :       4081188921
+Total time without initialization :       4022754820
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1307080.061599 task-clock                #    0.320 CPUs utilized          
+           351,551 context-switches          #    0.269 K/sec                  
+           220,208 cpu-migrations            #    0.168 K/sec                  
+         1,927,890 page-faults               #    0.001 M/sec                  
+ 2,344,515,401,134 cycles                    #    1.794 GHz                     [49.99%]
+    63,693,231,603 stalled-cycles-frontend   #    2.72% frontend cycles idle    [49.96%]
+ 1,315,237,728,829 stalled-cycles-backend    #   56.10% backend  cycles idle    [50.00%]
+ 2,317,346,468,155 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.02%]
+   131,169,835,706 branches                  #  100.353 M/sec                   [50.05%]
+     6,570,058,930 branch-misses             #    5.01% of all branches         [50.01%]
+
+    4082.561543625 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1303929.670193 task-clock                #    0.319 CPUs utilized          
+           351,320 context-switches          #    0.269 K/sec                  
+           222,350 cpu-migrations            #    0.171 K/sec                  
+         1,535,930 page-faults               #    0.001 M/sec                  
+ 2,338,875,470,924 cycles                    #    1.794 GHz                     [50.00%]
+    63,351,544,225 stalled-cycles-frontend   #    2.71% frontend cycles idle    [50.04%]
+ 1,310,521,696,907 stalled-cycles-backend    #   56.03% backend  cycles idle    [50.02%]
+ 2,316,496,807,069 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.01%]
+   131,058,348,826 branches                  #  100.510 M/sec                   [49.96%]
+     6,548,773,409 branch-misses             #    5.00% of all branches         [49.99%]
+
+    4083.136903514 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4011464469        201247        624483    3410648299     599990107
+
+                            TIMING INFORMATION
+Start time                        : 1414118902346074
+Initialization finish time        : 1414118976764378
+Overall finish time               : 1414122988229303
+Total time with initialization    :       4085883229
+Total time without initialization :       4011464925
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1301285.636111 task-clock                #    0.318 CPUs utilized          
+           350,146 context-switches          #    0.269 K/sec                  
+           219,267 cpu-migrations            #    0.169 K/sec                  
+         1,694,492 page-faults               #    0.001 M/sec                  
+ 2,334,065,304,506 cycles                    #    1.794 GHz                     [50.01%]
+    63,693,816,136 stalled-cycles-frontend   #    2.73% frontend cycles idle    [50.04%]
+ 1,305,220,325,036 stalled-cycles-backend    #   55.92% backend  cycles idle    [50.00%]
+ 2,316,769,047,956 instructions              #    0.99  insns per cycle        
+                                             #    0.56  stalled cycles per insn [49.99%]
+   131,099,939,354 branches                  #  100.746 M/sec                   [49.96%]
+     6,552,625,716 branch-misses             #    5.00% of all branches         [50.00%]
+
+    4086.165720500 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4029790933          1195        760219    3466755065     562273665
+
+                            TIMING INFORMATION
+Start time                        : 1414118902337107
+Initialization finish time        : 1414118962742300
+Overall finish time               : 1414122992533725
+Total time with initialization    :       4090196618
+Total time without initialization :       4029791425
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1308593.222216 task-clock                #    0.320 CPUs utilized          
+           351,072 context-switches          #    0.268 K/sec                  
+           219,357 cpu-migrations            #    0.168 K/sec                  
+         2,097,516 page-faults               #    0.002 M/sec                  
+ 2,347,194,738,589 cycles                    #    1.794 GHz                     [50.00%]
+    63,708,438,171 stalled-cycles-frontend   #    2.71% frontend cycles idle    [49.97%]
+ 1,317,832,471,186 stalled-cycles-backend    #   56.14% backend  cycles idle    [49.99%]
+ 2,317,620,024,125 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.00%]
+   131,267,009,442 branches                  #  100.312 M/sec                   [50.04%]
+     6,557,036,860 branch-misses             #    5.00% of all branches         [50.02%]
+
+    4091.163663146 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4024961200        153034       1364427    3465510063     557933251
+
+                            TIMING INFORMATION
+Start time                        : 1414118902241894
+Initialization finish time        : 1414118971479600
+Overall finish time               : 1414122996441158
+Total time with initialization    :       4094199264
+Total time without initialization :       4024961558
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1306023.481719 task-clock                #    0.319 CPUs utilized          
+           351,660 context-switches          #    0.269 K/sec                  
+           217,791 cpu-migrations            #    0.167 K/sec                  
+         1,628,545 page-faults               #    0.001 M/sec                  
+ 2,342,498,787,238 cycles                    #    1.794 GHz                     [49.99%]
+    63,399,444,069 stalled-cycles-frontend   #    2.71% frontend cycles idle    [50.00%]
+ 1,314,052,071,300 stalled-cycles-backend    #   56.10% backend  cycles idle    [49.99%]
+ 2,316,669,641,552 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.01%]
+   131,073,339,712 branches                  #  100.361 M/sec                   [50.00%]
+     6,551,547,060 branch-misses             #    5.00% of all branches         [50.02%]
+
+    4096.106791876 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4016910624          1187        733127    3459155001     557020904
+
+                            TIMING INFORMATION
+Start time                        : 1414118902294271
+Initialization finish time        : 1414118983609884
+Overall finish time               : 1414123000520910
+Total time with initialization    :       4098226639
+Total time without initialization :       4016911026
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1303758.327316 task-clock                #    0.318 CPUs utilized          
+           349,955 context-switches          #    0.268 K/sec                  
+           223,741 cpu-migrations            #    0.172 K/sec                  
+         1,989,581 page-faults               #    0.002 M/sec                  
+ 2,338,464,903,559 cycles                    #    1.794 GHz                     [50.01%]
+    63,506,898,112 stalled-cycles-frontend   #    2.72% frontend cycles idle    [49.98%]
+ 1,309,535,407,100 stalled-cycles-backend    #   56.00% backend  cycles idle    [50.01%]
+ 2,317,518,353,906 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.00%]
+   131,201,196,199 branches                  #  100.633 M/sec                   [50.03%]
+     6,556,252,458 branch-misses             #    5.00% of all branches         [50.00%]
+
+    4098.944198706 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4036668457          8558       1085317    3453214504     582359699
+
+                            TIMING INFORMATION
+Start time                        : 1414118902286695
+Initialization finish time        : 1414118964765616
+Overall finish time               : 1414123001434140
+Total time with initialization    :       4099147445
+Total time without initialization :       4036668524
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4035897964          1253        521154    3440160073     595215142
+
+                            TIMING INFORMATION
+Start time                        : 1414118902261968
+Initialization finish time        : 1414118967006931
+Overall finish time               : 1414123002905601
+Total time with initialization    :       4100643633
+Total time without initialization :       4035898670
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1308638.621288 task-clock                #    0.319 CPUs utilized          
+           352,061 context-switches          #    0.269 K/sec                  
+           221,976 cpu-migrations            #    0.170 K/sec                  
+         2,275,922 page-faults               #    0.002 M/sec                  
+ 2,347,300,649,428 cycles                    #    1.794 GHz                     [50.00%]
+    63,922,504,936 stalled-cycles-frontend   #    2.72% frontend cycles idle    [50.00%]
+ 1,317,291,918,591 stalled-cycles-backend    #   56.12% backend  cycles idle    [50.02%]
+ 2,318,199,426,869 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.01%]
+   131,340,728,645 branches                  #  100.364 M/sec                   [50.01%]
+     6,582,224,055 branch-misses             #    5.01% of all branches         [49.98%]
+
+    4101.247437558 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1307303.087694 task-clock                #    0.319 CPUs utilized          
+           351,358 context-switches          #    0.269 K/sec                  
+           217,709 cpu-migrations            #    0.167 K/sec                  
+         1,834,427 page-faults               #    0.001 M/sec                  
+ 2,344,827,638,589 cycles                    #    1.794 GHz                     [49.97%]
+    63,856,067,235 stalled-cycles-frontend   #    2.72% frontend cycles idle    [49.96%]
+ 1,315,798,960,746 stalled-cycles-backend    #   56.11% backend  cycles idle    [50.01%]
+ 2,317,053,157,341 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.03%]
+   131,126,876,742 branches                  #  100.303 M/sec                   [50.05%]
+     6,554,499,850 branch-misses             #    5.00% of all branches         [49.99%]
+
+    4101.572192454 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4030268976          1206       1539898    3432948057     595779448
+
+                            TIMING INFORMATION
+Start time                        : 1414118902261917
+Initialization finish time        : 1414118977354999
+Overall finish time               : 1414123007624814
+Total time with initialization    :       4105362897
+Total time without initialization :       4030269815
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4022211264          1185        810453    3439231449     582167773
+
+                            TIMING INFORMATION
+Start time                        : 1414118902187529
+Initialization finish time        : 1414118985669019
+Overall finish time               : 1414123007880688
+Total time with initialization    :       4105693159
+Total time without initialization :       4022211669
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1306157.595673 task-clock                #    0.318 CPUs utilized          
+           350,180 context-switches          #    0.268 K/sec                  
+           224,391 cpu-migrations            #    0.172 K/sec                  
+         2,041,651 page-faults               #    0.002 M/sec                  
+ 2,342,881,718,410 cycles                    #    1.794 GHz                     [50.00%]
+    63,554,935,634 stalled-cycles-frontend   #    2.71% frontend cycles idle    [50.01%]
+ 1,313,781,435,760 stalled-cycles-backend    #   56.08% backend  cycles idle    [50.01%]
+ 2,317,561,955,798 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.01%]
+   131,236,117,137 branches                  #  100.475 M/sec                   [49.99%]
+     6,553,182,152 branch-misses             #    4.99% of all branches         [50.00%]
+
+    4106.359795420 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4028356962          1235        760828    3433075059     594519473
+
+                            TIMING INFORMATION
+Start time                        : 1414118902201764
+Initialization finish time        : 1414118980448900
+Overall finish time               : 1414123008806494
+Total time with initialization    :       4106604730
+Total time without initialization :       4028357594
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1304453.176856 task-clock                #    0.318 CPUs utilized          
+           350,291 context-switches          #    0.269 K/sec                  
+           220,237 cpu-migrations            #    0.169 K/sec                  
+         1,793,761 page-faults               #    0.001 M/sec                  
+ 2,339,699,737,396 cycles                    #    1.794 GHz                     [50.01%]
+    63,664,138,989 stalled-cycles-frontend   #    2.72% frontend cycles idle    [50.04%]
+ 1,310,942,131,998 stalled-cycles-backend    #   56.03% backend  cycles idle    [50.01%]
+ 2,316,900,295,624 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [49.99%]
+   131,104,306,202 branches                  #  100.505 M/sec                   [49.97%]
+     6,549,102,838 branch-misses             #    5.00% of all branches         [49.99%]
+
+    4106.813873699 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1304261.532462 task-clock                #    0.318 CPUs utilized          
+           350,778 context-switches          #    0.269 K/sec                  
+           221,909 cpu-migrations            #    0.170 K/sec                  
+         1,708,362 page-faults               #    0.001 M/sec                  
+ 2,339,355,050,904 cycles                    #    1.794 GHz                     [49.97%]
+    63,683,452,531 stalled-cycles-frontend   #    2.72% frontend cycles idle    [49.97%]
+ 1,310,533,535,100 stalled-cycles-backend    #   56.02% backend  cycles idle    [50.01%]
+ 2,317,013,024,797 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.04%]
+   131,104,311,803 branches                  #  100.520 M/sec                   [50.03%]
+     6,550,568,818 branch-misses             #    5.00% of all branches         [49.99%]
+
+    4107.145978686 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4037681870        429335        579678    3463682981     572989488
+
+                            TIMING INFORMATION
+Start time                        : 1414118902190218
+Initialization finish time        : 1414118972474079
+Overall finish time               : 1414123010156703
+Total time with initialization    :       4107966485
+Total time without initialization :       4037682624
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1305754.987539 task-clock                #    0.318 CPUs utilized          
+           350,735 context-switches          #    0.269 K/sec                  
+           225,190 cpu-migrations            #    0.172 K/sec                  
+         1,959,769 page-faults               #    0.002 M/sec                  
+ 2,342,058,457,998 cycles                    #    1.794 GHz                     [50.02%]
+    63,457,936,816 stalled-cycles-frontend   #    2.71% frontend cycles idle    [50.01%]
+ 1,313,198,820,526 stalled-cycles-backend    #   56.07% backend  cycles idle    [50.01%]
+ 2,317,222,568,388 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [49.99%]
+   131,166,562,161 branches                  #  100.453 M/sec                   [49.99%]
+     6,554,163,989 branch-misses             #    5.00% of all branches         [49.99%]
+
+    4108.080866690 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4030490375          1214       1168952    3481610784     547708755
+
+                            TIMING INFORMATION
+Start time                        : 1414118902282858
+Initialization finish time        : 1414118980407765
+Overall finish time               : 1414123010898746
+Total time with initialization    :       4108615888
+Total time without initialization :       4030490981
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1303872.492372 task-clock                #    0.317 CPUs utilized          
+           350,607 context-switches          #    0.269 K/sec                  
+           219,892 cpu-migrations            #    0.169 K/sec                  
+         1,546,688 page-faults               #    0.001 M/sec                  
+ 2,338,596,142,255 cycles                    #    1.794 GHz                     [50.01%]
+    63,191,641,038 stalled-cycles-frontend   #    2.70% frontend cycles idle    [50.01%]
+ 1,310,632,149,070 stalled-cycles-backend    #   56.04% backend  cycles idle    [50.03%]
+ 2,316,489,228,455 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [49.99%]
+   131,023,679,680 branches                  #  100.488 M/sec                   [50.00%]
+     6,542,237,186 branch-misses             #    4.99% of all branches         [49.98%]
+
+    4108.743137770 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4016983524          1211       1150370    3445646937     570184653
+
+                            TIMING INFORMATION
+Start time                        : 1414118902298360
+Initialization finish time        : 1414118995185171
+Overall finish time               : 1414123012169192
+Total time with initialization    :       4109870832
+Total time without initialization :       4016984021
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1304050.734142 task-clock                #    0.317 CPUs utilized          
+           350,147 context-switches          #    0.269 K/sec                  
+           222,907 cpu-migrations            #    0.171 K/sec                  
+         1,738,655 page-faults               #    0.001 M/sec                  
+ 2,339,044,384,006 cycles                    #    1.794 GHz                     [50.02%]
+    63,498,689,415 stalled-cycles-frontend   #    2.71% frontend cycles idle    [50.04%]
+ 1,310,048,353,370 stalled-cycles-backend    #   56.01% backend  cycles idle    [50.02%]
+ 2,316,976,590,035 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [49.99%]
+   131,125,701,679 branches                  #  100.553 M/sec                   [49.97%]
+     6,571,801,680 branch-misses             #    5.01% of all branches         [49.98%]
+
+    4110.005367199 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4021525700          1192        806905    3479110518     541606675
+
+                            TIMING INFORMATION
+Start time                        : 1414118902282919
+Initialization finish time        : 1414118991197460
+Overall finish time               : 1414123012723779
+Total time with initialization    :       4110440860
+Total time without initialization :       4021526319
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1305015.956455 task-clock                #    0.317 CPUs utilized          
+           351,075 context-switches          #    0.269 K/sec                  
+           224,715 cpu-migrations            #    0.172 K/sec                  
+         1,653,841 page-faults               #    0.001 M/sec                  
+ 2,340,718,342,956 cycles                    #    1.794 GHz                     [49.99%]
+    63,176,958,780 stalled-cycles-frontend   #    2.70% frontend cycles idle    [50.00%]
+ 1,312,602,029,788 stalled-cycles-backend    #   56.08% backend  cycles idle    [50.00%]
+ 2,316,526,573,399 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.01%]
+   131,069,555,946 branches                  #  100.435 M/sec                   [50.00%]
+     6,536,560,833 branch-misses             #    4.99% of all branches         [50.00%]
+
+    4110.767302781 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4014640664        333242        555136    3385454666     628297212
+
+                            TIMING INFORMATION
+Start time                        : 1414118902263696
+Initialization finish time        : 1414119001531562
+Overall finish time               : 1414123016172850
+Total time with initialization    :       4113909154
+Total time without initialization :       4014641288
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1304076.567681 task-clock                #    0.317 CPUs utilized          
+           351,185 context-switches          #    0.269 K/sec                  
+           225,294 cpu-migrations            #    0.173 K/sec                  
+         1,668,459 page-faults               #    0.001 M/sec                  
+ 2,339,167,854,477 cycles                    #    1.794 GHz                     [50.01%]
+    63,320,320,796 stalled-cycles-frontend   #    2.71% frontend cycles idle    [50.06%]
+ 1,310,660,961,211 stalled-cycles-backend    #   56.03% backend  cycles idle    [50.01%]
+ 2,316,780,804,207 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [49.99%]
+   131,074,742,299 branches                  #  100.512 M/sec                   [49.95%]
+     6,543,788,890 branch-misses             #    4.99% of all branches         [50.00%]
+
+    4114.138179509 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4014151029          1211       1079125    3428595302     584474987
+
+                            TIMING INFORMATION
+Start time                        : 1414118902342355
+Initialization finish time        : 1414119002657061
+Overall finish time               : 1414123016808420
+Total time with initialization    :       4114466065
+Total time without initialization :       4014151359
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1307219.304156 task-clock                #    0.318 CPUs utilized          
+           352,321 context-switches          #    0.270 K/sec                  
+           224,175 cpu-migrations            #    0.171 K/sec                  
+         2,170,901 page-faults               #    0.002 M/sec                  
+ 2,344,637,349,877 cycles                    #    1.794 GHz                     [50.01%]
+    63,702,921,954 stalled-cycles-frontend   #    2.72% frontend cycles idle    [49.99%]
+ 1,315,229,461,909 stalled-cycles-backend    #   56.10% backend  cycles idle    [49.97%]
+ 2,317,692,541,367 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.00%]
+   131,270,886,539 branches                  #  100.420 M/sec                   [50.01%]
+     6,559,414,218 branch-misses             #    5.00% of all branches         [50.04%]
+
+    4114.611551604 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4026668410          1169        414480    3461284325     564967682
+
+                            TIMING INFORMATION
+Start time                        : 1414118902188085
+Initialization finish time        : 1414118990358693
+Overall finish time               : 1414123017027400
+Total time with initialization    :       4114839315
+Total time without initialization :       4026668707
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1307780.359391 task-clock                #    0.318 CPUs utilized          
+           350,573 context-switches          #    0.268 K/sec                  
+           224,993 cpu-migrations            #    0.172 K/sec                  
+         2,118,402 page-faults               #    0.002 M/sec                  
+ 2,345,667,182,249 cycles                    #    1.794 GHz                     [49.98%]
+    63,708,230,548 stalled-cycles-frontend   #    2.72% frontend cycles idle    [49.99%]
+ 1,316,060,349,440 stalled-cycles-backend    #   56.11% backend  cycles idle    [50.04%]
+ 2,318,293,084,688 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.02%]
+   131,337,136,660 branches                  #  100.428 M/sec                   [50.01%]
+     6,555,313,564 branch-misses             #    4.99% of all branches         [49.97%]
+
+    4115.058811095 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4035094731          1209        670010    3427739773     606683397
+
+                            TIMING INFORMATION
+Start time                        : 1414118902210919
+Initialization finish time        : 1414118982941135
+Overall finish time               : 1414123018035934
+Total time with initialization    :       4115825015
+Total time without initialization :       4035094799
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4020469784          1273        383036    3478719857     541365228
+
+                            TIMING INFORMATION
+Start time                        : 1414118902185995
+Initialization finish time        : 1414118997578998
+Overall finish time               : 1414123018049169
+Total time with initialization    :       4115863174
+Total time without initialization :       4020470171
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1305935.219632 task-clock                #    0.317 CPUs utilized          
+           350,585 context-switches          #    0.268 K/sec                  
+           226,319 cpu-migrations            #    0.173 K/sec                  
+         2,234,698 page-faults               #    0.002 M/sec                  
+ 2,342,477,187,046 cycles                    #    1.794 GHz                     [49.99%]
+    63,672,954,747 stalled-cycles-frontend   #    2.72% frontend cycles idle    [49.99%]
+ 1,313,011,923,900 stalled-cycles-backend    #   56.05% backend  cycles idle    [49.99%]
+ 2,317,758,160,085 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.01%]
+   131,259,902,843 branches                  #  100.510 M/sec                   [50.02%]
+     6,558,574,344 branch-misses             #    5.00% of all branches         [50.02%]
+
+    4115.950593362 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1306148.676719 task-clock                #    0.317 CPUs utilized          
+           351,224 context-switches          #    0.269 K/sec                  
+           221,889 cpu-migrations            #    0.170 K/sec                  
+         1,626,507 page-faults               #    0.001 M/sec                  
+ 2,342,719,177,162 cycles                    #    1.794 GHz                     [49.99%]
+    63,454,777,264 stalled-cycles-frontend   #    2.71% frontend cycles idle    [49.98%]
+ 1,314,090,663,751 stalled-cycles-backend    #   56.09% backend  cycles idle    [49.99%]
+ 2,316,421,132,244 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.01%]
+   131,050,481,037 branches                  #  100.334 M/sec                   [50.02%]
+     6,575,700,580 branch-misses             #    5.02% of all branches         [50.01%]
+
+    4116.067752364 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4014488956          1208        717159    3431797547     581972645
+
+                            TIMING INFORMATION
+Start time                        : 1414118902206586
+Initialization finish time        : 1414119005565004
+Overall finish time               : 1414123020054713
+Total time with initialization    :       4117848127
+Total time without initialization :       4014489709
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1303833.162035 task-clock                #    0.317 CPUs utilized          
+           349,863 context-switches          #    0.268 K/sec                  
+           223,370 cpu-migrations            #    0.171 K/sec                  
+         1,668,362 page-faults               #    0.001 M/sec                  
+ 2,338,606,949,802 cycles                    #    1.794 GHz                     [49.98%]
+    63,630,175,315 stalled-cycles-frontend   #    2.72% frontend cycles idle    [50.06%]
+ 1,309,920,406,882 stalled-cycles-backend    #   56.01% backend  cycles idle    [50.04%]
+ 2,316,607,925,027 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.02%]
+   131,065,681,503 branches                  #  100.523 M/sec                   [49.94%]
+     6,546,913,782 branch-misses             #    5.00% of all branches         [49.97%]
+
+    4118.327183350 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4019418156          1230        976146    3491317451     527122932
+
+                            TIMING INFORMATION
+Start time                        : 1414118902195551
+Initialization finish time        : 1414119002519943
+Overall finish time               : 1414123021938373
+Total time with initialization    :       4119742822
+Total time without initialization :       4019418430
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1307558.257822 task-clock                #    0.317 CPUs utilized          
+           350,330 context-switches          #    0.268 K/sec                  
+           227,788 cpu-migrations            #    0.174 K/sec                  
+         2,200,691 page-faults               #    0.002 M/sec                  
+ 2,345,354,306,960 cycles                    #    1.794 GHz                     [50.00%]
+    63,919,343,129 stalled-cycles-frontend   #    2.73% frontend cycles idle    [49.97%]
+ 1,315,412,649,975 stalled-cycles-backend    #   56.09% backend  cycles idle    [50.01%]
+ 2,317,850,429,718 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.00%]
+   131,295,413,050 branches                  #  100.413 M/sec                   [50.03%]
+     6,583,198,389 branch-misses             #    5.01% of all branches         [49.99%]
+
+    4120.171073535 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4003823516          1192        651180    3437493587     565677173
+
+                            TIMING INFORMATION
+Start time                        : 1414118902271976
+Initialization finish time        : 1414119020352420
+Overall finish time               : 1414123024175940
+Total time with initialization    :       4121903964
+Total time without initialization :       4003823520
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1302735.375609 task-clock                #    0.316 CPUs utilized          
+           350,511 context-switches          #    0.269 K/sec                  
+           223,519 cpu-migrations            #    0.172 K/sec                  
+         1,670,673 page-faults               #    0.001 M/sec                  
+ 2,336,557,369,552 cycles                    #    1.794 GHz                     [50.00%]
+    63,324,439,729 stalled-cycles-frontend   #    2.71% frontend cycles idle    [50.01%]
+ 1,308,352,202,680 stalled-cycles-backend    #   55.99% backend  cycles idle    [50.02%]
+ 2,316,541,634,982 instructions              #    0.99  insns per cycle        
+                                             #    0.56  stalled cycles per insn [50.01%]
+   131,060,314,220 branches                  #  100.604 M/sec                   [49.99%]
+     6,553,794,508 branch-misses             #    5.00% of all branches         [49.98%]
+
+    4122.103653178 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4024906817          1179       1411273    3477794423     545247539
+
+                            TIMING INFORMATION
+Start time                        : 1414118902286188
+Initialization finish time        : 1414118999485409
+Overall finish time               : 1414123024392635
+Total time with initialization    :       4122106447
+Total time without initialization :       4024907226
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    3985973480         73251        985983    3434431975     550481878
+
+                            TIMING INFORMATION
+Start time                        : 1414118902181733
+Initialization finish time        : 1414119038605327
+Overall finish time               : 1414123024579081
+Total time with initialization    :       4122397348
+Total time without initialization :       3985973754
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1305882.067152 task-clock                #    0.317 CPUs utilized          
+           350,781 context-switches          #    0.269 K/sec                  
+           223,567 cpu-migrations            #    0.171 K/sec                  
+         1,712,761 page-faults               #    0.001 M/sec                  
+ 2,342,202,212,147 cycles                    #    1.794 GHz                     [49.97%]
+    63,484,228,290 stalled-cycles-frontend   #    2.71% frontend cycles idle    [49.99%]
+ 1,313,590,771,014 stalled-cycles-backend    #   56.08% backend  cycles idle    [50.02%]
+ 2,316,839,756,710 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.04%]
+   131,094,766,686 branches                  #  100.388 M/sec                   [50.02%]
+     6,556,483,615 branch-misses             #    5.00% of all branches         [49.99%]
+
+    4122.383623968 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1303474.756584 task-clock                #    0.316 CPUs utilized          
+           349,434 context-switches          #    0.268 K/sec                  
+           226,759 cpu-migrations            #    0.174 K/sec                  
+         1,632,420 page-faults               #    0.001 M/sec                  
+ 2,338,009,305,399 cycles                    #    1.794 GHz                     [49.98%]
+    63,336,592,546 stalled-cycles-frontend   #    2.71% frontend cycles idle    [50.00%]
+ 1,309,678,113,575 stalled-cycles-backend    #   56.02% backend  cycles idle    [50.00%]
+ 2,316,440,914,581 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.03%]
+   131,074,687,402 branches                  #  100.558 M/sec                   [50.01%]
+     6,544,541,103 branch-misses             #    4.99% of all branches         [50.00%]
+
+    4122.530865141 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4015719084          1268        778586    3433330634     581608213
+
+                            TIMING INFORMATION
+Start time                        : 1414118902314252
+Initialization finish time        : 1414119009987251
+Overall finish time               : 1414123025706956
+Total time with initialization    :       4123392704
+Total time without initialization :       4015719705
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    3993027327        132192        987316    3395150529     596756903
+
+                            TIMING INFORMATION
+Start time                        : 1414118902216298
+Initialization finish time        : 1414119032870675
+Overall finish time               : 1414123025898616
+Total time with initialization    :       4123682318
+Total time without initialization :       3993027941
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1304918.922674 task-clock                #    0.316 CPUs utilized          
+           350,392 context-switches          #    0.269 K/sec                  
+           218,726 cpu-migrations            #    0.168 K/sec                  
+         1,919,122 page-faults               #    0.001 M/sec                  
+ 2,340,560,513,120 cycles                    #    1.794 GHz                     [50.01%]
+    63,763,504,461 stalled-cycles-frontend   #    2.72% frontend cycles idle    [49.99%]
+ 1,311,452,018,699 stalled-cycles-backend    #   56.03% backend  cycles idle    [49.98%]
+ 2,317,137,794,812 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [49.99%]
+   131,174,425,218 branches                  #  100.523 M/sec                   [50.02%]
+     6,552,951,869 branch-misses             #    5.00% of all branches         [50.02%]
+
+    4123.611649016 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1302068.861168 task-clock                #    0.316 CPUs utilized          
+           348,741 context-switches          #    0.268 K/sec                  
+           223,376 cpu-migrations            #    0.172 K/sec                  
+         1,633,707 page-faults               #    0.001 M/sec                  
+ 2,335,415,372,972 cycles                    #    1.794 GHz                     [50.00%]
+    63,261,742,149 stalled-cycles-frontend   #    2.71% frontend cycles idle    [50.03%]
+ 1,306,999,002,639 stalled-cycles-backend    #   55.96% backend  cycles idle    [50.02%]
+ 2,316,787,358,427 instructions              #    0.99  insns per cycle        
+                                             #    0.56  stalled cycles per insn [50.00%]
+   131,068,124,409 branches                  #  100.661 M/sec                   [49.97%]
+     6,545,790,753 branch-misses             #    4.99% of all branches         [49.98%]
+
+    4123.891411752 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4015220551          1202        899576    3429345997     584973410
+
+                            TIMING INFORMATION
+Start time                        : 1414118902279892
+Initialization finish time        : 1414119010952323
+Overall finish time               : 1414123026173491
+Total time with initialization    :       4123893599
+Total time without initialization :       4015221168
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1304994.876617 task-clock                #    0.316 CPUs utilized          
+           349,743 context-switches          #    0.268 K/sec                  
+           224,892 cpu-migrations            #    0.172 K/sec                  
+         2,079,835 page-faults               #    0.002 M/sec                  
+ 2,340,722,333,104 cycles                    #    1.794 GHz                     [50.00%]
+    63,694,715,822 stalled-cycles-frontend   #    2.72% frontend cycles idle    [49.95%]
+ 1,311,397,000,972 stalled-cycles-backend    #   56.03% backend  cycles idle    [49.98%]
+ 2,317,681,414,529 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.01%]
+   131,239,265,492 branches                  #  100.567 M/sec                   [50.05%]
+     6,559,177,746 branch-misses             #    5.00% of all branches         [50.03%]
+
+    4124.033884901 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4004529370          1266        629635    3426832529     577065545
+
+                            TIMING INFORMATION
+Start time                        : 1414118902277782
+Initialization finish time        : 1414119024104821
+Overall finish time               : 1414123028634908
+Total time with initialization    :       4126357126
+Total time without initialization :       4004530087
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1305354.515417 task-clock                #    0.316 CPUs utilized          
+           348,766 context-switches          #    0.267 K/sec                  
+           223,080 cpu-migrations            #    0.171 K/sec                  
+         1,735,139 page-faults               #    0.001 M/sec                  
+ 2,341,318,311,088 cycles                    #    1.794 GHz                     [50.00%]
+    63,348,508,696 stalled-cycles-frontend   #    2.71% frontend cycles idle    [50.01%]
+ 1,312,728,035,953 stalled-cycles-backend    #   56.07% backend  cycles idle    [50.03%]
+ 2,316,904,610,694 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.00%]
+   131,088,719,445 branches                  #  100.424 M/sec                   [50.00%]
+     6,547,806,207 branch-misses             #    4.99% of all branches         [49.97%]
+
+    4126.492523625 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    4004877333          2384        781768    3454387670     549705119
+
+                            TIMING INFORMATION
+Start time                        : 1414118902266608
+Initialization finish time        : 1414119023944929
+Overall finish time               : 1414123028824008
+Total time with initialization    :       4126557400
+Total time without initialization :       4004879079
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    3990242197          1213        960259    3459237066     530043235
+
+                            TIMING INFORMATION
+Start time                        : 1414118902249338
+Initialization finish time        : 1414119038621430
+Overall finish time               : 1414123028864983
+Total time with initialization    :       4126615645
+Total time without initialization :       3990243553
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1304807.844893 task-clock                #    0.316 CPUs utilized          
+           348,875 context-switches          #    0.267 K/sec                  
+           225,269 cpu-migrations            #    0.173 K/sec                  
+         2,033,656 page-faults               #    0.002 M/sec                  
+ 2,340,162,525,078 cycles                    #    1.793 GHz                     [49.96%]
+    63,536,255,586 stalled-cycles-frontend   #    2.72% frontend cycles idle    [49.98%]
+ 1,311,088,114,646 stalled-cycles-backend    #   56.03% backend  cycles idle    [50.02%]
+ 2,317,299,356,837 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.05%]
+   131,256,335,341 branches                  #  100.594 M/sec                   [50.02%]
+     6,553,763,160 branch-misses             #    4.99% of all branches         [49.99%]
+
+    4126.701125894 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1303397.580679 task-clock                #    0.316 CPUs utilized          
+           348,721 context-switches          #    0.268 K/sec                  
+           220,166 cpu-migrations            #    0.169 K/sec                  
+         1,579,510 page-faults               #    0.001 M/sec                  
+ 2,337,745,261,624 cycles                    #    1.794 GHz                     [50.01%]
+    63,361,922,212 stalled-cycles-frontend   #    2.71% frontend cycles idle    [49.98%]
+ 1,309,449,061,022 stalled-cycles-backend    #   56.01% backend  cycles idle    [50.00%]
+ 2,316,433,393,089 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.00%]
+   131,027,253,256 branches                  #  100.527 M/sec                   [50.02%]
+     6,557,994,362 branch-misses             #    5.01% of all branches         [50.00%]
+
+    4126.758627889 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    3964447495          1199        625530    3425023225     538797132
+
+                            TIMING INFORMATION
+Start time                        : 1414118902273821
+Initialization finish time        : 1414119064721528
+Overall finish time               : 1414123029169431
+Total time with initialization    :       4126895610
+Total time without initialization :       3964447903
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1303288.817345 task-clock                #    0.316 CPUs utilized          
+           348,311 context-switches          #    0.267 K/sec                  
+           220,597 cpu-migrations            #    0.169 K/sec                  
+         1,737,684 page-faults               #    0.001 M/sec                  
+ 2,337,195,496,043 cycles                    #    1.793 GHz                     [50.01%]
+    63,635,514,787 stalled-cycles-frontend   #    2.72% frontend cycles idle    [49.98%]
+ 1,308,538,121,299 stalled-cycles-backend    #   55.99% backend  cycles idle    [49.98%]
+ 2,316,833,376,170 instructions              #    0.99  insns per cycle        
+                                             #    0.56  stalled cycles per insn [50.00%]
+   131,113,387,905 branches                  #  100.602 M/sec                   [50.02%]
+     6,550,837,313 branch-misses             #    5.00% of all branches         [50.02%]
+
+    4127.052367992 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    3974844954          1229       1007802    3471967141     501868409
+
+                            TIMING INFORMATION
+Start time                        : 1414118902210466
+Initialization finish time        : 1414119054544052
+Overall finish time               : 1414123029390755
+Total time with initialization    :       4127180289
+Total time without initialization :       3974846703
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    3962077979          1225        811399    3443450263     517814352
+
+                            TIMING INFORMATION
+Start time                        : 1414118902293997
+Initialization finish time        : 1414119067362912
+Overall finish time               : 1414123029441173
+Total time with initialization    :       4127147176
+Total time without initialization :       3962078261
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1303736.733864 task-clock                #    0.316 CPUs utilized          
+           348,022 context-switches          #    0.267 K/sec                  
+           224,468 cpu-migrations            #    0.172 K/sec                  
+         1,394,452 page-faults               #    0.001 M/sec                  
+ 2,337,941,134,258 cycles                    #    1.793 GHz                     [49.99%]
+    63,079,354,147 stalled-cycles-frontend   #    2.70% frontend cycles idle    [49.96%]
+ 1,310,168,500,052 stalled-cycles-backend    #   56.04% backend  cycles idle    [49.96%]
+ 2,315,898,453,882 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.01%]
+   130,927,618,455 branches                  #  100.425 M/sec                   [50.04%]
+     6,540,303,622 branch-misses             #    5.00% of all branches         [50.05%]
+
+    4127.331996828 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     6600 by 6600 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    3967925769          1270        945236    3447147375     519831545
+
+                            TIMING INFORMATION
+Start time                        : 1414118902294148
+Initialization finish time        : 1414119061662856
+Overall finish time               : 1414123029589060
+Total time with initialization    :       4127294912
+Total time without initialization :       3967926204
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1307984.002812 task-clock                #    0.317 CPUs utilized          
+           349,134 context-switches          #    0.267 K/sec                  
+           229,122 cpu-migrations            #    0.175 K/sec                  
+         2,234,558 page-faults               #    0.002 M/sec                  
+ 2,345,181,850,431 cycles                    #    1.793 GHz                     [49.97%]
+    63,673,207,911 stalled-cycles-frontend   #    2.72% frontend cycles idle    [49.98%]
+ 1,315,751,307,307 stalled-cycles-backend    #   56.10% backend  cycles idle    [50.00%]
+ 2,318,162,016,494 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [50.03%]
+   131,330,291,620 branches                  #  100.407 M/sec                   [50.03%]
+     6,550,834,761 branch-misses             #    4.99% of all branches         [50.00%]
+
+    4127.332808810 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n6600 -p16 -b16 -c':
+
+    1305940.691267 task-clock                #    0.316 CPUs utilized          
+           348,315 context-switches          #    0.267 K/sec                  
+           230,673 cpu-migrations            #    0.177 K/sec                  
+         1,572,698 page-faults               #    0.001 M/sec                  
+ 2,340,375,128,785 cycles                    #    1.792 GHz                     [50.01%]
+    63,245,457,134 stalled-cycles-frontend   #    2.70% frontend cycles idle    [50.04%]
+ 1,312,180,558,553 stalled-cycles-backend    #   56.07% backend  cycles idle    [50.01%]
+ 2,316,340,954,059 instructions              #    0.99  insns per cycle        
+                                             #    0.57  stalled cycles per insn [49.99%]
+   131,027,137,688 branches                  #  100.332 M/sec                   [49.96%]
+     6,550,225,977 branch-misses             #    5.00% of all branches         [50.00%]
+
+    4127.474279494 seconds time elapsed
+

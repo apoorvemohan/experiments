@@ -1,0 +1,12 @@
+<APPDATA ID='16' NAME='WATERNSQUARED'>
+        <TSTEP>1.5e-16</TSTEP>
+        <NMOL>216</NMOL>
+        <NSTEP>90000</NSTEP>
+        <NORDER>6</NORDER>
+        <NSAVE>0</NSAVE>
+        <NRST>0</NRST>
+        <NPRINT>10000</NPRINT>
+        <NFMC>0</NFMC>
+        <THREADS>16</THREADS>
+        <CUTOFF>6.212752</CUTOFF>
+</APPDATA>

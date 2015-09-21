@@ -1,0 +1,43 @@
+#!/usr/bin/env python
+
+import os
+import sys
+import zipfile
+import shutil
+
+path = os.path.dirname(os.path.realpath(__file__))  + '/..'
+sys.path.insert(0, path)
+
+import common.imports.utils as u
+import common.imports.constants as c
+import common.imports.dmtcp_utils as du
+
+def get_runnable_instance_map():
+	runnablemap = {}
+	for chkpt in u.listonlydir(c.SEQ_DMTCP_CHKPTS_DIR):
+		chkptlist = u.listonlydir(c.SEQ_DMTCP_CHKPTS_DIR + '/' + chkpt)
+		if len(chkptlist) > 0:
+			
+			runnablemap.update({chkpt: c.SEQ_DMTCP_CHKPTS_DIR + '/' + chkpt + '/' + max(chkptlist) + '/' + u.getchkptimg(c.SEQ_DMTCP_CHKPTS_DIR + '/' + chkpt + '/' + max(chkptlist))})
+		else:
+			u.logerr('INVALID CHKPT DIR ' + chkpt)
+
+	return runnablemap
+
+def main():
+	if os.path.isdir(c.SEQ_DMTCP_STATS_DIR):
+		os.rename(c.SEQ_DMTCP_STATS_DIR, c.SEQ_DMTCP_STATS_DIR + '.' + u.gettimestamp().replace(' ', '_') )
+
+	os.mkdir(c.SEQ_DMTCP_STATS_DIR)
+	runnable = get_runnable_instance_map()
+
+	for key in runnable.keys():
+		time = u.gettimestamp().replace(' ', '_')
+		u.loginfo('Executing ' + runnable[key])
+		du.restart(runnable[key], '--new-coordinator', None, None, None, {'STATFILE': c.SEQ_DMTCP_STATS_DIR + '/' + key + '_' + time + '.stat', 'STATGEN' : ''})
+
+if __name__ == "__main__":
+	c.LOGGER = 'sequential_dmtcp.log'
+	u.loginfo('Begin Time:  ' + u.gettimestamp())
+	main()
+	u.loginfo('End Time:  ' + u.gettimestamp())

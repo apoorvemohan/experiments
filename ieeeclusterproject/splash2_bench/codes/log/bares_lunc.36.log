@@ -1,0 +1,335 @@
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+  10709000   0.02500    0.0500      1.00     0.250     0.075      2.00        16
+
+COMPUTESTART  = 1414071148087332
+COMPUTEEND    = 1414072773046640
+COMPUTETIME   =   1624959308
+TRACKTIME     =    796733765
+PARTITIONTIME =      6785258	 0.01
+TREEBUILDTIME =     26028181	 0.03
+FORCECALCTIME =    718318185	 0.90
+RESTTIME      =     45602141	 0.06
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,192,489,661,957 cycles                    #    0.000 GHz                     [50.01%]
+ 4,918,783,761,030 instructions              #    0.95  insns per cycle         [50.01%]
+   967,562,296,394 cache-references                                             [50.00%]
+       394,084,711 cache-misses              #    0.041 % of all cache refs     [49.99%]
+   310,685,925,317 branches                                                     [49.99%]
+     5,896,866,886 branch-misses             #    1.90% of all branches         [50.00%]
+
+    1664.894216810 seconds time elapsed
+
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+  10709000   0.02500    0.0500      1.00     0.250     0.075      2.00        16
+
+COMPUTESTART  = 1414071140506491
+COMPUTEEND    = 1414072787097702
+COMPUTETIME   =   1646591211
+TRACKTIME     =    809690514
+PARTITIONTIME =      5144869	 0.01
+TREEBUILDTIME =     25487068	 0.03
+FORCECALCTIME =    748303926	 0.92
+RESTTIME      =     30754651	 0.04
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,202,187,300,872 cycles                    #    0.000 GHz                     [50.01%]
+ 4,921,075,514,042 instructions              #    0.95  insns per cycle         [50.02%]
+   968,700,313,097 cache-references                                             [50.00%]
+       395,367,588 cache-misses              #    0.041 % of all cache refs     [49.99%]
+   311,618,837,785 branches                                                     [49.98%]
+     5,939,365,905 branch-misses             #    1.91% of all branches         [50.00%]
+
+    1680.712135950 seconds time elapsed
+
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+  10709000   0.02500    0.0500      1.00     0.250     0.075      2.00        16
+
+COMPUTESTART  = 1414071139681405
+COMPUTEEND    = 1414072793343821
+COMPUTETIME   =   1653662416
+TRACKTIME     =    799788308
+PARTITIONTIME =      5867293	 0.01
+TREEBUILDTIME =     32352045	 0.04
+FORCECALCTIME =    730788442	 0.91
+RESTTIME      =     30780528	 0.04
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,192,610,133,926 cycles                    #    0.000 GHz                     [50.00%]
+ 4,912,261,268,879 instructions              #    0.95  insns per cycle         [50.01%]
+   966,409,744,168 cache-references                                             [50.01%]
+       394,985,119 cache-misses              #    0.041 % of all cache refs     [50.00%]
+   309,353,829,030 branches                                                     [49.99%]
+     5,940,158,182 branch-misses             #    1.92% of all branches         [49.99%]
+
+    1685.706490980 seconds time elapsed
+
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+  10709000   0.02500    0.0500      1.00     0.250     0.075      2.00        16
+
+COMPUTESTART  = 1414071138404489
+COMPUTEEND    = 1414072795705007
+COMPUTETIME   =   1657300518
+TRACKTIME     =    803921870
+PARTITIONTIME =      7941955	 0.01
+TREEBUILDTIME =     35570405	 0.04
+FORCECALCTIME =    726046916	 0.90
+RESTTIME      =     34362594	 0.04
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+  10709000   0.02500    0.0500      1.00     0.250     0.075      2.00        16
+
+COMPUTESTART  = 1414071143725297
+COMPUTEEND    = 1414072795794230
+COMPUTETIME   =   1652068933
+TRACKTIME     =    816753270
+PARTITIONTIME =      3930560	 0.00
+TREEBUILDTIME =     26450008	 0.03
+FORCECALCTIME =    734321383	 0.90
+RESTTIME      =     52051319	 0.06
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,194,002,962,181 cycles                    #    0.000 GHz                     [50.00%]
+ 4,929,198,971,035 instructions              #    0.95  insns per cycle         [50.00%]
+   970,161,788,988 cache-references                                             [50.01%]
+       386,950,788 cache-misses              #    0.040 % of all cache refs     [50.00%]
+   313,635,765,288 branches                                                     [50.00%]
+     5,887,027,933 branch-misses             #    1.88% of all branches         [50.00%]
+
+    1687.638720769 seconds time elapsed
+
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+  10709000   0.02500    0.0500      1.00     0.250     0.075      2.00        16
+
+COMPUTESTART  = 1414071140559853
+COMPUTEEND    = 1414072796718027
+COMPUTETIME   =   1656158174
+TRACKTIME     =    797565965
+PARTITIONTIME =      2746085	 0.00
+TREEBUILDTIME =     36788768	 0.05
+FORCECALCTIME =    750774719	 0.94
+RESTTIME      =      7256393	 0.01
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,195,049,201,262 cycles                    #    0.000 GHz                     [50.02%]
+ 4,936,294,793,161 instructions              #    0.95  insns per cycle         [50.01%]
+   971,854,424,954 cache-references                                             [49.99%]
+       378,337,733 cache-misses              #    0.039 % of all cache refs     [49.98%]
+   315,407,297,141 branches                                                     [49.99%]
+     5,869,757,392 branch-misses             #    1.86% of all branches         [50.01%]
+
+    1687.870966328 seconds time elapsed
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,190,070,755,312 cycles                    #    0.000 GHz                     [50.00%]
+ 4,921,695,218,706 instructions              #    0.95  insns per cycle         [50.02%]
+   968,335,728,807 cache-references                                             [50.00%]
+       370,973,167 cache-misses              #    0.038 % of all cache refs     [50.00%]
+   311,797,950,983 branches                                                     [49.98%]
+     5,867,326,716 branch-misses             #    1.88% of all branches         [50.00%]
+
+    1688.996498412 seconds time elapsed
+
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+  10709000   0.02500    0.0500      1.00     0.250     0.075      2.00        16
+
+COMPUTESTART  = 1414071139629520
+COMPUTEEND    = 1414072799495574
+COMPUTETIME   =   1659866054
+TRACKTIME     =    813928898
+PARTITIONTIME =      6756482	 0.01
+TREEBUILDTIME =     34697012	 0.04
+FORCECALCTIME =    751396719	 0.92
+RESTTIME      =     21078685	 0.03
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,204,840,091,853 cycles                    #    0.000 GHz                     [50.00%]
+ 4,928,483,089,160 instructions              #    0.95  insns per cycle         [50.01%]
+   970,215,785,183 cache-references                                             [50.00%]
+       442,947,669 cache-misses              #    0.046 % of all cache refs     [50.00%]
+   313,619,909,274 branches                                                     [49.99%]
+     5,889,500,976 branch-misses             #    1.88% of all branches         [50.00%]
+
+    1691.345736745 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     8296 by 8296 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    1828024098          1911        901589    1240591047     586528593
+    1    1828023949           132        891665    1221078269     606053022
+    2    1828023847          1918        805035    1208328662     618887359
+    3    1828023867           138        663326    1252905339     574454122
+    4    1828023884          1920        717475    1251610090     575693491
+    5    1828023947           135        826045    1214865441     612331513
+    6    1828024133          1885        896833    1195415344     631709187
+    7    1828023786           144        822536    1250179346     577020828
+    8    1828023941         38026        803608    1277271875     549909372
+    9    1828023856           150       1031515    1201729094     625262209
+   10    1828023894          1956        850143    1221015293     606155565
+   11    1828023870           130       1136096    1251740334     575146355
+   12    1828023812          1795        969866    1240444816     586606333
+   13    1828023837           129       1195054    1240808233     586019482
+   14    1828024210          1907       1037040    1235849903     591134842
+   15    1828024280           138        734729    1221224967     606063380
+  Avg    1828023951          3276        892660    1232816128     594310978
+  Min    1828023786           129        663326    1195415344     549909372
+  Max    1828024280         38026       1195054    1277271875     631709187
+
+                            TIMING INFORMATION
+Start time                        : 1414071109030902
+Initialization finish time        : 1414071113999338
+Overall finish time               : 1414072942024226
+Total time with initialization    :       1832993324
+Total time without initialization :       1828024888
+
+                             TESTING RESULTS
+TEST PASSED
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 5,191,554,194,783 cycles                    #    0.000 GHz                     [50.00%]
+ 4,591,727,202,532 instructions              #    0.88  insns per cycle         [50.01%]
+ 1,076,326,603,862 cache-references                                             [50.00%]
+       181,967,862 cache-misses              #    0.017 % of all cache refs     [50.00%]
+   259,845,079,433 branches                                                     [49.99%]
+    12,878,498,630 branch-misses             #    4.96% of all branches         [50.00%]
+
+    1834.481784601 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     8296 by 8296 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    1828132584          1983        813049    1227185682     600131383
+    1    1828132659           139        861038    1189894725     637375776
+    2    1828132636          1921        737566    1247066840     580325260
+    3    1828132908           136        781949    1224396636     602953119
+    4    1828132597          1935       1063121    1197187866     629878526
+    5    1828132650           137        636818    1188955643     638539064
+    6    1828132748          1935        704602    1243747545     583677514
+    7    1828132774           125        984732    1273093047     554053777
+    8    1828132678          1974        783764    1227833845     599403971
+    9    1828132771           124        696372    1232668206     594767098
+   10    1828132963         25586        885514    1262533177     564655507
+   11    1828132537           146        914712    1215659964     611556610
+   12    1828132730          1841        878170    1187540226     639711390
+   13    1828132811           129        852142    1261905691     565349750
+   14    1828132799          1916        833705    1241274560     586021537
+   15    1828132612           131        932856    1187765313     639433157
+  Avg    1828132716          2510        835007    1225544310     601739590
+  Min    1828132537           124        636818    1187540226     554053777
+  Max    1828132963         25586       1063121    1273093047     639711390
+
+                            TIMING INFORMATION
+Start time                        : 1414071109033960
+Initialization finish time        : 1414071114185099
+Overall finish time               : 1414072942318219
+Total time with initialization    :       1833284259
+Total time without initialization :       1828133120
+
+                             TESTING RESULTS
+TEST PASSED
+
+Blocked Dense LU Factorization
+     8296 by 8296 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    1828172934          2066        825853    1213069760     614274763
+    1    1828173016           127        809664    1234019214     593342774
+    2    1828172738          1977        792807    1259173429     568203156
+    3    1828172996           133        761721    1218024097     609385629
+    4    1828172582          2038        783768    1208238025     619147351
+    5    1828172554           140        960180    1276142491     551068525
+    6    1828172478          1929        810228    1247115719     580243284
+    7    1828172748           129       1281994    1263204432     563684742
+    8    1828172491          1927       1139707    1230377306     596652092
+    9    1828172863           133        744668    1233900656     593526036
+   10    1828173093          2062        743912    1200174574     627251175
+   11    1828172789           130        845389    1218138510     609175264
+   12    1828172669          1844        705122    1241550094     585914173
+   13    1828172925           129        812022    1219963792     607395711
+   14    1828172760          2048        811523    1238290648     589067191
+   15    1828172581           140        674983    1225955122     601540945
+  Avg    1828172764          1060        843971    1232958617     594367051
+  Min    1828172478           127        674983    1200174574     551068525
+  Max    1828173093          2066       1281994    1276142491     627251175
+
+                            TIMING INFORMATION
+Start time                        : 1414071109038183
+Initialization finish time        : 1414071114142633
+Overall finish time               : 1414072942316151
+Total time with initialization    :       1833277968
+Total time without initialization :       1828173518
+
+                             TESTING RESULTS
+TEST PASSED
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 5,224,395,853,716 cycles                    #    0.000 GHz                     [50.00%]
+ 4,593,571,879,042 instructions              #    0.88  insns per cycle         [50.02%]
+ 1,076,961,042,935 cache-references                                             [50.02%]
+       189,599,721 cache-misses              #    0.018 % of all cache refs     [50.00%]
+   260,304,977,968 branches                                                     [49.99%]
+    12,888,894,794 branch-misses             #    4.95% of all branches         [49.99%]
+
+    1834.801598219 seconds time elapsed
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/lu/non_contiguous_blocks/LU -n8296 -p16 -b16 -s -t':
+
+ 5,246,666,314,922 cycles                    #    0.000 GHz                     [50.00%]
+ 4,600,167,866,754 instructions              #    0.88  insns per cycle         [49.99%]
+ 1,079,006,062,239 cache-references                                             [49.99%]
+       217,361,501 cache-misses              #    0.020 % of all cache refs     [50.00%]
+   261,561,403,368 branches                                                     [50.01%]
+    12,927,253,255 branch-misses             #    4.94% of all branches         [50.02%]
+
+    1834.863154230 seconds time elapsed
+

@@ -1,0 +1,545 @@
+Sysconf CALL: 4096
+Particle array: 1aaf000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        19077         114         334          45        3787       14597           0          95         104
+
+                                   TIMING INFORMATION
+Start time                        : 1412378933537658
+Initialization finish time        : 1412378933550946
+Overall finish time               : 1412378933570023
+Total time with initialization    :            32365
+Total time without initialization :            19077
+
+Total time for steps 3 to 5 :        19077
+
+Sysconf CALL: 4096
+Particle array: 99e000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        16890          96         231          43        3303       13044           1          82          87
+
+                                   TIMING INFORMATION
+Start time                        : 1412378933583242
+Initialization finish time        : 1412378933596371
+Overall finish time               : 1412378933613260
+Total time with initialization    :            30018
+Total time without initialization :            16890
+
+Total time for steps 3 to 5 :        16890
+
+Sysconf CALL: 4096
+Particle array: 1309000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15874          88         213          41        3080       12288           0          81          81
+
+                                   TIMING INFORMATION
+Start time                        : 1412378933629861
+Initialization finish time        : 1412378933648161
+Overall finish time               : 1412378933664036
+Total time with initialization    :            34175
+Total time without initialization :            15874
+
+Total time for steps 3 to 5 :        15874
+
+Sysconf CALL: 4096
+Particle array: d79000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        17390         110         290          50        3465       13294           0          80          96
+
+                                   TIMING INFORMATION
+Start time                        : 1412378933682251
+Initialization finish time        : 1412378933701445
+Overall finish time               : 1412378933718835
+Total time with initialization    :            36584
+Total time without initialization :            17390
+
+Total time for steps 3 to 5 :        17390
+
+Sysconf CALL: 4096
+Particle array: 1264000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        17852         104         241          41        3466       13813           1          91          93
+
+                                   TIMING INFORMATION
+Start time                        : 1412378933733639
+Initialization finish time        : 1412378933745610
+Overall finish time               : 1412378933763462
+Total time with initialization    :            29823
+Total time without initialization :            17852
+
+Total time for steps 3 to 5 :        17852
+
+Sysconf CALL: 4096
+Particle array: 1159000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15922          86         211          40        3200       12223           1          79          79
+
+                                   TIMING INFORMATION
+Start time                        : 1412378933780173
+Initialization finish time        : 1412378933793725
+Overall finish time               : 1412378933809647
+Total time with initialization    :            29474
+Total time without initialization :            15922
+
+Total time for steps 3 to 5 :        15922
+
+Sysconf CALL: 4096
+Particle array: 200f000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15875          88         214          36        3091       12282           1          81          79
+
+                                   TIMING INFORMATION
+Start time                        : 1412378933827602
+Initialization finish time        : 1412378933846944
+Overall finish time               : 1412378933862820
+Total time with initialization    :            35218
+Total time without initialization :            15875
+
+Total time for steps 3 to 5 :        15875
+
+Sysconf CALL: 4096
+Particle array: b6e000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        18332         103         254          50        3571       14169           1          87          95
+
+                                   TIMING INFORMATION
+Start time                        : 1412378933879779
+Initialization finish time        : 1412378933895056
+Overall finish time               : 1412378933913388
+Total time with initialization    :            33609
+Total time without initialization :            18332
+
+Total time for steps 3 to 5 :        18332
+
+Sysconf CALL: 4096
+Particle array: e87000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15928          91         212          41        3121       12299           1          80          80
+
+                                   TIMING INFORMATION
+Start time                        : 1412378933929566
+Initialization finish time        : 1412378933946396
+Overall finish time               : 1412378933962324
+Total time with initialization    :            32758
+Total time without initialization :            15928
+
+Total time for steps 3 to 5 :        15928
+
+Sysconf CALL: 4096
+Particle array: 1d6c000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        18937         123         268          49        3573       14744           0          81          96
+
+                                   TIMING INFORMATION
+Start time                        : 1412378933979243
+Initialization finish time        : 1412378933998090
+Overall finish time               : 1412378934017026
+Total time with initialization    :            37783
+Total time without initialization :            18937
+
+Total time for steps 3 to 5 :        18937
+
+Sysconf CALL: 4096
+Particle array: 1447000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        20810         120         281          56        3884       16268           0          94         103
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934034322
+Initialization finish time        : 1412378934050237
+Overall finish time               : 1412378934071047
+Total time with initialization    :            36725
+Total time without initialization :            20810
+
+Total time for steps 3 to 5 :        20810
+
+Sysconf CALL: 4096
+Particle array: b69000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15886          88         212          41        3097       12283           2          81          80
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934087898
+Initialization finish time        : 1412378934107104
+Overall finish time               : 1412378934122990
+Total time with initialization    :            35092
+Total time without initialization :            15886
+
+Total time for steps 3 to 5 :        15886
+
+Sysconf CALL: 4096
+Particle array: 1cfd000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15967          87         211          39        3201       12265           0          81          81
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934139853
+Initialization finish time        : 1412378934153794
+Overall finish time               : 1412378934169761
+Total time with initialization    :            29908
+Total time without initialization :            15967
+
+Total time for steps 3 to 5 :        15967
+
+Sysconf CALL: 4096
+Particle array: 18c2000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15921          88         211          35        3109       12312           0          81          81
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934187446
+Initialization finish time        : 1412378934206880
+Overall finish time               : 1412378934222801
+Total time with initialization    :            35355
+Total time without initialization :            15921
+
+Total time for steps 3 to 5 :        15921
+
+Sysconf CALL: 4096
+Particle array: 17ca000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15881          87         213          36        3088       12293           0          81          80
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934238563
+Initialization finish time        : 1412378934252156
+Overall finish time               : 1412378934268037
+Total time with initialization    :            29474
+Total time without initialization :            15881
+
+Total time for steps 3 to 5 :        15881
+
+Sysconf CALL: 4096
+Particle array: 21af000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15918          87         211          41        3102       12299           1          95          82
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934285881
+Initialization finish time        : 1412378934304858
+Overall finish time               : 1412378934320776
+Total time with initialization    :            34895
+Total time without initialization :            15918
+
+Total time for steps 3 to 5 :        15918
+
+Sysconf CALL: 4096
+Particle array: 24df000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15888          87         209          38        3109       12280           0          79          80
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934338798
+Initialization finish time        : 1412378934351905
+Overall finish time               : 1412378934367793
+Total time with initialization    :            28995
+Total time without initialization :            15888
+
+Total time for steps 3 to 5 :        15888
+
+Sysconf CALL: 4096
+Particle array: 1f78000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15845         101         211          37        3078       12252           2          80          82
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934386181
+Initialization finish time        : 1412378934406146
+Overall finish time               : 1412378934421990
+Total time with initialization    :            35809
+Total time without initialization :            15845
+
+Total time for steps 3 to 5 :        15845
+
+Sysconf CALL: 4096
+Particle array: 1659000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15931          86         209          41        3195       12233           2          80          81
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934438585
+Initialization finish time        : 1412378934452176
+Overall finish time               : 1412378934468108
+Total time with initialization    :            29523
+Total time without initialization :            15931
+
+Total time for steps 3 to 5 :        15931
+
+Sysconf CALL: 4096
+Particle array: fd3000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15888          91         211          37        3085       12300           0          81          79
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934486007
+Initialization finish time        : 1412378934504830
+Overall finish time               : 1412378934520718
+Total time with initialization    :            34711
+Total time without initialization :            15888
+
+Total time for steps 3 to 5 :        15888
+
+Sysconf CALL: 4096
+Particle array: 935000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15863          87         210          35        3088       12279           1          81          81
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934538655
+Initialization finish time        : 1412378934551816
+Overall finish time               : 1412378934567679
+Total time with initialization    :            29024
+Total time without initialization :            15863
+
+Total time for steps 3 to 5 :        15863
+
+Sysconf CALL: 4096
+Particle array: 25ea000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15885          89         213          37        3084       12297           0          81          81
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934585932
+Initialization finish time        : 1412378934606193
+Overall finish time               : 1412378934622079
+Total time with initialization    :            36147
+Total time without initialization :            15885
+
+Total time for steps 3 to 5 :        15885
+
+Sysconf CALL: 4096
+Particle array: 1c74000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        18380         112         270          47        3497       14274           1          80          98
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934638240
+Initialization finish time        : 1412378934659377
+Overall finish time               : 1412378934677757
+Total time with initialization    :            39517
+Total time without initialization :            18380
+
+Total time for steps 3 to 5 :        18380
+
+Sysconf CALL: 4096
+Particle array: f58000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15875          93         213          35        3079       12288           2          81          83
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934694636
+Initialization finish time        : 1412378934710916
+Overall finish time               : 1412378934726791
+Total time with initialization    :            32155
+Total time without initialization :            15875
+
+Total time for steps 3 to 5 :        15875
+
+Sysconf CALL: 4096
+Particle array: 1741000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        16532         111         268          53        3476       12443           2          80          97
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934743364
+Initialization finish time        : 1412378934763372
+Overall finish time               : 1412378934779904
+Total time with initialization    :            36540
+Total time without initialization :            16532
+
+Total time for steps 3 to 5 :        16532
+
+Sysconf CALL: 4096
+Particle array: cdd000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        18008         117         270          48        3483       13908           1          81          98
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934799060
+Initialization finish time        : 1412378934820081
+Overall finish time               : 1412378934838088
+Total time with initialization    :            39028
+Total time without initialization :            18008
+
+Total time for steps 3 to 5 :        18008
+
+Sysconf CALL: 4096
+Particle array: 1c37000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0        15925          88         211          41        3184       12237           1          81          80
+
+                                   TIMING INFORMATION
+Start time                        : 1412378934854402
+Initialization finish time        : 1412378934869608
+Overall finish time               : 1412378934885533
+Total time with initialization    :            31131
+Total time without initialization :            15925
+
+Total time for steps 3 to 5 :        15925
+
+Sysconf CALL: 4096
+Particle array: 1c7e000
+rc: 0
+Creating a two cluster, non uniform distribution for 256 particles
+Starting FMM with 1 processor

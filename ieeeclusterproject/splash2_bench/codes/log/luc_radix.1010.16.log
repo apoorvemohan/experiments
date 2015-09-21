@@ -1,0 +1,1380 @@
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     201313052           599         83225     107558958      93670100
+
+                            TIMING INFORMATION
+Start time                        : 1414201576691805
+Initialization finish time        : 1414201595284963
+Overall finish time               : 1414201796598670
+Total time with initialization    :        219906865
+Total time without initialization :        201313707
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+     172429.710681 task-clock                #    0.784 CPUs utilized          
+            38,926 context-switches          #    0.226 K/sec                  
+            31,691 cpu-migrations            #    0.184 K/sec                  
+           150,955 page-faults               #    0.875 K/sec                  
+   309,166,893,638 cycles                    #    1.793 GHz                     [50.06%]
+     8,659,725,569 stalled-cycles-frontend   #    2.80% frontend cycles idle    [49.97%]
+   167,183,132,153 stalled-cycles-backend    #   54.08% backend  cycles idle    [50.07%]
+   317,795,452,731 instructions              #    1.03  insns per cycle        
+                                             #    0.53  stalled cycles per insn [49.97%]
+    18,001,655,212 branches                  #  104.400 M/sec                   [50.07%]
+       913,598,819 branch-misses             #    5.08% of all branches         [49.96%]
+
+     219.973070868 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     205208178           610         91418     104908334     100207580
+
+                            TIMING INFORMATION
+Start time                        : 1414201576722297
+Initialization finish time        : 1414201594824767
+Overall finish time               : 1414201800032949
+Total time with initialization    :        223310652
+Total time without initialization :        205208182
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+     172867.653930 task-clock                #    0.774 CPUs utilized          
+            38,209 context-switches          #    0.221 K/sec                  
+            32,131 cpu-migrations            #    0.186 K/sec                  
+           148,850 page-faults               #    0.861 K/sec                  
+   309,955,428,898 cycles                    #    1.793 GHz                     [50.00%]
+     8,718,450,174 stalled-cycles-frontend   #    2.81% frontend cycles idle    [50.03%]
+   167,870,125,120 stalled-cycles-backend    #   54.16% backend  cycles idle    [50.05%]
+   317,869,532,650 instructions              #    1.03  insns per cycle        
+                                             #    0.53  stalled cycles per insn [50.03%]
+    18,001,923,201 branches                  #  104.137 M/sec                   [50.01%]
+       921,770,423 branch-misses             #    5.12% of all branches         [49.99%]
+
+     223.378085976 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     201916813           600         89033     103379252      98447758
+
+                            TIMING INFORMATION
+Start time                        : 1414201576697676
+Initialization finish time        : 1414201598377863
+Overall finish time               : 1414201800295330
+Total time with initialization    :        223597654
+Total time without initialization :        201917467
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+     172680.150952 task-clock                #    0.772 CPUs utilized          
+            39,028 context-switches          #    0.226 K/sec                  
+            33,641 cpu-migrations            #    0.195 K/sec                  
+           145,277 page-faults               #    0.841 K/sec                  
+   309,578,470,404 cycles                    #    1.793 GHz                     [50.19%]
+     8,676,185,278 stalled-cycles-frontend   #    2.80% frontend cycles idle    [50.00%]
+   167,548,576,503 stalled-cycles-backend    #   54.12% backend  cycles idle    [49.90%]
+   317,827,626,455 instructions              #    1.03  insns per cycle        
+                                             #    0.53  stalled cycles per insn [49.84%]
+    18,003,124,186 branches                  #  104.257 M/sec                   [50.02%]
+       915,474,554 branch-misses             #    5.09% of all branches         [50.12%]
+
+     223.629647878 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     204899465           622        102594     108268503      96527598
+
+                            TIMING INFORMATION
+Start time                        : 1414201576703070
+Initialization finish time        : 1414201595425371
+Overall finish time               : 1414201800325353
+Total time with initialization    :        223622283
+Total time without initialization :        204899982
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+     171962.555395 task-clock                #    0.769 CPUs utilized          
+            38,163 context-switches          #    0.222 K/sec                  
+            30,764 cpu-migrations            #    0.179 K/sec                  
+           143,609 page-faults               #    0.835 K/sec                  
+   308,347,639,155 cycles                    #    1.793 GHz                     [49.93%]
+     8,663,107,833 stalled-cycles-frontend   #    2.81% frontend cycles idle    [50.01%]
+   166,314,753,629 stalled-cycles-backend    #   53.94% backend  cycles idle    [50.12%]
+   317,761,816,756 instructions              #    1.03  insns per cycle        
+                                             #    0.52  stalled cycles per insn [50.10%]
+    18,001,854,756 branches                  #  104.685 M/sec                   [50.02%]
+       909,675,691 branch-misses             #    5.05% of all branches         [49.91%]
+
+     223.648441889 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     195789285           601         91510     104923023      90773915
+
+                            TIMING INFORMATION
+Start time                        : 1414201576696407
+Initialization finish time        : 1414201604710450
+Overall finish time               : 1414201800500150
+Total time with initialization    :        223803743
+Total time without initialization :        195789700
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+     172713.725420 task-clock                #    0.772 CPUs utilized          
+            38,360 context-switches          #    0.222 K/sec                  
+            32,853 cpu-migrations            #    0.190 K/sec                  
+           143,931 page-faults               #    0.833 K/sec                  
+   309,636,559,027 cycles                    #    1.793 GHz                     [49.97%]
+     8,640,358,122 stalled-cycles-frontend   #    2.79% frontend cycles idle    [49.98%]
+   167,652,561,186 stalled-cycles-backend    #   54.14% backend  cycles idle    [50.12%]
+   317,688,469,243 instructions              #    1.03  insns per cycle        
+                                             #    0.53  stalled cycles per insn [50.06%]
+    17,992,450,355 branches                  #  104.175 M/sec                   [50.06%]
+       911,149,704 branch-misses             #    5.06% of all branches         [49.91%]
+
+     223.827761495 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     188251260           606         98753     101433579      86718145
+
+                            TIMING INFORMATION
+Start time                        : 1414201576702481
+Initialization finish time        : 1414201612384776
+Overall finish time               : 1414201800636508
+Total time with initialization    :        223934027
+Total time without initialization :        188251732
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+     172292.454393 task-clock                #    0.769 CPUs utilized          
+            38,837 context-switches          #    0.225 K/sec                  
+            30,794 cpu-migrations            #    0.179 K/sec                  
+           146,039 page-faults               #    0.848 K/sec                  
+   308,791,230,354 cycles                    #    1.792 GHz                     [50.00%]
+     8,628,485,205 stalled-cycles-frontend   #    2.79% frontend cycles idle    [49.98%]
+   166,885,370,319 stalled-cycles-backend    #   54.04% backend  cycles idle    [50.01%]
+   317,854,978,577 instructions              #    1.03  insns per cycle        
+                                             #    0.53  stalled cycles per insn [50.04%]
+    18,000,246,146 branches                  #  104.475 M/sec                   [50.05%]
+       907,861,006 branch-misses             #    5.04% of all branches         [50.02%]
+
+     223.963690998 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     197924443           607         87467     101591481      96244730
+
+                            TIMING INFORMATION
+Start time                        : 1414201576717538
+Initialization finish time        : 1414201602736828
+Overall finish time               : 1414201800663354
+Total time with initialization    :        223945816
+Total time without initialization :        197926526
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     205636490           599        194739     105616999      99823986
+
+                            TIMING INFORMATION
+Start time                        : 1414201576692582
+Initialization finish time        : 1414201595046969
+Overall finish time               : 1414201800684346
+Total time with initialization    :        223991764
+Total time without initialization :        205637377
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+     172445.732972 task-clock                #    0.770 CPUs utilized          
+            39,218 context-switches          #    0.227 K/sec                  
+            31,059 cpu-migrations            #    0.180 K/sec                  
+           142,121 page-faults               #    0.824 K/sec                  
+   309,147,355,377 cycles                    #    1.793 GHz                     [50.05%]
+     8,716,559,552 stalled-cycles-frontend   #    2.82% frontend cycles idle    [49.99%]
+   166,983,306,120 stalled-cycles-backend    #   54.01% backend  cycles idle    [49.96%]
+   317,680,676,201 instructions              #    1.03  insns per cycle        
+                                             #    0.53  stalled cycles per insn [49.99%]
+    17,990,437,420 branches                  #  104.325 M/sec                   [50.06%]
+       918,997,030 branch-misses             #    5.11% of all branches         [50.07%]
+
+     223.983950443 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+     172313.570213 task-clock                #    0.769 CPUs utilized          
+            38,503 context-switches          #    0.223 K/sec                  
+            32,683 cpu-migrations            #    0.190 K/sec                  
+           143,985 page-faults               #    0.836 K/sec                  
+   308,900,375,117 cycles                    #    1.793 GHz                     [49.94%]
+     8,665,582,597 stalled-cycles-frontend   #    2.81% frontend cycles idle    [50.01%]
+   166,856,347,624 stalled-cycles-backend    #   54.02% backend  cycles idle    [50.16%]
+   317,760,965,499 instructions              #    1.03  insns per cycle        
+                                             #    0.53  stalled cycles per insn [50.10%]
+    17,992,958,234 branches                  #  104.420 M/sec                   [50.02%]
+       914,091,331 branch-misses             #    5.08% of all branches         [49.87%]
+
+     224.017295519 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     200374928           614         91666     106459049      93823450
+
+                            TIMING INFORMATION
+Start time                        : 1414201576692870
+Initialization finish time        : 1414201600376893
+Overall finish time               : 1414201800752108
+Total time with initialization    :        224059238
+Total time without initialization :        200375215
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+     172453.676273 task-clock                #    0.770 CPUs utilized          
+            38,968 context-switches          #    0.226 K/sec                  
+            30,729 cpu-migrations            #    0.178 K/sec                  
+           138,792 page-faults               #    0.805 K/sec                  
+   308,878,459,640 cycles                    #    1.791 GHz                     [50.05%]
+     8,660,572,886 stalled-cycles-frontend   #    2.80% frontend cycles idle    [49.98%]
+   166,940,846,734 stalled-cycles-backend    #   54.05% backend  cycles idle    [49.97%]
+   317,811,988,196 instructions              #    1.03  insns per cycle        
+                                             #    0.53  stalled cycles per insn [50.00%]
+    17,997,000,400 branches                  #  104.358 M/sec                   [50.06%]
+       905,603,230 branch-misses             #    5.03% of all branches         [50.07%]
+
+     224.092972248 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     187923202           642        178503      98222976      89520892
+
+                            TIMING INFORMATION
+Start time                        : 1414201576697571
+Initialization finish time        : 1414201612965026
+Overall finish time               : 1414201800888684
+Total time with initialization    :        224191113
+Total time without initialization :        187923658
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+     173335.729513 task-clock                #    0.773 CPUs utilized          
+            38,660 context-switches          #    0.223 K/sec                  
+            30,278 cpu-migrations            #    0.175 K/sec                  
+           151,093 page-faults               #    0.872 K/sec                  
+   309,371,458,845 cycles                    #    1.785 GHz                     [50.07%]
+     8,686,673,071 stalled-cycles-frontend   #    2.81% frontend cycles idle    [50.06%]
+   167,456,504,932 stalled-cycles-backend    #   54.13% backend  cycles idle    [50.04%]
+   317,806,765,772 instructions              #    1.03  insns per cycle        
+                                             #    0.53  stalled cycles per insn [49.99%]
+    18,002,630,284 branches                  #  103.860 M/sec                   [50.00%]
+       908,249,523 branch-misses             #    5.05% of all branches         [50.01%]
+
+     224.219041141 seconds time elapsed
+
+kernels/radix/RADIX: Killed
+
+ Performance counter stats for 'kernels/radix/RADIX -p12 -n240200000 -r16 -m7 -s':
+
+     182923.189468 task-clock                #    0.387 CPUs utilized          
+            31,370 context-switches          #    0.171 K/sec                  
+            30,595 cpu-migrations            #    0.167 K/sec                  
+           759,777 page-faults               #    0.004 M/sec                  
+   328,098,385,127 cycles                    #    1.794 GHz                     [49.97%]
+       577,709,265 stalled-cycles-frontend   #    0.18% frontend cycles idle    [50.01%]
+   284,544,680,091 stalled-cycles-backend    #   86.73% backend  cycles idle    [50.06%]
+   104,462,344,954 instructions              #    0.32  insns per cycle        
+                                             #    2.72  stalled cycles per insn [50.05%]
+     3,285,982,356 branches                  #   17.964 M/sec                   [50.01%]
+        10,837,767 branch-misses             #    0.33% of all branches         [49.97%]
+
+     473.135675200 seconds time elapsed
+
+kernels/radix/RADIX: Killed
+
+ Performance counter stats for 'kernels/radix/RADIX -p12 -n240200000 -r16 -m7 -s':
+
+     183031.193426 task-clock                #    0.383 CPUs utilized          
+            31,552 context-switches          #    0.172 K/sec                  
+            30,789 cpu-migrations            #    0.168 K/sec                  
+           769,184 page-faults               #    0.004 M/sec                  
+   328,299,520,905 cycles                    #    1.794 GHz                     [49.99%]
+       581,402,454 stalled-cycles-frontend   #    0.18% frontend cycles idle    [50.08%]
+   284,771,531,729 stalled-cycles-backend    #   86.74% backend  cycles idle    [50.10%]
+   104,378,786,499 instructions              #    0.32  insns per cycle        
+                                             #    2.73  stalled cycles per insn [50.03%]
+     3,258,682,336 branches                  #   17.804 M/sec                   [49.95%]
+        10,980,021 branch-misses             #    0.34% of all branches         [49.92%]
+
+     478.472997849 seconds time elapsed
+
+kernels/radix/RADIX: Killed
+
+ Performance counter stats for 'kernels/radix/RADIX -p12 -n240200000 -r16 -m7 -s':
+
+     182688.376661 task-clock                #    0.378 CPUs utilized          
+            32,250 context-switches          #    0.177 K/sec                  
+            30,142 cpu-migrations            #    0.165 K/sec                  
+           770,256 page-faults               #    0.004 M/sec                  
+   327,631,539,946 cycles                    #    1.793 GHz                     [49.91%]
+       576,171,338 stalled-cycles-frontend   #    0.18% frontend cycles idle    [49.97%]
+   284,235,829,720 stalled-cycles-backend    #   86.75% backend  cycles idle    [50.02%]
+   104,292,235,108 instructions              #    0.32  insns per cycle        
+                                             #    2.73  stalled cycles per insn [50.11%]
+     3,247,134,681 branches                  #   17.774 M/sec                   [50.05%]
+        10,808,280 branch-misses             #    0.33% of all branches         [50.00%]
+
+     483.404891747 seconds time elapsed
+
+kernels/radix/RADIX: Killed
+
+ Performance counter stats for 'kernels/radix/RADIX -p12 -n240200000 -r16 -m7 -s':
+
+     182809.906475 task-clock                #    0.374 CPUs utilized          
+            31,671 context-switches          #    0.173 K/sec                  
+            31,946 cpu-migrations            #    0.175 K/sec                  
+           766,182 page-faults               #    0.004 M/sec                  
+   327,891,428,657 cycles                    #    1.794 GHz                     [50.05%]
+       578,068,967 stalled-cycles-frontend   #    0.18% frontend cycles idle    [50.11%]
+   284,495,963,367 stalled-cycles-backend    #   86.77% backend  cycles idle    [50.02%]
+   104,248,491,591 instructions              #    0.32  insns per cycle        
+                                             #    2.73  stalled cycles per insn [49.97%]
+     3,237,820,122 branches                  #   17.711 M/sec                   [49.91%]
+        10,910,289 branch-misses             #    0.34% of all branches         [50.00%]
+
+     489.155508446 seconds time elapsed
+
+kernels/radix/RADIX: Killed
+
+ Performance counter stats for 'kernels/radix/RADIX -p12 -n240200000 -r16 -m7 -s':
+
+     183096.270815 task-clock                #    0.370 CPUs utilized          
+            31,513 context-switches          #    0.172 K/sec                  
+            30,421 cpu-migrations            #    0.166 K/sec                  
+           771,751 page-faults               #    0.004 M/sec                  
+   328,359,057,833 cycles                    #    1.793 GHz                     [50.00%]
+       584,846,756 stalled-cycles-frontend   #    0.18% frontend cycles idle    [49.98%]
+   284,915,050,363 stalled-cycles-backend    #   86.77% backend  cycles idle    [49.97%]
+   104,372,791,084 instructions              #    0.32  insns per cycle        
+                                             #    2.73  stalled cycles per insn [50.03%]
+     3,250,958,239 branches                  #   17.755 M/sec                   [50.04%]
+        10,861,056 branch-misses             #    0.33% of all branches         [50.05%]
+
+     495.081694448 seconds time elapsed
+
+kernels/radix/RADIX: Killed
+
+ Performance counter stats for 'kernels/radix/RADIX -p12 -n240200000 -r16 -m7 -s':
+
+     183058.498191 task-clock                #    0.367 CPUs utilized          
+            31,637 context-switches          #    0.173 K/sec                  
+            30,128 cpu-migrations            #    0.165 K/sec                  
+           761,284 page-faults               #    0.004 M/sec                  
+   328,314,467,999 cycles                    #    1.793 GHz                     [49.93%]
+       583,135,225 stalled-cycles-frontend   #    0.18% frontend cycles idle    [49.93%]
+   284,802,805,086 stalled-cycles-backend    #   86.75% backend  cycles idle    [50.00%]
+   104,343,389,532 instructions              #    0.32  insns per cycle        
+                                             #    2.73  stalled cycles per insn [50.09%]
+     3,247,264,926 branches                  #   17.739 M/sec                   [50.10%]
+        11,178,778 branch-misses             #    0.34% of all branches         [50.03%]
+
+     499.022470035 seconds time elapsed
+
+kernels/radix/RADIX: Killed
+
+ Performance counter stats for 'kernels/radix/RADIX -p12 -n240200000 -r16 -m7 -s':
+
+     183225.247597 task-clock                #    0.365 CPUs utilized          
+            31,865 context-switches          #    0.174 K/sec                  
+            30,292 cpu-migrations            #    0.165 K/sec                  
+           740,231 page-faults               #    0.004 M/sec                  
+   328,614,301,985 cycles                    #    1.793 GHz                     [49.97%]
+       584,974,176 stalled-cycles-frontend   #    0.18% frontend cycles idle    [49.94%]
+   285,100,588,804 stalled-cycles-backend    #   86.76% backend  cycles idle    [49.95%]
+   104,505,986,076 instructions              #    0.32  insns per cycle        
+                                             #    2.73  stalled cycles per insn [50.05%]
+     3,292,535,056 branches                  #   17.970 M/sec                   [50.09%]
+        10,867,303 branch-misses             #    0.33% of all branches         [50.07%]
+
+     502.617903727 seconds time elapsed
+
+kernels/radix/RADIX: Killed
+
+ Performance counter stats for 'kernels/radix/RADIX -p12 -n240200000 -r16 -m7 -s':
+
+     182904.431944 task-clock                #    0.357 CPUs utilized          
+            31,957 context-switches          #    0.175 K/sec                  
+            31,484 cpu-migrations            #    0.172 K/sec                  
+           768,766 page-faults               #    0.004 M/sec                  
+   328,029,731,230 cycles                    #    1.793 GHz                     [50.02%]
+       591,778,882 stalled-cycles-frontend   #    0.18% frontend cycles idle    [50.02%]
+   284,542,921,115 stalled-cycles-backend    #   86.74% backend  cycles idle    [49.97%]
+   104,277,979,996 instructions              #    0.32  insns per cycle        
+                                             #    2.73  stalled cycles per insn [50.00%]
+     3,240,800,817 branches                  #   17.719 M/sec                   [50.01%]
+        11,058,840 branch-misses             #    0.34% of all branches         [50.05%]
+
+     512.786197731 seconds time elapsed
+
+kernels/radix/RADIX: Killed
+
+ Performance counter stats for 'kernels/radix/RADIX -p12 -n240200000 -r16 -m7 -s':
+
+     183202.466324 task-clock                #    0.353 CPUs utilized          
+            31,488 context-switches          #    0.172 K/sec                  
+            28,694 cpu-migrations            #    0.157 K/sec                  
+           757,545 page-faults               #    0.004 M/sec                  
+   328,599,556,680 cycles                    #    1.794 GHz                     [50.01%]
+       581,440,658 stalled-cycles-frontend   #    0.18% frontend cycles idle    [50.00%]
+   285,000,784,511 stalled-cycles-backend    #   86.73% backend  cycles idle    [50.02%]
+   104,496,436,960 instructions              #    0.32  insns per cycle        
+                                             #    2.73  stalled cycles per insn [50.01%]
+     3,277,770,292 branches                  #   17.892 M/sec                   [50.03%]
+        10,910,923 branch-misses             #    0.33% of all branches         [50.00%]
+
+     518.842189234 seconds time elapsed
+
+kernels/radix/RADIX: Killed
+
+ Performance counter stats for 'kernels/radix/RADIX -p12 -n240200000 -r16 -m7 -s':
+
+     182872.461786 task-clock                #    0.351 CPUs utilized          
+            32,187 context-switches          #    0.176 K/sec                  
+            32,158 cpu-migrations            #    0.176 K/sec                  
+           769,339 page-faults               #    0.004 M/sec                  
+   327,924,335,476 cycles                    #    1.793 GHz                     [50.03%]
+       580,725,834 stalled-cycles-frontend   #    0.18% frontend cycles idle    [50.06%]
+   284,510,600,338 stalled-cycles-backend    #   86.76% backend  cycles idle    [50.05%]
+   104,266,526,280 instructions              #    0.32  insns per cycle        
+                                             #    2.73  stalled cycles per insn [49.98%]
+     3,240,488,521 branches                  #   17.720 M/sec                   [49.97%]
+        11,178,306 branch-misses             #    0.34% of all branches         [49.97%]
+
+     521.004894407 seconds time elapsed
+
+
+Integer Radix Sort
+     240200000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       15060666         5224290         8504241
+    1       15098668         5262522         6677606
+    2       15060535         5224214         8093356
+    3       15060525         5224266         7032823
+    4       15076129         5240202         6013937
+    5       15040602         5212266         5406288
+    6       15076506         5240196         7479598
+    7       15020552         5192241         5199738
+    8       15056332         5220209         6260014
+    9       15060347         5224174         6650088
+   10       15036229         5200137         6197532
+   11       15024471         5188183         6761995
+   12       15043431         5207002         8452201
+   13       15060500         5232159         5156555
+   14       15068300         5240060         5149188
+   15       15036758         5188435         9748376
+  Avg       15055034         5220035         6798971
+  Min       15020552         5188183         5149188
+  Max       15098668         5262522         9748376
+
+
+                 TIMING INFORMATION
+Start time                        : 1414243047905511
+Initialization finish time        : 1414243206420765
+Overall finish time               : 1414243221481431
+Total time with initialization    :        173575920
+Total time without initialization :         15060666
+
+
+Integer Radix Sort
+     240200000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       14436419         3752296         5185302
+    1       14453418         3769185         5379065
+    2       14486922         3816311         8499481
+    3       14453026         3769206         3092281
+    4       14452741         3768273         7384771
+    5       14444355         3760286         4860267
+    6       14453537         3769126         7048747
+    7       14464585         3780211         6382297
+    8       14492136         3808208         4152641
+    9       14464299         3780202         4637443
+   10       14512281         3843894         5112111
+   11       14453030         3769121        10642579
+   12       14424511         3740264         5354224
+   13       14432613         3748208         6199273
+   14       14516628         3831936         7173118
+   15       14436574         3739149         6086858
+  Avg       14461067         3777867         6074404
+  Min       14424511         3739149         3092281
+  Max       14516628         3843894        10642579
+
+
+                 TIMING INFORMATION
+Start time                        : 1414243047898353
+Initialization finish time        : 1414243207380791
+Overall finish time               : 1414243221817210
+Total time with initialization    :        173918857
+Total time without initialization :         14436419
+
+
+Integer Radix Sort
+     240200000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       13232198         4957131         4976656
+    1       13279924         5004532         7310713
+    2       13264580         4989016         8195179
+    3       13196266         4921140         5162528
+    4       13276145         5001076         4817198
+    5       13252682         4977120         7917533
+    6       13252470         4977078         6982732
+    7       13204422         4929133         5716706
+    8       13264013         4989008         4780890
+    9       13235940         4961050         4390655
+   10       13232442         4957084         5938596
+   11       13240673         4965130         7719460
+   12       13212353         4936914         5384414
+   13       13220624         4944957         7458881
+   14       13188239         4920913         7995114
+   15       13264355         4988897         5231979
+  Avg       13238583         4963761         6248702
+  Min       13188239         4920913         4390655
+  Max       13279924         5004532         8195179
+
+
+                 TIMING INFORMATION
+Start time                        : 1414243047920564
+Initialization finish time        : 1414243211044841
+Overall finish time               : 1414243224277039
+Total time with initialization    :        176356475
+Total time without initialization :         13232198
+
+
+Integer Radix Sort
+     240200000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       14944033         6140413         3793571
+    1       14955087         6150915         7417929
+    2       14920070         6116393         4220985
+    3       14763424         5959596         5125132
+    4       14932340         6128395         5614143
+    5       14923645         6119791         5350351
+    6       14768593         5964359         7934979
+    7       14943169         6139096         5995089
+    8       14924423         6120398         5777629
+    9       14940413         6148344         3785698
+   10       14940548         6136891         8726728
+   11       14936551         6132351         7435758
+   12       14768493         5976058         6416335
+   13       14900237         6120006         2773545
+   14       14916326         6112262         5606218
+   15       14928669         6124130         8359186
+  Avg       14900376         6099337         5895830
+  Min       14763424         5959596         2773545
+  Max       14955087         6150915         8726728
+
+
+                 TIMING INFORMATION
+Start time                        : 1414243047903278
+Initialization finish time        : 1414243209792775
+Overall finish time               : 1414243224736808
+Total time with initialization    :        176833530
+Total time without initialization :         14944033
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n240200000 -r8 -m7 -s':
+
+   345,998,894,203 cycles                    #    0.000 GHz                     [49.96%]
+   114,555,053,112 instructions              #    0.33  insns per cycle         [49.98%]
+    20,218,736,538 cache-references                                             [50.02%]
+        20,528,162 cache-misses              #    0.102 % of all cache refs     [50.06%]
+     3,727,439,832 branches                                                     [50.05%]
+        13,946,718 branch-misses             #    0.37% of all branches         [50.00%]
+         1,246,604 page-faults                                                 
+
+     177.262951864 seconds time elapsed
+
+
+Integer Radix Sort
+     240200000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       14272477         5352379         5926786
+    1       14308491         5388299         6752159
+    2       14296493         5376340         6252666
+    3       14291957         5388216         4240818
+    4       14272023         5368331         8849835
+    5       14296675         5376289         6806082
+    6       14301054         5380944         5681479
+    7       14308045         5388251         5038610
+    8       14316316         5396231         5598970
+    9       14323485         5403756         4717459
+   10       14308778         5388282         7044063
+   11       14276279         5356236         5505080
+   12       14308780         5388274         7262729
+   13       14300038         5396272         3981022
+   14       14316200         5396277         5436409
+   15       14254423         5360260         7892039
+  Avg       14296970         5381540         6061638
+  Min       14254423         5352379         3981022
+  Max       14323485         5403756         8849835
+
+
+                 TIMING INFORMATION
+Start time                        : 1414243047918522
+Initialization finish time        : 1414243211208762
+Overall finish time               : 1414243225481239
+Total time with initialization    :        177562717
+Total time without initialization :         14272477
+
+
+Integer Radix Sort
+     240200000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       14324177         6812066         7442243
+    1       14333882         6821221         7189293
+    2       14360297         6847996         4909298
+    3       14348293         6835910         5009013
+    4       14328491         6816029         5694371
+    5       14388183         6875530         6864355
+    6       14348173         6836039         4739042
+    7       14344579         6832006         6366425
+    8       14380123         6856342         4623686
+    9       14339157         6814708         7268805
+   10       14360384         6836292         5106655
+   11       14355971         6832240         3705643
+   12       14319885         6809539         7292937
+   13       14336071         6812305         4491849
+   14       14342110         6817745         6628435
+   15       14342035         6817624         5895495
+  Avg       14346988         6829600         5826722
+  Min       14319885         6809539         3705643
+  Max       14388183         6875530         7442243
+
+
+                 TIMING INFORMATION
+Start time                        : 1414243047926006
+Initialization finish time        : 1414243211356753
+Overall finish time               : 1414243225680930
+Total time with initialization    :        177754924
+Total time without initialization :         14324177
+
+
+Integer Radix Sort
+     240200000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       14783444         5695939         7162629
+    1       14827362         5740116         6249091
+    2       14803549         5716066         7006126
+    3       14799183         5712044         5220167
+    4       14831053         5744068         3942471
+    5       14823274         5736040         6256025
+    6       14787479         5700023         6846881
+    7       14821162         5733745         6810262
+    8       14778980         5691707         9062412
+    9       14846611         5758615         7463663
+   10       14807614         5720013         7153808
+   11       14791195         5703649         4968992
+   12       14799271         5711686         5825467
+   13       14821161         5733369         6829729
+   14       14815403         5728009         6492913
+   15       14787299         5697014         7845800
+  Avg       14807752         5720131         6571027
+  Min       14778980         5691707         3942471
+  Max       14846611         5758615         9062412
+
+
+                 TIMING INFORMATION
+Start time                        : 1414243048217932
+Initialization finish time        : 1414243211284956
+Overall finish time               : 1414243226068400
+Total time with initialization    :        177850468
+Total time without initialization :         14783444
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n240200000 -r8 -m7 -s':
+
+   345,230,229,135 cycles                    #    0.000 GHz                     [50.03%]
+   114,507,386,598 instructions              #    0.33  insns per cycle         [50.06%]
+    20,202,952,741 cache-references                                             [50.05%]
+        20,198,346 cache-misses              #    0.100 % of all cache refs     [49.99%]
+     3,687,973,368 branches                                                     [49.97%]
+        13,218,356 branch-misses             #    0.36% of all branches         [49.98%]
+         1,223,191 page-faults                                                 
+
+     178.705103219 seconds time elapsed
+
+
+Integer Radix Sort
+     240200000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       12731307         5723008         5669428
+    1       12704676         5696252         6332875
+    2       12716671         5708277         6112937
+    3       12677855         5712253         2563593
+    4       12708425         5700055         5825913
+    5       12680366         5672238         4820856
+    6       12728309         5720231         4820467
+    7       12664421         5656241         4983647
+    8       12692060         5684103         4288676
+    9       12712067         5704252         4297627
+   10       12646014         5680279         2965036
+   11       12656561         5648196         5520582
+   12       12668240         5660213         4578396
+   13       12660470         5652233         5321894
+   14       12671041         5663151         6965147
+   15       12692285         5678818         5350776
+  Avg       12688173         5684988         5026116
+  Min       12646014         5648196         2563593
+  Max       12731307         5723008         6965147
+
+
+                 TIMING INFORMATION
+Start time                        : 1414243047905830
+Initialization finish time        : 1414243214182053
+Overall finish time               : 1414243226913360
+Total time with initialization    :        179007530
+Total time without initialization :         12731307
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n240200000 -r8 -m7 -s':
+
+   345,532,046,623 cycles                    #    0.000 GHz                     [50.02%]
+   114,535,284,850 instructions              #    0.33  insns per cycle         [50.04%]
+    20,204,821,829 cache-references                                             [50.01%]
+        20,417,569 cache-misses              #    0.101 % of all cache refs     [50.01%]
+     3,690,497,763 branches                                                     [49.99%]
+        13,872,096 branch-misses             #    0.38% of all branches         [50.02%]
+         1,261,956 page-faults                                                 
+
+     180.203644895 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n240200000 -r8 -m7 -s':
+
+   345,938,272,351 cycles                    #    0.000 GHz                     [50.02%]
+   114,705,902,406 instructions              #    0.33  insns per cycle         [50.03%]
+    20,265,864,802 cache-references                                             [49.91%]
+        20,245,249 cache-misses              #    0.100 % of all cache refs     [50.00%]
+     3,740,521,687 branches                                                     [49.99%]
+        14,245,184 branch-misses             #    0.38% of all branches         [50.12%]
+         1,219,577 page-faults                                                 
+
+     180.465443741 seconds time elapsed
+
+
+Integer Radix Sort
+     240200000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        8760519         4844101         2686825
+    1        8748229         4828243         2968244
+    2        8787617         4867385         3367705
+    3        8764326         4844222         3155527
+    4        8748368         4832215         1510366
+    5        8764636         4848216         2470653
+    6        8787264         4867418         3868033
+    7        8961820         5041740         3084275
+    8        8787475         4867229         3242395
+    9        8776107         4856216         2687133
+   10        8756479         4840073         1679126
+   11        8779962         4860043         2749123
+   12        8752773         4836313         2229607
+   13        8751677         4831359         3338301
+   14        8776308         4856299         2855691
+   15        8960496         5027029         3675331
+  Avg        8791504         4871756         2848021
+  Min        8748229         4828243         1510366
+  Max        8961820         5041740         3868033
+
+
+                 TIMING INFORMATION
+Start time                        : 1414243047921961
+Initialization finish time        : 1414243220600939
+Overall finish time               : 1414243229361458
+Total time with initialization    :        181439497
+Total time without initialization :          8760519
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n240200000 -r8 -m7 -s':
+
+   345,749,521,360 cycles                    #    0.000 GHz                     [50.02%]
+   114,480,250,888 instructions              #    0.33  insns per cycle         [49.99%]
+    20,183,696,378 cache-references                                             [49.99%]
+        20,395,104 cache-misses              #    0.101 % of all cache refs     [50.00%]
+     3,699,290,357 branches                                                     [50.04%]
+        14,037,780 branch-misses             #    0.38% of all branches         [50.04%]
+         1,251,835 page-faults                                                 
+
+     181.603045619 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n240200000 -r8 -m7 -s':
+
+   345,435,828,827 cycles                    #    0.000 GHz                     [49.90%]
+   114,552,692,344 instructions              #    0.33  insns per cycle         [50.00%]
+    20,202,996,482 cache-references                                             [50.07%]
+        20,585,369 cache-misses              #    0.102 % of all cache refs     [50.12%]
+     3,705,669,720 branches                                                     [50.01%]
+        14,161,966 branch-misses             #    0.38% of all branches         [49.96%]
+         1,238,370 page-faults                                                 
+
+     182.567707109 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n240200000 -r8 -m7 -s':
+
+   346,046,569,875 cycles                    #    0.000 GHz                     [49.96%]
+   114,622,678,941 instructions              #    0.33  insns per cycle         [50.01%]
+    20,243,908,235 cache-references                                             [50.11%]
+        20,458,269 cache-misses              #    0.101 % of all cache refs     [50.06%]
+     3,721,631,292 branches                                                     [50.01%]
+        14,413,802 branch-misses             #    0.39% of all branches         [49.91%]
+         1,241,347 page-faults                                                 
+
+     182.749471576 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n240200000 -r8 -m7 -s':
+
+   346,264,225,399 cycles                    #    0.000 GHz                     [50.02%]
+   114,589,937,184 instructions              #    0.33  insns per cycle         [50.06%]
+    20,234,532,126 cache-references                                             [50.06%]
+        20,335,510 cache-misses              #    0.100 % of all cache refs     [50.01%]
+     3,727,535,873 branches                                                     [49.96%]
+        13,819,129 branch-misses             #    0.37% of all branches         [49.97%]
+         1,244,753 page-faults                                                 
+
+     182.800133887 seconds time elapsed
+
+
+Integer Radix Sort
+     240200000 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       10119221         5054579         3889836
+    1       10139807         5075256         3382922
+    2       10099577         5034688         4856054
+    3       10149793         5085065         4022175
+    4       10107236         5042681         3678343
+    5       10077792         5012862         4959230
+    6       10095388         5030719         3948089
+    7       10135316         5070655         3736607
+    8       10087084         5032090         2833456
+    9       10107033         5052068         5010285
+   10       10118378         5062972         4110397
+   11       10087080         5032055         3232621
+   12       10114674         5050699         1755931
+   13       10099094         5034778         3274724
+   14       10143581         5078742         4194193
+   15       10098991         5034618         1843821
+  Avg       10111253         5049033         3670543
+  Min       10077792         5012862         1755931
+  Max       10149793         5085065         5010285
+
+
+                 TIMING INFORMATION
+Start time                        : 1414243047961907
+Initialization finish time        : 1414243220600947
+Overall finish time               : 1414243230720168
+Total time with initialization    :        182758261
+Total time without initialization :         10119221
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n240200000 -r8 -m7 -s':
+
+   346,121,883,214 cycles                    #    0.000 GHz                     [50.09%]
+   114,440,083,280 instructions              #    0.33  insns per cycle         [49.90%]
+    20,196,009,992 cache-references                                             [49.96%]
+        20,313,451 cache-misses              #    0.101 % of all cache refs     [49.94%]
+     3,674,644,466 branches                                                     [50.13%]
+        14,152,402 branch-misses             #    0.39% of all branches         [50.07%]
+         1,256,193 page-faults                                                 
+
+     183.787309061 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/radix/RADIX -p16 -n240200000 -r8 -m7 -s':
+
+   345,738,069,900 cycles                    #    0.000 GHz                     [50.00%]
+   114,432,498,583 instructions              #    0.33  insns per cycle         [50.00%]
+    20,187,372,493 cache-references                                             [50.05%]
+        20,665,733 cache-misses              #    0.102 % of all cache refs     [50.03%]
+     3,675,861,519 branches                                                     [50.03%]
+        14,637,695 branch-misses             #    0.40% of all branches         [49.99%]
+         1,247,521 page-faults                                                 
+
+     188.284336533 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     206037949           599         94128     106434391      99508598
+
+                            TIMING INFORMATION
+Start time                        : 1414243047902068
+Initialization finish time        : 1414243069904803
+Overall finish time               : 1414243275943005
+Total time with initialization    :        228040937
+Total time without initialization :        206038202
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+   309,811,850,908 cycles                    #    0.000 GHz                     [50.02%]
+   317,671,723,324 instructions              #    1.03  insns per cycle         [49.96%]
+    73,654,264,530 cache-references                                             [49.94%]
+        11,718,641 cache-misses              #    0.016 % of all cache refs     [50.01%]
+    17,988,600,519 branches                                                     [50.08%]
+       916,323,766 branch-misses             #    5.09% of all branches         [50.09%]
+           138,868 page-faults                                                 
+
+     228.172751130 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     201255959           590         90082     109747163      91417962
+
+                            TIMING INFORMATION
+Start time                        : 1414243047894422
+Initialization finish time        : 1414243075040939
+Overall finish time               : 1414243276297141
+Total time with initialization    :        228402719
+Total time without initialization :        201256202
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+   308,594,951,125 cycles                    #    0.000 GHz                     [50.07%]
+   317,777,032,409 instructions              #    1.03  insns per cycle         [50.07%]
+    73,607,492,788 cache-references                                             [50.04%]
+        11,908,791 cache-misses              #    0.016 % of all cache refs     [49.96%]
+    17,995,242,365 branches                                                     [49.96%]
+       908,822,730 branch-misses             #    5.05% of all branches         [49.99%]
+           125,921 page-faults                                                 
+
+     228.434870928 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     197903944           596        143028     103731863      94024202
+
+                            TIMING INFORMATION
+Start time                        : 1414243047891875
+Initialization finish time        : 1414243078887585
+Overall finish time               : 1414243276791963
+Total time with initialization    :        228900088
+Total time without initialization :        197904378
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     195746300           565         83208     107671903      87990439
+
+                            TIMING INFORMATION
+Start time                        : 1414243047897053
+Initialization finish time        : 1414243081057055
+Overall finish time               : 1414243276803708
+Total time with initialization    :        228906655
+Total time without initialization :        195746653
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+   309,431,717,594 cycles                    #    0.000 GHz                     [50.03%]
+   317,754,981,134 instructions              #    1.03  insns per cycle         [49.96%]
+    73,629,866,027 cache-references                                             [49.97%]
+        12,162,631 cache-misses              #    0.017 % of all cache refs     [50.00%]
+    18,002,499,273 branches                                                     [50.07%]
+       910,893,220 branch-misses             #    5.06% of all branches         [50.06%]
+           141,087 page-faults                                                 
+
+     228.929402761 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+   309,507,698,119 cycles                    #    0.000 GHz                     [50.05%]
+   317,743,921,705 instructions              #    1.03  insns per cycle         [50.02%]
+    73,646,008,614 cache-references                                             [49.98%]
+        11,342,556 cache-misses              #    0.015 % of all cache refs     [49.99%]
+    17,977,924,251 branches                                                     [50.01%]
+       915,827,738 branch-misses             #    5.09% of all branches         [50.04%]
+           139,747 page-faults                                                 
+
+     228.936686440 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     196923150           591         86641     113757247      83078450
+
+                            TIMING INFORMATION
+Start time                        : 1414243047895061
+Initialization finish time        : 1414243080945019
+Overall finish time               : 1414243277868786
+Total time with initialization    :        229973725
+Total time without initialization :        196923767
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+   309,828,539,361 cycles                    #    0.000 GHz                     [50.07%]
+   317,700,600,916 instructions              #    1.03  insns per cycle         [50.04%]
+    73,625,930,623 cache-references                                             [50.06%]
+        11,907,096 cache-misses              #    0.016 % of all cache refs     [49.96%]
+    17,993,440,052 branches                                                     [49.99%]
+       909,884,023 branch-misses             #    5.06% of all branches         [49.97%]
+           137,846 page-faults                                                 
+
+     230.001231415 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     196964506           602         80688     117258174      79624874
+
+                            TIMING INFORMATION
+Start time                        : 1414243047891041
+Initialization finish time        : 1414243081124764
+Overall finish time               : 1414243278089915
+Total time with initialization    :        230198874
+Total time without initialization :        196965151
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+   309,671,037,678 cycles                    #    0.000 GHz                     [50.01%]
+   317,603,777,986 instructions              #    1.03  insns per cycle         [50.14%]
+    73,689,608,359 cache-references                                             [50.10%]
+        12,035,874 cache-misses              #    0.016 % of all cache refs     [50.02%]
+    17,996,289,777 branches                                                     [49.91%]
+       918,173,571 branch-misses             #    5.10% of all branches         [49.93%]
+           138,509 page-faults                                                 
+
+     230.225357447 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     191051209           590        375646     103266024      87408770
+
+                            TIMING INFORMATION
+Start time                        : 1414243047895656
+Initialization finish time        : 1414243087124834
+Overall finish time               : 1414243278176336
+Total time with initialization    :        230280680
+Total time without initialization :        191051502
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+   309,690,135,582 cycles                    #    0.000 GHz                     [49.93%]
+   317,760,662,181 instructions              #    1.03  insns per cycle         [50.03%]
+    73,645,055,201 cache-references                                             [49.99%]
+        12,306,677 cache-misses              #    0.017 % of all cache refs     [50.10%]
+    18,000,908,483 branches                                                     [50.00%]
+       913,039,813 branch-misses             #    5.07% of all branches         [50.05%]
+           150,102 page-faults                                                 
+
+     230.316110921 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     184825074           669        109938      92260241      92454069
+
+                            TIMING INFORMATION
+Start time                        : 1414243047899407
+Initialization finish time        : 1414243093718388
+Overall finish time               : 1414243278544100
+Total time with initialization    :        230644693
+Total time without initialization :        184825712
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+   309,102,058,863 cycles                    #    0.000 GHz                     [50.05%]
+   317,766,939,447 instructions              #    1.03  insns per cycle         [49.99%]
+    73,676,602,982 cache-references                                             [50.04%]
+        12,160,306 cache-misses              #    0.017 % of all cache refs     [49.98%]
+    17,990,774,252 branches                                                     [50.05%]
+       915,176,417 branch-misses             #    5.09% of all branches         [50.00%]
+           149,972 page-faults                                                 
+
+     230.681865681 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     195688174           632        116662     103887625      91683089
+
+                            TIMING INFORMATION
+Start time                        : 1414243047896887
+Initialization finish time        : 1414243082904972
+Overall finish time               : 1414243278593420
+Total time with initialization    :        230696533
+Total time without initialization :        195688448
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+   309,172,774,062 cycles                    #    0.000 GHz                     [50.10%]
+   317,688,882,900 instructions              #    1.03  insns per cycle         [50.11%]
+    73,574,870,790 cache-references                                             [50.01%]
+        11,967,800 cache-misses              #    0.016 % of all cache refs     [49.94%]
+    17,985,849,685 branches                                                     [49.92%]
+       904,349,468 branch-misses             #    5.03% of all branches         [50.02%]
+           134,459 page-faults                                                 
+
+     230.727689648 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     184799000           664        198025     104513986      80086157
+
+                            TIMING INFORMATION
+Start time                        : 1414243047894734
+Initialization finish time        : 1414243093825079
+Overall finish time               : 1414243278624347
+Total time with initialization    :        230729613
+Total time without initialization :        184799268
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p16 -b16 -c':
+
+   309,643,691,777 cycles                    #    0.000 GHz                     [50.01%]
+   317,711,673,245 instructions              #    1.03  insns per cycle         [50.14%]
+    73,606,434,210 cache-references                                             [50.16%]
+        12,263,518 cache-misses              #    0.017 % of all cache refs     [50.02%]
+    18,003,005,893 branches                                                     [49.89%]
+       907,546,276 branch-misses             #    5.04% of all branches         [49.87%]
+           145,007 page-faults                                                 
+
+     230.771119762 seconds time elapsed
+

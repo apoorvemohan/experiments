@@ -1,0 +1,55 @@
+
+Integer Radix Sort
+     2147483647 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       20794837        11175297         5975138
+    1       20815179        11195423         6125787
+    2       20799236        11179410         7285759
+    3       20817935        11198085         7321406
+    4       20811065        11191433         6048139
+    5       20817718        11197955         6092377
+    6       20798848        11179438         5956247
+    7       20817688        11197971         6057209
+    8       20799189        11179400         6126216
+    9       20814954        11195267         6052683
+   10       20814763        11195384         5866895
+   11       20815046        11195272         6075000
+   12       20795092        11175107         6372024
+   13       20783011        11163326         5958746
+   14       20814690        11195143         8831825
+   15       20817330        11197716         9618644
+  Avg       20807911        11188227         6610256
+  Min       20783011        11163326         5866895
+  Max       20817935        11198085         9618644
+
+
+                 TIMING INFORMATION
+Start time                        : 1414029060750890
+Initialization finish time        : 1414029196745004
+Overall finish time               : 1414029217539841
+Total time with initialization    :        156788951
+Total time without initialization :         20794837
+
+
+                  TESTING RESULTS
+PASSED: All keys in place.
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/radix/RADIX -p16 -r8 -n2147483647 -m7 -s -t':
+
+ 3,879,626,363,490 cycles                    #    0.000 GHz                     [50.00%]
+ 1,221,245,449,645 instructions              #    0.31  insns per cycle         [50.00%]
+   234,425,687,438 cache-references                                             [50.00%]
+       246,339,193 cache-misses              #    0.105 % of all cache refs     [50.00%]
+    70,927,531,911 branches                                                     [50.00%]
+       174,058,153 branch-misses             #    0.25% of all branches         [50.00%]
+
+     191.779056786 seconds time elapsed
+

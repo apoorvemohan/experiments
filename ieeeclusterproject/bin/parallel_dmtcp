@@ -1,0 +1,319 @@
+#!/usr/bin/env python
+
+#total memory usage of all processes should be <= total memory of the system
+#return list of processes to be exetuted next
+
+import os
+import sys
+import time
+import copy
+import random
+import signal
+import subprocess as s
+import multiprocessing as m
+import xml.etree.ElementTree as ET
+
+path = os.path.dirname(os.path.realpath(__file__))  + '/..'
+sys.path.insert(0, path)
+
+import common.imports.utils as u
+import common.imports.constants as c
+import common.imports.dmtcp_utils as du
+import common.imports.rules as r
+
+MAX = 10
+running_pid_port = []
+app_stats_map = {}
+stats_history_map = {}
+total_passes = 0
+
+def setup_for_restart(chkptdir):
+        fp = open(chkptdir + '/dmtcp_env.txt', 'w')
+        fp.write('STATFILE=$STATFILE\n')
+        fp.write('STATGEN=$STATGEN\n')
+        fp.close()
+
+def get_runnable_instance_map():
+        runnablemap = {}
+	u.listonlydir(c.PARALLEL_DMTCP_CHKPTS_DIR).sort()
+        for chkpt in u.listonlydir(c.PARALLEL_DMTCP_CHKPTS_DIR):
+                chkptlist = u.listonlydir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + chkpt)
+                if len(chkptlist) > 0:
+                        runnablemap.update({chkpt: c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + chkpt + '/' + max(chkptlist) + '/' + u.getchkptimg(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + chkpt + '/' + max(chkptlist))})
+                else:
+                        u.logerr('INVALID CHKPT DIR ' + chkpt)
+
+        return runnablemap
+
+def update_app_stats_map(appid, statfile):
+	fp = open(statfile, 'r')
+	stats = fp.readlines()
+	app_stats_map.update({appid : {}})
+	for stat in stats[0:-2]:
+#		if stat.split(':')[0].strip() == 'INSTRUCTIONS':
+#			stats_history_map[appid][stat.split(':')[0].strip()].append(int(stat.split(':')[1].strip()))
+#		if stat.split(':')[0].strip() == 'CPU_CYCLES':
+#			stats_history_map[appid][stat.split(':')[0].strip()].append(int(stat.split(':')[1].strip()))
+		if stat.split(':')[0].strip() in ['CPU_CYCLES', 'INSTRUCTIONS', 'CACHE_REFERENCES', 'CACHE_MISSES', 'BRANCH_INSTRUCTIONS']:
+			app_stats_map[appid][stat.split(':')[0].strip()] = float(stat.split(':')[1].strip())
+		else:
+			app_stats_map[appid][stat.split(':')[0].strip()] = stat.split(':')[1].strip()
+#u.loginfo('Latest App Stats Map: ' + str(app_stats_map))
+	fp.close()
+
+def generate_stats_and_enqueue():
+	runnable = get_runnable_instance_map()
+	app_thread_pid = {}
+
+	for app in runnable:
+		tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
+		root = tree.getroot()
+		app_thread_pid.update({app: [int(root.findall('THREADS')[0].text), None, str(app), None]})
+		#app_thread_pid.update({app: [int(root.findall('THREADS')[0].text), None, str(app), int(root.findall('TYPE')[0].text)]})
+
+	#cpu = m.cpu_count()*1.5
+	cpu = m.cpu_count()
+	while len(app_thread_pid) > 0:
+		next_runnable_app_list = []
+		local_copy = copy.deepcopy(app_thread_pid)
+
+		while len(local_copy) > 0:
+			maxthreadapp = None
+			maxthread = -1
+			for app in local_copy:
+				if local_copy[app][0] > maxthread:
+					maxthreadapp = app
+					maxthread = local_copy[app][0]
+
+			if(cpu - local_copy[maxthreadapp][0]) >= 0:
+				cpu -= local_copy[maxthreadapp][0]
+				next_runnable_app_list.append(maxthreadapp)
+
+			local_copy.pop(maxthreadapp)
+
+		for key in next_runnable_app_list:
+
+			if app_thread_pid[key][1] == None:
+
+				u.loginfo('Executing ' + runnable[key])
+				cwd = os.getcwd()
+                		chkptnum = 0
+
+				if len(u.listonlydir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(key))) > 0:
+        	               		chkptnum = int(max(u.listonlydir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(key)))) + 1
+	        	        else:
+        	        	        chkptnum = 1
+				chkptnum = 1
+		
+		        #        os.mkdir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(key) + '/' + str(chkptnum))
+        		        os.chdir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(key) + '/' + str(chkptnum))
+                		#setup_for_restart(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(key) + '/' + str(chkptnum))
+				port = u.getopenport()
+				u.loginfo('Restart1: ' + str(key))
+				if(sys.argv[1] == '-b'):
+	                		a = du.restart(runnable[key], '--new-coordinator', '--port ' + str(port), '--daemon', ' ', {'STATFILE': c.PARALLEL_DMTCP_QUEUED_DIR + '/' + key + '.stat', 'STATGEN' : 'BASE'})
+				else:
+	                		a = du.restart(runnable[key], '--new-coordinator', '--port ' + str(port), '--daemon', '-i 30', {'STATFILE': c.PARALLEL_DMTCP_QUEUED_DIR + '/' + key + '.stat', 'STATGEN' : 'ONCE'})
+				os.chdir(cwd)
+
+				app_thread_pid[key][1] = a
+
+		flag = True
+
+		while flag:
+
+			for app in app_thread_pid.items():
+				if (app[1][1] != None) and (app[1][1].poll() == 0):
+					cpu += app[1][0]
+					app_thread_pid.pop(app[0])
+					flag = False
+					u.loginfo('Stop1: ' + str(key))
+					stats_history_map.update({app[0]:{}})
+					stats_history_map[app[0]].update({'INSTRUCTIONS':[]})
+					stats_history_map[app[0]].update({'CPU_CYCLES':[]})
+					stats_history_map[app[0]].update({'CACHE_MISSES':[]})
+					update_app_stats_map(app[1][2], c.PARALLEL_DMTCP_QUEUED_DIR + '/' + app[1][2] + '.stat')
+					app_stats_map[app[1][2]]['TYPE'] = app[1][3]
+					app_stats_map[app[1][2]]['pickup_count'] = 0
+					stats_history_map[app[1][2]]['INSTRUCTIONS'].append(app_stats_map[app[1][2]]['INSTRUCTIONS'])
+					stats_history_map[app[1][2]]['CPU_CYCLES'].append(app_stats_map[app[1][2]]['CPU_CYCLES'])
+					stats_history_map[app[1][2]]['CACHE_MISSES'].append(app_stats_map[app[1][2]]['CACHE_MISSES'])
+			if flag:
+				time.sleep(1)
+
+def clean_completed():
+	global running_pid_port
+	freed_threads = 0
+	for app in running_pid_port:
+			if (app[1].poll() == 0) or (not os.path.exists('/proc/' + str(app[1].pid))):
+				os.rename(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app[0] + '.stat', c.PARALLEL_DMTCP_COMPLETED_DIR + '/' + app[0] + '.stat' + u.gettimestamp().replace(' ', '_'))
+				running_pid_port.remove(app)
+				app_stats_map.pop(app[0])
+				flag = True
+				tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
+                                root = tree.getroot()
+                                thread = int(root.findall('THREADS')[0].text)
+				freed_threads += thread
+
+	return freed_threads
+
+def get_next_runnable_map(retval, passes):
+
+	global app_stats_map, total_passes
+	runningapplist = [app[0] for app in running_pid_port]
+
+	for app in os.listdir(c.PARALLEL_DMTCP_RUNNING_DIR):
+		update_app_stats_map(app.split('.')[0], c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app)
+
+	for app in app_stats_map.keys():
+		for stat in app_stats_map[app].keys():
+			app_stats_map[app][stat] /= float(passes*30)
+
+	if ((len(sys.argv) == 1) or (sys.argv[1] == None) or (sys.argv[1] == '') or (sys.argv[1] == '-r') or (sys.argv[1] == '--random')):
+		
+		return random.choice(r.RULES.keys())(stats_history_map, app_stats_map, runningapplist, total_passes, retval)
+	else:
+		return r.RULES[sys.argv[1]](stats_history_map, app_stats_map, runningapplist, total_passes, retval)
+
+#	return [set(next_runnable_list) - set(app[0] for app in running_pid_port)]
+#	retur nexu_runnable_list
+
+def stop_running(next_runnable):
+
+	u.loginfo("In STOP RUNNING!!!")
+	u.loginfo("Next Runnable: " + str(next_runnable))
+	u.loginfo("Running: " + str([running[0] for running in running_pid_port]))
+
+	for running in running_pid_port:
+		stats_history_map[running[0]]['INSTRUCTIONS'].append(app_stats_map[running[0]]['INSTRUCTIONS'])
+		stats_history_map[running[0]]['CPU_CYCLES'].append(app_stats_map[running[0]]['CPU_CYCLES'])
+		stats_history_map[running[0]]['CACHE_MISSES'].append(app_stats_map[running[0]]['CACHE_MISSES'])
+		if not running[0] in next_runnable:
+			#du.chkpt('--port ' + str(running[2]), '-b'
+			out = open('/tmp/out', 'w+')
+			err = open('/tmp/err', 'w+')
+			u.loginfo('Checkpoint Start2: ' + str(running[0]))
+			obj = s.Popen(c.DMTCP_COMMAND + ' -bc --port ' + str(running[2]), shell=True, stdout=out, stderr=err)
+			obj.wait()
+			out.seek(0, 0)
+			err.seek(0, 0)
+			output = out.readlines()
+			error = err.readlines()
+			err.close()
+			out.close()
+			u.loginfo(output)
+			u.logerr(error)
+			if len(error) == 0:		
+				u.loginfo('CHECKPOINTED SUCCESSFULLY : ' + str(running[0]))
+				#du.kill('--port ' + str(running[2]))
+				out = open('/tmp/out', 'w+')
+				err = open('/tmp/err', 'w+')
+				obj = s.Popen(c.DMTCP_COMMAND + ' -k --port ' + str(running[2]), shell=True, stdout=out, stderr=err)
+				obj.wait()
+				out.seek(0, 0)
+				err.seek(0, 0)
+				output = out.readlines()
+				error = err.readlines()
+				out.close()
+				err.close()
+				u.loginfo(output)
+				u.logerr(error)
+				if len(error) == 0:
+					os.rename(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + running[0] + '.stat', c.PARALLEL_DMTCP_QUEUED_DIR + '/' + running[0] + '.stat')
+					u.loginfo('KILLED SUCCESSFULLY : ' + str(running[0]))
+					u.loginfo('Stop2: ' + str(running[0]))
+				else:	
+					u.loginfo('ERROR OCCURRED WHILE KILLING APP ' + str(running[0]))
+					u.logerr(error)
+					app_stats_map.pop(running[0])
+					os.rename(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + running[0] + '.stat', c.PARALLEL_DMTCP_NOIDEA_DIR + '/' + running[0] + '.stat')
+			else:
+				u.loginfo('ERROR OCCURRED WHILE CHECKPOINTING APP ' + str(running[0]))
+				u.logerr(error)
+				app_stats_map.pop(running[0])
+				os.rename(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + running[0] + '.stat', c.PARALLEL_DMTCP_NOIDEA_DIR + '/' + running[0] + '.stat')
+
+			running_pid_port.remove(running)
+			pass
+
+def start_next(next_runnable):
+	to_restart = list(set(next_runnable) - set([app[0] for app in running_pid_port]))
+	runnable = get_runnable_instance_map()
+	
+	for app in to_restart:
+		os.rename(c.PARALLEL_DMTCP_QUEUED_DIR + '/' + app + '.stat', c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app + '.stat')
+		cwd = os.getcwd()
+		chkptnum = 0
+		if len(u.listonlydir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app))) > 0:
+                        chkptnum = int(max(u.listonlydir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app)))) + 1
+                else:
+                        chkptnum = 1
+                chkptnum = 1
+		#os.mkdir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app) + '/' + str(chkptnum))
+		os.chdir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app) + '/' + str(chkptnum))
+		setup_for_restart(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app) + '/' + str(chkptnum))
+		port = u.getopenport()
+		cmd = 'STATFILE=' + c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app + '.stat' + ' ' + 'STATGEN=INFINITE ' + c.DMTCP_RESTART + ' --new-coordinator --port ' + str(port) + ' ' + runnable[app]
+		logfile = open(c.LOGDIR + '/' + c.LOGGER, 'a+')
+		a = s.Popen(cmd, shell=True, stdout=logfile, stderr=logfile)
+		running_pid_port.append([app, a, port])
+		os.chdir(cwd)
+
+def main():
+	import time
+	global running_pid_port, app_stats_map, total_passes, app_stats_map
+	#signal.signal(signal.SIGCHLD, signal.SIG_IGN)
+
+	if os.path.isdir(c.PARALLEL_DMTCP_STATS_DIR):
+                os.rename(c.PARALLEL_DMTCP_STATS_DIR, c.PARALLEL_DMTCP_STATS_DIR + '.' + u.gettimestamp().replace(' ', '_'))
+
+	os.mkdir(c.PARALLEL_DMTCP_STATS_DIR)
+	os.mkdir(c.PARALLEL_DMTCP_COMPLETED_DIR)
+	os.mkdir(c.PARALLEL_DMTCP_RUNNING_DIR)
+	os.mkdir(c.PARALLEL_DMTCP_QUEUED_DIR)
+	os.mkdir(c.PARALLEL_DMTCP_NOIDEA_DIR)
+
+	#run all in for MAX seconds and get stats
+	generate_stats_and_enqueue()
+
+	if(sys.argv[1] == '-b'):
+		sys.exit(0)
+
+	print 'Stats Generated and Tasks Enqueued!!!'
+	timer = 0
+
+	#print app_stats_map
+	#sys.exit(0)
+	total_passes = 0
+	
+	while((len(os.listdir(c.PARALLEL_DMTCP_QUEUED_DIR)) > 0) or (len(os.listdir(c.PARALLEL_DMTCP_RUNNING_DIR)) > 0)):
+		passes = 0
+		retval = clean_completed()
+
+		if (retval > 0) or (timer % 60 == 0):
+			if (timer % 60 == 0):
+				timer = 0
+				passes = 2
+			else:
+				passes = 1
+
+			for app in running_pid_port:
+				app_stats_map[app[0]]['pickup_count'] += passes
+			total_passes += passes
+			stop_running([])
+			next_runnable = get_next_runnable_map(retval, passes)
+			u.loginfo('Next Runnable List: ' + str(next_runnable))
+			print 'Next Runnable List: ' + str(next_runnable)
+			start_next(next_runnable)
+
+		time.sleep(60)
+		timer += 60
+		#check for remaining tasks
+
+	print 'Count: ' + str(total_passes)
+
+if __name__ == "__main__":
+	c.LOGGER = 'parallel_dmtcp_6.log'
+	u.loginfo('Begin Time:  ' + u.gettimestamp())
+	main()
+	u.loginfo('End Time:  ' + u.gettimestamp())

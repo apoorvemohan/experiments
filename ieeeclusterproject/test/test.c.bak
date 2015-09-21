@@ -1,0 +1,89 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<stdint.h>
+#include<pthread.h>
+#include<time.h>
+
+
+int *vec;
+int *matvec;
+int **mat;
+unsigned long long row=0, col=0;
+int threadcount=0;
+void **retval;
+pthread_t *threads;
+
+void *matvecmul(void *arg){
+
+	unsigned long long i, j;
+	int t = (intptr_t)arg;
+
+	unsigned long long beg = ((t * row)/threadcount);
+	unsigned long long end = (((t + 1) * row)/threadcount);
+
+        for(i = beg; i < end; ++i)
+                for(j = 0; j < col; ++j)
+                        matvec[i] = mat[i][j] * vec[j];
+
+	return NULL;
+}
+
+int main(){
+
+	int tid;
+        unsigned long long i, j;
+
+	threadcount = 32;
+        row = 10000000;
+	col = 1000;
+        srand(1000);
+
+	threads = (pthread_t*) calloc(threadcount, sizeof(pthread_t));
+        mat = (int **) calloc(row , sizeof(int*));
+	vec = (int *) calloc(col, sizeof(int));
+	matvec = (int *) calloc (row, sizeof(int));
+
+        for(i = 0; i < row; ++i)
+                mat[i] = (int *) calloc(col , sizeof(int));
+	
+	printf("Stage One\n");
+	
+        for(i = 0; i < row; ++i)
+                for(j = 0; j < col; ++j)
+                        mat[i][j] = rand();
+
+        for(j = 0; j < col; ++j)
+                vec[j] = rand();
+
+	printf("Stage Two\n");
+	
+	time_t rawtime;
+	struct tm * timeinfo;
+
+	time (&rawtime);
+	timeinfo = localtime (&rawtime);
+	printf ("Current local time and date: %s", asctime(timeinfo));
+
+	for(tid = 0; tid < threadcount; ++tid){
+		pthread_create(&threads[tid], NULL, matvecmul, (void*)(intptr_t)tid);
+	}
+
+	for(tid = 0; tid < threadcount; ++tid)
+		pthread_join(threads[tid], retval);
+
+	time (&rawtime);
+	timeinfo = localtime (&rawtime);
+	printf ("Current local time and date: %s", asctime(timeinfo));
+
+	printf("Stage Three\n");
+		
+        for(i = 0; i < row; ++i)
+                free(mat[i]);
+
+	free(mat);
+	free(vec);
+	free(matvec);
+
+	printf("Stage Four\n");
+        return 0;
+}

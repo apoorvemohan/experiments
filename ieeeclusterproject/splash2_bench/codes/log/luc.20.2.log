@@ -1,0 +1,640 @@
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     206603394          4501       1359657     184774060      20464765
+
+                            TIMING INFORMATION
+Start time                        : 1414209502804140
+Initialization finish time        : 1414209506558422
+Overall finish time               : 1414209713161846
+Total time with initialization    :        210357706
+Total time without initialization :        206603424
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   307,130,747,642 cycles                    #    0.000 GHz                     [50.02%]
+   317,068,875,255 instructions              #    1.03  insns per cycle         [49.95%]
+    73,248,013,312 cache-references                                             [49.98%]
+        10,812,851 cache-misses              #    0.015 % of all cache refs     [49.99%]
+    17,904,637,253 branches                                                     [50.05%]
+       887,250,774 branch-misses             #    4.96% of all branches         [50.02%]
+            26,442 page-faults                                                 
+
+     210.382641116 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     207171175          4353       1039036     180828000      25299600
+
+                            TIMING INFORMATION
+Start time                        : 1414209502794142
+Initialization finish time        : 1414209506230185
+Overall finish time               : 1414209713401392
+Total time with initialization    :        210607250
+Total time without initialization :        207171207
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   305,362,464,137 cycles                    #    0.000 GHz                     [50.02%]
+   316,317,352,454 instructions              #    1.04  insns per cycle         [50.00%]
+    73,036,340,205 cache-references                                             [50.01%]
+         9,084,294 cache-misses              #    0.012 % of all cache refs     [49.99%]
+    17,800,206,731 branches                                                     [50.00%]
+       882,900,328 branch-misses             #    4.96% of all branches         [49.99%]
+            32,151 page-faults                                                 
+
+     210.645667300 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     207971529          4406       1104104     187542523      19320282
+
+                            TIMING INFORMATION
+Start time                        : 1414209502803993
+Initialization finish time        : 1414209506552203
+Overall finish time               : 1414209714523912
+Total time with initialization    :        211719919
+Total time without initialization :        207971709
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   305,731,560,627 cycles                    #    0.000 GHz                     [49.99%]
+   316,720,096,675 instructions              #    1.04  insns per cycle         [49.98%]
+    73,146,786,365 cache-references                                             [50.01%]
+         9,774,285 cache-misses              #    0.013 % of all cache refs     [50.02%]
+    17,861,666,940 branches                                                     [50.02%]
+       886,534,429 branch-misses             #    4.96% of all branches         [50.00%]
+            37,525 page-faults                                                 
+
+     211.743272713 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     209141485          4360       1755130     181959212      25422619
+
+                            TIMING INFORMATION
+Start time                        : 1414209502794683
+Initialization finish time        : 1414209506321476
+Overall finish time               : 1414209715463144
+Total time with initialization    :        212668461
+Total time without initialization :        209141668
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   307,745,653,865 cycles                    #    0.000 GHz                     [50.00%]
+   317,198,097,488 instructions              #    1.03  insns per cycle         [50.04%]
+    73,265,044,424 cache-references                                             [49.98%]
+        11,075,840 cache-misses              #    0.015 % of all cache refs     [50.00%]
+    17,943,439,911 branches                                                     [49.97%]
+       888,174,575 branch-misses             #    4.95% of all branches         [50.02%]
+            43,301 page-faults                                                 
+
+     212.695037264 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     209086247          4471       1094219     183710141      24277212
+
+                            TIMING INFORMATION
+Start time                        : 1414209502789902
+Initialization finish time        : 1414209506532135
+Overall finish time               : 1414209715618412
+Total time with initialization    :        212828510
+Total time without initialization :        209086277
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   306,570,782,755 cycles                    #    0.000 GHz                     [49.92%]
+   316,554,216,086 instructions              #    1.03  insns per cycle         [50.01%]
+    73,063,710,758 cache-references                                             [50.03%]
+         9,870,865 cache-misses              #    0.014 % of all cache refs     [50.08%]
+    17,833,378,864 branches                                                     [50.00%]
+       885,139,148 branch-misses             #    4.96% of all branches         [49.98%]
+            31,484 page-faults                                                 
+
+     212.851049788 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     209889803          4363       1237352     181935782      26712133
+
+                            TIMING INFORMATION
+Start time                        : 1414209502806372
+Initialization finish time        : 1414209506293212
+Overall finish time               : 1414209716183192
+Total time with initialization    :        213376820
+Total time without initialization :        209889980
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   307,766,047,361 cycles                    #    0.000 GHz                     [50.02%]
+   317,160,745,574 instructions              #    1.03  insns per cycle         [49.98%]
+    73,249,467,981 cache-references                                             [50.03%]
+        10,939,888 cache-misses              #    0.015 % of all cache refs     [49.99%]
+    17,932,712,998 branches                                                     [50.03%]
+       887,260,546 branch-misses             #    4.95% of all branches         [49.97%]
+            58,894 page-faults                                                 
+
+     213.405235871 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     209314733         20464        959815     181382562      26951689
+
+                            TIMING INFORMATION
+Start time                        : 1414209502816169
+Initialization finish time        : 1414209507194789
+Overall finish time               : 1414209716509525
+Total time with initialization    :        213693356
+Total time without initialization :        209314736
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   306,842,379,785 cycles                    #    0.000 GHz                     [50.01%]
+   316,868,476,567 instructions              #    1.03  insns per cycle         [50.01%]
+    73,160,761,000 cache-references                                             [50.03%]
+        10,090,232 cache-misses              #    0.014 % of all cache refs     [49.99%]
+    17,902,720,715 branches                                                     [50.00%]
+       885,931,604 branch-misses             #    4.95% of all branches         [49.97%]
+            53,652 page-faults                                                 
+
+     213.724365214 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     210154392          4585        950628     182873805      26325157
+
+                            TIMING INFORMATION
+Start time                        : 1414209502793942
+Initialization finish time        : 1414209506624292
+Overall finish time               : 1414209716778686
+Total time with initialization    :        213984744
+Total time without initialization :        210154394
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   305,950,583,919 cycles                    #    0.000 GHz                     [50.01%]
+   316,464,524,345 instructions              #    1.03  insns per cycle         [50.01%]
+    73,059,768,433 cache-references                                             [50.01%]
+        10,427,186 cache-misses              #    0.014 % of all cache refs     [49.99%]
+    17,793,169,394 branches                                                     [49.99%]
+       885,888,241 branch-misses             #    4.98% of all branches         [49.99%]
+           304,438 page-faults                                                 
+
+     214.009127522 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     210889172          4377       1202947     180778663      28902977
+
+                            TIMING INFORMATION
+Start time                        : 1414209502802739
+Initialization finish time        : 1414209505953228
+Overall finish time               : 1414209716842402
+Total time with initialization    :        214039663
+Total time without initialization :        210889174
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   306,792,289,738 cycles                    #    0.000 GHz                     [49.98%]
+   316,392,622,784 instructions              #    1.03  insns per cycle         [49.98%]
+    73,071,690,651 cache-references                                             [50.03%]
+         9,321,177 cache-misses              #    0.013 % of all cache refs     [50.02%]
+    17,801,283,527 branches                                                     [50.02%]
+       885,070,082 branch-misses             #    4.97% of all branches         [49.97%]
+            33,111 page-faults                                                 
+
+     214.069630059 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     210886665          4458       1053973     186789700      23038356
+
+                            TIMING INFORMATION
+Start time                        : 1414209502795818
+Initialization finish time        : 1414209506165262
+Overall finish time               : 1414209717052105
+Total time with initialization    :        214256287
+Total time without initialization :        210886843
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   305,257,049,693 cycles                    #    0.000 GHz                     [50.03%]
+   316,683,656,905 instructions              #    1.04  insns per cycle         [50.11%]
+    73,136,052,326 cache-references                                             [50.07%]
+         9,490,001 cache-misses              #    0.013 % of all cache refs     [49.98%]
+    17,820,654,054 branches                                                     [49.89%]
+       884,228,626 branch-misses             #    4.96% of all branches         [49.93%]
+            36,950 page-faults                                                 
+
+     214.279915754 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     211381186          4468       1245669     178565617      31565223
+
+                            TIMING INFORMATION
+Start time                        : 1414209502806054
+Initialization finish time        : 1414209506259357
+Overall finish time               : 1414209717640697
+Total time with initialization    :        214834643
+Total time without initialization :        211381340
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     211412148          4375       1366915     185626493      24414145
+
+                            TIMING INFORMATION
+Start time                        : 1414209502806686
+Initialization finish time        : 1414209506237583
+Overall finish time               : 1414209717649901
+Total time with initialization    :        214843215
+Total time without initialization :        211412318
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   305,771,292,919 cycles                    #    0.000 GHz                     [49.99%]
+   316,894,415,385 instructions              #    1.04  insns per cycle         [49.97%]
+    73,194,752,687 cache-references                                             [49.97%]
+        10,094,207 cache-misses              #    0.014 % of all cache refs     [50.01%]
+    17,867,864,434 branches                                                     [50.03%]
+       886,728,851 branch-misses             #    4.96% of all branches         [50.03%]
+            36,580 page-faults                                                 
+
+     214.862982189 seconds time elapsed
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   306,948,427,656 cycles                    #    0.000 GHz                     [49.94%]
+   316,796,509,953 instructions              #    1.03  insns per cycle         [50.00%]
+    73,164,403,756 cache-references                                             [50.03%]
+        10,459,694 cache-misses              #    0.014 % of all cache refs     [50.07%]
+    17,870,221,319 branches                                                     [50.00%]
+       885,360,803 branch-misses             #    4.95% of all branches         [49.98%]
+            42,014 page-faults                                                 
+
+     214.869298829 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     211456715          4395       1531209     188385483      21535414
+
+                            TIMING INFORMATION
+Start time                        : 1414209502797179
+Initialization finish time        : 1414209506600517
+Overall finish time               : 1414209718057236
+Total time with initialization    :        215260057
+Total time without initialization :        211456719
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   306,846,375,316 cycles                    #    0.000 GHz                     [49.98%]
+   316,845,192,020 instructions              #    1.03  insns per cycle         [49.87%]
+    73,154,437,853 cache-references                                             [49.94%]
+        10,645,379 cache-misses              #    0.015 % of all cache refs     [50.03%]
+    17,873,463,753 branches                                                     [50.14%]
+       888,043,283 branch-misses             #    4.97% of all branches         [50.06%]
+            61,291 page-faults                                                 
+
+     215.286723254 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     211474758          4397       1082047     189587049      20801094
+
+                            TIMING INFORMATION
+Start time                        : 1414209502806053
+Initialization finish time        : 1414209506648586
+Overall finish time               : 1414209718123348
+Total time with initialization    :        215317295
+Total time without initialization :        211474762
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   308,235,349,887 cycles                    #    0.000 GHz                     [50.04%]
+   316,858,752,633 instructions              #    1.03  insns per cycle         [50.04%]
+    73,186,260,158 cache-references                                             [50.03%]
+        10,476,866 cache-misses              #    0.014 % of all cache refs     [49.97%]
+    17,875,213,981 branches                                                     [49.96%]
+       887,760,759 branch-misses             #    4.97% of all branches         [49.98%]
+            35,820 page-faults                                                 
+
+     215.342705850 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     212049428         49492       1165165     184945152      25889420
+
+                            TIMING INFORMATION
+Start time                        : 1414209502793582
+Initialization finish time        : 1414209506441665
+Overall finish time               : 1414209718491098
+Total time with initialization    :        215697516
+Total time without initialization :        212049433
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   306,611,083,773 cycles                    #    0.000 GHz                     [49.94%]
+   316,692,964,653 instructions              #    1.03  insns per cycle         [50.04%]
+    73,148,347,851 cache-references                                             [50.04%]
+        11,165,264 cache-misses              #    0.015 % of all cache refs     [50.06%]
+    17,841,230,849 branches                                                     [49.96%]
+       888,442,784 branch-misses             #    4.98% of all branches         [49.96%]
+           383,008 page-faults                                                 
+
+     215.722714072 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     211245106         24479       1048402     185609176      24562869
+
+                            TIMING INFORMATION
+Start time                        : 1414209502792364
+Initialization finish time        : 1414209507375841
+Overall finish time               : 1414209718620951
+Total time with initialization    :        215828587
+Total time without initialization :        211245110
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   309,098,197,254 cycles                    #    0.000 GHz                     [50.00%]
+   316,793,104,411 instructions              #    1.02  insns per cycle         [50.01%]
+    73,145,988,529 cache-references                                             [49.98%]
+         9,959,148 cache-misses              #    0.014 % of all cache refs     [50.01%]
+    17,863,889,030 branches                                                     [49.99%]
+       885,479,564 branch-misses             #    4.96% of all branches         [50.02%]
+            44,846 page-faults                                                 
+
+     215.854590246 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     212600675          4361       1430549     190548645      20616941
+
+                            TIMING INFORMATION
+Start time                        : 1414209502800381
+Initialization finish time        : 1414209506262611
+Overall finish time               : 1414209718863290
+Total time with initialization    :        216062909
+Total time without initialization :        212600679
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   308,256,976,427 cycles                    #    0.000 GHz                     [50.02%]
+   317,216,247,006 instructions              #    1.03  insns per cycle         [49.93%]
+    73,283,744,076 cache-references                                             [50.04%]
+        11,588,811 cache-misses              #    0.016 % of all cache refs     [49.99%]
+    17,935,098,611 branches                                                     [50.08%]
+       888,345,008 branch-misses             #    4.95% of all branches         [49.96%]
+            44,111 page-faults                                                 
+
+     216.088776056 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     212414718         41471       1192776     189597887      21582404
+
+                            TIMING INFORMATION
+Start time                        : 1414209502806948
+Initialization finish time        : 1414209506546062
+Overall finish time               : 1414209718960784
+Total time with initialization    :        216153836
+Total time without initialization :        212414722
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   306,463,913,513 cycles                    #    0.000 GHz                     [49.97%]
+   316,581,932,698 instructions              #    1.03  insns per cycle         [49.96%]
+    73,117,911,155 cache-references                                             [50.01%]
+        10,095,766 cache-misses              #    0.014 % of all cache refs     [50.03%]
+    17,848,144,775 branches                                                     [50.04%]
+       886,899,146 branch-misses             #    4.97% of all branches         [49.99%]
+            36,018 page-faults                                                 
+
+     216.183228314 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     212886150          4960       1080773     191710101      20090121
+
+                            TIMING INFORMATION
+Start time                        : 1414209502830192
+Initialization finish time        : 1414209506510146
+Overall finish time               : 1414209719396301
+Total time with initialization    :        216566109
+Total time without initialization :        212886155
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   308,475,563,844 cycles                    #    0.000 GHz                     [49.88%]
+   316,304,973,568 instructions              #    1.03  insns per cycle         [49.98%]
+    73,039,834,440 cache-references                                             [49.98%]
+         9,441,375 cache-misses              #    0.013 % of all cache refs     [50.12%]
+    17,797,650,437 branches                                                     [50.02%]
+       885,209,471 branch-misses             #    4.97% of all branches         [50.02%]
+            31,903 page-faults                                                 
+
+     216.601481686 seconds time elapsed
+
+
+Blocked Dense LU Factorization
+     3400 by 3400 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     213336691          4533       1510801     182697564      29123588
+
+                            TIMING INFORMATION
+Start time                        : 1414209502793919
+Initialization finish time        : 1414209506307142
+Overall finish time               : 1414209719643837
+Total time with initialization    :        216849918
+Total time without initialization :        213336695
+
+
+ Performance counter stats for 'kernels/lu/contiguous_blocks/LU -n3400 -p2 -b16 -c':
+
+   311,176,229,395 cycles                    #    0.000 GHz                     [50.00%]
+   317,172,311,713 instructions              #    1.02  insns per cycle         [50.04%]
+    73,231,999,509 cache-references                                             [49.97%]
+        12,026,520 cache-misses              #    0.016 % of all cache refs     [50.01%]
+    17,948,425,204 branches                                                     [49.96%]
+       885,458,359 branch-misses             #    4.93% of all branches         [50.03%]
+            44,129 page-faults                                                 
+
+     216.876155400 seconds time elapsed
+

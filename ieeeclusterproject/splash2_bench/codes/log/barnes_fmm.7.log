@@ -1,0 +1,58 @@
+Sysconf CALL: 4096
+Particle array: 907ca000
+rc: 0
+Creating a two cluster, non uniform distribution for 9200000 particles
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Starting FMM with 16 processors
+Finished FMM
+                                   PROCESS STATISTICS
+             Track        Tree        List        Part        Pass       Inter        Bar        Intra       Other
+ Proc        Time         Time        Time        Time        Time       Time         Time       Time        Time
+    0    164494971     2645205     2095252     2406355    13890249   134332344     4548106     1177608     3399798
+
+                                   TIMING INFORMATION
+Start time                        : 1413838833747201
+Initialization finish time        : 1413838992955758
+Overall finish time               : 1413839157450729
+Total time with initialization    :        323703528
+Total time without initialization :        164936471
+
+Total time for steps 3 to 5 :    164936471
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/fmm/FMM':
+
+ 3,948,500,228,930 cycles                    #    0.000 GHz                     [50.01%]
+ 4,528,261,070,815 instructions              #    1.15  insns per cycle         [50.02%]
+   962,904,734,219 cache-references                                             [49.99%]
+       188,463,438 cache-misses              #    0.020 % of all cache refs     [49.99%]
+   165,110,979,939 branches                                                     [49.99%]
+     4,160,649,404 branch-misses             #    2.52% of all branches         [50.01%]
+
+     327.389147815 seconds time elapsed
+
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+  10709000   0.02500    0.0500      1.00     0.250     0.075      2.00        16
+
+COMPUTESTART  = 1413838848859590
+COMPUTEEND    = 1413839165656291
+COMPUTETIME   =    316796701
+TRACKTIME     =    169368300
+PARTITIONTIME =      1251987	 0.01
+TREEBUILDTIME =      8219677	 0.05
+FORCECALCTIME =    151941135	 0.90
+RESTTIME      =      7955501	 0.05
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,039,762,925,626 cycles                    #    0.000 GHz                     [50.00%]
+ 4,857,977,271,549 instructions              #    0.96  insns per cycle         [50.00%]
+   951,404,043,640 cache-references                                             [50.01%]
+       241,263,968 cache-misses              #    0.025 % of all cache refs     [50.00%]
+   296,472,161,716 branches                                                     [50.00%]
+     5,746,532,262 branch-misses             #    1.94% of all branches         [49.99%]
+
+     332.440631652 seconds time elapsed
+

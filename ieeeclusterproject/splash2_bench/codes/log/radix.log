@@ -1,0 +1,64 @@
+/home/apoorve/splash2_benchmark-1.0/codes/kernels/radix/RADIX: Killed
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/radix/RADIX -p16 -r8 -n2147483647 -m7 -s':
+
+   188,368,828,878 cycles                    #    0.000 GHz                     [50.00%]
+    58,519,916,343 instructions              #    0.31  insns per cycle         [49.99%]
+     9,934,251,478 cache-references                                             [49.99%]
+         8,158,737 cache-misses              #    0.082 % of all cache refs     [50.04%]
+     1,631,121,183 branches                                                     [50.06%]
+         4,498,991 branch-misses             #    0.28% of all branches         [50.08%]
+
+      12.644234861 seconds time elapsed
+
+
+Integer Radix Sort
+     2147483647 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       19070141        10745942         8058046
+    1       19070246        10746206         7606655
+    2       19065974        10742151         8185782
+    3       19042478        10718193         8141804
+    4       19070240        10746082         7997022
+    5       19069858        10745966         6893068
+    6       19070109        10746005         7890392
+    7       19065719        10741848         8297486
+    8       19066113        10742011         7647099
+    9       19074179        10750233         7251417
+   10       19074370        10750158         8051059
+   11       19074450        10750156         8131418
+   12       19066201        10742039         7939030
+   13       19074370        10750179         7954745
+   14       19042184        10718086         7451847
+   15       19064741        10740402         8119067
+  Avg       19066336        10742229         7850996
+  Min       19042184        10718086         6893068
+  Max       19074450        10750233         8297486
+
+
+                 TIMING INFORMATION
+Start time                        : 1414113592808054
+Initialization finish time        : 1414113741449047
+Overall finish time               : 1414113760519188
+Total time with initialization    :        167711134
+Total time without initialization :         19070141
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/radix/RADIX -p16 -r8 -n2147483647 -m7 -s':
+
+ 3,830,375,016,693 cycles                    #    0.000 GHz                     [50.00%]
+ 1,214,237,318,202 instructions              #    0.32  insns per cycle         [50.00%]
+   232,877,378,005 cache-references                                             [49.99%]
+       183,683,547 cache-misses              #    0.079 % of all cache refs     [50.00%]
+    73,628,782,902 branches                                                     [50.01%]
+       126,451,372 branch-misses             #    0.17% of all branches         [50.02%]
+
+     174.404456787 seconds time elapsed
+

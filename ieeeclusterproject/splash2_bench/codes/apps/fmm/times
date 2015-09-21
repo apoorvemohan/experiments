@@ -1,0 +1,3303 @@
+TIMING:
+16	20000	1.00e-10	100
+Time Step 0
+Processor 0
+	Total Time = 68486
+Processor 1
+	Total Time = 67623
+Processor 2
+	Total Time = 67833
+Processor 3
+	Total Time = 67811
+Processor 4
+	Total Time = 67732
+Processor 5
+	Total Time = 68022
+Processor 6
+	Total Time = 68174
+Processor 7
+	Total Time = 68504
+Processor 8
+	Total Time = 67558
+Processor 9
+	Total Time = 67769
+Processor 10
+	Total Time = 67457
+Processor 11
+	Total Time = 67661
+Processor 12
+	Total Time = 67841
+Processor 13
+	Total Time = 67763
+Processor 14
+	Total Time = 68054
+Processor 15
+	Total Time = 68372
+Time Step 1
+Processor 0
+	Total Time = 64798
+Processor 1
+	Total Time = 65212
+Processor 2
+	Total Time = 65103
+Processor 3
+	Total Time = 65220
+Processor 4
+	Total Time = 65123
+Processor 5
+	Total Time = 65132
+Processor 6
+	Total Time = 64813
+Processor 7
+	Total Time = 64488
+Processor 8
+	Total Time = 64871
+Processor 9
+	Total Time = 65167
+Processor 10
+	Total Time = 65233
+Processor 11
+	Total Time = 65126
+Processor 12
+	Total Time = 65133
+Processor 13
+	Total Time = 65435
+Processor 14
+	Total Time = 64903
+Processor 15
+	Total Time = 64565
+Time Step 2
+Processor 0
+	Total Time = 59645
+Processor 1
+	Total Time = 59934
+Processor 2
+	Total Time = 59971
+Processor 3
+	Total Time = 60047
+Processor 4
+	Total Time = 59852
+Processor 5
+	Total Time = 59779
+Processor 6
+	Total Time = 59613
+Processor 7
+	Total Time = 59666
+Processor 8
+	Total Time = 60025
+Processor 9
+	Total Time = 59885
+Processor 10
+	Total Time = 59518
+Processor 11
+	Total Time = 59819
+Processor 12
+	Total Time = 59577
+Processor 13
+	Total Time = 59379
+Processor 14
+	Total Time = 59516
+Processor 15
+	Total Time = 59425
+Time Step 3
+Processor 0
+	Total Time = 56434
+Processor 1
+	Total Time = 56085
+Processor 2
+	Total Time = 55910
+Processor 3
+	Total Time = 55873
+Processor 4
+	Total Time = 56734
+Processor 5
+	Total Time = 56164
+Processor 6
+	Total Time = 56057
+Processor 7
+	Total Time = 56050
+Processor 8
+	Total Time = 55932
+Processor 9
+	Total Time = 55843
+Processor 10
+	Total Time = 56634
+Processor 11
+	Total Time = 56451
+Processor 12
+	Total Time = 56831
+Processor 13
+	Total Time = 56389
+Processor 14
+	Total Time = 56419
+Processor 15
+	Total Time = 56733
+Time Step 4
+Processor 0
+	Total Time = 54095
+Processor 1
+	Total Time = 54571
+Processor 2
+	Total Time = 54504
+Processor 3
+	Total Time = 54645
+Processor 4
+	Total Time = 54180
+Processor 5
+	Total Time = 54328
+Processor 6
+	Total Time = 54474
+Processor 7
+	Total Time = 54181
+Processor 8
+	Total Time = 54516
+Processor 9
+	Total Time = 54776
+Processor 10
+	Total Time = 54266
+Processor 11
+	Total Time = 54264
+Processor 12
+	Total Time = 53853
+Processor 13
+	Total Time = 54069
+Processor 14
+	Total Time = 53970
+Processor 15
+	Total Time = 54030
+Time Step 5
+Processor 0
+	Total Time = 59344
+Processor 1
+	Total Time = 58994
+Processor 2
+	Total Time = 59322
+Processor 3
+	Total Time = 59073
+Processor 4
+	Total Time = 59241
+Processor 5
+	Total Time = 59290
+Processor 6
+	Total Time = 59400
+Processor 7
+	Total Time = 60001
+Processor 8
+	Total Time = 59548
+Processor 9
+	Total Time = 59200
+Processor 10
+	Total Time = 59071
+Processor 11
+	Total Time = 59453
+Processor 12
+	Total Time = 59481
+Processor 13
+	Total Time = 59682
+Processor 14
+	Total Time = 59708
+Processor 15
+	Total Time = 59466
+Time Step 6
+Processor 0
+	Total Time = 64772
+Processor 1
+	Total Time = 64850
+Processor 2
+	Total Time = 64812
+Processor 3
+	Total Time = 64849
+Processor 4
+	Total Time = 64744
+Processor 5
+	Total Time = 64597
+Processor 6
+	Total Time = 64606
+Processor 7
+	Total Time = 64573
+Processor 8
+	Total Time = 64629
+Processor 9
+	Total Time = 64563
+Processor 10
+	Total Time = 64661
+Processor 11
+	Total Time = 64697
+Processor 12
+	Total Time = 64754
+Processor 13
+	Total Time = 64580
+Processor 14
+	Total Time = 64552
+Processor 15
+	Total Time = 64658
+Time Step 7
+Processor 0
+	Total Time = 53272
+Processor 1
+	Total Time = 53151
+Processor 2
+	Total Time = 52672
+Processor 3
+	Total Time = 53303
+Processor 4
+	Total Time = 53340
+Processor 5
+	Total Time = 53408
+Processor 6
+	Total Time = 53095
+Processor 7
+	Total Time = 52848
+Processor 8
+	Total Time = 52999
+Processor 9
+	Total Time = 53178
+Processor 10
+	Total Time = 53539
+Processor 11
+	Total Time = 53264
+Processor 12
+	Total Time = 53180
+Processor 13
+	Total Time = 52921
+Processor 14
+	Total Time = 53209
+Processor 15
+	Total Time = 53440
+Time Step 8
+Processor 0
+	Total Time = 50036
+Processor 1
+	Total Time = 50251
+Processor 2
+	Total Time = 50656
+Processor 3
+	Total Time = 50201
+Processor 4
+	Total Time = 49919
+Processor 5
+	Total Time = 50202
+Processor 6
+	Total Time = 50026
+Processor 7
+	Total Time = 50134
+Processor 8
+	Total Time = 50128
+Processor 9
+	Total Time = 50398
+Processor 10
+	Total Time = 50160
+Processor 11
+	Total Time = 50001
+Processor 12
+	Total Time = 49787
+Processor 13
+	Total Time = 50154
+Processor 14
+	Total Time = 50053
+Processor 15
+	Total Time = 49944
+Time Step 9
+Processor 0
+	Total Time = 48744
+Processor 1
+	Total Time = 48862
+Processor 2
+	Total Time = 48857
+Processor 3
+	Total Time = 48608
+Processor 4
+	Total Time = 48715
+Processor 5
+	Total Time = 48517
+Processor 6
+	Total Time = 48885
+Processor 7
+	Total Time = 49068
+Processor 8
+	Total Time = 48854
+Processor 9
+	Total Time = 48908
+Processor 10
+	Total Time = 48704
+Processor 11
+	Total Time = 48809
+Processor 12
+	Total Time = 49006
+Processor 13
+	Total Time = 49045
+Processor 14
+	Total Time = 48845
+Processor 15
+	Total Time = 48759
+Time Step 10
+Processor 0
+	Total Time = 52273
+Processor 1
+	Total Time = 52295
+Processor 2
+	Total Time = 52225
+Processor 3
+	Total Time = 52329
+Processor 4
+	Total Time = 52518
+Processor 5
+	Total Time = 52325
+Processor 6
+	Total Time = 52423
+Processor 7
+	Total Time = 52382
+Processor 8
+	Total Time = 52362
+Processor 9
+	Total Time = 52140
+Processor 10
+	Total Time = 52246
+Processor 11
+	Total Time = 52329
+Processor 12
+	Total Time = 52216
+Processor 13
+	Total Time = 52326
+Processor 14
+	Total Time = 52363
+Processor 15
+	Total Time = 52219
+Time Step 11
+Processor 0
+	Total Time = 56718
+Processor 1
+	Total Time = 56449
+Processor 2
+	Total Time = 56382
+Processor 3
+	Total Time = 56393
+Processor 4
+	Total Time = 56212
+Processor 5
+	Total Time = 56410
+Processor 6
+	Total Time = 56647
+Processor 7
+	Total Time = 56712
+Processor 8
+	Total Time = 56883
+Processor 9
+	Total Time = 56613
+Processor 10
+	Total Time = 56440
+Processor 11
+	Total Time = 56265
+Processor 12
+	Total Time = 56369
+Processor 13
+	Total Time = 56315
+Processor 14
+	Total Time = 56563
+Processor 15
+	Total Time = 56677
+Time Step 12
+Processor 0
+	Total Time = 59551
+Processor 1
+	Total Time = 59582
+Processor 2
+	Total Time = 59698
+Processor 3
+	Total Time = 59713
+Processor 4
+	Total Time = 59961
+Processor 5
+	Total Time = 59697
+Processor 6
+	Total Time = 59516
+Processor 7
+	Total Time = 59309
+Processor 8
+	Total Time = 59165
+Processor 9
+	Total Time = 59543
+Processor 10
+	Total Time = 59782
+Processor 11
+	Total Time = 59971
+Processor 12
+	Total Time = 59955
+Processor 13
+	Total Time = 59656
+Processor 14
+	Total Time = 59463
+Processor 15
+	Total Time = 59595
+Time Step 13
+Processor 0
+	Total Time = 58309
+Processor 1
+	Total Time = 58346
+Processor 2
+	Total Time = 58268
+Processor 3
+	Total Time = 58303
+Processor 4
+	Total Time = 58302
+Processor 5
+	Total Time = 58200
+Processor 6
+	Total Time = 58145
+Processor 7
+	Total Time = 58122
+Processor 8
+	Total Time = 58311
+Processor 9
+	Total Time = 58253
+Processor 10
+	Total Time = 58131
+Processor 11
+	Total Time = 58493
+Processor 12
+	Total Time = 58265
+Processor 13
+	Total Time = 58243
+Processor 14
+	Total Time = 58352
+Processor 15
+	Total Time = 58306
+Time Step 14
+Processor 0
+	Total Time = 56397
+Processor 1
+	Total Time = 56160
+Processor 2
+	Total Time = 56248
+Processor 3
+	Total Time = 56447
+Processor 4
+	Total Time = 56329
+Processor 5
+	Total Time = 56529
+Processor 6
+	Total Time = 56414
+Processor 7
+	Total Time = 56121
+Processor 8
+	Total Time = 56347
+Processor 9
+	Total Time = 56342
+Processor 10
+	Total Time = 56495
+Processor 11
+	Total Time = 56058
+Processor 12
+	Total Time = 56139
+Processor 13
+	Total Time = 56299
+Processor 14
+	Total Time = 56330
+Processor 15
+	Total Time = 56367
+Time Step 15
+Processor 0
+	Total Time = 49670
+Processor 1
+	Total Time = 49941
+Processor 2
+	Total Time = 49879
+Processor 3
+	Total Time = 49747
+Processor 4
+	Total Time = 49502
+Processor 5
+	Total Time = 49655
+Processor 6
+	Total Time = 49630
+Processor 7
+	Total Time = 50098
+Processor 8
+	Total Time = 49982
+Processor 9
+	Total Time = 49907
+Processor 10
+	Total Time = 49778
+Processor 11
+	Total Time = 49733
+Processor 12
+	Total Time = 49641
+Processor 13
+	Total Time = 49864
+Processor 14
+	Total Time = 49553
+Processor 15
+	Total Time = 49739
+Time Step 16
+Processor 0
+	Total Time = 49621
+Processor 1
+	Total Time = 49628
+Processor 2
+	Total Time = 49526
+Processor 3
+	Total Time = 49502
+Processor 4
+	Total Time = 49708
+Processor 5
+	Total Time = 49884
+Processor 6
+	Total Time = 49785
+Processor 7
+	Total Time = 49499
+Processor 8
+	Total Time = 49657
+Processor 9
+	Total Time = 49555
+Processor 10
+	Total Time = 49754
+Processor 11
+	Total Time = 49633
+Processor 12
+	Total Time = 49806
+Processor 13
+	Total Time = 49738
+Processor 14
+	Total Time = 49886
+Processor 15
+	Total Time = 49614
+Time Step 17
+Processor 0
+	Total Time = 48255
+Processor 1
+	Total Time = 48257
+Processor 2
+	Total Time = 48337
+Processor 3
+	Total Time = 48362
+Processor 4
+	Total Time = 48137
+Processor 5
+	Total Time = 48098
+Processor 6
+	Total Time = 48221
+Processor 7
+	Total Time = 48429
+Processor 8
+	Total Time = 48001
+Processor 9
+	Total Time = 48326
+Processor 10
+	Total Time = 48101
+Processor 11
+	Total Time = 48143
+Processor 12
+	Total Time = 48138
+Processor 13
+	Total Time = 48318
+Processor 14
+	Total Time = 48336
+Processor 15
+	Total Time = 48267
+Time Step 18
+Processor 0
+	Total Time = 50453
+Processor 1
+	Total Time = 50649
+Processor 2
+	Total Time = 50734
+Processor 3
+	Total Time = 50651
+Processor 4
+	Total Time = 50777
+Processor 5
+	Total Time = 50643
+Processor 6
+	Total Time = 50710
+Processor 7
+	Total Time = 50636
+Processor 8
+	Total Time = 50790
+Processor 9
+	Total Time = 50609
+Processor 10
+	Total Time = 50577
+Processor 11
+	Total Time = 50665
+Processor 12
+	Total Time = 50761
+Processor 13
+	Total Time = 50631
+Processor 14
+	Total Time = 50632
+Processor 15
+	Total Time = 50639
+Time Step 19
+Processor 0
+	Total Time = 49317
+Processor 1
+	Total Time = 49260
+Processor 2
+	Total Time = 49158
+Processor 3
+	Total Time = 49140
+Processor 4
+	Total Time = 49198
+Processor 5
+	Total Time = 49026
+Processor 6
+	Total Time = 49139
+Processor 7
+	Total Time = 49239
+Processor 8
+	Total Time = 49015
+Processor 9
+	Total Time = 49253
+Processor 10
+	Total Time = 49308
+Processor 11
+	Total Time = 49244
+Processor 12
+	Total Time = 49251
+Processor 13
+	Total Time = 49234
+Processor 14
+	Total Time = 49167
+Processor 15
+	Total Time = 49149
+Time Step 20
+Processor 0
+	Total Time = 49573
+Processor 1
+	Total Time = 49617
+Processor 2
+	Total Time = 49713
+Processor 3
+	Total Time = 49703
+Processor 4
+	Total Time = 49806
+Processor 5
+	Total Time = 49878
+Processor 6
+	Total Time = 49832
+Processor 7
+	Total Time = 49764
+Processor 8
+	Total Time = 49820
+Processor 9
+	Total Time = 49704
+Processor 10
+	Total Time = 49605
+Processor 11
+	Total Time = 49742
+Processor 12
+	Total Time = 49618
+Processor 13
+	Total Time = 49770
+Processor 14
+	Total Time = 49723
+Processor 15
+	Total Time = 49800
+Time Step 21
+Processor 0
+	Total Time = 50452
+Processor 1
+	Total Time = 50289
+Processor 2
+	Total Time = 50207
+Processor 3
+	Total Time = 50435
+Processor 4
+	Total Time = 50323
+Processor 5
+	Total Time = 50197
+Processor 6
+	Total Time = 50159
+Processor 7
+	Total Time = 50277
+Processor 8
+	Total Time = 50283
+Processor 9
+	Total Time = 50160
+Processor 10
+	Total Time = 50400
+Processor 11
+	Total Time = 50393
+Processor 12
+	Total Time = 50478
+Processor 13
+	Total Time = 50084
+Processor 14
+	Total Time = 50191
+Processor 15
+	Total Time = 50337
+Time Step 22
+Processor 0
+	Total Time = 52007
+Processor 1
+	Total Time = 51939
+Processor 2
+	Total Time = 51948
+Processor 3
+	Total Time = 51944
+Processor 4
+	Total Time = 51897
+Processor 5
+	Total Time = 51935
+Processor 6
+	Total Time = 51935
+Processor 7
+	Total Time = 51789
+Processor 8
+	Total Time = 51870
+Processor 9
+	Total Time = 52016
+Processor 10
+	Total Time = 51997
+Processor 11
+	Total Time = 51901
+Processor 12
+	Total Time = 51936
+Processor 13
+	Total Time = 51908
+Processor 14
+	Total Time = 52011
+Processor 15
+	Total Time = 51942
+Time Step 23
+Processor 0
+	Total Time = 53841
+Processor 1
+	Total Time = 53746
+Processor 2
+	Total Time = 53761
+Processor 3
+	Total Time = 53494
+Processor 4
+	Total Time = 53309
+Processor 5
+	Total Time = 53767
+Processor 6
+	Total Time = 53965
+Processor 7
+	Total Time = 54161
+Processor 8
+	Total Time = 54157
+Processor 9
+	Total Time = 53706
+Processor 10
+	Total Time = 53553
+Processor 11
+	Total Time = 53442
+Processor 12
+	Total Time = 53412
+Processor 13
+	Total Time = 53856
+Processor 14
+	Total Time = 53643
+Processor 15
+	Total Time = 53859
+Time Step 24
+Processor 0
+	Total Time = 56239
+Processor 1
+	Total Time = 56383
+Processor 2
+	Total Time = 56422
+Processor 3
+	Total Time = 56581
+Processor 4
+	Total Time = 56850
+Processor 5
+	Total Time = 56266
+Processor 6
+	Total Time = 56043
+Processor 7
+	Total Time = 55929
+Processor 8
+	Total Time = 55852
+Processor 9
+	Total Time = 56267
+Processor 10
+	Total Time = 56493
+Processor 11
+	Total Time = 56756
+Processor 12
+	Total Time = 56715
+Processor 13
+	Total Time = 56250
+Processor 14
+	Total Time = 56482
+Processor 15
+	Total Time = 56203
+Time Step 25
+Processor 0
+	Total Time = 56690
+Processor 1
+	Total Time = 56588
+Processor 2
+	Total Time = 56511
+Processor 3
+	Total Time = 56549
+Processor 4
+	Total Time = 56635
+Processor 5
+	Total Time = 56550
+Processor 6
+	Total Time = 56596
+Processor 7
+	Total Time = 56610
+Processor 8
+	Total Time = 56629
+Processor 9
+	Total Time = 56618
+Processor 10
+	Total Time = 56388
+Processor 11
+	Total Time = 56552
+Processor 12
+	Total Time = 56578
+Processor 13
+	Total Time = 56518
+Processor 14
+	Total Time = 56434
+Processor 15
+	Total Time = 56656
+Time Step 26
+Processor 0
+	Total Time = 56254
+Processor 1
+	Total Time = 56337
+Processor 2
+	Total Time = 56381
+Processor 3
+	Total Time = 56359
+Processor 4
+	Total Time = 56423
+Processor 5
+	Total Time = 56345
+Processor 6
+	Total Time = 56558
+Processor 7
+	Total Time = 56289
+Processor 8
+	Total Time = 56432
+Processor 9
+	Total Time = 56501
+Processor 10
+	Total Time = 56522
+Processor 11
+	Total Time = 56451
+Processor 12
+	Total Time = 56236
+Processor 13
+	Total Time = 56396
+Processor 14
+	Total Time = 56534
+Processor 15
+	Total Time = 56292
+Time Step 27
+Processor 0
+	Total Time = 57982
+Processor 1
+	Total Time = 57785
+Processor 2
+	Total Time = 57796
+Processor 3
+	Total Time = 57841
+Processor 4
+	Total Time = 57821
+Processor 5
+	Total Time = 57902
+Processor 6
+	Total Time = 57826
+Processor 7
+	Total Time = 57739
+Processor 8
+	Total Time = 57805
+Processor 9
+	Total Time = 57778
+Processor 10
+	Total Time = 57689
+Processor 11
+	Total Time = 57846
+Processor 12
+	Total Time = 57939
+Processor 13
+	Total Time = 57776
+Processor 14
+	Total Time = 57793
+Processor 15
+	Total Time = 57936
+Time Step 28
+Processor 0
+	Total Time = 56887
+Processor 1
+	Total Time = 56899
+Processor 2
+	Total Time = 56977
+Processor 3
+	Total Time = 57026
+Processor 4
+	Total Time = 56808
+Processor 5
+	Total Time = 57130
+Processor 6
+	Total Time = 56931
+Processor 7
+	Total Time = 56930
+Processor 8
+	Total Time = 57047
+Processor 9
+	Total Time = 56807
+Processor 10
+	Total Time = 56972
+Processor 11
+	Total Time = 56759
+Processor 12
+	Total Time = 56786
+Processor 13
+	Total Time = 56965
+Processor 14
+	Total Time = 56784
+Processor 15
+	Total Time = 56872
+Time Step 29
+Processor 0
+	Total Time = 55381
+Processor 1
+	Total Time = 55318
+Processor 2
+	Total Time = 55231
+Processor 3
+	Total Time = 55147
+Processor 4
+	Total Time = 55368
+Processor 5
+	Total Time = 55404
+Processor 6
+	Total Time = 55374
+Processor 7
+	Total Time = 55408
+Processor 8
+	Total Time = 55279
+Processor 9
+	Total Time = 55333
+Processor 10
+	Total Time = 55483
+Processor 11
+	Total Time = 55449
+Processor 12
+	Total Time = 55363
+Processor 13
+	Total Time = 55400
+Processor 14
+	Total Time = 55593
+Processor 15
+	Total Time = 55379
+Time Step 30
+Processor 0
+	Total Time = 50276
+Processor 1
+	Total Time = 50447
+Processor 2
+	Total Time = 50408
+Processor 3
+	Total Time = 50563
+Processor 4
+	Total Time = 50283
+Processor 5
+	Total Time = 50378
+Processor 6
+	Total Time = 50257
+Processor 7
+	Total Time = 50267
+Processor 8
+	Total Time = 50361
+Processor 9
+	Total Time = 50455
+Processor 10
+	Total Time = 50454
+Processor 11
+	Total Time = 50324
+Processor 12
+	Total Time = 50477
+Processor 13
+	Total Time = 50240
+Processor 14
+	Total Time = 50031
+Processor 15
+	Total Time = 50302
+Time Step 31
+Processor 0
+	Total Time = 48803
+Processor 1
+	Total Time = 48993
+Processor 2
+	Total Time = 48922
+Processor 3
+	Total Time = 48723
+Processor 4
+	Total Time = 48891
+Processor 5
+	Total Time = 48818
+Processor 6
+	Total Time = 49002
+Processor 7
+	Total Time = 49136
+Processor 8
+	Total Time = 49066
+Processor 9
+	Total Time = 49009
+Processor 10
+	Total Time = 48813
+Processor 11
+	Total Time = 48891
+Processor 12
+	Total Time = 48866
+Processor 13
+	Total Time = 49086
+Processor 14
+	Total Time = 49311
+Processor 15
+	Total Time = 48971
+Time Step 32
+Processor 0
+	Total Time = 46595
+Processor 1
+	Total Time = 46618
+Processor 2
+	Total Time = 46437
+Processor 3
+	Total Time = 46694
+Processor 4
+	Total Time = 46452
+Processor 5
+	Total Time = 46547
+Processor 6
+	Total Time = 46542
+Processor 7
+	Total Time = 46520
+Processor 8
+	Total Time = 46531
+Processor 9
+	Total Time = 46279
+Processor 10
+	Total Time = 46525
+Processor 11
+	Total Time = 46393
+Processor 12
+	Total Time = 46439
+Processor 13
+	Total Time = 46496
+Processor 14
+	Total Time = 46401
+Processor 15
+	Total Time = 46366
+Time Step 33
+Processor 0
+	Total Time = 45078
+Processor 1
+	Total Time = 45072
+Processor 2
+	Total Time = 45396
+Processor 3
+	Total Time = 45068
+Processor 4
+	Total Time = 45012
+Processor 5
+	Total Time = 45103
+Processor 6
+	Total Time = 45063
+Processor 7
+	Total Time = 45234
+Processor 8
+	Total Time = 45215
+Processor 9
+	Total Time = 45280
+Processor 10
+	Total Time = 45108
+Processor 11
+	Total Time = 45004
+Processor 12
+	Total Time = 45125
+Processor 13
+	Total Time = 45260
+Processor 14
+	Total Time = 45033
+Processor 15
+	Total Time = 45165
+Time Step 34
+Processor 0
+	Total Time = 46993
+Processor 1
+	Total Time = 46955
+Processor 2
+	Total Time = 46961
+Processor 3
+	Total Time = 46869
+Processor 4
+	Total Time = 47079
+Processor 5
+	Total Time = 47051
+Processor 6
+	Total Time = 47020
+Processor 7
+	Total Time = 46931
+Processor 8
+	Total Time = 46979
+Processor 9
+	Total Time = 47096
+Processor 10
+	Total Time = 47157
+Processor 11
+	Total Time = 46985
+Processor 12
+	Total Time = 47037
+Processor 13
+	Total Time = 46931
+Processor 14
+	Total Time = 47035
+Processor 15
+	Total Time = 46974
+Time Step 35
+Processor 0
+	Total Time = 46377
+Processor 1
+	Total Time = 46471
+Processor 2
+	Total Time = 46350
+Processor 3
+	Total Time = 46369
+Processor 4
+	Total Time = 46419
+Processor 5
+	Total Time = 46229
+Processor 6
+	Total Time = 46409
+Processor 7
+	Total Time = 46470
+Processor 8
+	Total Time = 46311
+Processor 9
+	Total Time = 46397
+Processor 10
+	Total Time = 46309
+Processor 11
+	Total Time = 46434
+Processor 12
+	Total Time = 46349
+Processor 13
+	Total Time = 46431
+Processor 14
+	Total Time = 46502
+Processor 15
+	Total Time = 46458
+Time Step 36
+Processor 0
+	Total Time = 47328
+Processor 1
+	Total Time = 47324
+Processor 2
+	Total Time = 47401
+Processor 3
+	Total Time = 47417
+Processor 4
+	Total Time = 47432
+Processor 5
+	Total Time = 47423
+Processor 6
+	Total Time = 47361
+Processor 7
+	Total Time = 47331
+Processor 8
+	Total Time = 47255
+Processor 9
+	Total Time = 47378
+Processor 10
+	Total Time = 47396
+Processor 11
+	Total Time = 47356
+Processor 12
+	Total Time = 47392
+Processor 13
+	Total Time = 47560
+Processor 14
+	Total Time = 47296
+Processor 15
+	Total Time = 47342
+Time Step 37
+Processor 0
+	Total Time = 48475
+Processor 1
+	Total Time = 48316
+Processor 2
+	Total Time = 48450
+Processor 3
+	Total Time = 48428
+Processor 4
+	Total Time = 48339
+Processor 5
+	Total Time = 48423
+Processor 6
+	Total Time = 48339
+Processor 7
+	Total Time = 48407
+Processor 8
+	Total Time = 48428
+Processor 9
+	Total Time = 48253
+Processor 10
+	Total Time = 48301
+Processor 11
+	Total Time = 48358
+Processor 12
+	Total Time = 48443
+Processor 13
+	Total Time = 48200
+Processor 14
+	Total Time = 48333
+Processor 15
+	Total Time = 48440
+Time Step 38
+Processor 0
+	Total Time = 47106
+Processor 1
+	Total Time = 47207
+Processor 2
+	Total Time = 47206
+Processor 3
+	Total Time = 47172
+Processor 4
+	Total Time = 47229
+Processor 5
+	Total Time = 46982
+Processor 6
+	Total Time = 47194
+Processor 7
+	Total Time = 47180
+Processor 8
+	Total Time = 47107
+Processor 9
+	Total Time = 47278
+Processor 10
+	Total Time = 47214
+Processor 11
+	Total Time = 47371
+Processor 12
+	Total Time = 47110
+Processor 13
+	Total Time = 47185
+Processor 14
+	Total Time = 47115
+Processor 15
+	Total Time = 47096
+Time Step 39
+Processor 0
+	Total Time = 48843
+Processor 1
+	Total Time = 48799
+Processor 2
+	Total Time = 48685
+Processor 3
+	Total Time = 48745
+Processor 4
+	Total Time = 48820
+Processor 5
+	Total Time = 48896
+Processor 6
+	Total Time = 48787
+Processor 7
+	Total Time = 48787
+Processor 8
+	Total Time = 48755
+Processor 9
+	Total Time = 48758
+Processor 10
+	Total Time = 48805
+Processor 11
+	Total Time = 48665
+Processor 12
+	Total Time = 48895
+Processor 13
+	Total Time = 48749
+Processor 14
+	Total Time = 48773
+Processor 15
+	Total Time = 48866
+Time Step 40
+Processor 0
+	Total Time = 49400
+Processor 1
+	Total Time = 49337
+Processor 2
+	Total Time = 49403
+Processor 3
+	Total Time = 49591
+Processor 4
+	Total Time = 49331
+Processor 5
+	Total Time = 49433
+Processor 6
+	Total Time = 49378
+Processor 7
+	Total Time = 49437
+Processor 8
+	Total Time = 49560
+Processor 9
+	Total Time = 49410
+Processor 10
+	Total Time = 49330
+Processor 11
+	Total Time = 49533
+Processor 12
+	Total Time = 49345
+Processor 13
+	Total Time = 49506
+Processor 14
+	Total Time = 49476
+Processor 15
+	Total Time = 49483
+Time Step 41
+Processor 0
+	Total Time = 49171
+Processor 1
+	Total Time = 49169
+Processor 2
+	Total Time = 49193
+Processor 3
+	Total Time = 49220
+Processor 4
+	Total Time = 49208
+Processor 5
+	Total Time = 49188
+Processor 6
+	Total Time = 49183
+Processor 7
+	Total Time = 49191
+Processor 8
+	Total Time = 49185
+Processor 9
+	Total Time = 49165
+Processor 10
+	Total Time = 49232
+Processor 11
+	Total Time = 49217
+Processor 12
+	Total Time = 49223
+Processor 13
+	Total Time = 49191
+Processor 14
+	Total Time = 49218
+Processor 15
+	Total Time = 49099
+Time Step 42
+Processor 0
+	Total Time = 49062
+Processor 1
+	Total Time = 49015
+Processor 2
+	Total Time = 49020
+Processor 3
+	Total Time = 49004
+Processor 4
+	Total Time = 49102
+Processor 5
+	Total Time = 48965
+Processor 6
+	Total Time = 48963
+Processor 7
+	Total Time = 48970
+Processor 8
+	Total Time = 48969
+Processor 9
+	Total Time = 48865
+Processor 10
+	Total Time = 48946
+Processor 11
+	Total Time = 49021
+Processor 12
+	Total Time = 49032
+Processor 13
+	Total Time = 48908
+Processor 14
+	Total Time = 48996
+Processor 15
+	Total Time = 48956
+Time Step 43
+Processor 0
+	Total Time = 49621
+Processor 1
+	Total Time = 49706
+Processor 2
+	Total Time = 49718
+Processor 3
+	Total Time = 49660
+Processor 4
+	Total Time = 49611
+Processor 5
+	Total Time = 49640
+Processor 6
+	Total Time = 49659
+Processor 7
+	Total Time = 49676
+Processor 8
+	Total Time = 49559
+Processor 9
+	Total Time = 49767
+Processor 10
+	Total Time = 49770
+Processor 11
+	Total Time = 49719
+Processor 12
+	Total Time = 49706
+Processor 13
+	Total Time = 49732
+Processor 14
+	Total Time = 49651
+Processor 15
+	Total Time = 49845
+Time Step 44
+Processor 0
+	Total Time = 51642
+Processor 1
+	Total Time = 51634
+Processor 2
+	Total Time = 51540
+Processor 3
+	Total Time = 51610
+Processor 4
+	Total Time = 51696
+Processor 5
+	Total Time = 51677
+Processor 6
+	Total Time = 51713
+Processor 7
+	Total Time = 51653
+Processor 8
+	Total Time = 51726
+Processor 9
+	Total Time = 51674
+Processor 10
+	Total Time = 51586
+Processor 11
+	Total Time = 51698
+Processor 12
+	Total Time = 51650
+Processor 13
+	Total Time = 51550
+Processor 14
+	Total Time = 51637
+Processor 15
+	Total Time = 51494
+Time Step 45
+Processor 0
+	Total Time = 52052
+Processor 1
+	Total Time = 51923
+Processor 2
+	Total Time = 52001
+Processor 3
+	Total Time = 51897
+Processor 4
+	Total Time = 52062
+Processor 5
+	Total Time = 51934
+Processor 6
+	Total Time = 51852
+Processor 7
+	Total Time = 51936
+Processor 8
+	Total Time = 51963
+Processor 9
+	Total Time = 52033
+Processor 10
+	Total Time = 52013
+Processor 11
+	Total Time = 51906
+Processor 12
+	Total Time = 51969
+Processor 13
+	Total Time = 52044
+Processor 14
+	Total Time = 52087
+Processor 15
+	Total Time = 52042
+Time Step 46
+Processor 0
+	Total Time = 53704
+Processor 1
+	Total Time = 53589
+Processor 2
+	Total Time = 53350
+Processor 3
+	Total Time = 53409
+Processor 4
+	Total Time = 53147
+Processor 5
+	Total Time = 53638
+Processor 6
+	Total Time = 53813
+Processor 7
+	Total Time = 53898
+Processor 8
+	Total Time = 53980
+Processor 9
+	Total Time = 53478
+Processor 10
+	Total Time = 53437
+Processor 11
+	Total Time = 53247
+Processor 12
+	Total Time = 53235
+Processor 13
+	Total Time = 53470
+Processor 14
+	Total Time = 53575
+Processor 15
+	Total Time = 53489
+Time Step 47
+Processor 0
+	Total Time = 54251
+Processor 1
+	Total Time = 54166
+Processor 2
+	Total Time = 54368
+Processor 3
+	Total Time = 54122
+Processor 4
+	Total Time = 54223
+Processor 5
+	Total Time = 54076
+Processor 6
+	Total Time = 54208
+Processor 7
+	Total Time = 54338
+Processor 8
+	Total Time = 54128
+Processor 9
+	Total Time = 54219
+Processor 10
+	Total Time = 54215
+Processor 11
+	Total Time = 54095
+Processor 12
+	Total Time = 54127
+Processor 13
+	Total Time = 54206
+Processor 14
+	Total Time = 54222
+Processor 15
+	Total Time = 54269
+Time Step 48
+Processor 0
+	Total Time = 55935
+Processor 1
+	Total Time = 56134
+Processor 2
+	Total Time = 56105
+Processor 3
+	Total Time = 56228
+Processor 4
+	Total Time = 56482
+Processor 5
+	Total Time = 56141
+Processor 6
+	Total Time = 55807
+Processor 7
+	Total Time = 55523
+Processor 8
+	Total Time = 55633
+Processor 9
+	Total Time = 56033
+Processor 10
+	Total Time = 55954
+Processor 11
+	Total Time = 56563
+Processor 12
+	Total Time = 56473
+Processor 13
+	Total Time = 56179
+Processor 14
+	Total Time = 56005
+Processor 15
+	Total Time = 56113
+Time Step 49
+Processor 0
+	Total Time = 57182
+Processor 1
+	Total Time = 57144
+Processor 2
+	Total Time = 57233
+Processor 3
+	Total Time = 57246
+Processor 4
+	Total Time = 57299
+Processor 5
+	Total Time = 57152
+Processor 6
+	Total Time = 57359
+Processor 7
+	Total Time = 57227
+Processor 8
+	Total Time = 57209
+Processor 9
+	Total Time = 57244
+Processor 10
+	Total Time = 57348
+Processor 11
+	Total Time = 57193
+Processor 12
+	Total Time = 57245
+Processor 13
+	Total Time = 57072
+Processor 14
+	Total Time = 57074
+Processor 15
+	Total Time = 57131
+Time Step 50
+Processor 0
+	Total Time = 56425
+Processor 1
+	Total Time = 56377
+Processor 2
+	Total Time = 56404
+Processor 3
+	Total Time = 56428
+Processor 4
+	Total Time = 56357
+Processor 5
+	Total Time = 56413
+Processor 6
+	Total Time = 56383
+Processor 7
+	Total Time = 56377
+Processor 8
+	Total Time = 56441
+Processor 9
+	Total Time = 56323
+Processor 10
+	Total Time = 56492
+Processor 11
+	Total Time = 56468
+Processor 12
+	Total Time = 56447
+Processor 13
+	Total Time = 56428
+Processor 14
+	Total Time = 56454
+Processor 15
+	Total Time = 56485
+Time Step 51
+Processor 0
+	Total Time = 56809
+Processor 1
+	Total Time = 56960
+Processor 2
+	Total Time = 56762
+Processor 3
+	Total Time = 56881
+Processor 4
+	Total Time = 56924
+Processor 5
+	Total Time = 56667
+Processor 6
+	Total Time = 56805
+Processor 7
+	Total Time = 56690
+Processor 8
+	Total Time = 56815
+Processor 9
+	Total Time = 56998
+Processor 10
+	Total Time = 56651
+Processor 11
+	Total Time = 56839
+Processor 12
+	Total Time = 56699
+Processor 13
+	Total Time = 56743
+Processor 14
+	Total Time = 56807
+Processor 15
+	Total Time = 56663
+Time Step 52
+Processor 0
+	Total Time = 55795
+Processor 1
+	Total Time = 55548
+Processor 2
+	Total Time = 55683
+Processor 3
+	Total Time = 55717
+Processor 4
+	Total Time = 55668
+Processor 5
+	Total Time = 55897
+Processor 6
+	Total Time = 55790
+Processor 7
+	Total Time = 55834
+Processor 8
+	Total Time = 55755
+Processor 9
+	Total Time = 55648
+Processor 10
+	Total Time = 55771
+Processor 11
+	Total Time = 55689
+Processor 12
+	Total Time = 55729
+Processor 13
+	Total Time = 55713
+Processor 14
+	Total Time = 55692
+Processor 15
+	Total Time = 55818
+Time Step 53
+Processor 0
+	Total Time = 56440
+Processor 1
+	Total Time = 56466
+Processor 2
+	Total Time = 56508
+Processor 3
+	Total Time = 56580
+Processor 4
+	Total Time = 56588
+Processor 5
+	Total Time = 56677
+Processor 6
+	Total Time = 56669
+Processor 7
+	Total Time = 56519
+Processor 8
+	Total Time = 56490
+Processor 9
+	Total Time = 56350
+Processor 10
+	Total Time = 56445
+Processor 11
+	Total Time = 56494
+Processor 12
+	Total Time = 56516
+Processor 13
+	Total Time = 56482
+Processor 14
+	Total Time = 56585
+Processor 15
+	Total Time = 56456
+Time Step 54
+Processor 0
+	Total Time = 56456
+Processor 1
+	Total Time = 56387
+Processor 2
+	Total Time = 56365
+Processor 3
+	Total Time = 56278
+Processor 4
+	Total Time = 56296
+Processor 5
+	Total Time = 56236
+Processor 6
+	Total Time = 56182
+Processor 7
+	Total Time = 56248
+Processor 8
+	Total Time = 56338
+Processor 9
+	Total Time = 56517
+Processor 10
+	Total Time = 56453
+Processor 11
+	Total Time = 56406
+Processor 12
+	Total Time = 56403
+Processor 13
+	Total Time = 56476
+Processor 14
+	Total Time = 56422
+Processor 15
+	Total Time = 56497
+Time Step 55
+Processor 0
+	Total Time = 57301
+Processor 1
+	Total Time = 57494
+Processor 2
+	Total Time = 57322
+Processor 3
+	Total Time = 57413
+Processor 4
+	Total Time = 57326
+Processor 5
+	Total Time = 57402
+Processor 6
+	Total Time = 57349
+Processor 7
+	Total Time = 57344
+Processor 8
+	Total Time = 57245
+Processor 9
+	Total Time = 57058
+Processor 10
+	Total Time = 57144
+Processor 11
+	Total Time = 57264
+Processor 12
+	Total Time = 57152
+Processor 13
+	Total Time = 57100
+Processor 14
+	Total Time = 57010
+Processor 15
+	Total Time = 57238
+Time Step 56
+Processor 0
+	Total Time = 54998
+Processor 1
+	Total Time = 55031
+Processor 2
+	Total Time = 54974
+Processor 3
+	Total Time = 54976
+Processor 4
+	Total Time = 54830
+Processor 5
+	Total Time = 55134
+Processor 6
+	Total Time = 55112
+Processor 7
+	Total Time = 55079
+Processor 8
+	Total Time = 55228
+Processor 9
+	Total Time = 55398
+Processor 10
+	Total Time = 55219
+Processor 11
+	Total Time = 55061
+Processor 12
+	Total Time = 54959
+Processor 13
+	Total Time = 55164
+Processor 14
+	Total Time = 55050
+Processor 15
+	Total Time = 55156
+Time Step 57
+Processor 0
+	Total Time = 64434
+Processor 1
+	Total Time = 64338
+Processor 2
+	Total Time = 64395
+Processor 3
+	Total Time = 64438
+Processor 4
+	Total Time = 64458
+Processor 5
+	Total Time = 64369
+Processor 6
+	Total Time = 64501
+Processor 7
+	Total Time = 64655
+Processor 8
+	Total Time = 64531
+Processor 9
+	Total Time = 64415
+Processor 10
+	Total Time = 64620
+Processor 11
+	Total Time = 64503
+Processor 12
+	Total Time = 64551
+Processor 13
+	Total Time = 64404
+Processor 14
+	Total Time = 64775
+Processor 15
+	Total Time = 64394
+Time Step 58
+Processor 0
+	Total Time = 56901
+Processor 1
+	Total Time = 57048
+Processor 2
+	Total Time = 57132
+Processor 3
+	Total Time = 56975
+Processor 4
+	Total Time = 56824
+Processor 5
+	Total Time = 56913
+Processor 6
+	Total Time = 56831
+Processor 7
+	Total Time = 56660
+Processor 8
+	Total Time = 56597
+Processor 9
+	Total Time = 56706
+Processor 10
+	Total Time = 56733
+Processor 11
+	Total Time = 56769
+Processor 12
+	Total Time = 56697
+Processor 13
+	Total Time = 56834
+Processor 14
+	Total Time = 56644
+Processor 15
+	Total Time = 56769
+Time Step 59
+Processor 0
+	Total Time = 51566
+Processor 1
+	Total Time = 51600
+Processor 2
+	Total Time = 51524
+Processor 3
+	Total Time = 51604
+Processor 4
+	Total Time = 51603
+Processor 5
+	Total Time = 51617
+Processor 6
+	Total Time = 51547
+Processor 7
+	Total Time = 51635
+Processor 8
+	Total Time = 51789
+Processor 9
+	Total Time = 51718
+Processor 10
+	Total Time = 51663
+Processor 11
+	Total Time = 51648
+Processor 12
+	Total Time = 51884
+Processor 13
+	Total Time = 51746
+Processor 14
+	Total Time = 51555
+Processor 15
+	Total Time = 51731
+Time Step 60
+Processor 0
+	Total Time = 51788
+Processor 1
+	Total Time = 51756
+Processor 2
+	Total Time = 51819
+Processor 3
+	Total Time = 51580
+Processor 4
+	Total Time = 51742
+Processor 5
+	Total Time = 51817
+Processor 6
+	Total Time = 51877
+Processor 7
+	Total Time = 51809
+Processor 8
+	Total Time = 51616
+Processor 9
+	Total Time = 51797
+Processor 10
+	Total Time = 51713
+Processor 11
+	Total Time = 51724
+Processor 12
+	Total Time = 51699
+Processor 13
+	Total Time = 51754
+Processor 14
+	Total Time = 51826
+Processor 15
+	Total Time = 51593
+Time Step 61
+Processor 0
+	Total Time = 49974
+Processor 1
+	Total Time = 49996
+Processor 2
+	Total Time = 50017
+Processor 3
+	Total Time = 50100
+Processor 4
+	Total Time = 50043
+Processor 5
+	Total Time = 49986
+Processor 6
+	Total Time = 49826
+Processor 7
+	Total Time = 50042
+Processor 8
+	Total Time = 50357
+Processor 9
+	Total Time = 50109
+Processor 10
+	Total Time = 50028
+Processor 11
+	Total Time = 50009
+Processor 12
+	Total Time = 50073
+Processor 13
+	Total Time = 50148
+Processor 14
+	Total Time = 50165
+Processor 15
+	Total Time = 50036
+Time Step 62
+Processor 0
+	Total Time = 48771
+Processor 1
+	Total Time = 48901
+Processor 2
+	Total Time = 48851
+Processor 3
+	Total Time = 48765
+Processor 4
+	Total Time = 48786
+Processor 5
+	Total Time = 48749
+Processor 6
+	Total Time = 48782
+Processor 7
+	Total Time = 48744
+Processor 8
+	Total Time = 48668
+Processor 9
+	Total Time = 48660
+Processor 10
+	Total Time = 48842
+Processor 11
+	Total Time = 48704
+Processor 12
+	Total Time = 48885
+Processor 13
+	Total Time = 48796
+Processor 14
+	Total Time = 48891
+Processor 15
+	Total Time = 48902
+Time Step 63
+Processor 0
+	Total Time = 47560
+Processor 1
+	Total Time = 47575
+Processor 2
+	Total Time = 47595
+Processor 3
+	Total Time = 47650
+Processor 4
+	Total Time = 47489
+Processor 5
+	Total Time = 47614
+Processor 6
+	Total Time = 47665
+Processor 7
+	Total Time = 47736
+Processor 8
+	Total Time = 47713
+Processor 9
+	Total Time = 47616
+Processor 10
+	Total Time = 47602
+Processor 11
+	Total Time = 47457
+Processor 12
+	Total Time = 47534
+Processor 13
+	Total Time = 47784
+Processor 14
+	Total Time = 47699
+Processor 15
+	Total Time = 47637
+Time Step 64
+Processor 0
+	Total Time = 46508
+Processor 1
+	Total Time = 46444
+Processor 2
+	Total Time = 46372
+Processor 3
+	Total Time = 46461
+Processor 4
+	Total Time = 46509
+Processor 5
+	Total Time = 46485
+Processor 6
+	Total Time = 46484
+Processor 7
+	Total Time = 46494
+Processor 8
+	Total Time = 46327
+Processor 9
+	Total Time = 46647
+Processor 10
+	Total Time = 46574
+Processor 11
+	Total Time = 46508
+Processor 12
+	Total Time = 46231
+Processor 13
+	Total Time = 46432
+Processor 14
+	Total Time = 46381
+Processor 15
+	Total Time = 46347
+Time Step 65
+Processor 0
+	Total Time = 45302
+Processor 1
+	Total Time = 45305
+Processor 2
+	Total Time = 45490
+Processor 3
+	Total Time = 45224
+Processor 4
+	Total Time = 45249
+Processor 5
+	Total Time = 45368
+Processor 6
+	Total Time = 45374
+Processor 7
+	Total Time = 45269
+Processor 8
+	Total Time = 45462
+Processor 9
+	Total Time = 45257
+Processor 10
+	Total Time = 45236
+Processor 11
+	Total Time = 45241
+Processor 12
+	Total Time = 45348
+Processor 13
+	Total Time = 45319
+Processor 14
+	Total Time = 45239
+Processor 15
+	Total Time = 45373
+Time Step 66
+Processor 0
+	Total Time = 46181
+Processor 1
+	Total Time = 46080
+Processor 2
+	Total Time = 46096
+Processor 3
+	Total Time = 46212
+Processor 4
+	Total Time = 46087
+Processor 5
+	Total Time = 46202
+Processor 6
+	Total Time = 46170
+Processor 7
+	Total Time = 46339
+Processor 8
+	Total Time = 46189
+Processor 9
+	Total Time = 46159
+Processor 10
+	Total Time = 46110
+Processor 11
+	Total Time = 46224
+Processor 12
+	Total Time = 46225
+Processor 13
+	Total Time = 46058
+Processor 14
+	Total Time = 46207
+Processor 15
+	Total Time = 46120
+Time Step 67
+Processor 0
+	Total Time = 45093
+Processor 1
+	Total Time = 45195
+Processor 2
+	Total Time = 45249
+Processor 3
+	Total Time = 45128
+Processor 4
+	Total Time = 45301
+Processor 5
+	Total Time = 45112
+Processor 6
+	Total Time = 45215
+Processor 7
+	Total Time = 45168
+Processor 8
+	Total Time = 45234
+Processor 9
+	Total Time = 45168
+Processor 10
+	Total Time = 45221
+Processor 11
+	Total Time = 45139
+Processor 12
+	Total Time = 45291
+Processor 13
+	Total Time = 45280
+Processor 14
+	Total Time = 45129
+Processor 15
+	Total Time = 45143
+Time Step 68
+Processor 0
+	Total Time = 46220
+Processor 1
+	Total Time = 46182
+Processor 2
+	Total Time = 46194
+Processor 3
+	Total Time = 46229
+Processor 4
+	Total Time = 46155
+Processor 5
+	Total Time = 46211
+Processor 6
+	Total Time = 46070
+Processor 7
+	Total Time = 46206
+Processor 8
+	Total Time = 46110
+Processor 9
+	Total Time = 46139
+Processor 10
+	Total Time = 46148
+Processor 11
+	Total Time = 46129
+Processor 12
+	Total Time = 46207
+Processor 13
+	Total Time = 46229
+Processor 14
+	Total Time = 46228
+Processor 15
+	Total Time = 46327
+Time Step 69
+Processor 0
+	Total Time = 45515
+Processor 1
+	Total Time = 45753
+Processor 2
+	Total Time = 45623
+Processor 3
+	Total Time = 45351
+Processor 4
+	Total Time = 45506
+Processor 5
+	Total Time = 45471
+Processor 6
+	Total Time = 45521
+Processor 7
+	Total Time = 45522
+Processor 8
+	Total Time = 45559
+Processor 9
+	Total Time = 45523
+Processor 10
+	Total Time = 45594
+Processor 11
+	Total Time = 45558
+Processor 12
+	Total Time = 45517
+Processor 13
+	Total Time = 45522
+Processor 14
+	Total Time = 45475
+Processor 15
+	Total Time = 45405
+Time Step 70
+Processor 0
+	Total Time = 45092
+Processor 1
+	Total Time = 45060
+Processor 2
+	Total Time = 44940
+Processor 3
+	Total Time = 45209
+Processor 4
+	Total Time = 45061
+Processor 5
+	Total Time = 45068
+Processor 6
+	Total Time = 45067
+Processor 7
+	Total Time = 45058
+Processor 8
+	Total Time = 45010
+Processor 9
+	Total Time = 45103
+Processor 10
+	Total Time = 45056
+Processor 11
+	Total Time = 45123
+Processor 12
+	Total Time = 45027
+Processor 13
+	Total Time = 45069
+Processor 14
+	Total Time = 45169
+Processor 15
+	Total Time = 45181
+Time Step 71
+Processor 0
+	Total Time = 45682
+Processor 1
+	Total Time = 45600
+Processor 2
+	Total Time = 45630
+Processor 3
+	Total Time = 45691
+Processor 4
+	Total Time = 45838
+Processor 5
+	Total Time = 45706
+Processor 6
+	Total Time = 45687
+Processor 7
+	Total Time = 45709
+Processor 8
+	Total Time = 45701
+Processor 9
+	Total Time = 45711
+Processor 10
+	Total Time = 45743
+Processor 11
+	Total Time = 45760
+Processor 12
+	Total Time = 45728
+Processor 13
+	Total Time = 45817
+Processor 14
+	Total Time = 45724
+Processor 15
+	Total Time = 45650
+Time Step 72
+Processor 0
+	Total Time = 45448
+Processor 1
+	Total Time = 45541
+Processor 2
+	Total Time = 45575
+Processor 3
+	Total Time = 45501
+Processor 4
+	Total Time = 45514
+Processor 5
+	Total Time = 45418
+Processor 6
+	Total Time = 45472
+Processor 7
+	Total Time = 45441
+Processor 8
+	Total Time = 45390
+Processor 9
+	Total Time = 45418
+Processor 10
+	Total Time = 45355
+Processor 11
+	Total Time = 45418
+Processor 12
+	Total Time = 45494
+Processor 13
+	Total Time = 45294
+Processor 14
+	Total Time = 45334
+Processor 15
+	Total Time = 45320
+Time Step 73
+Processor 0
+	Total Time = 46838
+Processor 1
+	Total Time = 46815
+Processor 2
+	Total Time = 46748
+Processor 3
+	Total Time = 46779
+Processor 4
+	Total Time = 46754
+Processor 5
+	Total Time = 46757
+Processor 6
+	Total Time = 46904
+Processor 7
+	Total Time = 46780
+Processor 8
+	Total Time = 46798
+Processor 9
+	Total Time = 46889
+Processor 10
+	Total Time = 46952
+Processor 11
+	Total Time = 46885
+Processor 12
+	Total Time = 46797
+Processor 13
+	Total Time = 46911
+Processor 14
+	Total Time = 46839
+Processor 15
+	Total Time = 47010
+Time Step 74
+Processor 0
+	Total Time = 46235
+Processor 1
+	Total Time = 46075
+Processor 2
+	Total Time = 46242
+Processor 3
+	Total Time = 46282
+Processor 4
+	Total Time = 46199
+Processor 5
+	Total Time = 46276
+Processor 6
+	Total Time = 46147
+Processor 7
+	Total Time = 46241
+Processor 8
+	Total Time = 46366
+Processor 9
+	Total Time = 46113
+Processor 10
+	Total Time = 46199
+Processor 11
+	Total Time = 46235
+Processor 12
+	Total Time = 46224
+Processor 13
+	Total Time = 46134
+Processor 14
+	Total Time = 46223
+Processor 15
+	Total Time = 46121
+Time Step 75
+Processor 0
+	Total Time = 46115
+Processor 1
+	Total Time = 46147
+Processor 2
+	Total Time = 46135
+Processor 3
+	Total Time = 46145
+Processor 4
+	Total Time = 46228
+Processor 5
+	Total Time = 46181
+Processor 6
+	Total Time = 46173
+Processor 7
+	Total Time = 46200
+Processor 8
+	Total Time = 46117
+Processor 9
+	Total Time = 46229
+Processor 10
+	Total Time = 46179
+Processor 11
+	Total Time = 46227
+Processor 12
+	Total Time = 46180
+Processor 13
+	Total Time = 46145
+Processor 14
+	Total Time = 46139
+Processor 15
+	Total Time = 46213
+Time Step 76
+Processor 0
+	Total Time = 46381
+Processor 1
+	Total Time = 46366
+Processor 2
+	Total Time = 46344
+Processor 3
+	Total Time = 46328
+Processor 4
+	Total Time = 46324
+Processor 5
+	Total Time = 46307
+Processor 6
+	Total Time = 46334
+Processor 7
+	Total Time = 46258
+Processor 8
+	Total Time = 46407
+Processor 9
+	Total Time = 46274
+Processor 10
+	Total Time = 46301
+Processor 11
+	Total Time = 46327
+Processor 12
+	Total Time = 46350
+Processor 13
+	Total Time = 46357
+Processor 14
+	Total Time = 46317
+Processor 15
+	Total Time = 46368
+Time Step 77
+Processor 0
+	Total Time = 47191
+Processor 1
+	Total Time = 47145
+Processor 2
+	Total Time = 47182
+Processor 3
+	Total Time = 47251
+Processor 4
+	Total Time = 47088
+Processor 5
+	Total Time = 47218
+Processor 6
+	Total Time = 47179
+Processor 7
+	Total Time = 47199
+Processor 8
+	Total Time = 47127
+Processor 9
+	Total Time = 47278
+Processor 10
+	Total Time = 47107
+Processor 11
+	Total Time = 47195
+Processor 12
+	Total Time = 47155
+Processor 13
+	Total Time = 47102
+Processor 14
+	Total Time = 47228
+Processor 15
+	Total Time = 47184
+Time Step 78
+Processor 0
+	Total Time = 48127
+Processor 1
+	Total Time = 48072
+Processor 2
+	Total Time = 48042
+Processor 3
+	Total Time = 48034
+Processor 4
+	Total Time = 48107
+Processor 5
+	Total Time = 48057
+Processor 6
+	Total Time = 48002
+Processor 7
+	Total Time = 48033
+Processor 8
+	Total Time = 48128
+Processor 9
+	Total Time = 48042
+Processor 10
+	Total Time = 48059
+Processor 11
+	Total Time = 48131
+Processor 12
+	Total Time = 48074
+Processor 13
+	Total Time = 48200
+Processor 14
+	Total Time = 48085
+Processor 15
+	Total Time = 48114
+Time Step 79
+Processor 0
+	Total Time = 48295
+Processor 1
+	Total Time = 48305
+Processor 2
+	Total Time = 48330
+Processor 3
+	Total Time = 48352
+Processor 4
+	Total Time = 48441
+Processor 5
+	Total Time = 48377
+Processor 6
+	Total Time = 48471
+Processor 7
+	Total Time = 48358
+Processor 8
+	Total Time = 48305
+Processor 9
+	Total Time = 48317
+Processor 10
+	Total Time = 48362
+Processor 11
+	Total Time = 48292
+Processor 12
+	Total Time = 48316
+Processor 13
+	Total Time = 48234
+Processor 14
+	Total Time = 48339
+Processor 15
+	Total Time = 48231
+Time Step 80
+Processor 0
+	Total Time = 49163
+Processor 1
+	Total Time = 49148
+Processor 2
+	Total Time = 49268
+Processor 3
+	Total Time = 49255
+Processor 4
+	Total Time = 49185
+Processor 5
+	Total Time = 49159
+Processor 6
+	Total Time = 49028
+Processor 7
+	Total Time = 49239
+Processor 8
+	Total Time = 49140
+Processor 9
+	Total Time = 49160
+Processor 10
+	Total Time = 49167
+Processor 11
+	Total Time = 49189
+Processor 12
+	Total Time = 49162
+Processor 13
+	Total Time = 49322
+Processor 14
+	Total Time = 49143
+Processor 15
+	Total Time = 49258
+Time Step 81
+Processor 0
+	Total Time = 49295
+Processor 1
+	Total Time = 49300
+Processor 2
+	Total Time = 49146
+Processor 3
+	Total Time = 49292
+Processor 4
+	Total Time = 49308
+Processor 5
+	Total Time = 49277
+Processor 6
+	Total Time = 49275
+Processor 7
+	Total Time = 49246
+Processor 8
+	Total Time = 49168
+Processor 9
+	Total Time = 49238
+Processor 10
+	Total Time = 49227
+Processor 11
+	Total Time = 49275
+Processor 12
+	Total Time = 49396
+Processor 13
+	Total Time = 49275
+Processor 14
+	Total Time = 49226
+Processor 15
+	Total Time = 49198
+Time Step 82
+Processor 0
+	Total Time = 50189
+Processor 1
+	Total Time = 50083
+Processor 2
+	Total Time = 50069
+Processor 3
+	Total Time = 50155
+Processor 4
+	Total Time = 50103
+Processor 5
+	Total Time = 50035
+Processor 6
+	Total Time = 50216
+Processor 7
+	Total Time = 49981
+Processor 8
+	Total Time = 50162
+Processor 9
+	Total Time = 50119
+Processor 10
+	Total Time = 50208
+Processor 11
+	Total Time = 50110
+Processor 12
+	Total Time = 49972
+Processor 13
+	Total Time = 49947
+Processor 14
+	Total Time = 50219
+Processor 15
+	Total Time = 50123
+Time Step 83
+Processor 0
+	Total Time = 48531
+Processor 1
+	Total Time = 48578
+Processor 2
+	Total Time = 48680
+Processor 3
+	Total Time = 48571
+Processor 4
+	Total Time = 48518
+Processor 5
+	Total Time = 48547
+Processor 6
+	Total Time = 48404
+Processor 7
+	Total Time = 48666
+Processor 8
+	Total Time = 48576
+Processor 9
+	Total Time = 48489
+Processor 10
+	Total Time = 48528
+Processor 11
+	Total Time = 48611
+Processor 12
+	Total Time = 48648
+Processor 13
+	Total Time = 48581
+Processor 14
+	Total Time = 48601
+Processor 15
+	Total Time = 48670
+Time Step 84
+Processor 0
+	Total Time = 49575
+Processor 1
+	Total Time = 49568
+Processor 2
+	Total Time = 49553
+Processor 3
+	Total Time = 49566
+Processor 4
+	Total Time = 49577
+Processor 5
+	Total Time = 49517
+Processor 6
+	Total Time = 49606
+Processor 7
+	Total Time = 49488
+Processor 8
+	Total Time = 49462
+Processor 9
+	Total Time = 49542
+Processor 10
+	Total Time = 49608
+Processor 11
+	Total Time = 49521
+Processor 12
+	Total Time = 49474
+Processor 13
+	Total Time = 49565
+Processor 14
+	Total Time = 49446
+Processor 15
+	Total Time = 49470
+Time Step 85
+Processor 0
+	Total Time = 49405
+Processor 1
+	Total Time = 49435
+Processor 2
+	Total Time = 49379
+Processor 3
+	Total Time = 49431
+Processor 4
+	Total Time = 49410
+Processor 5
+	Total Time = 49374
+Processor 6
+	Total Time = 49406
+Processor 7
+	Total Time = 49440
+Processor 8
+	Total Time = 49392
+Processor 9
+	Total Time = 49583
+Processor 10
+	Total Time = 49419
+Processor 11
+	Total Time = 49505
+Processor 12
+	Total Time = 49501
+Processor 13
+	Total Time = 49421
+Processor 14
+	Total Time = 49436
+Processor 15
+	Total Time = 49552
+Time Step 86
+Processor 0
+	Total Time = 50459
+Processor 1
+	Total Time = 50505
+Processor 2
+	Total Time = 50461
+Processor 3
+	Total Time = 50460
+Processor 4
+	Total Time = 50546
+Processor 5
+	Total Time = 50676
+Processor 6
+	Total Time = 50589
+Processor 7
+	Total Time = 50530
+Processor 8
+	Total Time = 50598
+Processor 9
+	Total Time = 50516
+Processor 10
+	Total Time = 50476
+Processor 11
+	Total Time = 50489
+Processor 12
+	Total Time = 50478
+Processor 13
+	Total Time = 50662
+Processor 14
+	Total Time = 50599
+Processor 15
+	Total Time = 50419
+Time Step 87
+Processor 0
+	Total Time = 50071
+Processor 1
+	Total Time = 50004
+Processor 2
+	Total Time = 50094
+Processor 3
+	Total Time = 50056
+Processor 4
+	Total Time = 50050
+Processor 5
+	Total Time = 49946
+Processor 6
+	Total Time = 49953
+Processor 7
+	Total Time = 49990
+Processor 8
+	Total Time = 49896
+Processor 9
+	Total Time = 50022
+Processor 10
+	Total Time = 50047
+Processor 11
+	Total Time = 49997
+Processor 12
+	Total Time = 50057
+Processor 13
+	Total Time = 49878
+Processor 14
+	Total Time = 49853
+Processor 15
+	Total Time = 49939
+Time Step 88
+Processor 0
+	Total Time = 52330
+Processor 1
+	Total Time = 52361
+Processor 2
+	Total Time = 52277
+Processor 3
+	Total Time = 52254
+Processor 4
+	Total Time = 52320
+Processor 5
+	Total Time = 52327
+Processor 6
+	Total Time = 52502
+Processor 7
+	Total Time = 52387
+Processor 8
+	Total Time = 52484
+Processor 9
+	Total Time = 52312
+Processor 10
+	Total Time = 52340
+Processor 11
+	Total Time = 52407
+Processor 12
+	Total Time = 52420
+Processor 13
+	Total Time = 52267
+Processor 14
+	Total Time = 52441
+Processor 15
+	Total Time = 52408
+Time Step 89
+Processor 0
+	Total Time = 52104
+Processor 1
+	Total Time = 52251
+Processor 2
+	Total Time = 52243
+Processor 3
+	Total Time = 52134
+Processor 4
+	Total Time = 52090
+Processor 5
+	Total Time = 52220
+Processor 6
+	Total Time = 52040
+Processor 7
+	Total Time = 52079
+Processor 8
+	Total Time = 52088
+Processor 9
+	Total Time = 52104
+Processor 10
+	Total Time = 52084
+Processor 11
+	Total Time = 52063
+Processor 12
+	Total Time = 52089
+Processor 13
+	Total Time = 52191
+Processor 14
+	Total Time = 52211
+Processor 15
+	Total Time = 52169
+Time Step 90
+Processor 0
+	Total Time = 52504
+Processor 1
+	Total Time = 52326
+Processor 2
+	Total Time = 52474
+Processor 3
+	Total Time = 52506
+Processor 4
+	Total Time = 52470
+Processor 5
+	Total Time = 52425
+Processor 6
+	Total Time = 52355
+Processor 7
+	Total Time = 52473
+Processor 8
+	Total Time = 52338
+Processor 9
+	Total Time = 52554
+Processor 10
+	Total Time = 52539
+Processor 11
+	Total Time = 52449
+Processor 12
+	Total Time = 52564
+Processor 13
+	Total Time = 52388
+Processor 14
+	Total Time = 52468
+Processor 15
+	Total Time = 52306
+Time Step 91
+Processor 0
+	Total Time = 52649
+Processor 1
+	Total Time = 52546
+Processor 2
+	Total Time = 52489
+Processor 3
+	Total Time = 52423
+Processor 4
+	Total Time = 52762
+Processor 5
+	Total Time = 52507
+Processor 6
+	Total Time = 52633
+Processor 7
+	Total Time = 52611
+Processor 8
+	Total Time = 52589
+Processor 9
+	Total Time = 52504
+Processor 10
+	Total Time = 52483
+Processor 11
+	Total Time = 52573
+Processor 12
+	Total Time = 52545
+Processor 13
+	Total Time = 52725
+Processor 14
+	Total Time = 52620
+Processor 15
+	Total Time = 52718
+Time Step 92
+Processor 0
+	Total Time = 53846
+Processor 1
+	Total Time = 53712
+Processor 2
+	Total Time = 53457
+Processor 3
+	Total Time = 53659
+Processor 4
+	Total Time = 53054
+Processor 5
+	Total Time = 53723
+Processor 6
+	Total Time = 53955
+Processor 7
+	Total Time = 53408
+Processor 8
+	Total Time = 53591
+Processor 9
+	Total Time = 53602
+Processor 10
+	Total Time = 53531
+Processor 11
+	Total Time = 53213
+Processor 12
+	Total Time = 53239
+Processor 13
+	Total Time = 53232
+Processor 14
+	Total Time = 53567
+Processor 15
+	Total Time = 53792
+Time Step 93
+Processor 0
+	Total Time = 58773
+Processor 1
+	Total Time = 59192
+Processor 2
+	Total Time = 59262
+Processor 3
+	Total Time = 58675
+Processor 4
+	Total Time = 59222
+Processor 5
+	Total Time = 59033
+Processor 6
+	Total Time = 58930
+Processor 7
+	Total Time = 59497
+Processor 8
+	Total Time = 59294
+Processor 9
+	Total Time = 59010
+Processor 10
+	Total Time = 58999
+Processor 11
+	Total Time = 58896
+Processor 12
+	Total Time = 58914
+Processor 13
+	Total Time = 59475
+Processor 14
+	Total Time = 59011
+Processor 15
+	Total Time = 58782
+Time Step 94
+Processor 0
+	Total Time = 54009
+Processor 1
+	Total Time = 53708
+Processor 2
+	Total Time = 53684
+Processor 3
+	Total Time = 54064
+Processor 4
+	Total Time = 53919
+Processor 5
+	Total Time = 53860
+Processor 6
+	Total Time = 53922
+Processor 7
+	Total Time = 53908
+Processor 8
+	Total Time = 54205
+Processor 9
+	Total Time = 53902
+Processor 10
+	Total Time = 53982
+Processor 11
+	Total Time = 54121
+Processor 12
+	Total Time = 53998
+Processor 13
+	Total Time = 53794
+Processor 14
+	Total Time = 53978
+Processor 15
+	Total Time = 54045
+Time Step 95
+Processor 0
+	Total Time = 55061
+Processor 1
+	Total Time = 54960
+Processor 2
+	Total Time = 55037
+Processor 3
+	Total Time = 54955
+Processor 4
+	Total Time = 54865
+Processor 5
+	Total Time = 54959
+Processor 6
+	Total Time = 55090
+Processor 7
+	Total Time = 55003
+Processor 8
+	Total Time = 55103
+Processor 9
+	Total Time = 55007
+Processor 10
+	Total Time = 55014
+Processor 11
+	Total Time = 55027
+Processor 12
+	Total Time = 54956
+Processor 13
+	Total Time = 55121
+Processor 14
+	Total Time = 54983
+Processor 15
+	Total Time = 55061
+Time Step 96
+Processor 0
+	Total Time = 55032
+Processor 1
+	Total Time = 55099
+Processor 2
+	Total Time = 55273
+Processor 3
+	Total Time = 55302
+Processor 4
+	Total Time = 55723
+Processor 5
+	Total Time = 55197
+Processor 6
+	Total Time = 54928
+Processor 7
+	Total Time = 54867
+Processor 8
+	Total Time = 54556
+Processor 9
+	Total Time = 55014
+Processor 10
+	Total Time = 54958
+Processor 11
+	Total Time = 55436
+Processor 12
+	Total Time = 55708
+Processor 13
+	Total Time = 54963
+Processor 14
+	Total Time = 55041
+Processor 15
+	Total Time = 55102
+Time Step 97
+Processor 0
+	Total Time = 55136
+Processor 1
+	Total Time = 55205
+Processor 2
+	Total Time = 55074
+Processor 3
+	Total Time = 55206
+Processor 4
+	Total Time = 55119
+Processor 5
+	Total Time = 55062
+Processor 6
+	Total Time = 55118
+Processor 7
+	Total Time = 55033
+Processor 8
+	Total Time = 55071
+Processor 9
+	Total Time = 55192
+Processor 10
+	Total Time = 55331
+Processor 11
+	Total Time = 55196
+Processor 12
+	Total Time = 55042
+Processor 13
+	Total Time = 55019
+Processor 14
+	Total Time = 55039
+Processor 15
+	Total Time = 55038
+Time Step 98
+Processor 0
+	Total Time = 55770
+Processor 1
+	Total Time = 55705
+Processor 2
+	Total Time = 55727
+Processor 3
+	Total Time = 55828
+Processor 4
+	Total Time = 55608
+Processor 5
+	Total Time = 55694
+Processor 6
+	Total Time = 55578
+Processor 7
+	Total Time = 55664
+Processor 8
+	Total Time = 55659
+Processor 9
+	Total Time = 55743
+Processor 10
+	Total Time = 55644
+Processor 11
+	Total Time = 55581
+Processor 12
+	Total Time = 55694
+Processor 13
+	Total Time = 55629
+Processor 14
+	Total Time = 55645
+Processor 15
+	Total Time = 55660
+Time Step 99
+Processor 0
+	Total Time = 54726
+Processor 1
+	Total Time = 54749
+Processor 2
+	Total Time = 54770
+Processor 3
+	Total Time = 54646
+Processor 4
+	Total Time = 54831
+Processor 5
+	Total Time = 54593
+Processor 6
+	Total Time = 54831
+Processor 7
+	Total Time = 54783
+Processor 8
+	Total Time = 54808
+Processor 9
+	Total Time = 54750
+Processor 10
+	Total Time = 54832
+Processor 11
+	Total Time = 54815
+Processor 12
+	Total Time = 54783
+Processor 13
+	Total Time = 54831
+Processor 14
+	Total Time = 54864
+Processor 15
+	Total Time = 54813
+END

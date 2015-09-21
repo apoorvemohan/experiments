@@ -1,0 +1,39 @@
+#!/usr/bin/env python
+
+import os
+import sys
+import zipfile
+import shutil
+
+path = os.path.dirname(os.path.realpath(__file__))  + '/..'
+sys.path.insert(0, path)
+
+import common.imports.utils as u
+import common.imports.constants as c
+
+
+def get_runnable_instance_map():
+	runnable_instance_map = {}
+	for instance in os.listdir(c.SEQ_APP_INSTANCE_DIR):
+		runnable_instance_map.update(u.getidcmdpairbyxml(c.SEQ_APP_INSTANCE_DIR + '/' + instance))
+	return runnable_instance_map
+
+def main():
+	if os.path.isdir(c.SEQ_STATS_DIR):
+		os.rename(c.SEQ_STATS_DIR, c.SEQ_STATS_DIR + '.' + u.gettimestamp().replace(' ', '_'))
+#		shutil.rmtree(c.SEQ_STATS_DIR)
+
+	os.mkdir(c.SEQ_STATS_DIR)
+	runnable = get_runnable_instance_map()
+	for key in runnable.keys():
+		time = u.gettimestamp().replace(' ', '_')
+		u.loginfo('Executing ' + str(runnable[key]))
+		u.execcmd('touch ' + c.SEQ_STATS_DIR + '/' + str(key) + '_' + time + '.stat')
+		u.execcmd('echo \"' + runnable[key] + '\" >> ' + c.SEQ_STATS_DIR + '/' + str(key) + '_' + time + '.stat')
+		u.execcmd('perf stat ' + runnable[key] + ' >> ' + c.SEQ_STATS_DIR + '/' + str(key) + '_' + time + '.stat 2>&1')
+
+if __name__ == "__main__":
+	c.LOGGER = 'sequential.log'
+	u.loginfo('Begin Time:  ' + u.gettimestamp())
+	main()
+	u.loginfo('End Time:  ' + u.gettimestamp())

@@ -1,0 +1,347 @@
+
+Integer Radix Sort
+     2147483647 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       91328766        36004586        51991727
+    1       91312220        35988619        40333791
+    2       91272030        35948604        55288927
+    3       91292043        35968591        33393668
+    4       91320607        35996596        47082538
+    5       91320626        35996991        41194747
+    6       91268077        35944589        39160322
+    7       91277745        35953569        49731987
+    8       91321447        36004560        52124241
+    9       91300430        35976514        44677639
+   10       91328461        36004515        46613496
+   11       91280192        35956453        44128411
+   12       91280637        35956532        47256331
+   13       91300386        35976490        44561033
+   14       91336862        36012646        47563028
+   15       91304405        35980432        44420877
+  Avg       91302808        35979393        45595173
+  Min       91268077        35944589        33393668
+  Max       91336862        36012646        55288927
+
+
+                 TIMING INFORMATION
+Start time                        : 1414073726235144
+Initialization finish time        : 1414074611696800
+Overall finish time               : 1414074703025566
+Total time with initialization    :        976790422
+Total time without initialization :         91328766
+
+
+                  TESTING RESULTS
+PASSED: All keys in place.
+
+
+Integer Radix Sort
+     2147483647 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       92264629        38960722        50955659
+    1       92232274        38928770        42990326
+    2       92240970        38940741        52631494
+    3       92223957        38920695        53256383
+    4       92252542        38948743        48928747
+    5       92228628        38924731        50707684
+    6       92268750        38964745        51849369
+    7       92272496        38968723        48270027
+    8       92276708        38972657        51509713
+    9       92228407        38924626        44416825
+   10       92276040        38972624        41504299
+   11       92277518        38974127        39104858
+   12       92236587        38932602        49571344
+   13       92276051        38972591        40201033
+   14       92260277        38956642        43631362
+   15       92264176        38960544        42693980
+  Avg       92255001        38951518        47013944
+  Min       92223957        38920695        39104858
+  Max       92277518        38974127        53256383
+
+
+                 TIMING INFORMATION
+Start time                        : 1414073726231665
+Initialization finish time        : 1414074611720811
+Overall finish time               : 1414074703985440
+Total time with initialization    :        977753775
+Total time without initialization :         92264629
+
+
+                  TESTING RESULTS
+PASSED: All keys in place.
+
+
+Integer Radix Sort
+     2147483647 Keys
+     16 Processors
+     Radix = 8
+     Max key = 7
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       69681046        32702879        33223054
+    1       69680898        32702852        30695003
+    2       69681117        32702830        36782163
+    3       69735210        32757338        36956225
+    4       69697074        32718899        34246736
+    5       69661011        32682892        32762089
+    6       69668510        32690888        23005016
+    7       69685088        32706870        33250621
+    8       69701141        32722873        35413165
+    9       69716717        32738815        30234474
+   10       69676655        32698885        28446685
+   11       69688716        32710857        29932372
+   12       69693123        32714899        34484891
+   13       69724850        32746840        30492390
+   14       69708935        32730888        31025072
+   15       69724953        32746812        31555186
+  Avg       69695315        32717270        32031571
+  Min       69661011        32682892        23005016
+  Max       69735210        32757338        36956225
+
+
+                 TIMING INFORMATION
+Start time                        : 1414073726233771
+Initialization finish time        : 1414074643040758
+Overall finish time               : 1414074712721804
+Total time with initialization    :        986488033
+Total time without initialization :         69681046
+
+
+                  TESTING RESULTS
+PASSED: All keys in place.
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/radix/RADIX -p16 -r8 -n2147483647 -m7 -s -t':
+
+ 3,320,939,466,372 cycles                    #    0.000 GHz                     [49.98%]
+ 1,117,086,195,915 instructions              #    0.34  insns per cycle         [50.00%]
+   204,254,927,186 cache-references                                             [50.01%]
+       188,033,424 cache-misses              #    0.092 % of all cache refs     [50.02%]
+    48,928,549,718 branches                                                     [50.00%]
+       137,588,554 branch-misses             #    0.28% of all branches         [50.00%]
+
+    1190.370267416 seconds time elapsed
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/radix/RADIX -p16 -r8 -n2147483647 -m7 -s -t':
+
+ 3,335,970,003,738 cycles                    #    0.000 GHz                     [49.99%]
+ 1,121,050,036,846 instructions              #    0.34  insns per cycle         [49.99%]
+   205,341,452,728 cache-references                                             [50.02%]
+       187,711,142 cache-misses              #    0.091 % of all cache refs     [50.01%]
+    49,762,880,798 branches                                                     [50.01%]
+       137,659,536 branch-misses             #    0.28% of all branches         [49.98%]
+
+    1191.897797399 seconds time elapsed
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/kernels/radix/RADIX -p16 -r8 -n2147483647 -m7 -s -t':
+
+ 3,306,028,188,273 cycles                    #    0.000 GHz                     [49.99%]
+ 1,112,005,004,286 instructions              #    0.34  insns per cycle         [50.01%]
+   202,802,186,168 cache-references                                             [50.02%]
+       189,125,385 cache-misses              #    0.093 % of all cache refs     [50.01%]
+    47,822,777,434 branches                                                     [50.00%]
+       140,598,157 branch-misses             #    0.29% of all branches         [49.98%]
+
+    1202.724953029 seconds time elapsed
+
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+  10709000   0.02500    0.0500      1.00     0.250     0.075      2.00        16
+
+COMPUTESTART  = 1414073782392678
+COMPUTEEND    = 1414075341501893
+COMPUTETIME   =   1559109215
+TRACKTIME     =    626916465
+PARTITIONTIME =      3216348	 0.01
+TREEBUILDTIME =     18880056	 0.03
+FORCECALCTIME =    579665268	 0.92
+RESTTIME      =     25154793	 0.04
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+  10709000   0.02500    0.0500      1.00     0.250     0.075      2.00        16
+
+COMPUTESTART  = 1414073774237115
+COMPUTEEND    = 1414075342075841
+COMPUTETIME   =   1567838726
+TRACKTIME     =    631033162
+PARTITIONTIME =      3592518	 0.01
+TREEBUILDTIME =     13535185	 0.02
+FORCECALCTIME =    590918148	 0.94
+RESTTIME      =     22987311	 0.04
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+  10709000   0.02500    0.0500      1.00     0.250     0.075      2.00        16
+
+COMPUTESTART  = 1414073766105934
+COMPUTEEND    = 1414075342175004
+COMPUTETIME   =   1576069070
+TRACKTIME     =    632226785
+PARTITIONTIME =      4500868	 0.01
+TREEBUILDTIME =     19304070	 0.03
+FORCECALCTIME =    591938356	 0.94
+RESTTIME      =     16483491	 0.03
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,160,586,899,434 cycles                    #    0.000 GHz                     [49.99%]
+ 4,920,460,362,784 instructions              #    0.95  insns per cycle         [50.00%]
+   968,015,274,787 cache-references                                             [50.01%]
+       365,731,244 cache-misses              #    0.038 % of all cache refs     [50.01%]
+   311,210,041,647 branches                                                     [50.00%]
+     5,889,233,547 branch-misses             #    1.89% of all branches         [50.00%]
+
+    1616.182311396 seconds time elapsed
+
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+  10709000   0.02500    0.0500      1.00     0.250     0.075      2.00        16
+
+COMPUTESTART  = 1414073818942579
+COMPUTEEND    = 1414075342740619
+COMPUTETIME   =   1523798040
+TRACKTIME     =    628163800
+PARTITIONTIME =      3697487	 0.01
+TREEBUILDTIME =     25584041	 0.04
+FORCECALCTIME =    578436340	 0.92
+RESTTIME      =     20445932	 0.03
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,155,693,185,364 cycles                    #    0.000 GHz                     [49.99%]
+ 4,932,542,061,731 instructions              #    0.96  insns per cycle         [49.99%]
+   970,521,796,590 cache-references                                             [50.01%]
+       419,203,929 cache-misses              #    0.043 % of all cache refs     [50.01%]
+   314,292,863,231 branches                                                     [50.01%]
+     5,850,017,704 branch-misses             #    1.86% of all branches         [49.99%]
+
+    1616.638665724 seconds time elapsed
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,143,452,464,352 cycles                    #    0.000 GHz                     [49.99%]
+ 4,905,451,033,135 instructions              #    0.95  insns per cycle         [50.00%]
+   963,678,921,650 cache-references                                             [50.00%]
+       353,561,158 cache-misses              #    0.037 % of all cache refs     [50.01%]
+   307,392,710,580 branches                                                     [50.00%]
+     5,827,119,772 branch-misses             #    1.90% of all branches         [50.00%]
+
+    1616.707875841 seconds time elapsed
+
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+  10709000   0.02500    0.0500      1.00     0.250     0.075      2.00        16
+
+COMPUTESTART  = 1414073782863138
+COMPUTEEND    = 1414075343307295
+COMPUTETIME   =   1560444157
+TRACKTIME     =    628157278
+PARTITIONTIME =      3938480	 0.01
+TREEBUILDTIME =     24960198	 0.04
+FORCECALCTIME =    561507325	 0.89
+RESTTIME      =     37751275	 0.06
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+  10709000   0.02500    0.0500      1.00     0.250     0.075      2.00        16
+
+COMPUTESTART  = 1414073794463052
+COMPUTEEND    = 1414075343494094
+COMPUTETIME   =   1549031042
+TRACKTIME     =    621615918
+PARTITIONTIME =      4553305	 0.01
+TREEBUILDTIME =     25632251	 0.04
+FORCECALCTIME =    570214537	 0.92
+RESTTIME      =     21215825	 0.03
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,150,629,693,263 cycles                    #    0.000 GHz                     [50.01%]
+ 4,922,096,464,003 instructions              #    0.96  insns per cycle         [50.00%]
+   968,051,196,837 cache-references                                             [50.00%]
+       370,178,594 cache-misses              #    0.038 % of all cache refs     [49.99%]
+   311,686,721,429 branches                                                     [50.00%]
+     5,845,218,764 branch-misses             #    1.88% of all branches         [50.01%]
+
+    1617.371248498 seconds time elapsed
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,158,979,172,712 cycles                    #    0.000 GHz                     [50.01%]
+ 4,928,911,433,833 instructions              #    0.96  insns per cycle         [50.00%]
+   969,937,814,542 cache-references                                             [50.00%]
+       423,668,438 cache-misses              #    0.044 % of all cache refs     [49.99%]
+   313,679,037,672 branches                                                     [50.00%]
+     5,852,181,796 branch-misses             #    1.87% of all branches         [50.00%]
+
+    1618.051536725 seconds time elapsed
+
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,173,913,822,158 cycles                    #    0.000 GHz                     [50.01%]
+ 4,939,575,624,796 instructions              #    0.95  insns per cycle         [50.01%]
+   972,541,887,632 cache-references                                             [50.02%]
+       376,295,479 cache-misses              #    0.039 % of all cache refs     [49.99%]
+   316,192,948,392 branches                                                     [49.99%]
+     5,851,413,400 branch-misses             #    1.85% of all branches         [49.98%]
+
+    1618.293531933 seconds time elapsed
+
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+  10709000   0.02500    0.0500      1.00     0.250     0.075      2.00        16
+
+COMPUTESTART  = 1414073778840958
+COMPUTEEND    = 1414075345437624
+COMPUTETIME   =   1566596666
+TRACKTIME     =    618702527
+PARTITIONTIME =      7449533	 0.01
+TREEBUILDTIME =     31284066	 0.05
+FORCECALCTIME =    557495504	 0.90
+RESTTIME      =     22473424	 0.04
+
+ Performance counter stats for '/home/apoorve/splash2_benchmark-1.0/codes/apps/barnes/BARNES':
+
+ 5,165,142,382,218 cycles                    #    0.000 GHz                     [50.01%]
+ 4,933,633,366,749 instructions              #    0.96  insns per cycle         [49.99%]
+   971,009,692,615 cache-references                                             [49.98%]
+       427,461,868 cache-misses              #    0.044 % of all cache refs     [49.99%]
+   314,584,648,341 branches                                                     [50.02%]
+     5,858,850,649 branch-misses             #    1.86% of all branches         [50.02%]
+
+    1620.368229770 seconds time elapsed
+
