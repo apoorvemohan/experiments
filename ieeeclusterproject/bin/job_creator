@@ -18,10 +18,10 @@ import common.imports.constants as c
 import common.imports.dmtcp_utils as du
 import data.app_commands as ac
 
-APPS = ['OCEANNC', 'WATERNSQUARED', 'LUC', 'LUNC', 'OCEANC']
+APPS = ['RADIX', 'WATERNSQUARED']
 #APPS = ['RADIX', 'LUC', 'LUNC', 'FMM' 'OCEANC', 'OCEANNC' 'WATERNSQUARED', 'PROBEBLOCKED', 'PROBEOBLIVIOUS']
 
-APP_THREAD_MAP = {'LUC' : [1, 4, 8, 16], 'LUNC' : [2, 4, 8, 16],  'OCEANC' : [2, 4, 8, 16], 'OCEANNC' : [1, 2, 4, 8, 16], 'WATERNSQUARED' : [1, 2, 4, 8, 16]}
+APP_THREAD_MAP = {'RADIX' : [1, 2, 4, 8, 16], 'LUC' : [1, 4, 8, 16], 'LUNC' : [2, 4, 8, 16],  'OCEANC' : [2, 4, 8, 16], 'OCEANNC' : [1, 2, 4, 8, 16], 'WATERNSQUARED' : [1, 2, 4, 8, 16]}
 #APP_THREAD_MAP = {'RADIX' : [1, 2, 4, 8, 16], 'LUC' : [1, 2, 4, 8, 16], 'LUNC' :, [1, 2, 4, 8, 16]  'FMM' : [1, 2, 4, 8, 16], 'OCEANC' : [1, 2, 4, 8, 16], 'OCEANNC' : [1, 2, 4, 8, 16], 'WATERNSQUARED' : [1, 2, 4, 8, 16], 'PROBEBLOCKED' : [1, 2, 4, 8, 16], 'PROBEOBLIVIOUS' : [1, 2, 4, 8, 16] }
 
 

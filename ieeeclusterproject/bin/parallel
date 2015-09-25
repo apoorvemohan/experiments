@@ -169,7 +169,7 @@ def main():
 					u.loginfo('woken up. checking if jobs are finished')
 				
 if __name__ == "__main__":
-	c.LOGGER = 'parallel_4_2X.log'
+	c.LOGGER = 'parallel_a.log'
 	u.loginfo('Begin Time:  ' + u.gettimestamp())
 	main()
 	u.loginfo('End Time:  ' + u.gettimestamp())

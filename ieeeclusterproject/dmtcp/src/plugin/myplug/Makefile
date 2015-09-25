@@ -15,9 +15,10 @@ DMTCP_ROOT=/home/jiajun/apoorve/ieeeclusterproject/dmtcp
 #  DMTCP_ROOT=../../../../..
 endif
 DMTCP_INCLUDE=${DMTCP_ROOT}/include
+JALIB_INCLUDE=${DMTCP_ROOT}/jalib
 
-CFLAGS += -I${DMTCP_INCLUDE} -DDMTCP -fPIC -c --std=gnu99 -O0 -g
-CXXFLAGS += -I${DMTCP_INCLUDE} -DDMTCP -fPIC -c -O0 -g
+CFLAGS += -I${DMTCP_INCLUDE} -I${JALIB_INCLUDE} -DDMTCP -fPIC -c --std=gnu99 -O0 -g
+CXXFLAGS += -I${DMTCP_INCLUDE} -I${JALIB_INCLUDE} -DDMTCP -fPIC -c -O0 -g
 
 DEMO_PORT=7781
 
