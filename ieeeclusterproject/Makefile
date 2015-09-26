@@ -1,7 +1,7 @@
 default:
 
 vim:
-	vim dmtcp/src/plugin/myplug/myplug.c
+	vim dmtcp/src/plugin/myplug/myplug.cpp
 
 plugin:
 	cd dmtcp/src/plugin/myplug/ && make

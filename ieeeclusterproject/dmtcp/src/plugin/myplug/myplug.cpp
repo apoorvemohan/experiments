@@ -5,7 +5,6 @@
  */
 
 #include <stdio.h>
-#include <assert.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/types.h>
@@ -19,7 +18,7 @@
 #include <fcntl.h>
 
 #include "dmtcp.h"
-//#include "jassert.h"
+#include "jassert.h"
 
 #define CLOCKID CLOCK_REALTIME
 #define MAX_LINE_LEN 2000
@@ -49,7 +48,7 @@ readLine(int fd, char *buf, int count)
 {
   int i = 0;
   char c;
-  assert(fd >= 0 && buf != NULL);
+  JASSERT(fd >= 0 && buf != NULL);
 #define NEWLINE '\n' // Linux, OSX
   while (i < count) {
     ssize_t rc = read(fd, &c, 1);
@@ -71,9 +70,9 @@ readLine(int fd, char *buf, int count)
 }
 
 static void
-read_perf_ctr_val(int i, char *name)
+read_perf_ctr_val(int i, const char *name)
 {
-  assert(fd[i] > 0);
+  JASSERT(fd[i] > 0);
   count = 0;
   read(fd[i], &count, sizeof(long long));
   fprintf(outfp, "%s: %lld\n", name, count);
@@ -85,7 +84,7 @@ static void
 read_ctrs()
 {
   int fd = open("/proc/self/status", O_RDONLY);
-  assert(fd > 0);
+  JASSERT(fd > 0);
   char line[MAX_LINE_LEN] = {0};
   size_t a = MAX_LINE_LEN;
   while(readLine(fd, line, MAX_LINE_LEN) > 0) {
@@ -167,15 +166,15 @@ void dmtcp_event_hook(DmtcpEvent_t event, DmtcpEventData_t *data)
   switch (event) {
     case DMTCP_EVENT_WRITE_CKPT:
       {
-        //JTRACE("CHKP");
+        JTRACE("CHKP");
         filename = getenv("STATFILE");
         if(isrestart){
-          //JTRACE("WRITE CHKP");
-          assert(filename);
+          JTRACE("WRITE CHKP");
+          JASSERT(filename);
           outfp = fopen(filename, "w+");
           if (!outfp) {
             perror("Error opening stats file in w+ mode");
-            assert(0);
+            JASSERT(false);
           }
           read_ctrs();
           fclose(outfp);
@@ -194,8 +193,7 @@ void dmtcp_event_hook(DmtcpEvent_t event, DmtcpEventData_t *data)
       {
         isrestart = 1;
         filename = getenv("STATFILE");
-        //printf("Filename: %s\n", filename);
-        //JTRACE("Filename: ")(filename);
+        JTRACE("Filename: ")(filename);
         setup_perf_ctr();
       }
 
@@ -203,7 +201,7 @@ void dmtcp_event_hook(DmtcpEvent_t event, DmtcpEventData_t *data)
     case DMTCP_EVENT_RESUME_USER_THREAD:
       {
         filename = getenv("STATFILE");
-        //printf("Filename: %s\n", filename);
+        JTRACE("Filename: ")(filename);
       }
       break;
     default:
