@@ -20,17 +20,12 @@
 #include "dmtcp.h"
 #include "jassert.h"
 
-#define CLOCKID CLOCK_REALTIME
 #define MAX_LINE_LEN 2000
 
 int fd[] = {-1, -1, -1, -1, -1, -1, -1, -1};
 struct perf_event_attr pe[8];
-long long count = 0;
 FILE *outfp = NULL;
 char *filename = NULL;
-char *type = NULL;
-char *exit_after = NULL;
-int flag = 0;
 int isrestart = 0;
 
 /* Reads from fd until count bytes are read, or
@@ -73,7 +68,7 @@ static void
 read_perf_ctr_val(int i, const char *name)
 {
   JASSERT(fd[i] > 0);
-  count = 0;
+  long long count = 0;
   read(fd[i], &count, sizeof(long long));
   fprintf(outfp, "%s: %lld\n", name, count);
   ioctl(fd[i], PERF_EVENT_IOC_DISABLE, 0);
@@ -83,15 +78,19 @@ read_perf_ctr_val(int i, const char *name)
 static void
 read_ctrs()
 {
+  char line[MAX_LINE_LEN] = {0};
+  int foundBoth = 0;
   int fd = open("/proc/self/status", O_RDONLY);
   JASSERT(fd > 0);
-  char line[MAX_LINE_LEN] = {0};
-  size_t a = MAX_LINE_LEN;
-  while(readLine(fd, line, MAX_LINE_LEN) > 0) {
-    if(strstr(line, "Name") || strstr(line, "VmRSS"))
+
+  while ((readLine(fd, line, MAX_LINE_LEN) > 0) && (foundBoth != 2)) {
+    if(strstr(line, "Name") || strstr(line, "VmRSS")) {
       fprintf(outfp, "%s", line);
+      foundBoth += 1;
+    }
     memset(line, 0, MAX_LINE_LEN);
   }
+  close(fd);
 
   read_perf_ctr_val(0, "PAGE_FAULTS");
   read_perf_ctr_val(1, "CONTEXT_SWITCHES");
@@ -168,7 +167,7 @@ void dmtcp_event_hook(DmtcpEvent_t event, DmtcpEventData_t *data)
       {
         JTRACE("CHKP");
         filename = getenv("STATFILE");
-        if(isrestart){
+        if (isrestart) {
           JTRACE("WRITE CHKP");
           JASSERT(filename);
           outfp = fopen(filename, "w+");
