@@ -6,6 +6,9 @@ vim:
 plugin:
 	cd dmtcp/src/plugin/myplug/ && make
 
+plugin-clean:
+	cd dmtcp/src/plugin/myplug/ && make clean
+
 run:
 	bin/init_app_and_chkpt -p
 
