@@ -1,4 +1,4 @@
-default:
+default: plugin
 
 vim:
 	vim dmtcp/src/plugin/myplug/myplug.cpp

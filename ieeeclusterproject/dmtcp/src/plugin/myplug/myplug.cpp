@@ -21,12 +21,9 @@
 #include "jassert.h"
 
 #define MAX_LINE_LEN 2000
+#define NUM_OF_PERF_EVENTS 8
 
-int fd[] = {-1, -1, -1, -1, -1, -1, -1, -1};
-struct perf_event_attr pe[8];
-FILE *outfp = NULL;
-char *filename = NULL;
-int isrestart = 0;
+int fd[NUM_OF_PERF_EVENTS] = {-1, -1, -1, -1, -1, -1, -1, -1};
 
 /* Reads from fd until count bytes are read, or
  * newline encountered.
@@ -65,7 +62,7 @@ readLine(int fd, char *buf, int count)
 }
 
 static void
-read_perf_ctr_val(int i, const char *name)
+read_perf_ctr_val(int i, const char *name, FILE *outfp)
 {
   JASSERT(fd[i] > 0);
   long long count = 0;
@@ -76,7 +73,7 @@ read_perf_ctr_val(int i, const char *name)
 }
 
 static void
-read_ctrs()
+read_ctrs(FILE *outfp)
 {
   char line[MAX_LINE_LEN] = {0};
   int foundBoth = 0;
@@ -119,55 +116,66 @@ perf_event_open1(struct perf_event_attr *hw_event,
   return ret;
 }
 
-static void
-initialize_and_start_perf_attr(int i, __u32 type, __u64 config)
+static bool
+initialize_and_start_perf_attr(struct perf_event_attr *pes, int i, __u32 type, __u64 config)
 {
-  memset(&pe[i], 0, sizeof(struct perf_event_attr));
-  pe[i].type = type;
-  pe[i].size = sizeof(struct perf_event_attr);
-  pe[i].config = config;
-  pe[i].disabled = 1;
-  pe[i].exclude_kernel = 1;
-  pe[i].exclude_hv = 1;
-  fd[i] = perf_event_open1(&pe[i], 0, -1, -1, 0);
+  JASSERT(pes);
+  pes->type = type;
+  pes->size = sizeof(struct perf_event_attr);
+  pes->config = config;
+  pes->disabled = 1;
+  pes->exclude_kernel = 1;
+  pes->exclude_hv = 1;
+  fd[i] = perf_event_open1(pes, 0, -1, -1, 0);
   if (fd[i] < 0) {
-    fprintf(outfp, "Error opening leader %llx\n", pe[i].config);
+    JWARNING(false)("Error opening leader\n")(pes->config);
     ioctl(fd[i], PERF_EVENT_IOC_DISABLE, 0);
-    exit(EXIT_FAILURE);
+    return false;
   }
   ioctl(fd[i], PERF_EVENT_IOC_RESET, 0);
   ioctl(fd[i], PERF_EVENT_IOC_ENABLE, 0);
-
+  return true;
 }
 
-static void
+static bool
 invoke_ctr()
 {
-  initialize_and_start_perf_attr(0, PERF_TYPE_SOFTWARE, PERF_COUNT_SW_PAGE_FAULTS);
-  initialize_and_start_perf_attr(1, PERF_TYPE_SOFTWARE, PERF_COUNT_SW_CONTEXT_SWITCHES);
-  initialize_and_start_perf_attr(2, PERF_TYPE_SOFTWARE, PERF_COUNT_SW_CPU_MIGRATIONS);
-  initialize_and_start_perf_attr(3, PERF_TYPE_HARDWARE, PERF_COUNT_HW_CPU_CYCLES);
-  initialize_and_start_perf_attr(4, PERF_TYPE_HARDWARE, PERF_COUNT_HW_INSTRUCTIONS);
-  initialize_and_start_perf_attr(5, PERF_TYPE_HARDWARE, PERF_COUNT_HW_CACHE_REFERENCES);
-  initialize_and_start_perf_attr(6, PERF_TYPE_HARDWARE, PERF_COUNT_HW_CACHE_MISSES);
-  initialize_and_start_perf_attr(7, PERF_TYPE_HARDWARE, PERF_COUNT_HW_BRANCH_INSTRUCTIONS);
+  struct perf_event_attr pe[NUM_OF_PERF_EVENTS];
+
+  memset(pe, 0, sizeof(struct perf_event_attr) * NUM_OF_PERF_EVENTS);
+
+  bool ret = true;
+
+  ret &= initialize_and_start_perf_attr(&pe[0], 0, PERF_TYPE_SOFTWARE, PERF_COUNT_SW_PAGE_FAULTS);
+  ret &= initialize_and_start_perf_attr(&pe[1], 1, PERF_TYPE_SOFTWARE, PERF_COUNT_SW_CONTEXT_SWITCHES);
+  ret &= initialize_and_start_perf_attr(&pe[2], 2, PERF_TYPE_SOFTWARE, PERF_COUNT_SW_CPU_MIGRATIONS);
+  ret &= initialize_and_start_perf_attr(&pe[3], 3, PERF_TYPE_HARDWARE, PERF_COUNT_HW_CPU_CYCLES);
+  ret &= initialize_and_start_perf_attr(&pe[4], 4, PERF_TYPE_HARDWARE, PERF_COUNT_HW_INSTRUCTIONS);
+  ret &= initialize_and_start_perf_attr(&pe[5], 5, PERF_TYPE_HARDWARE, PERF_COUNT_HW_CACHE_REFERENCES);
+  ret &= initialize_and_start_perf_attr(&pe[6], 6, PERF_TYPE_HARDWARE, PERF_COUNT_HW_CACHE_MISSES);
+  ret &= initialize_and_start_perf_attr(&pe[7], 7, PERF_TYPE_HARDWARE, PERF_COUNT_HW_BRANCH_INSTRUCTIONS);
+
+  return ret;
 }
 
-static void
+static bool
 setup_perf_ctr()
 {
-  invoke_ctr();
+  return invoke_ctr();
 }
 
 void dmtcp_event_hook(DmtcpEvent_t event, DmtcpEventData_t *data)
 {
-  /* NOTE:  See warning in plugin/README about calls to printf here. */
+  char *filename = NULL;
+  bool restartingFromCkpt = false;
+  FILE *outfp = NULL;
+
   switch (event) {
     case DMTCP_EVENT_WRITE_CKPT:
       {
         JTRACE("CHKP");
         filename = getenv("STATFILE");
-        if (isrestart) {
+        if (restartingFromCkpt) {
           JTRACE("WRITE CHKP");
           JASSERT(filename);
           outfp = fopen(filename, "w+");
@@ -175,9 +183,9 @@ void dmtcp_event_hook(DmtcpEvent_t event, DmtcpEventData_t *data)
             perror("Error opening stats file in w+ mode");
             JASSERT(false);
           }
-          read_ctrs();
+          read_ctrs(outfp);
           fclose(outfp);
-          isrestart = 0;
+          restartingFromCkpt = false;
         }
       }
       break;
@@ -190,10 +198,10 @@ void dmtcp_event_hook(DmtcpEvent_t event, DmtcpEventData_t *data)
 
     case DMTCP_EVENT_RESTART:
       {
-        isrestart = 1;
+        restartingFromCkpt = true;
         filename = getenv("STATFILE");
         JTRACE("Filename: ")(filename);
-        setup_perf_ctr();
+        JWARNING(setup_perf_ctr()).Text("Error setting up perf ctrs.");
       }
 
       break;
