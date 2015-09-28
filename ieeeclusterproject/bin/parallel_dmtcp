@@ -21,7 +21,7 @@ import common.imports.constants as c
 import common.imports.dmtcp_utils as du
 import common.imports.rules as r
 
-MAX = 10
+TIME = 30
 running_pid_port = []
 app_stats_map = {}
 stats_history_map = {}
@@ -51,20 +51,15 @@ def update_app_stats_map(appid, statfile):
 	stats = fp.readlines()
 	app_stats_map.update({appid : {}})
 	for stat in stats[0:-2]:
-#		if stat.split(':')[0].strip() == 'INSTRUCTIONS':
-#			stats_history_map[appid][stat.split(':')[0].strip()].append(int(stat.split(':')[1].strip()))
-#		if stat.split(':')[0].strip() == 'CPU_CYCLES':
-#			stats_history_map[appid][stat.split(':')[0].strip()].append(int(stat.split(':')[1].strip()))
 		if stat.split(':')[0].strip() in ['CPU_CYCLES', 'INSTRUCTIONS', 'CACHE_REFERENCES', 'CACHE_MISSES', 'BRANCH_INSTRUCTIONS']:
 			app_stats_map[appid][stat.split(':')[0].strip()] = float(stat.split(':')[1].strip())
 		else:
 			app_stats_map[appid][stat.split(':')[0].strip()] = stat.split(':')[1].strip()
-#u.loginfo('Latest App Stats Map: ' + str(app_stats_map))
 	fp.close()
 	os.remove(statfile)
 
 def generate_stats_and_enqueue():
-	global app_stats_map
+	global app_stats_map, TIME
 	runnable = get_runnable_instance_map()
 	app_thread_pid = {}
 
@@ -72,9 +67,6 @@ def generate_stats_and_enqueue():
 		tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
 		root = tree.getroot()
 		app_thread_pid.update({app: [int(root.findall('THREADS')[0].text), None, str(app), None]})
-		#app_thread_pid.update({app: [int(root.findall('THREADS')[0].text), None, str(app), int(root.findall('TYPE')[0].text)]})
-
-	#cpu = m.cpu_count()*1.5
 	cpu = m.cpu_count()
 	while len(app_thread_pid) > 0:
 		next_runnable_app_list = []
@@ -108,15 +100,10 @@ def generate_stats_and_enqueue():
         	        	        chkptnum = 1
 				chkptnum = 1
 		
-		        #        os.mkdir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(key) + '/' + str(chkptnum))
         		        os.chdir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(key) + '/' + str(chkptnum))
-                		#setup_for_restart(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(key) + '/' + str(chkptnum))
 				port = u.getopenport()
 				u.loginfo('Restart1: ' + str(key))
-#				if(sys.argv[1] == '-b'):
-#	                		a = du.restart(runnable[key], '--new-coordinator', '--port ' + str(port), '--daemon', ' ', {'STATFILE': c.PARALLEL_DMTCP_QUEUED_DIR + '/' + key + '.stat', 'STATGEN' : 'BASE'})
-#				else:
-				a = du.restart(runnable[key], '--new-coordinator', '--port ' + str(port), '--daemon', '-i 5', {'STATFILE': c.PARALLEL_DMTCP_QUEUED_DIR + '/' + key + '.stat', 'STATGEN' : ''})
+				a = du.restart(runnable[key], '--new-coordinator', '--port ' + str(port), '--daemon', '-i ' + str(TIME) , {'STATFILE': c.PARALLEL_DMTCP_QUEUED_DIR + '/' + key + '.stat', 'STATGEN' : ''})
 				os.chdir(cwd)
 
 				app_thread_pid[key][1] = a
@@ -145,26 +132,22 @@ def generate_stats_and_enqueue():
 def clean_completed():
 	global running_pid_port
 	for app in running_pid_port:
-#			if (app[1].poll() == 0) or (not os.path.exists('/proc/' + str(app[1].pid))):
 			if (not os.path.exists(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app[0] + '.stat')):
-				#os.rename(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app[0] + '.stat', c.PARALLEL_DMTCP_COMPLETED_DIR + '/' + app[0] + '.stat' + u.gettimestamp().replace(' ', '_'))
 				os.system('touch ' + c.PARALLEL_DMTCP_COMPLETED_DIR + '/' + app[0] + '.' + u.gettimestamp().replace(' ', '_'))
-				running_pid_port.remove(app)
+		#		running_pid_port.remove(app)
 				app_stats_map.pop(app[0])
+	del running_pid_port[:]
+	running_pid_port[:] = []
 
 def get_next_runnable_map():
 
 	global app_stats_map, total_passes
-	#runningapplist = [app[0] for app in running_pid_port]
 	runningapplist = None
 	retval = 0
 
 	for app in os.listdir(c.PARALLEL_DMTCP_RUNNING_DIR):
 		update_app_stats_map(app.split('.')[0], c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app)
 
-#	for app in app_stats_map.keys():
-#		for stat in ['CPU_CYCLES', 'INSTRUCTIONS', 'CACHE_REFERENCES', 'CACHE_MISSES', 'BRANCH_INSTRUCTIONS']:
-#			app_stats_map[app][stat]  = float(app_stats_map[app][stat]) / float(passes*30)
 
 	if ((len(sys.argv) == 1) or (sys.argv[1] == None) or (sys.argv[1] == '') or (sys.argv[1] == '-r') or (sys.argv[1] == '--random')):
 		
@@ -172,8 +155,6 @@ def get_next_runnable_map():
 	else:
 		return r.RULES[sys.argv[1]](running_history_map, stats_history_map, app_stats_map, retval, runningapplist, total_passes)
 
-#	return [set(next_runnable_list) - set(app[0] for app in running_pid_port)]
-#	retur nexu_runnable_list
 
 def stop_running(next_runnable):
 	global running_pid_port
@@ -184,90 +165,12 @@ def stop_running(next_runnable):
 		stats_history_map[app[0]]['CPU_CYCLES'].append(app_stats_map[app[0]]['CPU_CYCLES'])
 		stats_history_map[app[0]]['CACHE_MISSES'].append(app_stats_map[app[0]]['CACHE_MISSES'])
 
-
-	running_pid_port = []
-
-"""	u.loginfo("In STOP RUNNING!!!")
-	c_list = []
-	k_list = []
-	out = open('/tmp/out', 'w+')
-	err = open('/tmp/err', 'w+')
-
-	for running in running_pid_port:
-		stats_history_map[running[0]]['INSTRUCTIONS'].append(app_stats_map[running[0]]['INSTRUCTIONS'])
-		stats_history_map[running[0]]['CPU_CYCLES'].append(app_stats_map[running[0]]['CPU_CYCLES'])
-		stats_history_map[running[0]]['CACHE_MISSES'].append(app_stats_map[running[0]]['CACHE_MISSES'])
-#		if not running[0] in next_runnable:
-			#du.chkpt('--port ' + str(running[2]), '-b'
-		u.loginfo('Checkpoint Start2: ' + str(running[0]))
-		obj = s.Popen(c.DMTCP_COMMAND + ' -bc --port ' + str(running[2]), shell=True, stdout=out, stderr=err)
-		c_list.append([running[0], obj])
-
-	print 'WAITING FOR CP TO FINISH'
-	for app in c_list:
-		app[1].wait()
-		u.loginfo('App Checkpointed: ' + str(app[0]))
-
-	u.loginfo("ERRORS DURING CHECKPOINTING APPS:")
-	output = out.readlines()
-	error = err.readlines()
-	err.close()
-	out.close()
-	u.loginfo(output)
-	u.logerr(error)
-"""
-#else:
-#			u.loginfo('ERROR OCCURRED WHILE CHECKPOINTING APP ' + str(running[0]))
-#			u.logerr(error)
-#			app_stats_map.pop(running[0])
-#			os.rename(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + running[0] + '.stat', c.PARALLEL_DMTCP_NOIDEA_DIR + '/' + running[0] + '.stat')
-
-#		running_pid_port.remove(running)
-#		pass
-
-#		os.rename(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + running[0] + '.stat', c.PARALLEL_DMTCP_NOIDEA_DIR + '/' + running[0] + '.stat')
-#	if len(error) == 0:		
-#	u.loginfo('CHECKPOINTED SUCCESSFULLY : ')
-		#du.kill('--port ' + str(running[2]))
-"""	out = open('/tmp/out', 'w+')
-	err = open('/tmp/err', 'w+')
-	err.seek(0, 0)
-	out.seek(0, 0)
-	output = out.readlines()
-
-	for running in running_pid_port:
-		obj = s.Popen(c.DMTCP_COMMAND + ' -k --port ' + str(running[2]), shell=True, stdout=out, stderr=err)
-		k_list.append([running[0], obj])
-
-	print 'WAITING FOR KILL TO FINISH'
-	for app in k_list:
-		app[1].wait()
-		u.loginfo('App Killed: ' + str(app[0]))
-		os.rename(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app[0] + '.stat', c.PARALLEL_DMTCP_QUEUED_DIR + '/' + app[0] + '.stat')
-
-	u.loginfo("ERRORS DURING KILLING APPS:")
-	error = err.readlines()
-	out.close()
-	err.close()
-	u.loginfo(output)
-	u.logerr(error)
-#		if len(error) == 0:
-#			os.rename(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + running[0] + '.stat', c.PARALLEL_DMTCP_QUEUED_DIR + '/' + running[0] + '.stat')
-#			u.loginfo('KILLED SUCCESSFULLY : ' + str(running[0]))
-#			u.loginfo('Stop2: ' + str(running[0]))
-#		else:	
-#			u.loginfo('ERROR OCCURRED WHILE KILLING APP ' + str(running[0]))
-#			u.logerr(error)
-#			app_stats_map.pop(running[0])
-"""
-
 def start_next(next_runnable):
+	global TIME
 	to_restart = next_runnable
-	#to_restart = list(set(next_runnable) - set([app[0] for app in running_pid_port]))
 	runnable = get_runnable_instance_map()
 	
 	for app in to_restart:
-#		os.rename(c.PARALLEL_DMTCP_QUEUED_DIR + '/' + app + '.stat', c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app + '.stat')
 		cwd = os.getcwd()
 		chkptnum = 0
 		if len(u.listonlydir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app))) > 0:
@@ -275,12 +178,9 @@ def start_next(next_runnable):
                 else:
                         chkptnum = 1
                 chkptnum = 1
-		#os.mkdir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app) + '/' + str(chkptnum))
-		os.chdir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app) + '/' + str(chkptnum))
 		setup_for_restart(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app) + '/' + str(chkptnum))
 		port = u.getopenport()
-		#cmd = 'STATFILE=' + c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app + '.stat' + ' ' + 'STATGEN=INFINITE ' + c.DMTCP_RESTART + ' ' + runnable[app]
-		cmd = 'STATFILE=' + c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app + '.stat' + ' ' + 'STATGEN= ' + c.DMTCP_RESTART + ' --new-coordinator -i 30 --port ' + str(port) + ' ' + runnable[app]
+		cmd = 'STATFILE=' + c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app + '.stat' + ' ' + 'STATGEN= ' + c.DMTCP_RESTART + ' --new-coordinator -i ' + str( TIME) + ' --port ' + str(port) + ' ' + runnable[app]
 		logfile = open(c.LOGDIR + '/' + c.LOGGER, 'a+')
 		a = s.Popen(cmd, shell=True, stdout=logfile, stderr=logfile)
 		running_pid_port.append([app, a, port])
@@ -288,8 +188,7 @@ def start_next(next_runnable):
 
 def main():
 	import time
-	global running_pid_port, app_stats_map, total_passes, app_stats_map, running_history
-	#signal.signal(signal.SIGCHLD, signal.SIG_IGN)
+	global running_pid_port, app_stats_map, total_passes, app_stats_map, running_history, TIME
 
 	if os.path.isdir(c.PARALLEL_DMTCP_STATS_DIR):
                 os.rename(c.PARALLEL_DMTCP_STATS_DIR, c.PARALLEL_DMTCP_STATS_DIR + '.' + u.gettimestamp().replace(' ', '_'))
@@ -300,7 +199,6 @@ def main():
 	os.mkdir(c.PARALLEL_DMTCP_QUEUED_DIR)
 	os.mkdir(c.PARALLEL_DMTCP_NOIDEA_DIR)
 
-	#run all in for MAX seconds and get stats
 	generate_stats_and_enqueue()
 
 	if(sys.argv[1] == '-b'):
@@ -309,39 +207,18 @@ def main():
 	print 'Stats Generated and Tasks Enqueued!!!'
 	timer = 0
 
-	#print app_stats_map
-	#sys.exit(0)
 	total_passes = 0
-	passes = 0
-
-#	while((len(os.listdir(c.PARALLEL_DMTCP_QUEUED_DIR)) > 0) or (len(os.listdir(c.PARALLEL_DMTCP_RUNNING_DIR)) > 0)):
 	while(len(app_stats_map) > 0):
-		clean_completed()
-#		if (retval > 0) or (timer % 60 == 0):
 		stop_running([])
-		print app_stats_map
+		clean_completed()
 		next_runnable = get_next_runnable_map()
 		u.loginfo('Next Runnable List: ' + str(next_runnable))
-		print 'Next Runnable List: ' + str(next_runnable)
 		start_next(next_runnable)
-#			if (timer % 60 == 0):
-#				timer = 0
-#				passes = 2
-#			else:
-#				passes = 1
-#			print app_stats_map
-#			for app in running_pid_port:
-#				print app
-#				app_stats_map[app[0]]['pickup_count'] = app_stats_map[app[0]]['pickup_count'] + 1
-#				app_stats_map[app[0]]['pickup_count'] += passes
-#			total_passes += passes
 		total_passes = total_passes + 1
 		running_history_map[total_passes] = next_runnable
-		time.sleep(6)
-#		timer += 60
-	#check for remaining tasks
+		time.sleep(TIME + 2)
 
-	print 'Count: ' + str(total_passes)
+	u.loginfo('Count: ' + str(total_passes))
 
 if __name__ == "__main__":
 	c.LOGGER = 'parallel_dmtcp_a.log'

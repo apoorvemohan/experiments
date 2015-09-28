@@ -89,14 +89,14 @@ read_ctrs(FILE *outfp)
   }
   close(fd);
 
-  read_perf_ctr_val(0, "PAGE_FAULTS");
-  read_perf_ctr_val(1, "CONTEXT_SWITCHES");
-  read_perf_ctr_val(2, "CPU_MIGRATIONS");
-  read_perf_ctr_val(3, "CPU_CYCLES");
-  read_perf_ctr_val(4, "INSTRUCTIONS");
-  read_perf_ctr_val(5, "CACHE_REFERENCES");
-  read_perf_ctr_val(6, "CACHE_MISSES");
-  read_perf_ctr_val(7, "BRANCH_INSTRUCTIONS");
+  read_perf_ctr_val(0, "PAGE_FAULTS", outfp);
+  read_perf_ctr_val(1, "CONTEXT_SWITCHES", outfp);
+  read_perf_ctr_val(2, "CPU_MIGRATIONS", outfp);
+  read_perf_ctr_val(3, "CPU_CYCLES", outfp);
+  read_perf_ctr_val(4, "INSTRUCTIONS", outfp);
+  read_perf_ctr_val(5, "CACHE_REFERENCES", outfp);
+  read_perf_ctr_val(6, "CACHE_MISSES", outfp);
+  read_perf_ctr_val(7, "BRANCH_INSTRUCTIONS", outfp);
 
   char buff[20];
   time_t now = time(NULL);

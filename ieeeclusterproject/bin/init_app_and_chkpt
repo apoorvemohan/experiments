@@ -115,7 +115,6 @@ def main():
 					u.loginfo('Launching App: ' + str(key))
 
 					a = du.launch(runnable[key], '--with-plugin myplug', '--newcoordinator', '--port ' + str(port), '--modify-env', '--daemon', '-i 5', {'STATFILE': '', 'STATGEN' : ''})
-					#a = du.launch(runnable[key], '--with-plugin myplug', '--newcoordinator', None, '--modify-env', '--daemon', '-i 60', {'STATFILE': '', 'STATGEN' : 'LAUNCH'})
 					u.loginfo('after launch: ' + str(key))
 					u.chdir(cwd)
 					app_thread_pid[key][1] = a
@@ -132,43 +131,6 @@ def main():
 						u.loginfo('App Finished: ' + str(app[0]))
 				if flag:
 					time.sleep(1)
-
-	elif (sys.argv[1] == '-s') or (sys.argv[1] == '--seq'):
-
-		for key in runnable.keys():
-			u.loginfo('[Starting ' + key + ' : ' + runnable[key] + ']')
-			os.mkdir(CHKPTDIR + '/' + str(key))
-			u.execcmd('touch ' + CHKPTDIR + '/' + str(key) + '/command')
-			u.execcmd('echo \"' + runnable[key] + '\" >> ' + CHKPTDIR + '/' + str(key) + '/command')
-			chkptnum = 0
-
-			if len(u.listonlydir(CHKPTDIR + '/' + str(key))) > 0:
-				chkptnum = int(max(u.listonlydir(CHKPTDIR + '/' + str(key)))) + 1
-			else:
-				chkptnum = 1
-
-			chkptnum = 1
-
-			if not os.path.isdir(CHKPTDIR + '/' + str(key) + '/' + str(chkptnum)):
-				os.mkdir(CHKPTDIR + '/' + str(key) + '/' + str(chkptnum))
-
-			port = None
-			cwd = u.getcwd()
-
-			if (sys.argv[1] == '-p') or (sys.argv[1] == '--parallel'):
-				setup_for_restart(CHKPTDIR + '/' + str(key) + '/' + str(chkptnum))
-
-			u.chdir(CHKPTDIR + '/' + str(key) + '/' + str(chkptnum))
-			os.system('cp ' + c.BASE + '/random.in .')
-			port = u.getopenport()
-
-			du.launch(runnable[key], None, '--newcoordinator ', '--port ' + str(port), None, '--daemon', None, None)
-			time.sleep(60)
-			du.chkpt('--port ' + str(port), '-b')
-			u.loginfo('after checkpoint')
-			du.kill('--port ' + str(port))
-			u.loginfo('after kill')
-			u.chdir(cwd)
 
 if __name__ == '__main__':
 	c.LOGGER = 'init_app_and_chkpt_a.log'
