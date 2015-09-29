@@ -166,9 +166,9 @@ setup_perf_ctr()
 
 void dmtcp_event_hook(DmtcpEvent_t event, DmtcpEventData_t *data)
 {
-  char *filename = NULL;
-  bool restartingFromCkpt = false;
-  FILE *outfp = NULL;
+  static char *filename = NULL;
+  static bool restartingFromCkpt = false;
+  static FILE *outfp = NULL;
 
   switch (event) {
     case DMTCP_EVENT_WRITE_CKPT:
