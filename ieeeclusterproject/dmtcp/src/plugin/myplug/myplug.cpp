@@ -164,6 +164,60 @@ setup_perf_ctr()
   return invoke_ctr();
 }
 
+#define START_SIGNAL  SIGRTMIN+2
+#define STOP_SIGNAL   SIGRTMIN+3
+#define handleError(msg) \
+    do { perror(msg); exit(EXIT_FAILURE); } while (0)
+
+static char*
+getStatsFilename(char *fname)
+{
+  static char *filename = NULL;
+  if (fname) {
+    filename = fname;
+  }
+  return filename;
+}
+
+
+void startCtrsSignalHandler(int sig, siginfo_t *si, void *uc)
+{
+  JWARNING(setup_perf_ctr()).Text("Error setting up perf ctrs.");
+}
+
+void stopCtrsSignalHandler(int sig, siginfo_t *si, void *uc)
+{
+  char *fname = getStatsFilename(NULL);
+  if (fname) {
+    FILE *outfp = fopen(fname, "w+");
+    if (!outfp) {
+      perror("Error opening stats file in w+ mode");
+      JASSERT(false);
+    }
+    read_ctrs(outfp);
+    fclose(outfp);
+  }
+}
+
+static void
+setup_handlers()
+{
+  struct sigaction sa;
+  sa.sa_flags = SA_SIGINFO;
+  sa.sa_sigaction = startCtrsSignalHandler;
+  sigemptyset(&sa.sa_mask);
+  if (sigaction(START_SIGNAL, &sa, NULL) == -1) {
+      handleError("sigaction");
+  }
+
+  sa.sa_flags = SA_SIGINFO;
+  sa.sa_sigaction = stopCtrsSignalHandler;
+  sigemptyset(&sa.sa_mask);
+  if (sigaction(STOP_SIGNAL, &sa, NULL) == -1) {
+      handleError("sigaction");
+  }
+}
+
 void dmtcp_event_hook(DmtcpEvent_t event, DmtcpEventData_t *data)
 {
   static char *filename = NULL;
@@ -171,46 +225,68 @@ void dmtcp_event_hook(DmtcpEvent_t event, DmtcpEventData_t *data)
   static FILE *outfp = NULL;
 
   switch (event) {
+    case DMTCP_EVENT_INIT:
+      {
+        if (!getenv("DMTCP_START_CTRS_ON_RESTART_STRATEGY")) {
+          setup_handlers();
+          filename = getStatsFilename(getenv("STATFILE"));
+          JWARNING(filename != NULL).Text("Could not get the stats filename in the init event.");
+          JTRACE("Filename: ")(filename);
+        }
+      }
+      break;
+
     case DMTCP_EVENT_WRITE_CKPT:
       {
         JTRACE("CHKP");
-        filename = getenv("STATFILE");
-        if (restartingFromCkpt) {
-          JTRACE("WRITE CHKP");
-          JASSERT(filename);
-          outfp = fopen(filename, "w+");
-          if (!outfp) {
-            perror("Error opening stats file in w+ mode");
-            JASSERT(false);
+        if (getenv("DMTCP_START_CTRS_ON_RESTART_STRATEGY")) {
+          filename = getenv("STATFILE");
+          if (restartingFromCkpt) {
+            JTRACE("WRITE CHKP");
+            JASSERT(filename);
+            outfp = fopen(filename, "w+");
+            if (!outfp) {
+              perror("Error opening stats file in w+ mode");
+              JASSERT(false);
+            }
+            read_ctrs(outfp);
+            fclose(outfp);
+            restartingFromCkpt = false;
           }
-          read_ctrs(outfp);
-          fclose(outfp);
-          restartingFromCkpt = false;
         }
       }
       break;
 
     case DMTCP_EVENT_RESUME:
       {
-        exit(0);
+        if (getenv("DMTCP_KILL_ON_RESUME_STRATEGY")) {
+          exit(0);
+        }
       }
       break;
 
     case DMTCP_EVENT_RESTART:
       {
-        restartingFromCkpt = true;
-        filename = getenv("STATFILE");
-        JTRACE("Filename: ")(filename);
-        JWARNING(setup_perf_ctr()).Text("Error setting up perf ctrs.");
+        if (getenv("DMTCP_START_CTRS_ON_RESTART_STRATEGY")) {
+          restartingFromCkpt = true;
+          filename = getStatsFilename(getenv("STATFILE"));
+          JWARNING(filename != NULL).Text("Could not get the stats filename in the restart event.");
+          JTRACE("Filename: ")(filename);
+          JWARNING(setup_perf_ctr()).Text("Error setting up perf ctrs.");
+        }
       }
-
       break;
+
     case DMTCP_EVENT_RESUME_USER_THREAD:
       {
-        filename = getenv("STATFILE");
-        JTRACE("Filename: ")(filename);
+        if (getenv("DMTCP_START_CTRS_ON_RESTART_STRATEGY")) {
+          filename = getStatsFilename(getenv("STATFILE"));
+          JWARNING(filename != NULL).Text("Could not get the stats filename in the resume_user_thread event.");
+          JTRACE("Filename: ")(filename);
+        }
       }
       break;
+
     default:
       break;
   }
