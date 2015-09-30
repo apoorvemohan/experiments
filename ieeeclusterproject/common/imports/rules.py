@@ -106,7 +106,8 @@ def rule10(running_history_map, stats_history_map, app_stats_map1, threads, runn
 	if total_passes == 0:
 		while len(app_stats_map) > 0:
 			#app = ru.get_app_with_max_threads(app_stats_map)
-			app = random.choice(app_stats_map.keys())
+			#app = random.choice(app_stats_map.keys())
+			app = get_app_with_max_threads(app_stats_map.keys())
 			tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
 			root = tree.getroot()
 			thread = int(root.findall('THREADS')[0].text)
@@ -125,7 +126,8 @@ def rule10(running_history_map, stats_history_map, app_stats_map1, threads, runn
 		if app not in app_stats_map.keys():
 			while len(app_stats_map) > 0:
 				#app = ru.get_app_with_max_threads(app_stats_map)
-				app = random.choice(app_stats_map.keys())
+				#app = random.choice(app_stats_map.keys())
+			        app = get_app_with_max_threads(app_stats_map.keys())
 				tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
 				root = tree.getroot()
 				thread = int(root.findall('THREADS')[0].text)
@@ -157,7 +159,8 @@ def rule10(running_history_map, stats_history_map, app_stats_map1, threads, runn
 	else:
 		while len(app_stats_map) > 0:
 			#app = ru.get_app_with_max_threads(app_stats_map)
-			app = random.choice(app_stats_map.keys())
+			#app = random.choice(app_stats_map.keys())
+			app = get_app_with_max_threads(app_stats_map.keys())
 			tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
 			root = tree.getroot()
 			thread = int(root.findall('THREADS')[0].text)

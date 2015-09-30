@@ -14,6 +14,7 @@ path = os.path.dirname(os.path.realpath(__file__))  + '/..'
 sys.path.insert(0, path)
 
 import common.imports.utils as u
+import common.imports.rules_utils as ru
 import common.imports.constants as c
 
 totalthreads = 0
@@ -51,7 +52,7 @@ def get_runnable_instance_map():
 
 def main():
 
-	global totalthreads, groupthreads, runnable_map, runnable, app_statfile_list
+	global totalthreads, groupthreads, runnable_map, app_stats_map, runnable, app_statfile_list
 	if os.path.isdir(c.PARALLEL_STATS_DIR):
 		os.rename(c.PARALLEL_STATS_DIR, c.PARALLEL_STATS_DIR + '.' + u.gettimestamp().replace(' ', '_'))
 	os.mkdir(c.PARALLEL_STATS_DIR)
@@ -93,7 +94,8 @@ def main():
 				appthreads = appid = None
 				timestamp = u.gettimestamp().replace(' ', '_')
 				u.loginfo("Runnablea: " + str(runnablea))
-				appid = random.choice(runnablea)
+				#appid = random.choice(runnablea)
+                                appid = ru.get_app_with_max_threads(runnablea):
 				tree1 = ET.parse(c.PARALLEL_APP_INSTANCE_DIR + '/' + appid + '.xml')
 				root1 = tree1.getroot()
 				appthreads = int(root1.findall('THREADS')[0].text)

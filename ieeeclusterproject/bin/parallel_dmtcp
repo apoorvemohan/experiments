@@ -19,6 +19,7 @@ sys.path.insert(0, path)
 import common.imports.utils as u
 import common.imports.constants as c
 import common.imports.dmtcp_utils as du
+import common.imports.rules_utils as ru
 import common.imports.rules as r
 
 TIME = 30
@@ -75,16 +76,18 @@ def generate_stats_and_enqueue():
 		local_copy = copy.deepcopy(app_thread_pid)
 
 		while len(local_copy) > 0:
-			maxthreadapp = None
-			maxthread = -1
-			for app in local_copy:
-				if local_copy[app][0] > maxthread:
-					maxthreadapp = app
-					maxthread = local_copy[app][0]
+                        maxthreadapp = ru.get_app_with_max_threads(local_copy)
+			next_runnable_app_list.append(maxthreadapp)
+			# maxthreadapp = None
+			# maxthread = -1
+			# for app in local_copy:
+			# 	if local_copy[app][0] > maxthread:
+			# 		maxthreadapp = app
+			# 		maxthread = local_copy[app][0]
 
-			if(cpu - local_copy[maxthreadapp][0]) >= 0:
-				cpu -= local_copy[maxthreadapp][0]
-				next_runnable_app_list.append(maxthreadapp)
+			# if(cpu - local_copy[maxthreadapp][0]) >= 0:
+			# 	cpu -= local_copy[maxthreadapp][0]
+			# 	next_runnable_app_list.append(maxthreadapp)
 
 			local_copy.pop(maxthreadapp)
 
