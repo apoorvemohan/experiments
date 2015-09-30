@@ -19,6 +19,8 @@ def setup_for_restart(chkptdir):
 	fp = open(chkptdir + '/dmtcp_env.txt', 'w')
 	fp.write('STATFILE=$STATFILE\n')
 	fp.write('STATGEN=$STATGEN\n')
+	fp.write('DMTCP_START_CTRS_ON_RESTART_STRATEGY=$DMTCP_START_CTRS_ON_RESTART_STRATEGY\n')
+	fp.write('DMTCP_KILL_ON_RESUME_STRATEGY=$DMTCP_KILL_ON_RESUME_STRATEGY\n')
         fp.close()
 
 def get_runnable_instance_map(appinstancedir):
@@ -114,7 +116,7 @@ def main():
 
 					u.loginfo('Launching App: ' + str(key))
 
-					a = du.launch(runnable[key], '--with-plugin myplug', '--newcoordinator', '--port ' + str(port), '--modify-env', '--daemon', '-i 5', {'STATFILE': '', 'STATGEN' : ''})
+					a = du.launch(runnable[key], '--with-plugin myplug', '--newcoordinator', '--port ' + str(port), '--modify-env', '--daemon', '-i 5', {'STATFILE': '', 'STATGEN' : '', 'DMTCP_START_CTRS_ON_RESTART_STRATEGY' : '1',  'DMTCP_KILL_ON_RESUME_STRATEGY' : '1'})
 					u.loginfo('after launch: ' + str(key))
 					u.chdir(cwd)
 					app_thread_pid[key][1] = a

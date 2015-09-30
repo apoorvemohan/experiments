@@ -32,6 +32,8 @@ def setup_for_restart(chkptdir):
         fp = open(chkptdir + '/dmtcp_env.txt', 'w')
         fp.write('STATFILE=$STATFILE\n')
         fp.write('STATGEN=$STATGEN\n')
+	fp.write('DMTCP_START_CTRS_ON_RESTART_STRATEGY=$DMTCP_START_CTRS_ON_RESTART_STRATEGY\n')
+	fp.write('DMTCP_KILL_ON_RESUME_STRATEGY=$DMTCP_KILL_ON_RESUME_STRATEGY\n')
         fp.close()
 
 def get_runnable_instance_map():
@@ -103,7 +105,7 @@ def generate_stats_and_enqueue():
         		        os.chdir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(key) + '/' + str(chkptnum))
 				port = u.getopenport()
 				u.loginfo('Restart1: ' + str(key))
-				a = du.restart(runnable[key], '--new-coordinator', '--port ' + str(port), '--daemon', '-i ' + str(TIME) , {'STATFILE': c.PARALLEL_DMTCP_QUEUED_DIR + '/' + key + '.stat', 'STATGEN' : ''})
+				a = du.restart(runnable[key], '--new-coordinator', '--port ' + str(port), '--daemon', '-i ' + str(TIME) , {'STATFILE': c.PARALLEL_DMTCP_QUEUED_DIR + '/' + key + '.stat', 'STATGEN' : '', 'DMTCP_START_CTRS_ON_RESTART_STRATEGY' : '1',  'DMTCP_KILL_ON_RESUME_STRATEGY' : '1'})
 				os.chdir(cwd)
 
 				app_thread_pid[key][1] = a
@@ -180,7 +182,7 @@ def start_next(next_runnable):
                 chkptnum = 1
 		setup_for_restart(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app) + '/' + str(chkptnum))
 		port = u.getopenport()
-		cmd = 'STATFILE=' + c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app + '.stat' + ' ' + 'STATGEN= ' + c.DMTCP_RESTART + ' --new-coordinator -i ' + str( TIME) + ' --port ' + str(port) + ' ' + runnable[app]
+		cmd = 'STATFILE=' + c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app + '.stat' + ' ' + 'STATGEN= DMTCP_START_CTRS_ON_RESTART_STRATEGY=1 DMTCP_KILL_ON_RESUME_STRATEGY=1' + c.DMTCP_RESTART + ' --new-coordinator -i ' + str( TIME) + ' --port ' + str(port) + ' ' + runnable[app]
 		logfile = open(c.LOGDIR + '/' + c.LOGGER, 'a+')
 		a = s.Popen(cmd, shell=True, stdout=logfile, stderr=logfile)
 		running_pid_port.append([app, a, port])

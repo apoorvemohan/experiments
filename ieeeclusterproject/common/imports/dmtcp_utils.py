@@ -9,7 +9,9 @@ def launch(app_cmd, plugin, newcoordinator, port, modifyenv, daemon, interval, e
 	if envvarmap == None:
 		envvarmap = {'STATFILE' : '', 'STATGEN' : ''}
 
-	cmd = 'STATFILE=' + envvarmap['STATFILE'] + ' ' + 'STATGEN=' + envvarmap['STATGEN'] + ' '
+        cmd = ''
+        for entry in envvarmap.keys():
+           cmd += (entry + '=' + envvarmap[entry] + ' ')
 
 	cmd += constants.DMTCP_LAUNCH 
 
@@ -88,7 +90,11 @@ def restart(chkpt_img, newcoordinator, port, daemon, interval, envvarmap):
 
 	perf_stat = ''
 
-	cmd = constants.DMTCP_RESTART
+        cmd = ''
+        for entry in envvarmap.keys():
+           cmd += (entry + '=' + envvarmap[entry] + ' ')
+
+	cmd += constants.DMTCP_RESTART + ' '
 
 	if (newcoordinator != None) and ('--new-coordinator' == newcoordinator):
                 cmd += (' ' + newcoordinator)
@@ -101,14 +107,14 @@ def restart(chkpt_img, newcoordinator, port, daemon, interval, envvarmap):
 
 	cmd += (' ' + chkpt_img)
 
-	if (daemon == None) and (envvarmap['STATGEN'] == ''):
-		perf_stat = ' perf stat '
-		cmd += (' >> ' + envvarmap['STATFILE'] + ' 2>&1 ')
-		envvarmap['STATFILE'] = ''
-	else:
-		cmd += (' >> ' + constants.LOGDIR + '/' + constants.LOGGER + ' 2>&1 ')
+#	if (daemon == None) and (envvarmap['STATGEN'] == ''):
+#		perf_stat = ' perf stat '
+#		cmd += (' >> ' + envvarmap['STATFILE'] + ' 2>&1 ')
+#		envvarmap['STATFILE'] = ''
+#	else:
+        cmd += (' >> ' + constants.LOGDIR + '/' + constants.LOGGER + ' 2>&1 ')
 
-	cmd = 'STATFILE=' + envvarmap['STATFILE'] + ' ' + 'STATGEN=' + envvarmap['STATGEN'] + ' ' + perf_stat + cmd
+	#cmd = 'STATFILE=' + envvarmap['STATFILE'] + ' ' + 'STATGEN=' + envvarmap['STATGEN'] + ' ' + perf_stat + cmd
 
 	utils.loginfo(cmd)	
 
