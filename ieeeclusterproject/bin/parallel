@@ -95,7 +95,7 @@ def main():
 				timestamp = u.gettimestamp().replace(' ', '_')
 				u.loginfo("Runnablea: " + str(runnablea))
 				#appid = random.choice(runnablea)
-                                appid = ru.get_app_with_max_threads(runnablea):
+                                appid = ru.get_app_with_max_threads(runnablea)
 				tree1 = ET.parse(c.PARALLEL_APP_INSTANCE_DIR + '/' + appid + '.xml')
 				root1 = tree1.getroot()
 				appthreads = int(root1.findall('THREADS')[0].text)
