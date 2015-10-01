@@ -61,114 +61,117 @@ def main():
 	runnable_map = get_runnable_instance_map()
 	runnable = runnable_map.keys()
 
-	if (sys.argv[1] == '-r') or (sys.argv[1] == '--random'):
-		tree = ET.parse(c.PARALLEL_RANDOM_DIR + '/R.xml')
-		root = tree.getroot()
-		maxthreads = root.findall('MAXTHREADS')
-		overcommitfactor = root.findall('TOVERCOMMIT')
+	if len(sys.argv) >= 0:
+		if (len(sys.argv) > 1) and ((sys.argv[1] == '-d') or (sys.argv[1] == '--defined')):
 
-		if ((len(maxthreads) > 0) and (len(overcommitfactor) > 0)):
-			totalthreads = random.choice([float(maxthreads[0].text), float(overcommitfactor[0].text) * float(m.cpu_count())])
-		elif (len(maxthreads) > 0):
-			u.loginfo("No Overcommitment Specified. MAXTHREADS")
-			totalthreads = float(maxthreads[0].text)
-		elif (len(overcommitfactor) > 0):
-			u.loginfo("No Maxthread Specified.")
-			totalthreads = float(overcommitfactor[0].text) * float(m.cpu_count())
+			groupmap = get_group_map(copy.deepcopy(runnable_map))
 
-		if (int(totalthreads) == 0):
-			u.loginfo('zero threads')
-			sys.exit(0)
-
-		totalthreads = int(totalthreads)
-		u.loginfo("Total Threads Selected: " + str(totalthreads))
-		os.mkdir(c.PARALLEL_STATS_DIR + '/R')
-
-		appthreads = appid = statfile = status = None
-
-		while len(runnable_map) > 0:
-
-			runnablea = copy.deepcopy(runnable)
-			u.loginfo("Runnable: " + str(runnable))
-			while (len(runnablea) > 0) and (groupthreads < totalthreads):
-				appthreads = appid = None
+			for groupid in groupmap.keys():
+				app_statfile_list = []
 				timestamp = u.gettimestamp().replace(' ', '_')
-				u.loginfo("Runnablea: " + str(runnablea))
-				#appid = random.choice(runnablea)
-                                appid = ru.get_app_with_max_threads(runnablea)
-				tree1 = ET.parse(c.PARALLEL_APP_INSTANCE_DIR + '/' + appid + '.xml')
-				root1 = tree1.getroot()
-				appthreads = int(root1.findall('THREADS')[0].text)
-				if ((groupthreads + appthreads) <= totalthreads):
-					statfile = status = None
-					runnable.remove(appid)
-					groupthreads += appthreads
-					statfile = open(c.PARALLEL_STATS_DIR + '/R/' + str(appid) + '_' + timestamp + '.stat','a')
+				u.loginfo('Executing group ' + groupid)
+				os.mkdir(c.PARALLEL_STATS_DIR + '/' + groupid)
+			
+				for appid in groupmap[groupid]:
+					u.loginfo('Executing app ' + runnable_map[appid])
+					statfile = open(c.PARALLEL_STATS_DIR + '/' + groupid + '/' + str(appid) + '_' + timestamp + '.stat','a')
 					statfile.write(runnable_map[appid])
-					u.loginfo('Executing: perf stat ' + runnable_map[appid])
-					u.loginfo('Executing appid: ' + str(appid))
+					u.loginfo('perf stat ' + runnable_map[appid])
 					status = subprocess.Popen('perf stat ' + runnable_map[appid], shell=True, stdout=statfile, stderr=statfile)
-					app_statfile_list.append([status, statfile, appid, appthreads])
-				runnablea.remove(appid)
+					app_statfile_list.append([status, statfile])
+				while True:
+					if group_exec_completed(app_statfile_list):
+						break
+					else:
+						u.loginfo('sleeping for jobs to finish')
+						time.sleep(10)
+						u.loginfo('woken up. checking if jobs are finished')
+		else:
+			tree = ET.parse(c.PARALLEL_RANDOM_DIR + '/R.xml')
+			root = tree.getroot()
+			maxthreads = root.findall('MAXTHREADS')
+			overcommitfactor = root.findall('TOVERCOMMIT')
 
-			while True:
+			if ((len(maxthreads) > 0) and (len(overcommitfactor) > 0)):
+				totalthreads = random.choice([float(maxthreads[0].text), float(overcommitfactor[0].text) * float(m.cpu_count())])
+			elif (len(maxthreads) > 0):
+				u.loginfo("No Overcommitment Specified. MAXTHREADS")
+				totalthreads = float(maxthreads[0].text)
+			elif (len(overcommitfactor) > 0):
+				u.loginfo("No Maxthread Specified.")
+				totalthreads = float(overcommitfactor[0].text) * float(m.cpu_count())
 
-				flag = False
-				toberemoved = []
-				
-				u.loginfo('APP STATFILE LIST: ' + str(app_statfile_list))
+			if (int(totalthreads) == 0):
+				u.loginfo('zero threads')
+				sys.exit(0)
 
-				for app in app_statfile_list:
-					if app[0].poll() == 0:
-						toberemoved.append(app)
-						u.loginfo('App id completed: ' + str(app[2]))
-						runnable_map.pop(app[2])
-						groupthreads -= app[3]
-						u.loginfo('Number of threads freed: ' + str(app[3]))
-						app[1].close()
-						flag = True
+			totalthreads = int(totalthreads)
+			u.loginfo("Total Threads Selected: " + str(totalthreads))
+			os.mkdir(c.PARALLEL_STATS_DIR + '/R')
 
-				if flag:
-					u.loginfo('Before Removing')
-					u.loginfo('APP STATFILE LIST: ' + str(app_statfile_list))
-					for app in toberemoved:
-						app_statfile_list.remove(app)
-						u.loginfo('Removing app from app id list: ' + str(app))
-						
-					break
+			appthreads = appid = statfile = status = None
+
+			while len(runnable_map) > 0:
+
+				runnablea = copy.deepcopy(runnable)
+				u.loginfo("Runnable: " + str(runnable))
+				while (len(runnablea) > 0) and (groupthreads < totalthreads):
+					appthreads = appid = None
+					timestamp = u.gettimestamp().replace(' ', '_')
+					u.loginfo("Runnablea: " + str(runnablea))
+                	                if (len(sys.argv) > 1) and ((sys.argv[1] == '-r') or (sys.argv[1] == '--random')):
+					        appid = random.choice(runnablea)
+					else:
+                	                        appid = ru.get_app_with_max_threads(runnablea)
+					tree1 = ET.parse(c.PARALLEL_APP_INSTANCE_DIR + '/' + appid + '.xml')
+					root1 = tree1.getroot()
+					appthreads = int(root1.findall('THREADS')[0].text)
+					if ((groupthreads + appthreads) <= totalthreads):
+						statfile = status = None
+						runnable.remove(appid)
+						groupthreads += appthreads
+						statfile = open(c.PARALLEL_STATS_DIR + '/R/' + str(appid) + '_' + timestamp + '.stat','a')
+						statfile.write(runnable_map[appid])
+						u.loginfo('Executing: perf stat ' + runnable_map[appid])
+						u.loginfo('Executing appid: ' + str(appid))
+						status = subprocess.Popen('perf stat ' + runnable_map[appid], shell=True, stdout=statfile, stderr=statfile)
+						app_statfile_list.append([status, statfile, appid, appthreads])
+					runnablea.remove(appid)
+
+				while True:
+
+					flag = False
+					toberemoved = []
 					
-				else:
-					u.loginfo('sleeping for jobs to finish')
-					time.sleep(5)
-					u.loginfo('woken up. checking if jobs are finished')
+					u.loginfo('APP STATFILE LIST: ' + str(app_statfile_list))
 
-		if groupthreads != 0:
-			u.logwarn("Group Threads Not ZERO at end: " + str(groupthreads))
+					for app in app_statfile_list:
+						if app[0].poll() == 0:
+							toberemoved.append(app)
+							u.loginfo('App id completed: ' + str(app[2]))
+							runnable_map.pop(app[2])
+							groupthreads -= app[3]
+							u.loginfo('Number of threads freed: ' + str(app[3]))
+							app[1].close()
+							flag = True
 
-	elif (sys.argv[1] == '-d') or (sys.argv[1] == '--defined'):
+					if flag:
+						u.loginfo('Before Removing')
+						u.loginfo('APP STATFILE LIST: ' + str(app_statfile_list))
+						for app in toberemoved:
+							app_statfile_list.remove(app)
+							u.loginfo('Removing app from app id list: ' + str(app))
+							
+						break
+						
+					else:
+						u.loginfo('sleeping for jobs to finish')
+						time.sleep(5)
+						u.loginfo('woken up. checking if jobs are finished')
 
-		groupmap = get_group_map(copy.deepcopy(runnable_map))
+			if groupthreads != 0:
+				u.logwarn("Group Threads Not ZERO at end: " + str(groupthreads))
 
-		for groupid in groupmap.keys():
-			app_statfile_list = []
-			timestamp = u.gettimestamp().replace(' ', '_')
-			u.loginfo('Executing group ' + groupid)
-			os.mkdir(c.PARALLEL_STATS_DIR + '/' + groupid)
-		
-			for appid in groupmap[groupid]:
-				u.loginfo('Executing app ' + runnable_map[appid])
-				statfile = open(c.PARALLEL_STATS_DIR + '/' + groupid + '/' + str(appid) + '_' + timestamp + '.stat','a')
-				statfile.write(runnable_map[appid])
-				u.loginfo('perf stat ' + runnable_map[appid])
-				status = subprocess.Popen('perf stat ' + runnable_map[appid], shell=True, stdout=statfile, stderr=statfile)
-				app_statfile_list.append([status, statfile])
-			while True:
-				if group_exec_completed(app_statfile_list):
-					break
-				else:
-					u.loginfo('sleeping for jobs to finish')
-					time.sleep(10)
-					u.loginfo('woken up. checking if jobs are finished')
 				
 if __name__ == "__main__":
 	c.LOGGER = 'parallel_a.log'
