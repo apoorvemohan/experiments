@@ -199,6 +199,12 @@ def start_next(next_runnable):
 		running_pid_port.append([app, a, port])
 		os.chdir(cwd)
 
+# Sends a message to a DMTCP coordinator to set a new ckpt interval
+# def sendMessageToSetCkptInterval(coord_port, ckptInterval):
+#   global running_pid_port
+#   cmd = "dmtcp_command -p " + str(coord_port) + " -i " + str(ckptInterval)
+#   u.execcmd(cmd)
+
 def main():
 	import time
 	global running_pid_port, app_stats_map, total_passes, app_stats_map, running_history, TIME
@@ -222,6 +228,7 @@ def main():
 
 	total_passes = 0
 	micro_passes = 0
+        #softDeadline = MICRO_TIME*2
 	while(len(app_stats_map) > 0):
 		micro_passes += 1
 		if timer == 0:
@@ -231,12 +238,20 @@ def main():
 
 		completed = clean_completed(timer)
 
+                #if timer < softDeadline:
+                #   newJob = startNewJob()
+                #elif timer > softDeadline and timer < hardDeadline:
+                #   newJob = startNewJob()
+                #   extendCheckpointInterval(timer, TIME + EXTENSION, listOfRunningApps, newJob)
+                #else:
+                #   continue
+
 		if timer == TIME:
 			del running_pid_port[:]
 			running_pid_port[:] = []
 			completed = None
 
-		if timer != (MICRO_TIME*3):
+		if timer <= (MICRO_TIME*3):
 			print 'Completed: ' + str(completed)
 			if (completed == None) or ((completed != 0) and (completed != None)) :
 				next_runnable = get_next_runnable_map(completed)
@@ -255,7 +270,16 @@ def main():
 						if app in app_stats_map:
 							running_history_map[total_passes].append(app)
 
+				#start_next(next_runnable)
 				start_next(next_runnable)
+				if timer >= softDeadline:
+					#    X = TIME
+					#    newTime = TIME + X
+					#    for app in running_pid_port:
+					#      if app[0] in next_runnable:
+					#        sendMessageToSetCkptInterval(app[2], newTime - currTime)
+					#      else:
+					#        sendMessageToSetCkptInterval(app[2], newTime)
 
 		print running_history_map
 		print timer
