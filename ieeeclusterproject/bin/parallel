@@ -109,6 +109,8 @@ def main():
 					app_statfile_list.append([status, statfile, appid, appthreads])
 				runnablea.remove(appid)
 
+			print "Total Thread: " + str(groupthreads)
+
 			while True:
 
 				flag = False
