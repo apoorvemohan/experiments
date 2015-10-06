@@ -18,11 +18,12 @@ import common.imports.constants as c
 import common.imports.dmtcp_utils as du
 import data.app_commands as ac
 
-APPS = ['RADIX', 'WATERNSQUARED']
+#APPS = ['RADIX', 'WATERNSQUARED']
+APPS = ['RADIX', 'LUC', 'OCEANC', 'WATERNSQUARED', 'LUNC']
 #APPS = ['RADIX', 'LUC', 'LUNC', 'FMM' 'OCEANC', 'OCEANNC' 'WATERNSQUARED', 'PROBEBLOCKED', 'PROBEOBLIVIOUS']
 
-APP_THREAD_MAP = {'RADIX' : [4, 16], 'LUC' : [1, 4, 8, 16], 'LUNC' : [2, 4, 8, 16],  'OCEANC' : [2, 4, 8, 16], 'OCEANNC' : [1, 2, 4, 8, 16], 'WATERNSQUARED' : [ 8, 16]}
-#APP_THREAD_MAP = {'RADIX' : [1, 2, 4, 8, 16], 'LUC' : [1, 2, 4, 8, 16], 'LUNC' :, [1, 2, 4, 8, 16]  'FMM' : [1, 2, 4, 8, 16], 'OCEANC' : [1, 2, 4, 8, 16], 'OCEANNC' : [1, 2, 4, 8, 16], 'WATERNSQUARED' : [1, 2, 4, 8, 16], 'PROBEBLOCKED' : [1, 2, 4, 8, 16], 'PROBEOBLIVIOUS' : [1, 2, 4, 8, 16] }
+APP_THREAD_MAP = {'RADIX' : [[4,600], [8,500]], 'LUC' : [[1,1200], [4,1100], [8,1000], [16,900]], 'LUNC' : [[2,1200], [4,1100], [8,1000], [16,9000]],  'OCEANC' : [[2,900], [4,800], [8,700]], 'OCEANNC' : [[1,900], [4,800], [8,700], [16,600]], 'WATERNSQUARED' : [ [8,900], [16,800]], 'PROBEBLOCKED' : [[1,1500]], 'PROBEOBLIVIOUS' : [[1,1500]]}
+#APP_THREAD_MAP = {'RADIX' : [1, 2, 4, 8, 16], 'LUC' : [1, 2, 4, 8, 16], 'LUNC' :, [1, 2, 4, 8, 16]  'FMM' : [1, 2, 4, 8, 16], 'OCEANC' : [1, 2, 4, 8, 16], 'OCEANNC' : [1, 2, 4, 8, 16], 'WATERNSQUARED' : [1, 2, 4, 8, 16], 'PROBEBLOCKED' : [1], 'PROBEOBLIVIOUS' : [1] }
 
 
 def main():
@@ -41,6 +42,8 @@ def main():
 	else:
 		total_instances = int(sys.argv[1])
 
+	seed = total_instances
+
 	APPINSTANCEDIR = c.PARALLEL_DMTCP_APP_INSTANCE_DIR
 
 	if os.path.isdir(APPINSTANCEDIR):
@@ -53,8 +56,10 @@ def main():
 		app = random.choice(APPS)
 		shutil.copyfile(c.APP_INSTANCES + '/' + app + '.xml', APPINSTANCEDIR + '/' + str(total_instances) + '.xml')
 		os.system("sed -i -e 's/IDX/" + str(total_instances) +"/g' " + APPINSTANCEDIR + '/' + str(total_instances) + ".xml")
-		x = str(random.choice(APP_THREAD_MAP[app]))
-		os.system("sed -i -e 's/THREADX/" + x +"/g' " + APPINSTANCEDIR + '/' + str(total_instances) + ".xml")
+		x = random.choice(APP_THREAD_MAP[app])
+		os.system("sed -i -e 's/THREADX/" + str(x[0]) +"/g' " + APPINSTANCEDIR + '/' + str(total_instances) + ".xml")
+		os.system("sed -i -e 's/WALLX/" + str(x[1]) +"/g' " + APPINSTANCEDIR + '/' + str(total_instances) + ".xml")
+		os.system("sed -i -e 's/ARRIVALX/" + str(random.randint(1, seed)) +"/g' " + APPINSTANCEDIR + '/' + str(total_instances) + ".xml")
 		total_instances -= 1
 
 if __name__ == '__main__':

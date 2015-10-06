@@ -10,7 +10,12 @@ def rule8(running_history_map, stats_history_map, app_stats_map1, threads, runni
         import math
 	import random
 
-        totalthreads = m.cpu_count()*1.25
+	totalthreads = 0
+	if threads != None:
+		totalthreads = threads
+	else:
+		totalthreads = m.cpu_count()*1.25
+
         app_stats_map = copy.deepcopy(app_stats_map1)
         next_runnable = []
 
@@ -88,6 +93,8 @@ def rule10(running_history_map, stats_history_map, app_stats_map1, threads, runn
         import math
 	import random
 
+	print running_history_map
+
 	totalram = 0
 	meminfo = open('/proc/meminfo').read()
 	matched = re.search(r'^MemTotal:\s+(\d+)', meminfo)
@@ -96,7 +103,12 @@ def rule10(running_history_map, stats_history_map, app_stats_map1, threads, runn
 
 	totalram = totalram*0.95
 
-        totalthreads = m.cpu_count()*1.25
+	totalthreads = 0
+	if threads != None:
+		totalthreads = threads
+	else:
+		totalthreads = m.cpu_count()*1.25
+
         app_stats_map = copy.deepcopy(app_stats_map1)
         next_runnable = []
 
@@ -117,26 +129,44 @@ def rule10(running_history_map, stats_history_map, app_stats_map1, threads, runn
 				next_runnable.append(app)
 			app_stats_map.pop(app)
 
-		print "FIRST TIME"
 		return next_runnable
 
-	#check if any app completed - if yes, start random jobs
-	for app in running_history_map[total_passes]:
-		if app not in app_stats_map.keys():
-			while len(app_stats_map) > 0:
-				#app = ru.get_app_with_max_threads(app_stats_map)
-				app = random.choice(app_stats_map.keys())
-				tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
-				root = tree.getroot()
-				thread = int(root.findall('THREADS')[0].text)
-				ram = int(app_stats_map[app]['VmRSS'].split(' ')[0])
-				if ((totalthreads - thread) >= 0) and ((totalram - ram) > 0):
-					totalthreads -= thread
-					totalram -= ram
-					next_runnable.append(app)
+	if threads == None:
+		#check if any app completed - if yes, start random jobs
+		for app in running_history_map[total_passes]:
+			if app not in app_stats_map.keys():
+				while len(app_stats_map) > 0:
+					#app = ru.get_app_with_max_threads(app_stats_map)
+					app = random.choice(app_stats_map.keys())
+					tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
+					root = tree.getroot()
+					thread = int(root.findall('THREADS')[0].text)
+					ram = int(app_stats_map[app]['VmRSS'].split(' ')[0])
+					if ((totalthreads - thread) >= 0) and ((totalram - ram) > 0):
+						totalthreads -= thread
+						totalram -= ram
+						next_runnable.append(app)
+					app_stats_map.pop(app)
+				print "Some App Completed"
+				return next_runnable
+	else:
+		for app in running_history_map[total_passes]:
+			if app in app_stats_map.keys():
 				app_stats_map.pop(app)
-			print "Some App Completed"
-			return next_runnable
+		while len(app_stats_map) > 0:
+			#app = ru.get_app_with_max_threads(app_stats_map)
+			app = random.choice(app_stats_map.keys())
+			tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
+			root = tree.getroot()
+			thread = int(root.findall('THREADS')[0].text)
+			ram = int(app_stats_map[app]['VmRSS'].split(' ')[0])
+			if ((totalthreads - thread) >= 0) and ((totalram - ram) > 0):
+				totalthreads -= thread
+				totalram -= ram
+				next_runnable.append(app)
+			app_stats_map.pop(app)
+		print "Some App Completed"
+		return next_runnable
 
 	#find throughput of previous apps
 	cur_ins = 0
@@ -188,7 +218,7 @@ def rule9(running_history_map, stats_histroy_map, app_stats_map, threads, runnin
 	matched = re.search(r'^MemTotal:\s+(\d+)', meminfo)
 	if matched: 
 		totalram = int(matched.groups()[0])
-	if threads == 0:
+	if threads == None:
 		totalthreads = ru.getcpuidleperc() * 1.25
 	else:
 		totalthreads = threads

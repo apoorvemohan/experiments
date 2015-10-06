@@ -21,7 +21,47 @@ groupthreads = 0
 runnable_map = {}
 runnable = []
 app_statfile_list = []
+app_stats_map = {}
+max_wall_time = 0
+wall_count = 0
+timer = 0
 
+def get_next(totalthreads):
+	global max_wall_time, wall_count, timer, app_stats_map
+	next_runnable = {}
+	max_wall_time = 0
+	sorted_by_arrival = sorted(app_stats_map.items(), key=lambda x: x[1]['ARRIVAL'])
+	print sorted_by_arrival
+
+	for app in sorted_by_arrival:
+		if wall_count != 0:
+			if ((totalthreads - app_stats_map[app[0]]['THREADS']) >= 0) and (app_stats_map[app[0]]['WALL'] <= (max_wall_time - timer)):
+				next_runnable.update({app[0]: app_stats_map[app[0]]['THREADS']})
+				totalthreads -= app_stats_map[app[0]]['THREADS']
+		else:
+			timer = 0
+			if ((totalthreads - app_stats_map[app[0]]['THREADS']) >= 0) :
+				next_runnable.update({app[0]: app_stats_map[app[0]]['THREADS']})
+				totalthreads -= app_stats_map[app[0]]['THREADS']
+				if app_stats_map[app[0]]['WALL'] > max_wall_time:
+					max_wall_time = app_stats_map[app[0]]['WALL']
+			else:
+				wall_count += 1
+
+	for app in next_runnable.keys():
+		app_stats_map.pop(app)
+
+	return next_runnable
+
+def get_queue_stats():
+	global runnable, app_stats_map
+	for app in runnable:
+		tree = ET.parse(c.PARALLEL_APP_INSTANCE_DIR + '/' + app + '.xml')
+		root = tree.getroot()
+		app_stats_map.update({app: {'THREADS':  int(root.findall('THREADS')[0].text)}})
+		app_stats_map[app].update({'WALL':  int(root.findall('WALL')[0].text)})
+		app_stats_map[app].update({'ARRIVAL':  int(root.findall('ARRIVAL')[0].text)})
+		
 
 def group_exec_completed(app_statfile_list):
 
@@ -51,7 +91,7 @@ def get_runnable_instance_map():
 
 def main():
 
-	global totalthreads, groupthreads, runnable_map, runnable, app_statfile_list
+	global totalthreads, groupthreads, runnable_map, runnable, app_statfile_list, app_stats_map, max_wall_time, wall_count, timer
 	if os.path.isdir(c.PARALLEL_STATS_DIR):
 		os.rename(c.PARALLEL_STATS_DIR, c.PARALLEL_STATS_DIR + '.' + u.gettimestamp().replace(' ', '_'))
 	os.mkdir(c.PARALLEL_STATS_DIR)
@@ -59,6 +99,8 @@ def main():
 	#signal.signal(signal.SIGCHLD, signal.SIG_IGN) 
 	runnable_map = get_runnable_instance_map()
 	runnable = runnable_map.keys()
+
+	get_queue_stats()
 
 	if (sys.argv[1] == '-r') or (sys.argv[1] == '--random'):
 		tree = ET.parse(c.PARALLEL_RANDOM_DIR + '/R.xml')
@@ -87,27 +129,21 @@ def main():
 
 		while len(runnable_map) > 0:
 
-			runnablea = copy.deepcopy(runnable)
-			u.loginfo("Runnable: " + str(runnable))
-			while (len(runnablea) > 0) and (groupthreads < totalthreads):
-				appthreads = appid = None
+			next_runnable = get_next(totalthreads)
+
+			for app in next_runnable.keys():
 				timestamp = u.gettimestamp().replace(' ', '_')
-				u.loginfo("Runnablea: " + str(runnablea))
-				appid = random.choice(runnablea)
-				tree1 = ET.parse(c.PARALLEL_APP_INSTANCE_DIR + '/' + appid + '.xml')
-				root1 = tree1.getroot()
-				appthreads = int(root1.findall('THREADS')[0].text)
-				if ((groupthreads + appthreads) <= totalthreads):
-					statfile = status = None
-					runnable.remove(appid)
-					groupthreads += appthreads
-					statfile = open(c.PARALLEL_STATS_DIR + '/R/' + str(appid) + '_' + timestamp + '.stat','a')
-					statfile.write(runnable_map[appid])
-					u.loginfo('Executing: perf stat ' + runnable_map[appid])
-					u.loginfo('Executing appid: ' + str(appid))
-					status = subprocess.Popen('perf stat ' + runnable_map[appid], shell=True, stdout=statfile, stderr=statfile)
-					app_statfile_list.append([status, statfile, appid, appthreads])
-				runnablea.remove(appid)
+				statfile = status = None
+				runnable.remove(app)
+				statfile = open(c.PARALLEL_STATS_DIR + '/R/' + str(app) + '_' + timestamp + '.stat','a')
+				statfile.write(runnable_map[app])
+				u.loginfo('Executing: perf stat ' + runnable_map[app])
+				u.loginfo('Executing appid: ' + str(app))
+				status = subprocess.Popen('perf stat ' + runnable_map[app], shell=True, stdout=statfile, stderr=statfile)
+				app_statfile_list.append([status, statfile, app, next_runnable[app]])
+				totalthreads -= next_runnable[app]
+
+			print "Total Thread: " + str(totalthreads)
 
 			while True:
 
@@ -121,10 +157,11 @@ def main():
 						toberemoved.append(app)
 						u.loginfo('App id completed: ' + str(app[2]))
 						runnable_map.pop(app[2])
-						groupthreads -= app[3]
+						totalthreads += app[3]
 						u.loginfo('Number of threads freed: ' + str(app[3]))
 						app[1].close()
 						flag = True
+						wall_count -= 1
 
 				if flag:
 					u.loginfo('Before Removing')
@@ -132,12 +169,11 @@ def main():
 					for app in toberemoved:
 						app_statfile_list.remove(app)
 						u.loginfo('Removing app from app id list: ' + str(app))
-						
 					break
-					
 				else:
 					u.loginfo('sleeping for jobs to finish')
-					time.sleep(5)
+					time.sleep(10)
+					timer += 10
 					u.loginfo('woken up. checking if jobs are finished')
 
 		if groupthreads != 0:
