@@ -19,21 +19,21 @@ stats_map = {}
 max_wall_time = 0
 wall_count = 0
 wtimer = 0
+runnable = {}
 
 def get_next(totalthreads):
-	global max_wall_time, wall_count, timer, stats_map
+	global max_wall_time, wall_count, wtimer, stats_map
 	next_runnable = {}
 	max_wall_time = 0
 	sorted_by_arrival = sorted(stats_map.items(), key=lambda x: x[1]['ARRIVAL'])
-	print sorted_by_arrival
 
 	for app in sorted_by_arrival:
 		if wall_count != 0:
-			if ((totalthreads - stats_map[app[0]]['THREADS']) >= 0) and (stats_map[app[0]]['WALL'] <= (max_wall_time - timer)):
+			if ((totalthreads - stats_map[app[0]]['THREADS']) >= 0) and (stats_map[app[0]]['WALL'] <= (max_wall_time - wtimer)):
 				next_runnable.update({app[0]: stats_map[app[0]]['THREADS']})
 				totalthreads -= stats_map[app[0]]['THREADS']
 		else:
-			timer = 0
+			wtimer = 0
 			if ((totalthreads - stats_map[app[0]]['THREADS']) >= 0) :
 				next_runnable.update({app[0]: stats_map[app[0]]['THREADS']})
 				totalthreads -= stats_map[app[0]]['THREADS']
@@ -49,7 +49,7 @@ def get_next(totalthreads):
 
 def get_queue_stats():
 	global runnable, stats_map
-	for app in runnable:
+	for app in runnable.keys():
 		tree = ET.parse(c.PARALLEL_APP_INSTANCE_DIR + '/' + app + '.xml')
 		root = tree.getroot()
 		stats_map.update({app: {'THREADS':  int(root.findall('THREADS')[0].text)}})
@@ -63,7 +63,6 @@ def setup_for_restart(chkptdir):
         fp.close()
 
 def get_runnable_instance_map(appinstancedir):
-	print appinstancedir
         runnable_instance_map = {}
         for instance in os.listdir(appinstancedir):
                 runnable_instance_map.update(u.getidcmdpairbyxml(appinstancedir + '/' + instance))
@@ -71,7 +70,7 @@ def get_runnable_instance_map(appinstancedir):
 
 def main():
 
-	global wall_count, wtimer
+	global wall_count, wtimer, runnable, stats_map
 
 	CHKPTDIR = None
 	APPINSTANCEDIR = None
@@ -109,22 +108,22 @@ def main():
 		while len(app_thread_pid) > 0:
 
 			next_runnable = get_next(cpu)
-			for app in next_runnable_app_list.keys():
+			for app in next_runnable.keys():
 				
 					u.loginfo('[Starting ' + app + ' : ' + runnable[app] + ']')
 					os.mkdir(CHKPTDIR + '/' + str(app))
 					u.execcmd('touch ' + CHKPTDIR + '/' + str(app) + '/command')
 					u.execcmd('echo \"' + runnable[app] + '\" >> ' + CHKPTDIR + '/' + str(app) + '/command')
-					if not os.path.isdir(CHKPTDIR + '/' + str(app) + '/' + str(chkptnum)):
+					if not os.path.isdir(CHKPTDIR + '/' + str(app) + '/1'):
 						os.mkdir(CHKPTDIR + '/' + str(app) + '/1')
 
 					port = None
 					cwd = u.getcwd()
 
 					if (sys.argv[1] == '-p') or (sys.argv[1] == '--parallel'):
-						setup_for_restart(CHKPTDIR + '/' + str(app) + '/' + str(chkptnum))
+						setup_for_restart(CHKPTDIR + '/' + str(app) + '/1')
 
-					u.chdir(CHKPTDIR + '/' + str(app) + '/' + str(chkptnum))
+					u.chdir(CHKPTDIR + '/' + str(app) + '/1')
 					os.system('cp ' + c.BASE + '/random.in .')
 					port = u.getopenport()
 
@@ -135,21 +134,22 @@ def main():
 					u.chdir(cwd)
 					app_thread_pid[app][1] = a
 					cpu -= app_thread_pid[app][0]
-
 			flag = True
 
 			while flag:
+				time.sleep(2)
+				wtimer += 2
 
 				for app in app_thread_pid.keys():
-					if (app_thread_pid[app][1] != None) and (app_thread_pid[key][1].poll() == 0):
+					if (app_thread_pid[app][1] != None) and (app_thread_pid[app][1].poll() == 0):
+					#if (app_thread_pid[app][1].poll() == 0):
 						cpu = cpu +  app_thread_pid[app][0]
-						app_thread_pid.pop(app)
 						flag = False
-						wall_count -= 1
-						u.loginfo('App Finished: ' + str(app[0]))
-				if flag:
-					time.sleep(1)
-					wtimer += 1
+						if wall_count > 0:
+							wall_count -= 1
+						u.loginfo('App Finished: ' + str(app))
+						app_thread_pid.pop(app)
+
 
 if __name__ == '__main__':
 	c.LOGGER = 'init_app_and_chkpt_a.log'

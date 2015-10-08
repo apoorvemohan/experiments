@@ -39,7 +39,6 @@ def get_next(totalthreads):
 	next_runnable = {}
 	max_wall_time = 0
 	sorted_by_arrival = sorted(stats_map.items(), key=lambda x: x[1]['ARRIVAL'])
-	print sorted_by_arrival
 
 	for app in sorted_by_arrival:
 		if wall_count != 0:
@@ -47,7 +46,7 @@ def get_next(totalthreads):
 				next_runnable.update({app[0]: stats_map[app[0]]['THREADS']})
 				totalthreads -= stats_map[app[0]]['THREADS']
 		else:
-			timer = 0
+			wtimer = 0
 			if ((totalthreads - stats_map[app[0]]['THREADS']) >= 0) :
 				next_runnable.update({app[0]: stats_map[app[0]]['THREADS']})
 				totalthreads -= stats_map[app[0]]['THREADS']
@@ -62,7 +61,8 @@ def get_next(totalthreads):
 	return next_runnable
 
 def get_queue_stats():
-	global runnable, stats_map
+	global  stats_map
+	runnable = get_runnable_instance_map().keys()
 	for app in runnable:
 		tree = ET.parse(c.PARALLEL_APP_INSTANCE_DIR + '/' + app + '.xml')
 		root = tree.getroot()
@@ -103,7 +103,7 @@ def update_app_stats_map(appid, statfile):
 
 def generate_stats_and_enqueue():
 	global app_stats_map, MICRO_TIME, stats_map, wtimer, wall_count
-	runnable = get_runnable_instance_map().keys()
+	runnable = get_runnable_instance_map()
 	app_thread_pid = {}
 
 	get_queue_stats()
@@ -131,28 +131,28 @@ def generate_stats_and_enqueue():
 
 		flag = True
 		while flag:
+			time.sleep(1)
+			wtimer += 1
 			for app in app_thread_pid.keys():
 				if (app_thread_pid[app][1] != None) and (app_thread_pid[app][1].poll() == 0):
 					cpu = cpu + app_thread_pid[app][0]
 					app_thread_pid.pop(app)
 					flag = False
-					wall_count -= 1
+					if wall_count > 0:
+						wall_count -= 1
 					u.loginfo('Stop1: ' + str(app))
-					stats_history_map.update({app[0]:{}})
-					stats_history_map[app[0]].update({'INSTRUCTIONS':[]})
-					stats_history_map[app[0]].update({'CPU_CYCLES':[]})
-					stats_history_map[app[0]].update({'CACHE_MISSES':[]})
-					stats_history_map[app[0]].update({'ELAPSED_TIME':[]})
-					update_app_stats_map(app[1][2], c.PARALLEL_DMTCP_QUEUED_DIR + '/' + app[1][2] + '.stat')
-					app_stats_map[app[1][2]]['TYPE'] = app[1][3]
-					app_stats_map[app[1][2]]['pickup_count'] = 0
-					stats_history_map[app[1][2]]['INSTRUCTIONS'].append(app_stats_map[app[1][2]]['INSTRUCTIONS'])
-					stats_history_map[app[1][2]]['CPU_CYCLES'].append(app_stats_map[app[1][2]]['CPU_CYCLES'])
-					stats_history_map[app[1][2]]['CACHE_MISSES'].append(app_stats_map[app[1][2]]['CACHE_MISSES'])
-					stats_history_map[app[1][2]]['ELAPSED_TIME'].append(app_stats_map[app[1][2]]['ELAPSED_TIME'])
-			if flag:
-				time.sleep(1)
-				wtimer += 1
+					stats_history_map.update({app:{}})
+					stats_history_map[app].update({'INSTRUCTIONS':[]})
+					stats_history_map[app].update({'CPU_CYCLES':[]})
+					stats_history_map[app].update({'CACHE_MISSES':[]})
+					stats_history_map[app].update({'ELAPSED_TIME':[]})
+					update_app_stats_map(app, c.PARALLEL_DMTCP_QUEUED_DIR + '/' + str(app) + '.stat')
+					app_stats_map[app]['TYPE'] = None
+					app_stats_map[app]['pickup_count'] = 0
+					stats_history_map[app]['INSTRUCTIONS'].append(app_stats_map[app]['INSTRUCTIONS'])
+					stats_history_map[app]['CPU_CYCLES'].append(app_stats_map[app]['CPU_CYCLES'])
+					stats_history_map[app]['CACHE_MISSES'].append(app_stats_map[app]['CACHE_MISSES'])
+					stats_history_map[app]['ELAPSED_TIME'].append(app_stats_map[app]['ELAPSED_TIME'])
 
 def get_next_runnable_map(retval):
 
@@ -203,13 +203,7 @@ def start_next(next_runnable):
 	
 	for app in to_restart:
 		cwd = os.getcwd()
-		chkptnum = 0
-		if len(u.listonlydir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app))) > 0:
-                        chkptnum = int(max(u.listonlydir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app)))) + 1
-                else:
-                        chkptnum = 1
-                chkptnum = 1
-		setup_for_restart(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app) + '/' + str(chkptnum))
+		setup_for_restart(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app) + '/1' )
 		port = u.getopenport()
 		cmd = 'STATFILE=' + c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app + '.stat' + ' ' + 'STATGEN= ' + c.DMTCP_RESTART + ' --new-coordinator -i ' + str(timer) + ' --port ' + str(port) + ' ' + runnable[app]
 		logfile = open(c.LOGDIR + '/' + c.LOGGER, 'a+')
