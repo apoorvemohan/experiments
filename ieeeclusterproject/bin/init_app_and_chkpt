@@ -103,7 +103,7 @@ def main():
 			root = tree.getroot()
 			app_thread_pid.update({app: [int(root.findall('THREADS')[0].text), None]})
 
-		cpu = m.cpu_count()
+		cpu = m.cpu_count()/2
 
 		while len(app_thread_pid) > 0:
 
@@ -129,7 +129,7 @@ def main():
 
 					u.loginfo('Launching App: ' + str(app))
 
-					a = du.launch(runnable[app], '--with-plugin myplug', '--newcoordinator', '--port ' + str(port), '--modify-env', '--daemon', '-i 5', {'STATFILE': '', 'STATGEN' : ''})
+					a = du.launch("taskset -c 0-" + str(m.cpu_count()/2) + " ", runnable[app], '--with-plugin myplug', '--newcoordinator', '--port ' + str(port), '--modify-env', '--daemon', '-i 5', {'STATFILE': '', 'STATGEN' : ''})
 					u.loginfo('after launch: ' + str(app))
 					u.chdir(cwd)
 					app_thread_pid[app][1] = a

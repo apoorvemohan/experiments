@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 
-def launch(app_cmd, plugin, newcoordinator, port, modifyenv, daemon, interval, envvarmap):
+def launch(cpu_affinity, app_cmd, plugin, newcoordinator, port, modifyenv, daemon, interval, envvarmap):
 	import utils
 	import constants
 	import subprocess as s
@@ -9,7 +9,7 @@ def launch(app_cmd, plugin, newcoordinator, port, modifyenv, daemon, interval, e
 	if envvarmap == None:
 		envvarmap = {'STATFILE' : '', 'STATGEN' : ''}
 
-	cmd = 'STATFILE=' + envvarmap['STATFILE'] + ' ' + 'STATGEN=' + envvarmap['STATGEN'] + ' '
+	cmd = 'STATFILE=' + envvarmap['STATFILE'] + ' ' + 'STATGEN=' + envvarmap['STATGEN'] + ' ' + cpu_affinity + ' ' 
 
 	cmd += constants.DMTCP_LAUNCH 
 
@@ -81,7 +81,7 @@ def kill(port):
 
 	utils.execcmd(cmd)
 
-def restart(chkpt_img, newcoordinator, port, daemon, interval, envvarmap):
+def restart(cpu_affinity, chkpt_img, newcoordinator, port, daemon, interval, envvarmap):
 	import utils
 	import constants
 	import subprocess as s
@@ -108,7 +108,7 @@ def restart(chkpt_img, newcoordinator, port, daemon, interval, envvarmap):
 	else:
 		cmd += (' >> ' + constants.LOGDIR + '/' + constants.LOGGER + ' 2>&1 ')
 
-	cmd = 'STATFILE=' + envvarmap['STATFILE'] + ' ' + 'STATGEN=' + envvarmap['STATGEN'] + ' ' + perf_stat + cmd
+	cmd = 'STATFILE=' + envvarmap['STATFILE'] + ' ' + 'STATGEN=' + envvarmap['STATGEN'] + ' ' + cpu_affinity + ' ' + perf_stat + cmd
 
 	utils.loginfo(cmd)	
 

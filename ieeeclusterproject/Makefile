@@ -1,13 +1,10 @@
-default: plugin
+default:
 
 vim:
-	vim dmtcp/src/plugin/myplug/myplug.cpp
+	vim dmtcp/src/plugin/myplug/myplug.c
 
 plugin:
 	cd dmtcp/src/plugin/myplug/ && make
-
-plugin-clean:
-	cd dmtcp/src/plugin/myplug/ && make clean
 
 run:
 	bin/init_app_and_chkpt -p
