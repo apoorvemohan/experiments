@@ -417,8 +417,8 @@ def rule11(running_history_map, stats_history_map, app_stats_map1, threads, runn
 	print 'Throughput: ' + str(throughput)
 
 	if throughput > 1:
-		next_runnable[0] = running_history_map[total_passes][0]
-		next_runnable[1] = running_history_map[total_passes][1]
+		next_runnable[0] = copy.deepcopy(running_history_map[total_passes][0])
+		next_runnable[1] = copy.deepcopy(running_history_map[total_passes][1])
 		for app in list(set(next_runnable[0]) - set(next_runnable[1])):
 			tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
 			root = tree.getroot()
