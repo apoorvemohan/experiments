@@ -54,10 +54,6 @@ def get_next(totalthreads):
 					max_wall_time = stats_map[app[0]]['WALL']
 			else:
 				wall_count += 1
-
-	for app in next_runnable.keys():
-		stats_map.pop(app)
-
 	return next_runnable
 
 def get_queue_stats():
@@ -120,12 +116,15 @@ def generate_stats_and_enqueue():
 		#remove job with least threads if next_runnable size > 1
 		if len(next_runnable) > 1:
 			min_threads = 9999999
-			min_threads_app = None:
+			min_threads_app = None
 			for app in next_runnable.keys():
 				if next_runnable[app] < min_threads:
 					min_threads = next_runnable[app]
 					min_threads_app = app
 			next_runnable.pop(min_threads_app)
+
+		for app in next_runnable.keys():
+			stats_map.pop(app)
 
 		for app in next_runnable.keys():
 			
@@ -136,7 +135,7 @@ def generate_stats_and_enqueue():
 			os.chdir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app) + '/1')
 			port = u.getopenport()
 			u.loginfo('Restart1: ' + str(app))
-			a = du.restart("taskset -c 0-" + str(m.cpu_count()/2) + ' ',runnable[app], '--new-coordinator', '--port ' + str(port), '--daemon', '-i ' + str(MICRO_TIME) , {'STATFILE': c.PARALLEL_DMTCP_QUEUED_DIR + '/' + app + '.stat', 'STATGEN' : ''})
+			a = du.restart("taskset -c 0-" + str(m.cpu_count()/2 - 1) + ' ',runnable[app], '--new-coordinator', '--port ' + str(port), '--daemon', '-i ' + str(MICRO_TIME) , {'STATFILE': c.PARALLEL_DMTCP_QUEUED_DIR + '/' + app + '.stat', 'STATGEN' : ''})
 			os.chdir(cwd)
 			app_thread_pid[app][1] = a
 			cpu -= app_thread_pid[app][0]
@@ -212,21 +211,37 @@ def stop_running(next_runnable):
 		stats_history_map[app[0]]['CHECKPOINT_TIME'].append(app_stats_map[app[0]]['CHECKPOINT_TIME'])
 
 def start_next(next_runnable):
-	global timer
-	to_restart = next_runnable
+	global timer, stats_map
+	to_restart = next_runnable[0]
 	runnable = get_runnable_instance_map()
 
-	cpu = m.cpu_count()
-
-	for app in to_restart:
+	cpu = m.cpu_count()/2
+	disp = cpu
+	
+	for app in next_runnable[1]:
 		cwd = os.getcwd()
 		setup_for_restart(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app) + '/1')
 		port = u.getopenport()
-		if app in next_runnable[1]:
-			cmd = 'STATFILE=' + c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app + '.stat' + ' ' + 'STATGEN= ' + 'taskset 0-' +str(cpu) + ' ' + c.DMTCP_RESTART + ' --new-coordinator -i ' + str(timer) + ' --port ' + str(port) + ' ' + runnable[app]
-		else:
-			cmd = 'STATFILE=' + c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app + '.stat' + ' ' + 'STATGEN= ' + 'taskset 0-' +str(cpu/2) + ' ' + c.DMTCP_RESTART + ' --new-coordinator -i ' + str(timer) + ' --port ' + str(port) + ' ' + runnable[app]
+		core_affinity = ''
+		app_threads = stats_map[app]['THREADS']
+		app_threads /= 2
+		while app_threads > 0:
+			core_affinity += (str(cpu - 1) + ',' + str(cpu - 1 + disp) + ',')
+			cpu -= 1
+			app_threads -= 1
+		cmd = 'STATFILE=' + c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app + '.stat' + ' ' + 'STATGEN= ' + 'taskset ' + core_affinity[:-1]  + ' ' + c.DMTCP_RESTART + ' --new-coordinator -i ' + str(timer) + ' --port ' + str(port) + ' ' + runnable[app]
 		logfile = open(c.LOGDIR + '/' + c.LOGGER, 'a+')
+		a = s.Popen(cmd, shell=True, stdout=logfile, stderr=logfile)
+		running_pid_port.append([app, a, port])
+		os.chdir(cwd)
+		
+	for app in list(set(next_runnable[0]) - set(next_runnable[1])):
+		cwd = os.getcwd()
+		setup_for_restart(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app) + '/1')
+		port = u.getopenport()
+		cmd = 'STATFILE=' + c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app + '.stat' + ' ' + 'STATGEN= ' + 'taskset -c 0-' +str(cpu - 1) + ' ' + c.DMTCP_RESTART + ' --new-coordinator -i ' + str(timer) + ' --port ' + str(port) + ' ' + runnable[app]
+		logfile = open(c.LOGDIR + '/' + c.LOGGER, 'a+')
+		print cmd
 		a = s.Popen(cmd, shell=True, stdout=logfile, stderr=logfile)
 		running_pid_port.append([app, a, port])
 		os.chdir(cwd)
@@ -266,14 +281,22 @@ def main():
 		if timer == TIME:
 			del running_pid_port[:]
 			running_pid_port[:] = []
-			completed = None
+			if completed > 0:
+				print 'Some app completed after midway'
+				completed = None
+			elif completed == 0:
+				completed = -1
+				print 'No App completed at the end of the interval'
 
-		if timer != (MICRO_TIME*3):
-			print 'Completed: ' + str(completed)
-			if (completed == None) or ((completed != 0) and (completed != None)) :
+		if (timer >= (MICRO_TIME*3)) and (completed != 0):
+				print timer
+				print completed
+				if completed > 0:
+					print 'Some app completed before midway'
+#			if (completed == None) or ((completed != 0) and (completed != None)):
 				next_runnable = get_next_runnable_map(completed)
 				total_passes = total_passes + 1
-				if completed == None:
+				if (completed == -1) or (completed == None):
 					u.loginfo('Next Runnable List: ' + str(next_runnable))
 					running_history_map[total_passes] = next_runnable
 				else:
@@ -283,14 +306,13 @@ def main():
 					for app in next_runnable[0]:
 						running_history_map[total_passes][0].append(app)
 
-					for app in running_history_map[total_passes - 1]:
+					for app in running_history_map[total_passes - 1][0]:
 						if app in app_stats_map:
-							running_history_map[total_passes].append(app)
+							running_history_map[total_passes][0].append(app)
 
 				start_next(next_runnable)
-
+		u.loginfo(running_history_map)
 		print running_history_map
-		print timer
 		time.sleep(MICRO_TIME)
 		timer -= MICRO_TIME
 
