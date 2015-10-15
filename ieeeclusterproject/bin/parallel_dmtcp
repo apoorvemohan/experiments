@@ -108,7 +108,7 @@ def generate_stats_and_enqueue():
 		tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
 		root = tree.getroot()
 		app_thread_pid.update({app: [int(root.findall('THREADS')[0].text), None, str(app), None]})
-	cpu = m.cpu_count()/2
+	cpu = m.cpu_count()
 	while len(app_thread_pid) > 0:
 
 		next_runnable = get_next(cpu)
@@ -135,7 +135,7 @@ def generate_stats_and_enqueue():
 			os.chdir(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app) + '/1')
 			port = u.getopenport()
 			u.loginfo('Restart1: ' + str(app))
-			a = du.restart("taskset -c 0-" + str(m.cpu_count()/2 - 1) + ' ',runnable[app], '--new-coordinator', '--port ' + str(port), '--daemon', '-i ' + str(MICRO_TIME) , {'STATFILE': c.PARALLEL_DMTCP_QUEUED_DIR + '/' + app + '.stat', 'STATGEN' : ''})
+			a = du.restart("taskset -c 0-" + str(m.cpu_count() - 1) + ' ',runnable[app], '--new-coordinator', '--port ' + str(port), '--daemon', '-i ' + str(MICRO_TIME) , {'STATFILE': c.PARALLEL_DMTCP_QUEUED_DIR + '/' + app + '.stat', 'STATGEN' : ''})
 			os.chdir(cwd)
 			app_thread_pid[app][1] = a
 			cpu -= app_thread_pid[app][0]
@@ -215,33 +215,13 @@ def start_next(next_runnable):
 	to_restart = next_runnable[0]
 	runnable = get_runnable_instance_map()
 
-	cpu = m.cpu_count()/2
-	disp = cpu
-	
-	for app in next_runnable[1]:
+	cpu = m.cpu_count()
+	for app in next_runnable[0]:
 		cwd = os.getcwd()
 		setup_for_restart(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app) + '/1')
 		port = u.getopenport()
-		core_affinity = ''
-		app_threads = stats_map[app]['THREADS']
-		app_threads /= 2
-		while app_threads > 0:
-			core_affinity += (str(cpu - 1) + ',' + str(cpu - 1 + disp) + ',')
-			cpu -= 1
-			app_threads -= 1
-		cmd = 'STATFILE=' + c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app + '.stat' + ' ' + 'STATGEN= ' + 'taskset ' + core_affinity[:-1]  + ' ' + c.DMTCP_RESTART + ' --new-coordinator -i ' + str(timer) + ' --port ' + str(port) + ' ' + runnable[app]
+		cmd = 'STATFILE=' + c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app + '.stat' + ' ' + 'STATGEN= ' + 'taskset -c 0-' + str(cpu - 1) + ' ' + c.DMTCP_RESTART + ' --new-coordinator -i ' + str(timer) + ' --port ' + str(port) + ' ' + runnable[app]
 		logfile = open(c.LOGDIR + '/' + c.LOGGER, 'a+')
-		a = s.Popen(cmd, shell=True, stdout=logfile, stderr=logfile)
-		running_pid_port.append([app, a, port])
-		os.chdir(cwd)
-		
-	for app in list(set(next_runnable[0]) - set(next_runnable[1])):
-		cwd = os.getcwd()
-		setup_for_restart(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app) + '/1')
-		port = u.getopenport()
-		cmd = 'STATFILE=' + c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app + '.stat' + ' ' + 'STATGEN= ' + 'taskset -c 0-' +str(cpu - 1) + ' ' + c.DMTCP_RESTART + ' --new-coordinator -i ' + str(timer) + ' --port ' + str(port) + ' ' + runnable[app]
-		logfile = open(c.LOGDIR + '/' + c.LOGGER, 'a+')
-		print cmd
 		a = s.Popen(cmd, shell=True, stdout=logfile, stderr=logfile)
 		running_pid_port.append([app, a, port])
 		os.chdir(cwd)
@@ -281,10 +261,14 @@ def main():
 		if timer == TIME:
 			del running_pid_port[:]
 			running_pid_port[:] = []
-			if completed > 0:
-				print 'Some app completed after midway'
-				completed = None
-			elif completed == 0:
+
+			if len(running_history_map) > 0:
+				for app in running_history_map[total_passes][0]:
+					if app not in app_stats_map.keys():
+						completed = None
+						print 'Some app completed after midway'
+
+			if completed == 0:
 				completed = -1
 				print 'No App completed at the end of the interval'
 

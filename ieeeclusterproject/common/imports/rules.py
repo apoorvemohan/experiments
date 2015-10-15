@@ -417,8 +417,8 @@ def rule11(running_history_map, stats_history_map, app_stats_map1, threads, runn
 	print 'Throughput: ' + str(throughput)
 
 	if throughput > 1:
-		next_runnable[0] = running_history_map[total_passes][0]
-		next_runnable[1] = running_history_map[total_passes][1]
+		next_runnable[0] = copy.deepcopy(running_history_map[total_passes][0])
+		next_runnable[1] = copy.deepcopy(running_history_map[total_passes][1])
 		for app in list(set(next_runnable[0]) - set(next_runnable[1])):
 			tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
 			root = tree.getroot()
@@ -549,7 +549,7 @@ def rule12(running_history_map, stats_history_map, app_stats_map1, threads, runn
 		cur_cyc = cur_cyc + stats_history_map[app]['CPU_CYCLES'][len(stats_history_map[app]['CPU_CYCLES']) - 1]
 		prev_ins = prev_ins + stats_history_map[app]['INSTRUCTIONS'][0]
 		prev_cyc = prev_cyc + stats_history_map[app]['CPU_CYCLES'][0]
-		if ((float(cur_ins)/float(cur_cyc))) < (.95*((float(prev_ins)/float(prev_cyc)))):
+		if ((float(cur_ins)/float(cur_cyc))) < (0.95*((float(prev_ins)/float(prev_cyc)))):
 			app_performing_bad.append([app, (float(cur_ins)/float(cur_cyc))])
 		else:
 			app_performing_well.append([app, (float(cur_ins)/float(cur_cyc))])
@@ -557,29 +557,37 @@ def rule12(running_history_map, stats_history_map, app_stats_map1, threads, runn
 	throughput = ((float(cur_ins)/float(cur_cyc)))/((float(prev_ins)/float(prev_cyc)))
 	print 'Throughput: ' + str(throughput)
 
-	if throughput > .95:
-		next_runnable[0] = running_history_map[total_passes][0]
-		next_runnable[1] = running_history_map[total_passes][1]
+	if throughput > 0.95:
+		next_runnable[0] = copy.deepcopy(running_history_map[total_passes][0])
+		next_runnable[1] = copy.deepcopy(running_history_map[total_passes][1])
 		#add one app with min threads within the limit
 		thread_sum = 0
+		ram_sum = 0
 		for app in next_runnable[0]:
 			tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
 			root = tree.getroot()
 			thread_sum += int(root.findall('THREADS')[0].text)
+			ram_sum += int(app_stats_map[app]['VmRSS'].split(' ')[0])
 
-		min_thread = 9999999999
 		min_thread_app = None
-		for app in list(set(app_stats_map.keys()) - set(next_runnable[0])):
+		probables_list = list(set(app_stats_map.keys()) - set(next_runnable[0]))
+
+		while len(probables_list) > 0:
+			app =  random.choice(probables_list)
 			tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
 			root = tree.getroot()
 			app_core_req = int(root.findall('THREADS')[0].text)
-			if (app_core_req < min_thread) and ((thread_sum + app_core_req) <= max_limit):
+			app_ram_req = int(app_stats_map[app]['VmRSS'].split(' ')[0])
+			if ((thread_sum + app_core_req) <= max_limit) and ((ram_sum + app_ram_req) <= totalram):
 				min_thread_app = app
-				min_thread = app_core_req
+				break
+			probables_list.remove(app)
 				
 		if min_thread_app != None:
 			next_runnable[1].append(min_thread_app)
 			next_runnable[0].append(min_thread_app)
+		else:
+			print 'No new app could be appended to this group'
 
 		return next_runnable
 

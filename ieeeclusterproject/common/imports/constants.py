@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-BASE = '/home/jiajun/apoorve/ieeeclusterproject'
+BASE = '/home/jiajun/apoorve/ipdps/ieeeclusterproject'
 DMTCP = BASE + '/dmtcp'
 STRACE = BASE + '/strace'
 
@@ -33,7 +33,7 @@ PARALLEL_DMTCP_STATS_DIR = PARALLEL_DMTCP_DIR + '/stats'
 PARALLEL_DMTCP_DATA_DIR = PARALLEL_DMTCP_DIR + '/appdata'
 PARALLEL_DMTCP_APP_INSTANCE_DIR = PARALLEL_DMTCP_DATA_DIR + '/app_instance_xml'
 #PARALLEL_DMTCP_CHKPTS_DIR = PARALLEL_DMTCP_DIR + '/chkpts'
-PARALLEL_DMTCP_CHKPTS_DIR = '/pool001/jiajun/apoorve/chkpts'
+PARALLEL_DMTCP_CHKPTS_DIR = '/pool001/jiajun/apoorve/chkpts123'
 PARALLEL_DMTCP_COMPLETED_DIR = PARALLEL_DMTCP_STATS_DIR + '/completed'
 PARALLEL_DMTCP_QUEUED_DIR = PARALLEL_DMTCP_STATS_DIR + '/queued'
 PARALLEL_DMTCP_RUNNING_DIR = PARALLEL_DMTCP_STATS_DIR + '/running'
