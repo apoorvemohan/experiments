@@ -281,10 +281,14 @@ def main():
 		if timer == TIME:
 			del running_pid_port[:]
 			running_pid_port[:] = []
-			if completed > 0:
-				print 'Some app completed after midway'
-				completed = None
-			elif completed == 0:
+
+			if len(running_history_map) > 0:
+				for app in running_history_map[total_passes][0]:
+					if app not in app_stats_map.keys():
+						completed = None
+						print 'Some app completed after midway'
+
+			if completed == 0:
 				completed = -1
 				print 'No App completed at the end of the interval'
 

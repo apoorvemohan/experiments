@@ -310,7 +310,7 @@ def rule9(running_history_map, stats_histroy_map, app_stats_map, threads, runnin
 
 	return next_runnable
 
-#hyperthreading
+#hyperthreading - switch ht on only if individual performance degrades after overall improvement
 def rule11(running_history_map, stats_history_map, app_stats_map1, threads, runninglist, total_passes):
         import copy
         import rules_utils as ru
@@ -449,4 +449,145 @@ def rule11(running_history_map, stats_history_map, app_stats_map1, threads, runn
 
 	return next_runnable
 
-RULES = {'rule8': rule8, 'rule9' : rule9, 'rule10': rule10, 'rule11': rule11}
+#hyperthreading - randomly switching to ht if overall performance improoves
+def rule13(running_history_map, stats_history_map, app_stats_map1, threads, runninglist, total_passes):
+        import copy
+        import rules_utils as ru
+        import multiprocessing as m
+        import xml.etree.ElementTree as ET
+        import re
+        import constants as c
+        import math
+	import random
+
+	totalram = 0
+	meminfo = open('/proc/meminfo').read()
+	matched = re.search(r'^MemTotal:\s+(\d+)', meminfo)
+	if matched: 
+		totalram = int(matched.groups()[0])
+
+	totalram = totalram*0.95
+
+	totalthreads = 0
+	if threads > 0:
+		totalthreads = threads
+	else:
+		totalthreads = (m.cpu_count()/2)*1.25
+
+        app_stats_map = copy.deepcopy(app_stats_map1)
+        next_runnable = [[],[]]
+
+	################# APP MEMORY NOT CONSIDERED ###############
+
+	#first time
+	if total_passes == 0:
+		while len(app_stats_map) > 0:
+			#app = ru.get_app_with_max_threads(app_stats_map)
+			app = random.choice(app_stats_map.keys())
+			tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
+			root = tree.getroot()
+			thread = int(root.findall('THREADS')[0].text)
+			ram = int(app_stats_map[app]['VmRSS'].split(' ')[0])
+			if ((totalthreads - thread) >= 0) and ((totalram - ram) > 0):
+				totalthreads -= thread
+				totalram -= ram
+				next_runnable[0].append(app)
+			app_stats_map.pop(app)
+
+		return next_runnable
+
+	if threads == None:
+		#check if any app completed - if yes, start random jobs
+		for app in running_history_map[total_passes][0]:
+			if app in app_stats_map.keys():
+				while len(app_stats_map) > 0:
+					#app = ru.get_app_with_max_threads(app_stats_map)
+					app = random.choice(app_stats_map.keys())
+					tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
+					root = tree.getroot()
+					thread = int(root.findall('THREADS')[0].text)
+					ram = int(app_stats_map[app]['VmRSS'].split(' ')[0])
+					if ((totalthreads - thread) >= 0) and ((totalram - ram) > 0):
+						totalthreads -= thread
+						totalram -= ram
+						next_runnable[0].append(app)
+					app_stats_map.pop(app)
+				print "Some App Complete after midway"
+				return next_runnable
+	elif threads > 0:
+		for app in running_history_map[total_passes][0]:
+			if app in app_stats_map.keys():
+				app_stats_map.pop(app)
+		while len(app_stats_map) > 0:
+			#app = ru.get_app_with_max_threads(app_stats_map)
+			app = random.choice(app_stats_map.keys())
+			tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
+			root = tree.getroot()
+			thread = int(root.findall('THREADS')[0].text)
+			ram = int(app_stats_map[app]['VmRSS'].split(' ')[0])
+			if ((totalthreads - thread) >= 0) and ((totalram - ram) > 0):
+				totalthreads -= thread
+				totalram -= ram
+				next_runnable[0].append(app)
+			app_stats_map.pop(app)
+		print "Some App Completed before midway"
+		return next_runnable
+
+	print "No app completed"
+
+	#find throughput of previous apps
+	cur_ins = 0
+	prev_ins = 0
+	cur_cyc = 0
+	prev_cyc = 0
+	app_performing_bad = []
+	app_performing_well = []
+	for app in running_history_map[total_passes][0]:
+		cur_ins = cur_ins + stats_history_map[app]['INSTRUCTIONS'][len(stats_history_map[app]['INSTRUCTIONS']) - 1]
+		cur_cyc = cur_cyc + stats_history_map[app]['CPU_CYCLES'][len(stats_history_map[app]['CPU_CYCLES']) - 1]
+		prev_ins = prev_ins + stats_history_map[app]['INSTRUCTIONS'][0]
+		prev_cyc = prev_cyc + stats_history_map[app]['CPU_CYCLES'][0]
+		if ((float(cur_ins)/float(cur_cyc))) < (((float(prev_ins)/float(prev_cyc)))):
+			app_performing_bad.append([app, (float(cur_ins)/float(cur_cyc))])
+		else:
+			app_performing_well.append([app, (float(cur_ins)/float(cur_cyc))])
+	
+	throughput = ((float(cur_ins)/float(cur_cyc)))/((float(prev_ins)/float(prev_cyc)))
+	print 'Throughput: ' + str(throughput)
+
+	if throughput > 1:
+		next_runnable[0] = copy.deepcopy(running_history_map[total_passes][0])
+		next_runnable[1] = copy.deepcopy(running_history_map[total_passes][1])
+		probables_list = list(set(next_runnable[0]) - set(next_runnable[1]))
+		for len(probables_list) > 0:
+			app = random.choice(probables_list)
+			tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
+			root = tree.getroot()
+			app_core_req = int(root.findall('THREADS')[0].text)
+			if (app not in running_history_map[total_passes][1]) and (app_core_req > 1):
+				next_runnable[1].append(app)
+				break
+
+		return next_runnable
+
+	elif len(running_history_map[total_passes][1]) > 0:
+		next_runnable[0] = running_history_map[total_passes][0]
+		next_runnable[1] = running_history_map[total_passes][1][:-1]
+		return next_runnable
+	else:
+		while len(app_stats_map) > 0:
+			#app = ru.get_app_with_max_threads(app_stats_map)
+			app = random.choice(app_stats_map.keys())
+			tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
+			root = tree.getroot()
+			thread = int(root.findall('THREADS')[0].text)
+			ram = int(app_stats_map[app]['VmRSS'].split(' ')[0])
+			if ((totalthreads - thread) >= 0) and ((totalram - ram) > 0):
+				totalthreads -= thread
+				totalram -= ram
+				next_runnable[0].append(app)
+			app_stats_map.pop(app)
+
+	return next_runnable
+
+RULES = {'rule8': rule8, 'rule9' : rule9, 'rule10': rule10, 'rule11': rule11, 'rule13': rule13}

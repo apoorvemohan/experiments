@@ -1,0 +1,1216 @@
+[2015-10-13 05:39:05 INFO] Begin Time:  2015-10-13 05:39:05
+[2015-10-13 05:39:05 INFO] Executing /scratch/mohan.ap/chkpts/8/1/ckpt_OCEANC_317857491b35e164-40000-561cd0f7.dmtcp
+[2015-10-13 05:39:05 INFO] Restart1: 8
+[2015-10-13 05:39:05 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat STATGEN= taskset -c 0-15  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator --port 56734 -i 10 /scratch/mohan.ap/chkpts/8/1/ckpt_OCEANC_317857491b35e164-40000-561cd0f7.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/parallel_dmtcp_a.log 2>&1 
+[2015-10-13 05:39:05 INFO] Executing /scratch/mohan.ap/chkpts/2/1/ckpt_RADIX_317857491b35e164-40000-561cd0f7.dmtcp
+[2015-10-13 05:39:05 INFO] Restart1: 2
+[2015-10-13 05:39:05 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/2.stat STATGEN= taskset -c 0-15  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator --port 40313 -i 10 /scratch/mohan.ap/chkpts/2/1/ckpt_RADIX_317857491b35e164-40000-561cd0f7.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/parallel_dmtcp_a.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 56734
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 40313
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+[2015-10-13 05:39:16 INFO] Stop1: 8
+[2015-10-13 05:39:16 INFO] Executing /scratch/mohan.ap/chkpts/5/1/ckpt_LUC_317857491b35e164-40000-561cd0f7.dmtcp
+[2015-10-13 05:39:16 INFO] Restart1: 5
+[2015-10-13 05:39:16 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat STATGEN= taskset -c 0-15  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator --port 42673 -i 10 /scratch/mohan.ap/chkpts/5/1/ckpt_LUC_317857491b35e164-40000-561cd0f7.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/parallel_dmtcp_a.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 42673
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+[2015-10-13 05:39:34 INFO] Stop1: 5
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/2.stat
+[2015-10-13 05:39:43 INFO] Stop1: 2
+[2015-10-13 05:39:43 INFO] Executing /scratch/mohan.ap/chkpts/10/1/ckpt_WATER-NSQUARED_317857491b35e164-40000-561cd109.dmtcp
+[2015-10-13 05:39:43 INFO] Restart1: 10
+[2015-10-13 05:39:43 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/10.stat STATGEN= taskset -c 0-15  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator --port 56707 -i 10 /scratch/mohan.ap/chkpts/10/1/ckpt_WATER-NSQUARED_317857491b35e164-40000-561cd109.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/parallel_dmtcp_a.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 56707
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/10.stat
+[2015-10-13 05:39:54 INFO] Stop1: 10
+[2015-10-13 05:39:54 INFO] Executing /scratch/mohan.ap/chkpts/20/1/ckpt_WATER-NSQUARED_317857491b35e164-40000-561cd111.dmtcp
+[2015-10-13 05:39:54 INFO] Restart1: 20
+[2015-10-13 05:39:54 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/20.stat STATGEN= taskset -c 0-15  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator --port 44986 -i 10 /scratch/mohan.ap/chkpts/20/1/ckpt_WATER-NSQUARED_317857491b35e164-40000-561cd111.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/parallel_dmtcp_a.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 44986
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/20.stat
+[2015-10-13 05:40:05 INFO] Stop1: 20
+[2015-10-13 05:40:05 INFO] Next Runnable List: [['2', '5', '8', '20'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 50732
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 55074
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 40860
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 53070
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/20.stat
+     10000        8.27203      3.36573     -1.81940                       0.20122
+           10.020       1650.50099         -4.66771
+     20000        8.35595      3.17367     -1.38205                      -0.12969
+           10.018       1653.05755         -4.62980
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/20.stat
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/2.stat
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        7045423         4199517         2818891
+
+                 TIMING INFORMATION
+Start time                        : 1444729079515388
+Initialization finish time        : 1444729267641609
+Overall finish time               : 1444729274687032
+Total time with initialization    :        195171644
+Total time without initialization :          7045423
+
+[2015-10-13 05:41:14 INFO] Next Runnable List: [['5', '20', '8'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 35117
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 45629
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 51313
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/20.stat
+     10000        8.27203      3.36573     -1.81940                       0.20122
+           10.020       1650.50099         -4.66771
+     20000        8.35595      3.17367     -1.38205                      -0.12969
+           10.018       1653.05755         -4.62980
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/20.stat
+     30000        8.46672      2.98499     -1.54248                       0.11410
+           10.023       1653.39194         -4.68016
+     40000        8.16622      3.12554     -1.12824                      -0.14387
+           10.020       1652.89412         -4.65322
+     50000        8.47180      3.09066     -1.45437                      -0.08934
+           10.019       1653.60430         -4.64395
+     60000        8.46100      3.23949     -1.65308                      -0.02079
+           10.027       1653.26286         -4.71424
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/20.stat
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 05:42:21 INFO] Next Runnable List: [['20', '8', '5'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 48243
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 47467
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 44599
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/20.stat
+     10000        8.27203      3.36573     -1.81940                       0.20122
+           10.020       1650.50099         -4.66771
+     20000        8.35595      3.17367     -1.38205                      -0.12969
+           10.018       1653.05755         -4.62980
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/20.stat
+     30000        8.46672      2.98499     -1.54248                       0.11410
+           10.023       1653.39194         -4.68016
+     40000        8.16622      3.12554     -1.12824                      -0.14387
+           10.020       1652.89412         -4.65322
+     50000        8.47180      3.09066     -1.45437                      -0.08934
+           10.019       1653.60430         -4.64395
+     60000        8.46100      3.23949     -1.65308                      -0.02079
+           10.027       1653.26286         -4.71424
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/20.stat
+     70000        8.36070      3.16557     -1.08663                      -0.41139
+           10.028       1654.29416         -4.73062
+     80000        8.36254      3.27472     -2.00166                       0.39359
+           10.029       1655.85909         -4.77463
+     90000        8.51461      3.17704     -1.76405                       0.09708
+           10.025       1655.68789         -4.75107
+COMPUTESTART (after initialization) = 1444729105885045
+COMPUTEEND = 1444729394910347
+COMPUTETIME (after initialization) = 289025302
+Measured Time (2nd timestep onward) = 289008664
+Intramolecular time only (2nd timestep onward) = 21924761
+Intermolecular time only (2nd timestep onward) = 264913054
+Other time (2nd timestep onward) = 2170849
+
+Exited Happily with XTT = 10.0247 (note: XTT value is garbage if NPRINT > NSTEP)
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 05:43:27 INFO] Next Runnable List: [['5', '10', '8'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 56380
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 56545
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 57310
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/10.stat
+     10000        8.40272      3.11481     -1.43874                      -0.05297
+           10.026       1647.68783         -4.70228
+     20000        8.10491      3.33638     -1.56498                       0.14602
+           10.022       1651.44596         -4.77393
+     30000        7.99527      3.32150     -1.28708                      -0.00129
+           10.028       1652.57379         -4.80403
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/10.stat
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 05:44:33 INFO] Next Runnable List: [['10', '5', '8'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 37092
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 35686
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 38745
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/10.stat
+     10000        8.40272      3.11481     -1.43874                      -0.05297
+           10.026       1647.68783         -4.70228
+     20000        8.10491      3.33638     -1.56498                       0.14602
+           10.022       1651.44596         -4.77393
+     30000        7.99527      3.32150     -1.28708                      -0.00129
+           10.028       1652.57379         -4.80403
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/10.stat
+     40000        8.43477      3.08918     -1.48867                      -0.00995
+           10.025       1653.49779         -4.74362
+     50000        8.40629      3.03483     -2.07137                       0.65953
+           10.029       1654.35141         -4.79939
+     60000        8.58572      3.16771     -1.38873                      -0.33254
+           10.032       1653.69727         -4.78628
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/10.stat
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 05:45:39 INFO] Next Runnable List: [['8', '5', '10'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 48017
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 45250
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 37906
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/10.stat
+     10000        8.40272      3.11481     -1.43874                      -0.05297
+           10.026       1647.68783         -4.70228
+     20000        8.10491      3.33638     -1.56498                       0.14602
+           10.022       1651.44596         -4.77393
+     30000        7.99527      3.32150     -1.28708                      -0.00129
+           10.028       1652.57379         -4.80403
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/10.stat
+     40000        8.43477      3.08918     -1.48867                      -0.00995
+           10.025       1653.49779         -4.74362
+     50000        8.40629      3.03483     -2.07137                       0.65953
+           10.029       1654.35141         -4.79939
+     60000        8.58572      3.16771     -1.38873                      -0.33254
+           10.032       1653.69727         -4.78628
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/10.stat
+     70000        8.18011      3.06897     -1.40637                       0.18520
+           10.028       1654.36901         -4.79564
+     80000        8.28476      2.93942     -1.22829                       0.03278
+           10.029       1655.12325         -4.78260
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/10.stat
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 05:46:45 INFO] Next Runnable List: [['5', '10', '8'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 43380
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 35047
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 48261
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/10.stat
+     10000        8.40272      3.11481     -1.43874                      -0.05297
+           10.026       1647.68783         -4.70228
+     20000        8.10491      3.33638     -1.56498                       0.14602
+           10.022       1651.44596         -4.77393
+     30000        7.99527      3.32150     -1.28708                      -0.00129
+           10.028       1652.57379         -4.80403
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/10.stat
+     40000        8.43477      3.08918     -1.48867                      -0.00995
+           10.025       1653.49779         -4.74362
+     50000        8.40629      3.03483     -2.07137                       0.65953
+           10.029       1654.35141         -4.79939
+     60000        8.58572      3.16771     -1.38873                      -0.33254
+           10.032       1653.69727         -4.78628
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/10.stat
+     70000        8.18011      3.06897     -1.40637                       0.18520
+           10.028       1654.36901         -4.79564
+     80000        8.28476      2.93942     -1.22829                       0.03278
+           10.029       1655.12325         -4.78260
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/10.stat
+     90000        8.41929      3.14576     -1.25822                      -0.27355
+           10.033       1655.03442         -4.78030
+COMPUTESTART (after initialization) = 1444729097739784
+COMPUTEEND = 1444729613829447
+COMPUTETIME (after initialization) = 516089663
+Measured Time (2nd timestep onward) = 516070270
+Intramolecular time only (2nd timestep onward) = 53702315
+Intermolecular time only (2nd timestep onward) = 457110846
+Other time (2nd timestep onward) = 5257109
+
+Exited Happily with XTT = 10.0333 (note: XTT value is garbage if NPRINT > NSTEP)
+[2015-10-13 05:46:55 INFO] Appending new job to current running: [['5', '8'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 43364
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 50021
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 05:47:59 INFO] Next Runnable List: [['5', '8'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 46978
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 36417
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 05:49:05 INFO] Next Runnable List: [['5', '8'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 56268
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 47112
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 05:50:11 INFO] Next Runnable List: [['8', '5'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 57380
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 47701
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 05:51:17 INFO] Next Runnable List: [['5', '8'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 59735
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 42885
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 05:52:23 INFO] Next Runnable List: [['5', '8'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 40607
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 52655
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 05:53:29 INFO] Next Runnable List: [['8', '5'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 54598
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 47978
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/8.stat
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0         937105721           69649944             0.074
+
+                       TIMING INFORMATION
+Start time                        : 1444729079457103
+Initialization finish time        : 1444729079503987
+Overall finish time               : 1444730016609959
+Total time with initialization    :        937152856
+Total time without initialization :        937105972
+    (excludes first timestep)
+
+[2015-10-13 05:53:39 INFO] Appending new job to current running: [['5'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 52419
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 05:54:44 INFO] Next Runnable List: [['5'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 35722
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 05:55:50 INFO] Next Runnable List: [['5'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 48280
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 05:56:57 INFO] Next Runnable List: [['5'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 51708
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 05:58:04 INFO] Next Runnable List: [['5'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 53945
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 05:59:11 INFO] Next Runnable List: [['5'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 35152
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 06:00:18 INFO] Next Runnable List: [['5'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 54313
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+[2015-10-13 06:01:25 INFO] Next Runnable List: [['5'], []]
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 51983
+    Checkpoint Interval: 60
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/running/5.stat
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    1361851585          1762       1962193    1359885590          1701
+
+                            TIMING INFORMATION
+Start time                        : 1444729079565345
+Initialization finish time        : 1444729162572229
+Overall finish time               : 1444730524423814
+Total time with initialization    :       1444858469
+Total time without initialization :       1361851585
+
+[2015-10-13 06:02:05 INFO] Appending new job to current running: [[], []]
+[2015-10-13 06:02:15 INFO] Micro Count: 119
+[2015-10-13 06:02:15 INFO] End Time:  2015-10-13 06:02:15

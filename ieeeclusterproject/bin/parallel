@@ -139,7 +139,7 @@ def main():
 				statfile.write(runnable_map[app])
 				u.loginfo('Executing: perf stat ' + runnable_map[app])
 				u.loginfo('Executing appid: ' + str(app))
-				status = subprocess.Popen('perf stat ' + runnable_map[app], shell=True, stdout=statfile, stderr=statfile)
+				status = subprocess.Popen('taskset -c 0-31 perf stat ' + runnable_map[app], shell=True, stdout=statfile, stderr=statfile)
 				app_statfile_list.append([status, statfile, app, next_runnable[app]])
 				totalthreads -= next_runnable[app]
 
