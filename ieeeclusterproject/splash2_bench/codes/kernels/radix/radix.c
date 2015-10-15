@@ -1,4 +1,4 @@
-#line 228 "/home/apoorve/splash2_benchmark-1.0/codes/null_macros/c.m4.null.POSIX"
+#line 228 "/home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/null_macros/c.m4.null.POSIX"
 
 #line 1 "radix.C"
 /*************************************************************************/
@@ -8,7 +8,7 @@
 /*  All rights reserved.                                                 */
 /*                                                                       */
 /*  Permission is given to use, copy, and modify this software for any   */
-/*  non-commercial purpose as long as this copyright notice is not       */
+/*  non-commercial purpose as long long as this copyright notice is not       */
 /*  removed.  All other uses, including redistribution in whole or in    */
 /*  part, are forbidden without prior written permission.                */
 /*                                                                       */
@@ -73,8 +73,8 @@ pthread_t PThreadTable[MAX_THREADS];
 
 
 struct prefix_node {
-   long densities[MAX_RADIX];
-   long ranks[MAX_RADIX];
+   long long densities[MAX_RADIX];
+   long long ranks[MAX_RADIX];
    
 #line 61
 struct {
@@ -92,7 +92,7 @@ struct {
 };
 
 struct global_memory {
-   long Index;                             /* process ID */
+   long long Index;                             /* process ID */
    pthread_mutex_t (lock_Index);                    /* for fetch and add to get ID */
    pthread_mutex_t (rank_lock);                     /* for fetch and add to get ID */
 /*   pthread_mutex_t section_lock[MAX_PROCESSORS];*/  /* key locks */
@@ -129,63 +129,63 @@ struct {
    double *ranktime;
    double *sorttime;
    double *totaltime;
-   long final;
-   unsigned long starttime;
-   unsigned long rs;
-   unsigned long rf;
+   long long final;
+   unsigned long long starttime;
+   unsigned long long rs;
+   unsigned long long rf;
    struct prefix_node prefix_tree[2 * MAX_PROCESSORS];
 } *global;
 
 struct global_private {
   char pad[PAGE_SIZE];
-  long *rank_ff;         /* overall processor ranks */
+  long long *rank_ff;         /* overall processor ranks */
 } gp[MAX_PROCESSORS];
 
-long *key[2];            /* sort from one index into the other */
-long **rank_me;          /* individual processor ranks */
-long *key_partition;     /* keys a processor works on */
-long *rank_partition;    /* ranks a processor works on */
+long long *key[2];            /* sort from one index into the other */
+long long **rank_me;          /* individual processor ranks */
+long long *key_partition;     /* keys a processor works on */
+long long *rank_partition;    /* ranks a processor works on */
 
-long number_of_processors = DEFAULT_P;
-long max_num_digits;
-long radix = DEFAULT_R;
-long num_keys = DEFAULT_N;
-long max_key = DEFAULT_M;
-long log2_radix;
-long log2_keys;
-long dostats = 0;
-long test_result = 0;
-long doprint = 0;
+long long number_of_processors = DEFAULT_P;
+long long max_num_digits;
+long long radix = DEFAULT_R;
+long long num_keys = DEFAULT_N;
+long long max_key = DEFAULT_M;
+long long log2_radix;
+long long log2_keys;
+long long dostats = 0;
+long long test_result = 0;
+long long doprint = 0;
 
 void slave_sort(void);
 double product_mod_46(double t1, double t2);
-double ran_num_init(unsigned long k, double b, double t);
-long get_max_digits(long max_key);
-long get_log2_radix(long rad);
-long get_log2_keys(long num_keys);
-long log_2(long number);
+double ran_num_init(unsigned long long k, double b, double t);
+long long get_max_digits(long long max_key);
+long long get_log2_radix(long long rad);
+long long get_log2_keys(long long num_keys);
+long long log_2(long long number);
 void printerr(char *s);
-void init(long key_start, long key_stop, long from);
-void test_sort(long final);
+void init(long long key_start, long long key_stop, long long from);
+void test_sort(long long final);
 void printout(void);
 
 int main(int argc, char *argv[])
 {
-   long i;
-   long p;
-   long quotient;
-   long remainder;
-   long sum_i; 
-   long sum_f;
-   long size;
-   long **temp;
-   long **temp2;
-   long *a;
-   long c;
+   long long i;
+   long long p;
+   long long quotient;
+   long long remainder;
+   long long sum_i; 
+   long long sum_f;
+   long long size;
+   long long **temp;
+   long long **temp2;
+   long long *a;
+   long long c;
    double mint, maxt, avgt;
    double minrank, maxrank, avgrank;
    double minsort, maxsort, avgsort;
-   unsigned long start;
+   unsigned long long start;
 
 
    {
@@ -198,7 +198,7 @@ int main(int argc, char *argv[])
 #line 134
 	(start) = (unsigned long)(FullTime.tv_usec + FullTime.tv_sec * 1000000);
 #line 134
-}
+};
 
    while ((c = getopt(argc, argv, "p:r:n:m:stoh")) != -1) {
      switch(c) {
@@ -223,7 +223,7 @@ int main(int argc, char *argv[])
                   exit(-1);
                 }
                 break;
-      case 'n': num_keys = atoi(optarg);
+      case 'n': num_keys = atoll(optarg);
                 if (num_keys < 1) {
                   printerr("Number of keys must be >= 1\n");
                   exit(-1);
@@ -267,25 +267,25 @@ posix_memalign(&global ,sizeof(struct global_memory *) ,(sizeof(struct global_me
 	   fprintf(stderr,"ERROR: Cannot malloc enough memory for global\n");
 	   exit(-1);
    }
-//   key[0] = (long *) valloc(num_keys*sizeof(long));;
-//   key[1] = (long *) valloc(num_keys*sizeof(long));;
- //  key_partition = (long *) valloc((number_of_processors+1)*sizeof(long));;
-  // rank_partition = (long *) valloc((number_of_processors+1)*sizeof(long));;
+//   key[0] = (long long *) valloc(num_keys*sizeof(long long));;
+//   key[1] = (long long *) valloc(num_keys*sizeof(long long));;
+ //  key_partition = (long long *) valloc((number_of_processors+1)*sizeof(long long));;
+  // rank_partition = (long long *) valloc((number_of_processors+1)*sizeof(long long));;
   // global->ranktime = (double *) valloc(number_of_processors*sizeof(double));;
   // global->sorttime = (double *) valloc(number_of_processors*sizeof(double));;
   // global->totaltime = (double *) valloc(number_of_processors*sizeof(double));;
 
-posix_memalign(&key[0] ,sizeof(long *) ,(num_keys*sizeof(long)));
-posix_memalign(&key[1] ,sizeof(long *) ,(num_keys*sizeof(long)));
-posix_memalign(&key_partition ,sizeof(long *) ,((number_of_processors+1)*sizeof(long)));
-posix_memalign(&rank_partition ,sizeof(long *) ,((number_of_processors+1)*sizeof(long)));
+posix_memalign(&key[0] ,sizeof(long long *) ,(num_keys*sizeof(long long)));
+posix_memalign(&key[1] ,sizeof(long long *) ,(num_keys*sizeof(long long)));
+posix_memalign(&key_partition ,sizeof(long long *) ,((number_of_processors+1)*sizeof(long long)));
+posix_memalign(&rank_partition ,sizeof(long long *) ,((number_of_processors+1)*sizeof(long long)));
 posix_memalign(&global->ranktime ,sizeof(double *) ,(number_of_processors*sizeof(double)));
 posix_memalign(&global->sorttime ,sizeof(double *) ,(number_of_processors*sizeof(double)));
 posix_memalign(&global->totaltime ,sizeof(double *) ,(number_of_processors*sizeof(double)));
 
-   size = number_of_processors*(radix*sizeof(long)+sizeof(long *));
-//   rank_me = (long **) valloc(size);;
-posix_memalign(&rank_me ,sizeof(long **) ,(size));
+   size = number_of_processors*(radix*sizeof(long long)+sizeof(long long *));
+//   rank_me = (long long **) valloc(size);;
+posix_memalign(&rank_me ,sizeof(long long **) ,(size));
    if ((key[0] == NULL) || (key[1] == NULL) || (key_partition == NULL) || (rank_partition == NULL) || 
        (global->ranktime == NULL) || (global->sorttime == NULL) || (global->totaltime == NULL) || (rank_me == NULL)) {
      fprintf(stderr,"ERROR: Cannot malloc enough memory\n");
@@ -294,16 +294,16 @@ posix_memalign(&rank_me ,sizeof(long **) ,(size));
 
    temp = rank_me;
    temp2 = temp + number_of_processors;
-   a = (long *) temp2;
+   a = (long long *) temp2;
    for (i=0;i<number_of_processors;i++) {
-     *temp = (long *) a;
+     *temp = (long long *) a;
      temp++;
      a += radix;
    }
    for (i=0;i<number_of_processors;i++) {
-//     gp[i].rank_ff = (long *) valloc(radix*sizeof(long)+PAGE_SIZE);;
+//     gp[i].rank_ff = (long long *) valloc(radix*sizeof(long long)+PAGE_SIZE);;
 
-posix_memalign(&gp[i].rank_ff ,sizeof(long *) ,(radix*sizeof(long)+PAGE_SIZE));
+posix_memalign(&gp[i].rank_ff ,sizeof(long long *) ,(radix*sizeof(long long)+PAGE_SIZE));
 
    }
    {pthread_mutex_init(&(global->lock_Index), NULL);}
@@ -422,10 +422,10 @@ posix_memalign(&gp[i].rank_ff ,sizeof(long *) ,(radix*sizeof(long)+PAGE_SIZE));
    max_num_digits = get_max_digits(max_key);
    printf("\n");
    printf("Integer Radix Sort\n");
-   printf("     %ld Keys\n",num_keys);
-   printf("     %ld Processors\n",number_of_processors);
-   printf("     Radix = %ld\n",radix);
-   printf("     Max key = %ld\n",max_key);
+   printf("     %lld Keys\n",num_keys);
+   printf("     %lld Processors\n",number_of_processors);
+   printf("     Radix = %lld\n",radix);
+   printf("     Max key = %lld\n",max_key);
    printf("\n");
 
    quotient = num_keys / number_of_processors;
@@ -577,7 +577,7 @@ posix_memalign(&gp[i].rank_ff ,sizeof(long *) ,(radix*sizeof(long)+PAGE_SIZE));
      avgrank = avgrank / number_of_processors;
      avgsort = avgsort / number_of_processors;
      for (i=1; i<number_of_processors; i++) {
-       printf("  %3ld     %10.0f      %10.0f      %10.0f\n",
+       printf("  %3lld     %10.0f      %10.0f      %10.0f\n",
                i,global->totaltime[i],global->ranktime[i],
                global->sorttime[i]);
      }
@@ -590,15 +590,15 @@ posix_memalign(&gp[i].rank_ff ,sizeof(long *) ,(radix*sizeof(long)+PAGE_SIZE));
    printf("\n");
    global->starttime = start;
    printf("                 TIMING INFORMATION\n");
-   printf("Start time                        : %16lu\n",
+   printf("Start time                        : %16llu\n",
            global->starttime);
-   printf("Initialization finish time        : %16lu\n",
+   printf("Initialization finish time        : %16llu\n",
            global->rs);
-   printf("Overall finish time               : %16lu\n",
+   printf("Overall finish time               : %16llu\n",
            global->rf);
-   printf("Total time with initialization    : %16lu\n",
+   printf("Total time with initialization    : %16llu\n",
            global->rf-global->starttime);
-   printf("Total time without initialization : %16lu\n",
+   printf("Total time without initialization : %16llu\n",
            global->rf-global->rs);
    printf("\n");
 
@@ -614,43 +614,43 @@ posix_memalign(&gp[i].rank_ff ,sizeof(long *) ,(radix*sizeof(long)+PAGE_SIZE));
 
 void slave_sort()
 {
-   long i;
-   long MyNum;
-   long this_key;
-   long tmp;
-   long loopnum;
-   long shiftnum;
-   long bb;
-   long my_key;
-   long key_start;
-   long key_stop;
-   long rank_start;
-   long rank_stop;
-   long from=0;
-   long to=1;
-   long *key_density;       /* individual processor key densities */
-   unsigned long time1;
-   unsigned long time2;
-   unsigned long time3;
-   unsigned long time4;
-   unsigned long time5;
-   unsigned long time6;
+   long long i;
+   long long MyNum;
+   long long this_key;
+   long long tmp;
+   long long loopnum;
+   long long shiftnum;
+   long long bb;
+   long long my_key;
+   long long key_start;
+   long long key_stop;
+   long long rank_start;
+   long long rank_stop;
+   long long from=0;
+   long long to=1;
+   long long *key_density;       /* individual processor key densities */
+   unsigned long long time1;
+   unsigned long long time2;
+   unsigned long long time3;
+   unsigned long long time4;
+   unsigned long long time5;
+   unsigned long long time6;
    double ranktime=0;
    double sorttime=0;
-   long *key_from;
-   long *key_to;
-   long *rank_me_mynum;
-   long *rank_ff_mynum;
-   long stats;
+   long long *key_from;
+   long long *key_to;
+   long long *rank_me_mynum;
+   long long *rank_ff_mynum;
+   long long stats;
    struct prefix_node* n;
    struct prefix_node* r;
    struct prefix_node* l;
    struct prefix_node* my_node;
    struct prefix_node* their_node;
-   long index;
-   long level;
-   long base;
-   long offset;
+   long long index;
+   long long level;
+   long long base;
+   long long offset;
 
    stats = dostats;
 
@@ -665,9 +665,9 @@ void slave_sort()
 /* POSSIBLE ENHANCEMENT:  Here is where one might pin processes to
    processors to avoid migration */
 
-//   key_density = (long *) valloc(radix*sizeof(long));;
+//   key_density = (long long *) valloc(radix*sizeof(long long));;
 
-posix_memalign(&key_density ,sizeof(long *) ,(radix*sizeof(long)));
+posix_memalign(&key_density ,sizeof(long long *) ,(radix*sizeof(long long)));
 
    /* Fill the random-number array. */
 
@@ -833,8 +833,8 @@ posix_memalign(&key_density ,sizeof(long *) ,(radix*sizeof(long)));
      for (i = 0; i < radix; i++) {
        rank_me_mynum[i] = 0;
      }  
-     key_from = (long *) key[from];
-     key_to = (long *) key[to];
+     key_from = (long long *) key[from];
+     key_to = (long long *) key[to];
      for (i=key_start;i<key_stop;i++) {
        my_key = key_from[i] & bb;
        my_key = my_key >> shiftnum;  
@@ -1366,15 +1366,15 @@ double product_mod_46(double t1, double t2)
    double a2;
    double b2;
 			
-   a1 = (double)((long)(t1 / RADIX_S));    /* Decompose the arguments.  */
+   a1 = (double)((long long)(t1 / RADIX_S));    /* Decompose the arguments.  */
    a2 = t1 - a1 * RADIX_S;
-   b1 = (double)((long)(t2 / RADIX_S));
+   b1 = (double)((long long)(t2 / RADIX_S));
    b2 = t2 - b1 * RADIX_S;
    t1 = a1 * b2 + a2 * b1;      /* Multiply the arguments.  */
-   t2 = (double)((long)(t1 / RADIX_S));
+   t2 = (double)((long long)(t1 / RADIX_S));
    t2 = t1 - t2 * RADIX_S;
    t1 = t2 * RADIX_S + a2 * b2;
-   t2 = (double)((long)(t1 / RADIX));
+   t2 = (double)((long long)(t1 / RADIX));
 
    return (t1 - t2 * RADIX);    /* Return the product.  */
 }
@@ -1382,9 +1382,9 @@ double product_mod_46(double t1, double t2)
 /*
  * finds the (k)th random number, given the seed, b, and the ratio, t.
  */
-double ran_num_init(unsigned long k, double b, double t)
+double ran_num_init(unsigned long long k, double b, double t)
 {
-   unsigned long j;
+   unsigned long long j;
 
    while (k != 0) {             /* while() is executed m times
 				   such that 2^m > k.  */
@@ -1399,11 +1399,11 @@ double ran_num_init(unsigned long k, double b, double t)
    return b;
 }
 
-long get_max_digits(long max_key)
+long long get_max_digits(long long max_key)
 {
-  long done = 0;
-  long temp = 1;
-  long key_val;
+  long long done = 0;
+  long long temp = 1;
+  long long key_val;
 
   key_val = max_key;
   while (!done) {
@@ -1417,10 +1417,10 @@ long get_max_digits(long max_key)
   return temp;
 }
 
-long get_log2_radix(long rad)
+long long get_log2_radix(long long rad)
 {
-   long cumulative=1;
-   long out;
+   long long cumulative=1;
+   long long out;
 
    for (out = 0; out < 20; out++) {
      if (cumulative == rad) {
@@ -1429,14 +1429,14 @@ long get_log2_radix(long rad)
        cumulative = cumulative * 2;
      }
    }
-   fprintf(stderr,"ERROR: Radix %ld not a power of 2\n", rad);
+   fprintf(stderr,"ERROR: Radix %lld not a power of 2\n", rad);
    exit(-1);
 }
 
-long get_log2_keys(long num_keys)
+long long get_log2_keys(long long num_keys)
 {
-   long cumulative=1;
-   long out;
+   long long cumulative=1;
+   long long out;
 
    for (out = 0; out < 30; out++) {
      if (cumulative == num_keys) {
@@ -1445,15 +1445,15 @@ long get_log2_keys(long num_keys)
        cumulative = cumulative * 2;
      }
    }
-   fprintf(stderr,"ERROR: Number of keys %ld not a power of 2\n", num_keys);
+   fprintf(stderr,"ERROR: Number of keys %lld not a power of 2\n", num_keys);
    exit(-1);
 }
 
-long log_2(long number)
+long long log_2(long long number)
 {
-  long cumulative = 1;
-  long out = 0;
-  long done = 0;
+  long long cumulative = 1;
+  long long out = 0;
+  long long done = 0;
 
   while ((cumulative < number) && (!done) && (out < 50)) {
     if (cumulative == number) {
@@ -1476,17 +1476,17 @@ void printerr(char *s)
   fprintf(stderr,"ERROR: %s\n",s);
 }
 
-void init(long key_start, long key_stop, long from)
+void init(long long key_start, long long key_stop, long long from)
 {
    double ran_num;
    double sum;
-   long tmp;
-   long i;
-   long *key_from;
+   long long tmp;
+   long long i;
+   long long *key_from;
 
    ran_num = ran_num_init((key_start << 2) + 1, SEED, RATIO);
    sum = ran_num / RADIX;
-   key_from = (long *) key[from];
+   key_from = (long long *) key[from];
    for (i = key_start; i < key_stop; i++) {
       ran_num = product_mod_46(ran_num, RATIO);
       sum = sum + ran_num / RADIX;
@@ -1494,32 +1494,32 @@ void init(long key_start, long key_stop, long from)
       sum = sum + ran_num / RADIX;
       ran_num = product_mod_46(ran_num, RATIO);
       sum = sum + ran_num / RADIX;
-      key_from[i] = (long) ((sum / 4.0) *  max_key);
-      tmp = (long) ((key_from[i])/100);
+      key_from[i] = (long long) ((sum / 4.0) *  max_key);
+      tmp = (long long) ((key_from[i])/100);
       ran_num = product_mod_46(ran_num, RATIO);
       sum = ran_num / RADIX;
    }
 }
 
-void test_sort(long final)
+void test_sort(long long final)
 {
-   long i;
-   long mistake = 0;
-   long *key_final;
+   long long i;
+   long long mistake = 0;
+   long long *key_final;
 
    printf("\n");
    printf("                  TESTING RESULTS\n");
    key_final = key[final];
    for (i = 0; i < num_keys-1; i++) {
      if (key_final[i] > key_final[i + 1]) {
-       fprintf(stderr,"error with key %ld, value %ld %ld \n",
+       fprintf(stderr,"error with key %lld, value %lld %lld \n",
         i,key_final[i],key_final[i + 1]);
        mistake++;
      }
    }
 
    if (mistake) {
-      printf("FAILED: %ld keys out of place.\n", mistake);
+      printf("FAILED: %lld keys out of place.\n", mistake);
    } else {
       printf("PASSED: All keys in place.\n");
    }
@@ -1528,15 +1528,15 @@ void test_sort(long final)
 
 void printout()
 {
-   long i;
-   long *key_final;
+   long long i;
+   long long *key_final;
 
-   key_final = (long *) key[global->final];
+   key_final = (long long *) key[global->final];
    printf("\n");
    printf("                 SORTED KEY VALUES\n");
-   printf("%8ld ",key_final[0]);
+   printf("%8lld ",key_final[0]);
    for (i = 0; i < num_keys-1; i++) {
-     printf("%8ld ",key_final[i+1]);
+     printf("%8lld ",key_final[i+1]);
      if ((i+2)%5 == 0) {
        printf("\n");
      }
