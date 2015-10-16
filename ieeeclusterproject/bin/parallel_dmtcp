@@ -273,8 +273,9 @@ def main():
 				print 'No App completed at the end of the interval'
 
 		if (timer >= (MICRO_TIME*3)) and (completed != 0):
+				print running_history_map
 				print timer
-				print completed
+				print app_stats_map
 				if completed > 0:
 					print 'Some app completed before midway'
 #			if (completed == None) or ((completed != 0) and (completed != None)):
@@ -296,7 +297,6 @@ def main():
 
 				start_next(next_runnable)
 		u.loginfo(running_history_map)
-		print running_history_map
 		time.sleep(MICRO_TIME)
 		timer -= MICRO_TIME
 
