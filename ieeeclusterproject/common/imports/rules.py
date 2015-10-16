@@ -514,7 +514,6 @@ def rule12(running_history_map, stats_history_map, app_stats_map1, threads, runn
 						totalram -= ram
 						next_runnable[0].append(app)
 					app_stats_map.pop(app)
-				print "Some App Complete after midway"
 				return next_runnable
 	elif threads > 0:
 		for app in running_history_map[total_passes][0]:
@@ -523,6 +522,10 @@ def rule12(running_history_map, stats_history_map, app_stats_map1, threads, runn
 				root = tree.getroot()
 				totalram -= int(app_stats_map[app]['VmRSS'].split(' ')[0])
 				app_stats_map.pop(app)
+
+		print app_stats_map
+		print totalram
+		print totalthreads
 
 		while len(app_stats_map) > 0:
 			#app = ru.get_app_with_max_threads(app_stats_map)
@@ -709,9 +712,9 @@ def rule14(running_history_map, stats_history_map, app_stats_map1, threads, runn
 		root = tree.getroot()
 		thread_sum += int(root.findall('THREADS')[0].text)
 	if thread_sum > totalthreads:
-		deg_ratio += ((thread_sum - totalthreads)/100)
+		deg_ratio += (((thread_sum - totalthreads)/100)*5)
 	elif thread_sum < totalthreads:
-		deg_ratio = 1
+		deg_ratio = 0.95
 	
 	cur_ins = 0
 	prev_ins = 0
@@ -784,7 +787,7 @@ def rule14(running_history_map, stats_history_map, app_stats_map1, threads, runn
 
 	return next_runnable
 
-#no overcommit + degradation ratio 0.95
+#no overcommit + degradation ratio 0.95 - no normalization
 def rule15(running_history_map, stats_history_map, app_stats_map1, threads, runninglist, total_passes):
         import copy
         import rules_utils as ru
