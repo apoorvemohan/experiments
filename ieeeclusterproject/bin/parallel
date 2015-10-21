@@ -31,7 +31,7 @@ def get_next(totalthreads):
 	next_runnable = {}
 	max_wall_time = 0
 	sorted_by_arrival = sorted(app_stats_map.items(), key=lambda x: x[1]['ARRIVAL'])
-	print sorted_by_arrival
+	print 'Sortyed by arrival Time: ' + str(sorted_by_arrival)
 
 	for app in sorted_by_arrival:
 		if wall_count != 0:
@@ -62,16 +62,6 @@ def get_queue_stats():
 		app_stats_map[app].update({'WALL':  int(root.findall('WALL')[0].text)})
 		app_stats_map[app].update({'ARRIVAL':  int(root.findall('ARRIVAL')[0].text)})
 		
-
-def group_exec_completed(app_statfile_list):
-
-	for app in app_statfile_list:
-		if app[0].poll() == 0:
-			app[1].close()
-			app_statfile_list.pop(app_statfile_list.index(app))
-		else:
-			return False
-	return True	
 
 def get_group_map(runnablemap):
 	groupmap = {}
@@ -109,13 +99,13 @@ def main():
 		overcommitfactor = root.findall('TOVERCOMMIT')
 
 		if ((len(maxthreads) > 0) and (len(overcommitfactor) > 0)):
-			totalthreads = random.choice([float(maxthreads[0].text), float(overcommitfactor[0].text) * float(m.cpu_count())])
+			totalthreads = random.choice([float(maxthreads[0].text), float(overcommitfactor[0].text) * float(m.cpu_count()/2)])
 		elif (len(maxthreads) > 0):
 			u.loginfo("No Overcommitment Specified. MAXTHREADS")
 			totalthreads = float(maxthreads[0].text)
 		elif (len(overcommitfactor) > 0):
 			u.loginfo("No Maxthread Specified.")
-			totalthreads = float(overcommitfactor[0].text) * float(m.cpu_count())
+			totalthreads = float(overcommitfactor[0].text) * float(m.cpu_count()/2)
 
 		if (int(totalthreads) == 0):
 			u.loginfo('zero threads')
@@ -128,53 +118,49 @@ def main():
 		appthreads = appid = statfile = status = None
 
 		while len(runnable_map) > 0:
-
+			print 'Runnable Map: ' + str(runnable_map)
+			next_runnable = None
 			next_runnable = get_next(totalthreads)
-
+			print 'Next_Runnable: ' + str(next_runnable)
+			print 'Available Threads: ' + str(totalthreads)
 			for app in next_runnable.keys():
 				timestamp = u.gettimestamp().replace(' ', '_')
 				statfile = status = None
-				runnable.remove(app)
 				statfile = open(c.PARALLEL_STATS_DIR + '/R/' + str(app) + '_' + timestamp + '.stat','a')
 				statfile.write(runnable_map[app])
 				u.loginfo('Executing: perf stat ' + runnable_map[app])
 				u.loginfo('Executing appid: ' + str(app))
-				status = subprocess.Popen('taskset -c 0-31 perf stat ' + runnable_map[app], shell=True, stdout=statfile, stderr=statfile)
+				cmd = ''
+				if 'WATER-NSQUARED' in runnable_map[app]:
+					cmd = runnable_map[app].split(";")[0] + ' ; taskset -c 0-3,16-19,28-31,12-15 ' + runnable_map[app].split(";")[1] + ' >> ' + c.LOGDIR + '/' + c.LOGGER + ' 2>&1'
+				else:
+					cmd = 'taskset -c 0-3,16-19,28-31,12-15 ' + runnable_map[app] + ' >> ' + c.LOGDIR + '/' + c.LOGGER + ' 2>&1'
+
+				print cmd
+				status = subprocess.Popen(cmd, shell=True, stdout=statfile, stderr=statfile)
 				app_statfile_list.append([status, statfile, app, next_runnable[app]])
 				totalthreads -= next_runnable[app]
 
-			print "Total Thread: " + str(totalthreads)
+			print "Remaining Thread: " + str(totalthreads)
+			print app_statfile_list
 
-			while True:
+			flag = True
+			while flag:
+				time.sleep(5)
+				timer += 5
 
-				flag = False
-				toberemoved = []
-				
-				u.loginfo('APP STATFILE LIST: ' + str(app_statfile_list))
-
-				for app in app_statfile_list:
-					if app[0].poll() == 0:
-						toberemoved.append(app)
+				for app in [app_statfile_list][0]:
+					if (app[0] != None) and (app[0].poll() == 0):
+						app_statfile_list.remove(app)
 						u.loginfo('App id completed: ' + str(app[2]))
 						runnable_map.pop(app[2])
 						totalthreads += app[3]
 						u.loginfo('Number of threads freed: ' + str(app[3]))
 						app[1].close()
-						flag = True
-						wall_count -= 1
+						flag = False
+						if wall_count > 0:
+							wall_count -= 1
 
-				if flag:
-					u.loginfo('Before Removing')
-					u.loginfo('APP STATFILE LIST: ' + str(app_statfile_list))
-					for app in toberemoved:
-						app_statfile_list.remove(app)
-						u.loginfo('Removing app from app id list: ' + str(app))
-					break
-				else:
-					u.loginfo('sleeping for jobs to finish')
-					time.sleep(10)
-					timer += 10
-					u.loginfo('woken up. checking if jobs are finished')
 
 		if groupthreads != 0:
 			u.logwarn("Group Threads Not ZERO at end: " + str(groupthreads))
@@ -182,30 +168,9 @@ def main():
 	elif (sys.argv[1] == '-d') or (sys.argv[1] == '--defined'):
 
 		groupmap = get_group_map(copy.deepcopy(runnable_map))
-
-		for groupid in groupmap.keys():
-			app_statfile_list = []
-			timestamp = u.gettimestamp().replace(' ', '_')
-			u.loginfo('Executing group ' + groupid)
-			os.mkdir(c.PARALLEL_STATS_DIR + '/' + groupid)
-		
-			for appid in groupmap[groupid]:
-				u.loginfo('Executing app ' + runnable_map[appid])
-				statfile = open(c.PARALLEL_STATS_DIR + '/' + groupid + '/' + str(appid) + '_' + timestamp + '.stat','a')
-				statfile.write(runnable_map[appid])
-				u.loginfo('perf stat ' + runnable_map[appid])
-				status = subprocess.Popen('perf stat ' + runnable_map[appid], shell=True, stdout=statfile, stderr=statfile)
-				app_statfile_list.append([status, statfile])
-			while True:
-				if group_exec_completed(app_statfile_list):
-					break
-				else:
-					u.loginfo('sleeping for jobs to finish')
-					time.sleep(10)
-					u.loginfo('woken up. checking if jobs are finished')
 				
 if __name__ == "__main__":
-	c.LOGGER = 'parallel_a.log'
+	c.LOGGER = 'parallel_16_on_16_two_chip.log'
 	u.loginfo('Begin Time:  ' + u.gettimestamp())
 	main()
 	u.loginfo('End Time:  ' + u.gettimestamp())

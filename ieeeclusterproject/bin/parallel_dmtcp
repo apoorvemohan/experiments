@@ -60,7 +60,7 @@ def get_queue_stats():
 	global  stats_map
 	runnable = get_runnable_instance_map().keys()
 	for app in runnable:
-		tree = ET.parse(c.PARALLEL_APP_INSTANCE_DIR + '/' + app + '.xml')
+		tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
 		root = tree.getroot()
 		stats_map.update({app: {'THREADS':  int(root.findall('THREADS')[0].text)}})
 		stats_map[app].update({'WALL':  int(root.findall('WALL')[0].text)})
@@ -95,6 +95,14 @@ def update_app_stats_map(appid, statfile):
 			app_stats_map[appid][stat.split(':')[0].strip()] = float(stat.split(':')[1].strip())/app_stats_map[appid]['ELAPSED_TIME']
 		else:
 			app_stats_map[appid][stat.split(':')[0].strip()] = stat.split(':')[1].strip()
+
+	app_stats_map[appid]['TYPE'] = None
+	app_stats_map[appid]['pickup_count'] = 0
+	tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + appid + '.xml')
+	root = tree.getroot()
+	app_stats_map[appid]['HT'] = False
+	if (len(stats_history_map[appid]['INSTRUCTIONS']) > 0) and (int(root.findall('THREADS')[0].text) > 1) and ((float(root.findall('HT')[0].text)) > float(stats_history_map[appid]['INSTRUCTIONS'][0]/stats_history_map[appid]['CPU_CYCLES'][0])):
+		app_stats_map[appid]['HT'] = True
 	fp.close()
 	os.remove(statfile)
 
@@ -159,8 +167,7 @@ def generate_stats_and_enqueue():
 					stats_history_map[app].update({'ELAPSED_TIME':[]})
 					stats_history_map[app].update({'CHECKPOINT_TIME':[]})
 					update_app_stats_map(app, c.PARALLEL_DMTCP_QUEUED_DIR + '/' + str(app) + '.stat')
-					app_stats_map[app]['TYPE'] = None
-					app_stats_map[app]['pickup_count'] = 0
+
 					stats_history_map[app]['INSTRUCTIONS'].append(app_stats_map[app]['INSTRUCTIONS'])
 					stats_history_map[app]['CPU_CYCLES'].append(app_stats_map[app]['CPU_CYCLES'])
 					stats_history_map[app]['CACHE_MISSES'].append(app_stats_map[app]['CACHE_MISSES'])
@@ -223,7 +230,9 @@ def start_next(next_runnable):
 		setup_for_restart(c.PARALLEL_DMTCP_CHKPTS_DIR + '/' + str(app) + '/1')
 		port = u.getopenport()
 		core_affinity = ''
-		app_threads = stats_map[app]['THREADS']
+		tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
+		root = tree.getroot()
+		app_threads = int(root.findall('THREADS')[0].text)
 		app_threads /= 2
 		while app_threads > 0:
 			core_affinity += (str(cpu - 1) + ',' + str(cpu - 1 + disp) + ',')
@@ -294,7 +303,7 @@ def main():
 
 		if (timer >= (MICRO_TIME*3)) and (completed != 0):
 				print timer
-				print completed
+				print app_stats_map
 				if completed > 0:
 					print 'Some app completed before midway'
 #			if (completed == None) or ((completed != 0) and (completed != None)):
@@ -305,7 +314,7 @@ def main():
 					running_history_map[total_passes] = next_runnable
 				else:
 					u.loginfo('Appending new job to current running: ' + str(next_runnable))
-					running_history_map[total_passes] = [[],[]]
+					running_history_map[total_passes] = [[],[],[]]
 
 					for app in next_runnable[0]:
 						running_history_map[total_passes][0].append(app)
@@ -313,10 +322,18 @@ def main():
 					for app in running_history_map[total_passes - 1][0]:
 						if app in app_stats_map:
 							running_history_map[total_passes][0].append(app)
+				
+					for app in running_history_map[total_passes - 1][1]:
+						if app in app_stats_map:
+							running_history_map[total_passes][1].append(app)
 
+					for app in running_history_map[total_passes - 1][2]:
+						if app in app_stats_map:
+							running_history_map[total_passes][2].append(app)
+
+				print running_history_map
 				start_next(next_runnable)
 		u.loginfo(running_history_map)
-		print running_history_map
 		time.sleep(MICRO_TIME)
 		timer -= MICRO_TIME
 

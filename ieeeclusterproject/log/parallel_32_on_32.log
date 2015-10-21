@@ -1,0 +1,707 @@
+[2015-10-18 05:12:38 INFO] Begin Time:  2015-10-18 05:12:38
+[2015-10-18 05:12:38 INFO] Total Threads Selected: 32
+[2015-10-18 05:12:38 INFO] Executing: perf stat echo "1.5e-16 216 90000 6 0 0 10000 0 16 6.212752" > /tmp/input ; /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/apps/water-nsquared/WATER-NSQUARED < /tmp/input
+[2015-10-18 05:12:38 INFO] Executing appid: 1
+[2015-10-18 05:12:38 INFO] Executing: perf stat /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/radix/RADIX -p4 -r16 -n2121440000 -m15
+[2015-10-18 05:12:38 INFO] Executing appid: 12
+[2015-10-18 05:12:38 INFO] Executing: perf stat /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/lu/contiguous_blocks/LUC -n9500 -p1 -b8
+[2015-10-18 05:12:38 INFO] Executing appid: 5
+[2015-10-18 05:12:38 INFO] Executing: perf stat echo "1.5e-16 216 90000 6 0 0 10000 0 8 6.212752" > /tmp/input ; /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/apps/water-nsquared/WATER-NSQUARED < /tmp/input
+[2015-10-18 05:12:38 INFO] Executing appid: 4
+[2015-10-18 05:12:38 INFO] Executing: perf stat /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/lu/contiguous_blocks/LUC -n9500 -p1 -b8
+[2015-10-18 05:12:38 INFO] Executing appid: 7
+[2015-10-18 05:12:38 INFO] Executing: perf stat /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/apps/ocean/contiguous_partitions/OCEANC -n258 -p2 -e1e-07 -r20000 -t2
+[2015-10-18 05:12:38 INFO] Executing appid: 8
+Using 16 procs on 90000 steps of 216 mols
+Other parameters:
+	TSTEP = 1.50e-16
+	NORDER = 6
+	NSAVE = 0
+	NRST = 0
+	NPRINT = 10000
+	NFMC = 0
+	CUTOFF = 6.212752
+
+
+TEMPERATURE                =   298.00 K
+DENSITY                    =  0.99800 G/C.C.
+NUMBER OF MOLECULES        =      216
+NUMBER OF PROCESSORS       =       16
+TIME STEP                  = 1.50e-01 SEC
+ORDER USED TO SOLVE F=MA   =        6 
+NO. OF TIME STEPS          =    90000 
+FREQUENCY OF DATA SAVING   =        0 
+FREQUENCY TO WRITE RST FILE=        0 
+SPHERICAL CUTOFF RADIUS    =   6.2128 ANGSTROM
+
+NS = 5.9999899999999995
+BOXL =  18.638257
+CUTOFF =   6.212752
+XS =   3.106381
+ZERO = 1.55319
+WCOS = 0.585882
+WSIN = 0.756950
+***** NEW RUN STARTING FROM REGULAR LATTICE *****
+Using 8 procs on 90000 steps of 216 mols
+Other parameters:
+	TSTEP = 1.50e-16
+	NORDER = 6
+	NSAVE = 0
+	NRST = 0
+	NPRINT = 10000
+	NFMC = 0
+	CUTOFF = 6.212752
+
+
+TEMPERATURE                =   298.00 K
+DENSITY                    =  0.99800 G/C.C.
+NUMBER OF MOLECULES        =      216
+NUMBER OF PROCESSORS       =        8
+TIME STEP                  = 1.50e-01 SEC
+ORDER USED TO SOLVE F=MA   =        6 
+NO. OF TIME STEPS          =    90000 
+FREQUENCY OF DATA SAVING   =        0 
+FREQUENCY TO WRITE RST FILE=        0 
+SPHERICAL CUTOFF RADIUS    =   6.2128 ANGSTROM
+
+NS = 5.9999899999999995
+BOXL =  18.638257
+CUTOFF =   6.212752
+XS =   3.106381
+ZERO = 1.55319
+WCOS = 0.585882
+WSIN = 0.756950
+***** NEW RUN STARTING FROM REGULAR LATTICE *****
+
+Integer Radix Sort
+     2121440000 Keys
+     4 Processors
+     Radix = 16
+     Max key = 15
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       17727177        10364631         6881199
+
+                 TIMING INFORMATION
+Start time                        : 1445159558506627
+Initialization finish time        : 1445159692889952
+Overall finish time               : 1445159710617129
+Total time with initialization    :        152110502
+Total time without initialization :         17727177
+
+[2015-10-18 05:15:14 INFO] App id completed: 12
+[2015-10-18 05:15:14 INFO] Number of threads freed: 4
+     10000        7.98523      3.36607     -1.60723                       0.28163
+           10.026       1649.05829         -4.56680
+     20000        8.52149      3.14886     -1.65809                       0.01137
+           10.024       1652.56025         -4.67487
+     30000        8.19174      3.35582     -1.25448                      -0.25960
+           10.033       1653.51053         -4.74028
+     40000        8.30678      3.10994     -1.68466                       0.30432
+           10.036       1654.00092         -4.77514
+     50000        8.17040      3.22862     -1.54187                       0.17496
+           10.032       1653.10950         -4.78719
+     60000        8.34789      3.08147     -1.39261                      -0.00311
+           10.034       1653.64607         -4.78394
+     70000        8.09193      3.50743     -1.48058                      -0.08184
+           10.037       1654.10333         -4.82858
+     80000        8.18975      3.19066     -1.22115                      -0.12456
+           10.035       1655.77290         -4.87918
+     90000        8.19310      3.40211     -1.57543                       0.01612
+           10.036       1655.59937         -4.89661
+COMPUTESTART (after initialization) = 1445159558529763
+COMPUTEEND = 1445159768655811
+COMPUTETIME (after initialization) = 210126048
+Measured Time (2nd timestep onward) = 210109480
+Intramolecular time only (2nd timestep onward) = 25552295
+Intermolecular time only (2nd timestep onward) = 178950753
+Other time (2nd timestep onward) = 5606432
+
+Exited Happily with XTT = 10.0359 (note: XTT value is garbage if NPRINT > NSTEP)
+[2015-10-18 05:16:09 INFO] App id completed: 1
+[2015-10-18 05:16:09 INFO] Number of threads freed: 16
+[2015-10-18 05:16:09 INFO] Executing: perf stat /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/apps/ocean/contiguous_partitions/OCEANC -n258 -p2 -e1e-07 -r20000 -t2
+[2015-10-18 05:16:09 INFO] Executing appid: 19
+[2015-10-18 05:16:09 INFO] Executing: perf stat /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/lu/non_contiguous_blocks/LUNC -n9500 -p2 -b8
+[2015-10-18 05:16:09 INFO] Executing appid: 13
+[2015-10-18 05:16:09 INFO] Executing: perf stat /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/radix/RADIX -p8 -r16 -n2121440000 -m15
+[2015-10-18 05:16:09 INFO] Executing appid: 2
+[2015-10-18 05:16:09 INFO] Executing: perf stat /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/lu/non_contiguous_blocks/LUNC -n9500 -p4 -b8
+[2015-10-18 05:16:09 INFO] Executing appid: 15
+     10000        8.52091      3.22574     -1.93945                       0.21852
+           10.026       1648.63768         -4.66289
+     20000        8.38083      3.19704     -1.99223                       0.43735
+           10.023       1650.99491         -4.72972
+     30000        8.48997      2.90228     -1.25308                      -0.11256
+           10.027       1653.09144         -4.80322
+     40000        8.27528      3.26172     -1.49860                      -0.01382
+           10.025       1653.52520         -4.82126
+     50000        8.08323      3.25595     -1.17133                      -0.13998
+           10.028       1652.32030         -4.77260
+     60000        8.31007      3.10388     -1.41219                       0.02447
+           10.026       1653.10601         -4.80238
+     70000        8.34426      2.99210     -1.53215                       0.22539
+           10.030       1654.31239         -4.81150
+     80000        8.39557      3.22191     -1.73854                       0.15264
+           10.032       1654.88368         -4.81067
+     90000        8.34548      3.28684     -1.73044                       0.13233
+           10.034       1655.62716         -4.84317
+COMPUTESTART (after initialization) = 1445159558533540
+COMPUTEEND = 1445159833784510
+COMPUTETIME (after initialization) = 275250970
+Measured Time (2nd timestep onward) = 275231934
+Intramolecular time only (2nd timestep onward) = 25593499
+Intermolecular time only (2nd timestep onward) = 247177521
+Other time (2nd timestep onward) = 2460914
+
+Exited Happily with XTT = 10.0342 (note: XTT value is garbage if NPRINT > NSTEP)
+[2015-10-18 05:17:14 INFO] App id completed: 4
+[2015-10-18 05:17:14 INFO] Number of threads freed: 8
+[2015-10-18 05:17:14 INFO] Executing: perf stat /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/radix/RADIX -p8 -r16 -n2121440000 -m15
+[2015-10-18 05:17:14 INFO] Executing appid: 14
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       10541589         6027823         3718031
+
+                 TIMING INFORMATION
+Start time                        : 1445159769619374
+Initialization finish time        : 1445159838591784
+Overall finish time               : 1445159849133373
+Total time with initialization    :         79513999
+Total time without initialization :         10541589
+
+[2015-10-18 05:17:30 INFO] App id completed: 2
+[2015-10-18 05:17:30 INFO] Number of threads freed: 8
+[2015-10-18 05:17:30 INFO] Executing: perf stat /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/radix/RADIX -p8 -r16 -n2121440000 -m15
+[2015-10-18 05:17:30 INFO] Executing appid: 3
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       11006839         6195181         3953813
+
+                 TIMING INFORMATION
+Start time                        : 1445159834971585
+Initialization finish time        : 1445159908990666
+Overall finish time               : 1445159919997505
+Total time with initialization    :         85025920
+Total time without initialization :         11006839
+
+[2015-10-18 05:18:40 INFO] App id completed: 14
+[2015-10-18 05:18:40 INFO] Number of threads freed: 8
+[2015-10-18 05:18:40 INFO] Executing: perf stat /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/radix/RADIX -p8 -r16 -n2121440000 -m15
+[2015-10-18 05:18:40 INFO] Executing appid: 17
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       11918991         6942777         4115161
+
+                 TIMING INFORMATION
+Start time                        : 1445159850053451
+Initialization finish time        : 1445159923654560
+Overall finish time               : 1445159935573551
+Total time with initialization    :         85520100
+Total time without initialization :         11918991
+
+[2015-10-18 05:19:00 INFO] App id completed: 3
+[2015-10-18 05:19:00 INFO] Number of threads freed: 8
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        8638256         4864077         2932294
+
+                 TIMING INFORMATION
+Start time                        : 1445159920437039
+Initialization finish time        : 1445159988904744
+Overall finish time               : 1445159997543000
+Total time with initialization    :         77105961
+Total time without initialization :          8638256
+
+[2015-10-18 05:20:00 INFO] App id completed: 17
+[2015-10-18 05:20:00 INFO] Number of threads freed: 8
+[2015-10-18 05:20:00 INFO] Executing: perf stat echo "1.5e-16 216 90000 6 0 0 10000 0 16 6.212752" > /tmp/input ; /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/apps/water-nsquared/WATER-NSQUARED < /tmp/input
+[2015-10-18 05:20:00 INFO] Executing appid: 6
+Using 16 procs on 90000 steps of 216 mols
+Other parameters:
+	TSTEP = 1.50e-16
+	NORDER = 6
+	NSAVE = 0
+	NRST = 0
+	NPRINT = 10000
+	NFMC = 0
+	CUTOFF = 6.212752
+
+
+TEMPERATURE                =   298.00 K
+DENSITY                    =  0.99800 G/C.C.
+NUMBER OF MOLECULES        =      216
+NUMBER OF PROCESSORS       =       16
+TIME STEP                  = 1.50e-01 SEC
+ORDER USED TO SOLVE F=MA   =        6 
+NO. OF TIME STEPS          =    90000 
+FREQUENCY OF DATA SAVING   =        0 
+FREQUENCY TO WRITE RST FILE=        0 
+SPHERICAL CUTOFF RADIUS    =   6.2128 ANGSTROM
+
+NS = 5.9999899999999995
+BOXL =  18.638257
+CUTOFF =   6.212752
+XS =   3.106381
+ZERO = 1.55319
+WCOS = 0.585882
+WSIN = 0.756950
+***** NEW RUN STARTING FROM REGULAR LATTICE *****
+     10000        8.14818      3.25172     -1.26102                      -0.12292
+           10.016       1649.74351         -4.73229
+     20000        8.29235      3.07524     -1.41467                       0.05873
+           10.012       1648.96486         -4.62673
+     30000        8.65230      2.85840     -1.85402                       0.35393
+           10.011       1650.38114         -4.69367
+     40000        8.02309      3.16193     -1.16665                      -0.01330
+           10.005       1650.29773         -4.69652
+     50000        8.10646      3.13014     -1.15459                      -0.07583
+           10.006       1650.39581         -4.73231
+     60000        8.30290      3.27146     -1.92025                       0.35367
+           10.008       1650.57212         -4.74309
+     70000        8.48257      2.92109     -1.21299                      -0.17829
+           10.012       1652.05353         -4.73001
+     80000        8.05695      3.24249     -1.31664                       0.03092
+           10.014       1653.02314         -4.74648
+     90000        8.53957      2.93727     -1.80895                       0.34946
+           10.017       1654.40583         -4.77404
+COMPUTESTART (after initialization) = 1445160000887183
+COMPUTEEND = 1445160197179504
+COMPUTETIME (after initialization) = 196292321
+Measured Time (2nd timestep onward) = 196272375
+Intramolecular time only (2nd timestep onward) = 24275856
+Intermolecular time only (2nd timestep onward) = 166169930
+Other time (2nd timestep onward) = 5826589
+
+Exited Happily with XTT = 10.0174 (note: XTT value is garbage if NPRINT > NSTEP)
+[2015-10-18 05:23:21 INFO] App id completed: 6
+[2015-10-18 05:23:21 INFO] Number of threads freed: 16
+[2015-10-18 05:23:21 INFO] Executing: perf stat echo "1.5e-16 216 90000 6 0 0 10000 0 16 6.212752" > /tmp/input ; /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/apps/water-nsquared/WATER-NSQUARED < /tmp/input
+[2015-10-18 05:23:21 INFO] Executing appid: 10
+Using 16 procs on 90000 steps of 216 mols
+Other parameters:
+	TSTEP = 1.50e-16
+	NORDER = 6
+	NSAVE = 0
+	NRST = 0
+	NPRINT = 10000
+	NFMC = 0
+	CUTOFF = 6.212752
+
+
+TEMPERATURE                =   298.00 K
+DENSITY                    =  0.99800 G/C.C.
+NUMBER OF MOLECULES        =      216
+NUMBER OF PROCESSORS       =       16
+TIME STEP                  = 1.50e-01 SEC
+ORDER USED TO SOLVE F=MA   =        6 
+NO. OF TIME STEPS          =    90000 
+FREQUENCY OF DATA SAVING   =        0 
+FREQUENCY TO WRITE RST FILE=        0 
+SPHERICAL CUTOFF RADIUS    =   6.2128 ANGSTROM
+
+NS = 5.9999899999999995
+BOXL =  18.638257
+CUTOFF =   6.212752
+XS =   3.106381
+ZERO = 1.55319
+WCOS = 0.585882
+WSIN = 0.756950
+***** NEW RUN STARTING FROM REGULAR LATTICE *****
+     10000        8.40376      3.06696     -1.18895                      -0.25805
+           10.024       1649.70522         -4.76334
+     20000        8.30157      3.34765     -1.21119                      -0.41227
+           10.026       1649.25593         -4.76541
+     30000        8.21138      3.15612     -1.60855                       0.26709
+           10.026       1649.34189         -4.77846
+     40000        7.84488      3.59742     -1.52686                       0.11367
+           10.029       1649.96437         -4.78969
+     50000        8.15177      3.32469     -1.70624                       0.26215
+           10.032       1651.25372         -4.79892
+     60000        8.31955      3.12609     -1.94694                       0.52894
+           10.028       1652.05349         -4.84392
+     70000        8.16780      3.01016     -1.05949                      -0.09043
+           10.028       1653.29233         -4.80285
+     80000        8.20488      3.28332     -1.49689                       0.03927
+           10.031       1652.92187         -4.77984
+     90000        8.26812      3.21442     -1.54995                       0.10064
+           10.033       1653.37946         -4.74757
+COMPUTESTART (after initialization) = 1445160201845224
+COMPUTEEND = 1445160413621912
+COMPUTETIME (after initialization) = 211776688
+Measured Time (2nd timestep onward) = 211758557
+Intramolecular time only (2nd timestep onward) = 26565004
+Intermolecular time only (2nd timestep onward) = 180423140
+Other time (2nd timestep onward) = 4770413
+
+Exited Happily with XTT = 10.0332 (note: XTT value is garbage if NPRINT > NSTEP)
+[2015-10-18 05:26:57 INFO] App id completed: 10
+[2015-10-18 05:26:57 INFO] Number of threads freed: 16
+[2015-10-18 05:26:57 INFO] Executing: perf stat /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/apps/ocean/contiguous_partitions/OCEANC -n258 -p8 -e1e-07 -r20000 -t2
+[2015-10-18 05:26:57 INFO] Executing appid: 9
+[2015-10-18 05:26:57 INFO] Executing: perf stat echo "1.5e-16 216 90000 6 0 0 10000 0 8 6.212752" > /tmp/input ; /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/apps/water-nsquared/WATER-NSQUARED < /tmp/input
+[2015-10-18 05:26:57 INFO] Executing appid: 16
+Using 8 procs on 90000 steps of 216 mols
+Other parameters:
+	TSTEP = 1.50e-16
+	NORDER = 6
+	NSAVE = 0
+	NRST = 0
+	NPRINT = 10000
+	NFMC = 0
+	CUTOFF = 6.212752
+
+
+TEMPERATURE                =   298.00 K
+DENSITY                    =  0.99800 G/C.C.
+NUMBER OF MOLECULES        =      216
+NUMBER OF PROCESSORS       =        8
+TIME STEP                  = 1.50e-01 SEC
+ORDER USED TO SOLVE F=MA   =        6 
+NO. OF TIME STEPS          =    90000 
+FREQUENCY OF DATA SAVING   =        0 
+FREQUENCY TO WRITE RST FILE=        0 
+SPHERICAL CUTOFF RADIUS    =   6.2128 ANGSTROM
+
+NS = 5.9999899999999995
+BOXL =  18.638257
+CUTOFF =   6.212752
+XS =   3.106381
+ZERO = 1.55319
+WCOS = 0.585882
+WSIN = 0.756950
+***** NEW RUN STARTING FROM REGULAR LATTICE *****
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     4 Processors
+     8 by 8 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     688286431          1878       1035399     627126826      60121810
+
+                            TIMING INFORMATION
+Start time                        : 1445159769620334
+Initialization finish time        : 1445159771757727
+Overall finish time               : 1445160460044177
+Total time with initialization    :        690423843
+Total time without initialization :        688286450
+
+[2015-10-18 05:27:43 INFO] App id completed: 15
+[2015-10-18 05:27:43 INFO] Number of threads freed: 4
+[2015-10-18 05:27:43 INFO] Executing: perf stat echo "1.5e-16 216 90000 6 0 0 10000 0 8 6.212752" > /tmp/input ; /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/apps/water-nsquared/WATER-NSQUARED < /tmp/input
+[2015-10-18 05:27:43 INFO] Executing appid: 20
+Using 8 procs on 90000 steps of 216 mols
+Other parameters:
+	TSTEP = 1.50e-16
+	NORDER = 6
+	NSAVE = 0
+	NRST = 0
+	NPRINT = 10000
+	NFMC = 0
+	CUTOFF = 6.212752
+
+
+TEMPERATURE                =   298.00 K
+DENSITY                    =  0.99800 G/C.C.
+NUMBER OF MOLECULES        =      216
+NUMBER OF PROCESSORS       =        8
+TIME STEP                  = 1.50e-01 SEC
+ORDER USED TO SOLVE F=MA   =        6 
+NO. OF TIME STEPS          =    90000 
+FREQUENCY OF DATA SAVING   =        0 
+FREQUENCY TO WRITE RST FILE=        0 
+SPHERICAL CUTOFF RADIUS    =   6.2128 ANGSTROM
+
+NS = 5.9999899999999995
+BOXL =  18.638257
+CUTOFF =   6.212752
+XS =   3.106381
+ZERO = 1.55319
+WCOS = 0.585882
+WSIN = 0.756950
+***** NEW RUN STARTING FROM REGULAR LATTICE *****
+     10000        8.01838      3.30980     -1.23720                      -0.06951
+           10.021       1650.27913         -4.59721
+     20000        8.37493      3.26922     -1.73115                       0.11144
+           10.024       1648.81162         -4.66688
+     30000        8.24866      3.14448     -1.29041                      -0.08103
+           10.022       1650.06023         -4.66430
+     40000        8.23091      3.26443     -1.34018                      -0.12912
+           10.026       1650.48362         -4.74357
+     50000        8.24893      3.04237     -1.63127                       0.36129
+           10.021       1650.63291         -4.76460
+     60000        8.56416      2.84658     -1.30107                      -0.09402
+           10.016       1651.16146         -4.76531
+     70000        8.53119      3.09626     -1.36274                      -0.24724
+           10.017       1652.82659         -4.80702
+     80000        8.43034      3.19023     -1.62662                       0.02983
+           10.024       1653.01959         -4.81301
+     90000        8.46361      3.08294     -1.54819                       0.02210
+           10.020       1653.74518         -4.82139
+COMPUTESTART (after initialization) = 1445160417826549
+COMPUTEEND = 1445160679454005
+COMPUTETIME (after initialization) = 261627456
+Measured Time (2nd timestep onward) = 261609100
+Intramolecular time only (2nd timestep onward) = 19764105
+Intermolecular time only (2nd timestep onward) = 239359780
+Other time (2nd timestep onward) = 2485215
+
+Exited Happily with XTT = 10.0205 (note: XTT value is garbage if NPRINT > NSTEP)
+[2015-10-18 05:31:24 INFO] App id completed: 16
+[2015-10-18 05:31:24 INFO] Number of threads freed: 8
+[2015-10-18 05:31:24 INFO] Executing: perf stat /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/radix/RADIX -p8 -r16 -n2121440000 -m15
+[2015-10-18 05:31:24 INFO] Executing appid: 18
+     10000        8.57437      3.14116     -1.94237                       0.24454
+           10.018       1654.92031         -4.95525
+     20000        8.52241      3.17890     -1.40930                      -0.26492
+           10.027       1655.46428         -5.08181
+     30000        8.34033      3.26040     -1.34958                      -0.22213
+           10.029       1651.91773         -4.92491
+     40000        8.43107      2.99255     -1.03042                      -0.35769
+           10.036       1653.66807         -4.87106
+     50000        7.98194      3.55586     -1.90104                       0.39211
+           10.029       1652.75590         -4.87029
+     60000        8.06797      3.19946     -1.75116                       0.51117
+           10.027       1652.56597         -4.82792
+     70000        8.58171      3.14135     -1.82592                       0.13424
+           10.031       1652.62557         -4.79741
+     80000        8.52386      3.09717     -1.75056                       0.16355
+           10.034       1652.08853         -4.73752
+     90000        8.24174      3.28056     -1.71330                       0.22310
+           10.032       1653.06509         -4.75004
+COMPUTESTART (after initialization) = 1445160463052607
+COMPUTEEND = 1445160727616211
+COMPUTETIME (after initialization) = 264563604
+Measured Time (2nd timestep onward) = 264545621
+Intramolecular time only (2nd timestep onward) = 18641778
+Intermolecular time only (2nd timestep onward) = 243676391
+Other time (2nd timestep onward) = 2227452
+
+Exited Happily with XTT = 10.0321 (note: XTT value is garbage if NPRINT > NSTEP)
+[2015-10-18 05:32:09 INFO] App id completed: 20
+[2015-10-18 05:32:09 INFO] Number of threads freed: 8
+[2015-10-18 05:32:09 INFO] Executing: perf stat /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/radix/RADIX -p8 -r16 -n2121440000 -m15
+[2015-10-18 05:32:09 INFO] Executing appid: 11
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       11543294         7363556         4006939
+
+                 TIMING INFORMATION
+Start time                        : 1445160684167097
+Initialization finish time        : 1445160754718083
+Overall finish time               : 1445160766261377
+Total time with initialization    :         82094280
+Total time without initialization :         11543294
+
+[2015-10-18 05:32:49 INFO] App id completed: 18
+[2015-10-18 05:32:49 INFO] Number of threads freed: 8
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0        1218870222          102112709             0.084
+
+                       TIMING INFORMATION
+Start time                        : 1445159558531607
+Initialization finish time        : 1445159558604702
+Overall finish time               : 1445160777475005
+Total time with initialization    :       1218943398
+Total time without initialization :       1218870303
+    (excludes first timestep)
+
+[2015-10-18 05:32:59 INFO] App id completed: 8
+[2015-10-18 05:32:59 INFO] Number of threads freed: 2
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0        8176293         4004368         4171833
+
+                 TIMING INFORMATION
+Start time                        : 1445160729400710
+Initialization finish time        : 1445160799906180
+Overall finish time               : 1445160808082473
+Total time with initialization    :         78681763
+Total time without initialization :          8176293
+
+[2015-10-18 05:33:29 INFO] App id completed: 11
+[2015-10-18 05:33:29 INFO] Number of threads freed: 8
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 8
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0         422378226           52889395             0.125
+
+                       TIMING INFORMATION
+Start time                        : 1445160417806666
+Initialization finish time        : 1445160417840490
+Overall finish time               : 1445160840218740
+Total time with initialization    :        422412074
+Total time without initialization :        422378250
+    (excludes first timestep)
+
+[2015-10-18 05:34:04 INFO] App id completed: 9
+[2015-10-18 05:34:04 INFO] Number of threads freed: 8
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0        1150767180           94584437             0.082
+
+                       TIMING INFORMATION
+Start time                        : 1445159769620126
+Initialization finish time        : 1445159769696927
+Overall finish time               : 1445160920464147
+Total time with initialization    :       1150844021
+Total time without initialization :       1150767220
+    (excludes first timestep)
+
+[2015-10-18 05:35:25 INFO] App id completed: 19
+[2015-10-18 05:35:25 INFO] Number of threads freed: 2
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     2 Processors
+     8 by 8 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    1200356463          2658       1792194    1138553197      60007957
+
+                            TIMING INFORMATION
+Start time                        : 1445159769620287
+Initialization finish time        : 1445159772178303
+Overall finish time               : 1445160972534767
+Total time with initialization    :       1202914480
+Total time without initialization :       1200356464
+
+[2015-10-18 05:36:15 INFO] App id completed: 13
+[2015-10-18 05:36:15 INFO] Number of threads freed: 2
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    1546862346          1972       2410022    1544448986           992
+
+                            TIMING INFORMATION
+Start time                        : 1445159558522956
+Initialization finish time        : 1445159570868164
+Overall finish time               : 1445161117730511
+Total time with initialization    :       1559207555
+Total time without initialization :       1546862347
+
+[2015-10-18 05:38:41 INFO] App id completed: 7
+[2015-10-18 05:38:41 INFO] Number of threads freed: 1
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0    1556501443          2014       2489890    1554007875          1242
+
+                            TIMING INFORMATION
+Start time                        : 1445159558512716
+Initialization finish time        : 1445159571715422
+Overall finish time               : 1445161128216865
+Total time with initialization    :       1569704149
+Total time without initialization :       1556501443
+
+[2015-10-18 05:38:51 INFO] App id completed: 5
+[2015-10-18 05:38:51 INFO] Number of threads freed: 1
+[2015-10-18 05:38:51 INFO] End Time:  2015-10-18 05:38:51

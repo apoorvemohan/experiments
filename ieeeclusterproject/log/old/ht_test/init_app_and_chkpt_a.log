@@ -1,0 +1,144 @@
+[2015-10-13 05:37:58 INFO] Begin Time:  2015-10-13 05:37:58
+[2015-10-13 05:37:58 INFO] [Starting 8 : /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/apps/ocean/contiguous_partitions/OCEANC -n258 -p2 -e1e-07 -r20000 -t2]
+[2015-10-13 05:37:58 INFO] Launching App: 8
+[2015-10-13 05:37:58 INFO] Final launch command: STATFILE= STATGEN= taskset -c 0-15  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_launch -i 5 --with-plugin /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/src/plugin/myplug/dmtcp_myplughijack.so --port 33646 --modify-env --no-gzip /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/apps/ocean/contiguous_partitions/OCEANC -n258 -p2 -e1e-07 -r20000 -t2 >> /home/mohan.ap/ipdps/ieeeclusterproject/log/init_app_and_chkpt_a.log 2>&1 
+[2015-10-13 05:37:58 INFO] after launch: 8
+[2015-10-13 05:37:58 INFO] [Starting 2 : /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/radix/RADIX -p8 -r16 -n2121440000 -m15]
+[2015-10-13 05:37:58 INFO] Launching App: 2
+[2015-10-13 05:37:58 INFO] Final launch command: STATFILE= STATGEN= taskset -c 0-15  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_launch -i 5 --with-plugin /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/src/plugin/myplug/dmtcp_myplughijack.so --port 49605 --modify-env --no-gzip /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/radix/RADIX -p8 -r16 -n2121440000 -m15 >> /home/mohan.ap/ipdps/ieeeclusterproject/log/init_app_and_chkpt_a.log 2>&1 
+[2015-10-13 05:37:58 INFO] after launch: 2
+[2015-10-13 05:37:58 INFO] [Starting 5 : /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/lu/contiguous_blocks/LUC -n9500 -p1 -b8]
+[2015-10-13 05:37:58 INFO] Launching App: 5
+[2015-10-13 05:37:58 INFO] Final launch command: STATFILE= STATGEN= taskset -c 0-15  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_launch -i 5 --with-plugin /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/src/plugin/myplug/dmtcp_myplughijack.so --port 59385 --modify-env --no-gzip /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/lu/contiguous_blocks/LUC -n9500 -p1 -b8 >> /home/mohan.ap/ipdps/ieeeclusterproject/log/init_app_and_chkpt_a.log 2>&1 
+[2015-10-13 05:37:58 INFO] after launch: 5
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 33646
+    Checkpoint Interval: 5
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 49605
+    Checkpoint Interval: 5
+    Exit on last client: 1
+Backgrounding...
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 59385
+    Checkpoint Interval: 5
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+[2015-10-13 05:38:04 INFO] App Finished: 8
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     1 Processors
+     8 by 8 Element Blocks
+
+
+
+[2015-10-13 05:38:10 INFO] App Finished: 5
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+[2015-10-13 05:38:16 INFO] App Finished: 2
+[2015-10-13 05:38:16 INFO] [Starting 10 : echo "1.5e-16 216 90000 6 0 0 10000 0 16 6.212752" > /tmp/input ; /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/apps/water-nsquared/WATER-NSQUARED < /tmp/input]
+[2015-10-13 05:38:16 INFO] Launching App: 10
+[2015-10-13 05:38:16 INFO] Final launch command: echo "1.5e-16 216 90000 6 0 0 10000 0 16 6.212752" > /tmp/input  ; STATFILE= STATGEN= taskset -c 0-15  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_launch -i 5 --with-plugin /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/src/plugin/myplug/dmtcp_myplughijack.so --port 46987 --modify-env --no-gzip /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/apps/water-nsquared/WATER-NSQUARED < /tmp/input >> /home/mohan.ap/ipdps/ieeeclusterproject/log/init_app_and_chkpt_a.log 2>&1 
+[2015-10-13 05:38:16 INFO] after launch: 10
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 46987
+    Checkpoint Interval: 5
+    Exit on last client: 1
+Backgrounding...
+Using 16 procs on 90000 steps of 216 mols
+Other parameters:
+	TSTEP = 1.50e-16
+	NORDER = 6
+	NSAVE = 0
+	NRST = 0
+	NPRINT = 10000
+	NFMC = 0
+	CUTOFF = 6.212752
+
+
+TEMPERATURE                =   298.00 K
+DENSITY                    =  0.99800 G/C.C.
+NUMBER OF MOLECULES        =      216
+NUMBER OF PROCESSORS       =       16
+TIME STEP                  = 1.50e-01 SEC
+ORDER USED TO SOLVE F=MA   =        6 
+NO. OF TIME STEPS          =    90000 
+FREQUENCY OF DATA SAVING   =        0 
+FREQUENCY TO WRITE RST FILE=        0 
+SPHERICAL CUTOFF RADIUS    =   6.2128 ANGSTROM
+
+NS = 5.9999899999999995
+BOXL =  18.638257
+CUTOFF =   6.212752
+XS =   3.106381
+ZERO = 1.55319
+WCOS = 0.585882
+WSIN = 0.756950
+***** NEW RUN STARTING FROM REGULAR LATTICE *****
+
+[2015-10-13 05:38:24 INFO] App Finished: 10
+[2015-10-13 05:38:24 INFO] [Starting 20 : echo "1.5e-16 216 90000 6 0 0 10000 0 8 6.212752" > /tmp/input ; /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/apps/water-nsquared/WATER-NSQUARED < /tmp/input]
+[2015-10-13 05:38:24 INFO] Launching App: 20
+[2015-10-13 05:38:24 INFO] Final launch command: echo "1.5e-16 216 90000 6 0 0 10000 0 8 6.212752" > /tmp/input  ; STATFILE= STATGEN= taskset -c 0-15  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_launch -i 5 --with-plugin /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/src/plugin/myplug/dmtcp_myplughijack.so --port 41046 --modify-env --no-gzip /home/mohan.ap/ipdps/ieeeclusterproject/splash2_bench/codes/apps/water-nsquared/WATER-NSQUARED < /tmp/input >> /home/mohan.ap/ipdps/ieeeclusterproject/log/init_app_and_chkpt_a.log 2>&1 
+[2015-10-13 05:38:24 INFO] after launch: 20
+dmtcp_coordinator starting...
+    Host: compute-2-001 (10.100.9.31)
+    Port: 41046
+    Checkpoint Interval: 5
+    Exit on last client: 1
+Backgrounding...
+Using 8 procs on 90000 steps of 216 mols
+Other parameters:
+	TSTEP = 1.50e-16
+	NORDER = 6
+	NSAVE = 0
+	NRST = 0
+	NPRINT = 10000
+	NFMC = 0
+	CUTOFF = 6.212752
+
+
+TEMPERATURE                =   298.00 K
+DENSITY                    =  0.99800 G/C.C.
+NUMBER OF MOLECULES        =      216
+NUMBER OF PROCESSORS       =        8
+TIME STEP                  = 1.50e-01 SEC
+ORDER USED TO SOLVE F=MA   =        6 
+NO. OF TIME STEPS          =    90000 
+FREQUENCY OF DATA SAVING   =        0 
+FREQUENCY TO WRITE RST FILE=        0 
+SPHERICAL CUTOFF RADIUS    =   6.2128 ANGSTROM
+
+NS = 5.9999899999999995
+BOXL =  18.638257
+CUTOFF =   6.212752
+XS =   3.106381
+ZERO = 1.55319
+WCOS = 0.585882
+WSIN = 0.756950
+***** NEW RUN STARTING FROM REGULAR LATTICE *****
+
+[2015-10-13 05:38:32 INFO] App Finished: 20
+[2015-10-13 05:38:32 INFO] End Time:  2015-10-13 05:38:32

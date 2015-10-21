@@ -104,7 +104,8 @@ def restart(cpu_affinity, chkpt_img, newcoordinator, port, daemon, interval, env
 	if (daemon == None) and (envvarmap['STATGEN'] == ''):
 		perf_stat = ' perf stat '
 		cmd += (' >> ' + envvarmap['STATFILE'] + ' 2>&1 ')
-		envvarmap['STATFILE'] = ''
+		if envvarmap['STATFILE'] == '':
+			envvarmap['STATFILE'] = ''
 	else:
 		cmd += (' >> ' + constants.LOGDIR + '/' + constants.LOGGER + ' 2>&1 ')
 

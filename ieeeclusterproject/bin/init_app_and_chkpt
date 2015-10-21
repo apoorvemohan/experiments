@@ -50,7 +50,7 @@ def get_next(totalthreads):
 def get_queue_stats():
 	global runnable, stats_map
 	for app in runnable.keys():
-		tree = ET.parse(c.PARALLEL_APP_INSTANCE_DIR + '/' + app + '.xml')
+		tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app + '.xml')
 		root = tree.getroot()
 		stats_map.update({app: {'THREADS':  int(root.findall('THREADS')[0].text)}})
 		stats_map[app].update({'WALL':  int(root.findall('WALL')[0].text)})

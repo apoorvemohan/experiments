@@ -1,0 +1,1148 @@
+[2015-10-19 23:45:34 INFO] Begin Time:  2015-10-19 23:45:34
+[2015-10-19 23:45:34 INFO] Executing /scratch/mohan.ap/chkpts/12/1/ckpt_RADIX_317857491b35e163-40000-5625b84c.dmtcp
+[2015-10-19 23:45:34 INFO] Restart1: 12
+[2015-10-19 23:45:34 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/12.stat STATGEN= taskset -c 0-1,16-17  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/12/1/ckpt_RADIX_317857491b35e163-40000-5625b84c.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 37860
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     4 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/12.stat
+[2015-10-19 23:46:06 INFO] Executing /scratch/mohan.ap/chkpts/4/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625b84c.dmtcp
+[2015-10-19 23:46:06 INFO] Restart1: 4
+[2015-10-19 23:46:06 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/4.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/4/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625b84c.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 48160
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/4.stat
+[2015-10-19 23:46:17 INFO] Executing /scratch/mohan.ap/chkpts/1/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625b85e.dmtcp
+[2015-10-19 23:46:17 INFO] Restart1: 1
+[2015-10-19 23:46:17 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/1.stat STATGEN= taskset -c 0-7,16-23  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/1/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625b85e.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 43847
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/1.stat
+[2015-10-19 23:46:28 INFO] Executing /scratch/mohan.ap/chkpts/8/1/ckpt_OCEANC_317857491b35e163-40000-5625b84c.dmtcp
+[2015-10-19 23:46:28 INFO] Restart1: 8
+[2015-10-19 23:46:28 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat STATGEN= taskset -c 0-0,16-16  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/8/1/ckpt_OCEANC_317857491b35e163-40000-5625b84c.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 44582
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+[2015-10-19 23:46:39 INFO] Executing /scratch/mohan.ap/chkpts/2/1/ckpt_RADIX_317857491b35e163-40000-5625b866.dmtcp
+[2015-10-19 23:46:39 INFO] Restart1: 2
+[2015-10-19 23:46:39 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/2.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/2/1/ckpt_RADIX_317857491b35e163-40000-5625b866.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 41231
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/2.stat
+[2015-10-19 23:47:23 INFO] Executing /scratch/mohan.ap/chkpts/13/1/ckpt_LUNC_317857491b35e163-40000-5625b866.dmtcp
+[2015-10-19 23:47:23 INFO] Restart1: 13
+[2015-10-19 23:47:23 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/13.stat STATGEN= taskset -c 0-0,16-16  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/13/1/ckpt_LUNC_317857491b35e163-40000-5625b866.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 41881
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     2 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/13.stat
+[2015-10-19 23:47:41 INFO] Executing /scratch/mohan.ap/chkpts/14/1/ckpt_RADIX_317857491b35e163-40000-5625b877.dmtcp
+[2015-10-19 23:47:41 INFO] Restart1: 14
+[2015-10-19 23:47:41 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/14.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/14/1/ckpt_RADIX_317857491b35e163-40000-5625b877.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 35504
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/14.stat
+[2015-10-19 23:48:27 INFO] Executing /scratch/mohan.ap/chkpts/3/1/ckpt_RADIX_317857491b35e163-40000-5625b87d.dmtcp
+[2015-10-19 23:48:27 INFO] Restart1: 3
+[2015-10-19 23:48:27 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/3.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/3/1/ckpt_RADIX_317857491b35e163-40000-5625b87d.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 57187
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/3.stat
+[2015-10-19 23:49:20 INFO] Executing /scratch/mohan.ap/chkpts/15/1/ckpt_LUNC_317857491b35e163-40000-5625b866.dmtcp
+[2015-10-19 23:49:20 INFO] Restart1: 15
+[2015-10-19 23:49:20 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/15.stat STATGEN= taskset -c 0-1,16-17  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/15/1/ckpt_LUNC_317857491b35e163-40000-5625b866.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 36843
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     4 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/15.stat
+[2015-10-19 23:49:38 INFO] Executing /scratch/mohan.ap/chkpts/17/1/ckpt_RADIX_317857491b35e163-40000-5625b890.dmtcp
+[2015-10-19 23:49:38 INFO] Restart1: 17
+[2015-10-19 23:49:38 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/17.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/17/1/ckpt_RADIX_317857491b35e163-40000-5625b890.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 51003
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/17.stat
+[2015-10-19 23:50:22 INFO] Executing /scratch/mohan.ap/chkpts/6/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625b8a8.dmtcp
+[2015-10-19 23:50:22 INFO] Restart1: 6
+[2015-10-19 23:50:22 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/6.stat STATGEN= taskset -c 0-7,16-23  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/6/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625b8a8.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 35875
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/6.stat
+[2015-10-19 23:50:34 INFO] Executing /scratch/mohan.ap/chkpts/10/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625b8b0.dmtcp
+[2015-10-19 23:50:34 INFO] Restart1: 10
+[2015-10-19 23:50:34 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/10.stat STATGEN= taskset -c 0-7,16-23  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/10/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625b8b0.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 46099
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/10.stat
+[2015-10-19 23:50:45 INFO] Executing /scratch/mohan.ap/chkpts/16/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625b8b8.dmtcp
+[2015-10-19 23:50:45 INFO] Restart1: 16
+[2015-10-19 23:50:45 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/16.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/16/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625b8b8.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 51696
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/16.stat
+[2015-10-19 23:50:56 INFO] Executing /scratch/mohan.ap/chkpts/9/1/ckpt_OCEANC_317857491b35e163-40000-5625b8b8.dmtcp
+[2015-10-19 23:50:56 INFO] Restart1: 9
+[2015-10-19 23:50:56 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/9.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/9/1/ckpt_OCEANC_317857491b35e163-40000-5625b8b8.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 54437
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 8
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/9.stat
+[2015-10-19 23:51:07 INFO] Executing /scratch/mohan.ap/chkpts/20/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625b8c0.dmtcp
+[2015-10-19 23:51:07 INFO] Restart1: 20
+[2015-10-19 23:51:07 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/20.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/20/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625b8c0.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 59143
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/20.stat
+[2015-10-19 23:51:18 INFO] Executing /scratch/mohan.ap/chkpts/18/1/ckpt_RADIX_317857491b35e163-40000-5625b8c0.dmtcp
+[2015-10-19 23:51:18 INFO] Restart1: 18
+[2015-10-19 23:51:18 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/18.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/18/1/ckpt_RADIX_317857491b35e163-40000-5625b8c0.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 38562
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/18.stat
+[2015-10-19 23:52:14 INFO] Executing /scratch/mohan.ap/chkpts/19/1/ckpt_OCEANC_317857491b35e163-40000-5625b866.dmtcp
+[2015-10-19 23:52:14 INFO] Restart1: 19
+[2015-10-19 23:52:14 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/19.stat STATGEN= taskset -c 0-0,16-16  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/19/1/ckpt_OCEANC_317857491b35e163-40000-5625b866.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 46785
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/19.stat
+[2015-10-19 23:52:24 INFO] Executing /scratch/mohan.ap/chkpts/11/1/ckpt_RADIX_317857491b35e163-40000-5625b8c8.dmtcp
+[2015-10-19 23:52:24 INFO] Restart1: 11
+[2015-10-19 23:52:24 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/11.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/11/1/ckpt_RADIX_317857491b35e163-40000-5625b8c8.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 40829
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/11.stat
+[2015-10-19 23:53:22 INFO] End Time:  2015-10-19 23:53:22
+[2015-10-20 01:29:04 INFO] Begin Time:  2015-10-20 01:29:04
+[2015-10-20 01:29:04 INFO] Executing /scratch/mohan.ap/chkpts/12/1/ckpt_RADIX_317857491b35e163-40000-5625d055.dmtcp
+[2015-10-20 01:29:04 INFO] Restart1: 12
+[2015-10-20 01:29:04 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/12.stat STATGEN= taskset -c 0-1,16-17  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/12/1/ckpt_RADIX_317857491b35e163-40000-5625d055.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 52096
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     4 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/12.stat
+[2015-10-20 01:29:36 INFO] Executing /scratch/mohan.ap/chkpts/4/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625d055.dmtcp
+[2015-10-20 01:29:36 INFO] Restart1: 4
+[2015-10-20 01:29:36 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/4.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/4/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625d055.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 49151
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/4.stat
+[2015-10-20 01:29:47 INFO] Executing /scratch/mohan.ap/chkpts/1/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625d067.dmtcp
+[2015-10-20 01:29:47 INFO] Restart1: 1
+[2015-10-20 01:29:47 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/1.stat STATGEN= taskset -c 0-7,16-23  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/1/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625d067.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 41837
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/1.stat
+[2015-10-20 01:29:59 INFO] Executing /scratch/mohan.ap/chkpts/8/1/ckpt_OCEANC_317857491b35e163-40000-5625d055.dmtcp
+[2015-10-20 01:29:59 INFO] Restart1: 8
+[2015-10-20 01:29:59 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat STATGEN= taskset -c 0-0,16-16  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/8/1/ckpt_OCEANC_317857491b35e163-40000-5625d055.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 33536
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+[2015-10-20 01:30:09 INFO] Executing /scratch/mohan.ap/chkpts/2/1/ckpt_RADIX_317857491b35e163-40000-5625d06f.dmtcp
+[2015-10-20 01:30:09 INFO] Restart1: 2
+[2015-10-20 01:30:09 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/2.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/2/1/ckpt_RADIX_317857491b35e163-40000-5625d06f.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 52042
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/2.stat
+[2015-10-20 01:31:01 INFO] Executing /scratch/mohan.ap/chkpts/13/1/ckpt_LUNC_317857491b35e163-40000-5625d06f.dmtcp
+[2015-10-20 01:31:01 INFO] Restart1: 13
+[2015-10-20 01:31:01 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/13.stat STATGEN= taskset -c 0-0,16-16  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/13/1/ckpt_LUNC_317857491b35e163-40000-5625d06f.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 51412
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     2 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/13.stat
+[2015-10-20 01:31:21 INFO] Executing /scratch/mohan.ap/chkpts/14/1/ckpt_RADIX_317857491b35e163-40000-5625d080.dmtcp
+[2015-10-20 01:31:21 INFO] Restart1: 14
+[2015-10-20 01:31:21 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/14.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/14/1/ckpt_RADIX_317857491b35e163-40000-5625d080.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 43969
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/14.stat
+[2015-10-20 01:32:37 INFO] Executing /scratch/mohan.ap/chkpts/3/1/ckpt_RADIX_317857491b35e163-40000-5625d086.dmtcp
+[2015-10-20 01:32:37 INFO] Restart1: 3
+[2015-10-20 01:32:37 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/3.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/3/1/ckpt_RADIX_317857491b35e163-40000-5625d086.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 47509
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/3.stat
+[2015-10-20 01:33:42 INFO] Executing /scratch/mohan.ap/chkpts/15/1/ckpt_LUNC_317857491b35e163-40000-5625d06f.dmtcp
+[2015-10-20 01:33:42 INFO] Restart1: 15
+[2015-10-20 01:33:42 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/15.stat STATGEN= taskset -c 0-1,16-17  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/15/1/ckpt_LUNC_317857491b35e163-40000-5625d06f.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 42233
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     4 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/15.stat
+[2015-10-20 01:34:12 INFO] Executing /scratch/mohan.ap/chkpts/17/1/ckpt_RADIX_317857491b35e163-40000-5625d09a.dmtcp
+[2015-10-20 01:34:12 INFO] Restart1: 17
+[2015-10-20 01:34:12 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/17.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/17/1/ckpt_RADIX_317857491b35e163-40000-5625d09a.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 60445
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/17.stat
+[2015-10-20 01:35:08 INFO] Executing /scratch/mohan.ap/chkpts/6/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625d0b0.dmtcp
+[2015-10-20 01:35:08 INFO] Restart1: 6
+[2015-10-20 01:35:08 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/6.stat STATGEN= taskset -c 0-7,16-23  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/6/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625d0b0.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 42224
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/6.stat
+[2015-10-20 01:35:21 INFO] Executing /scratch/mohan.ap/chkpts/10/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625d0b8.dmtcp
+[2015-10-20 01:35:21 INFO] Restart1: 10
+[2015-10-20 01:35:21 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/10.stat STATGEN= taskset -c 0-7,16-23  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/10/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625d0b8.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 36256
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/10.stat
+[2015-10-20 01:35:34 INFO] Executing /scratch/mohan.ap/chkpts/16/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625d0c0.dmtcp
+[2015-10-20 01:35:34 INFO] Restart1: 16
+[2015-10-20 01:35:34 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/16.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/16/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625d0c0.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 33375
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/16.stat
+[2015-10-20 01:35:45 INFO] Executing /scratch/mohan.ap/chkpts/9/1/ckpt_OCEANC_317857491b35e163-40000-5625d0c0.dmtcp
+[2015-10-20 01:35:45 INFO] Restart1: 9
+[2015-10-20 01:35:45 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/9.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/9/1/ckpt_OCEANC_317857491b35e163-40000-5625d0c0.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 53838
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 8
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/9.stat
+[2015-10-20 01:35:56 INFO] Executing /scratch/mohan.ap/chkpts/20/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625d0c7.dmtcp
+[2015-10-20 01:35:56 INFO] Restart1: 20
+[2015-10-20 01:35:56 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/20.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/20/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625d0c7.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 46667
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/20.stat
+[2015-10-20 01:36:08 INFO] Executing /scratch/mohan.ap/chkpts/18/1/ckpt_RADIX_317857491b35e163-40000-5625d0c9.dmtcp
+[2015-10-20 01:36:08 INFO] Restart1: 18
+[2015-10-20 01:36:08 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/18.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/18/1/ckpt_RADIX_317857491b35e163-40000-5625d0c9.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 55489
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/18.stat
+[2015-10-20 01:37:07 INFO] Executing /scratch/mohan.ap/chkpts/19/1/ckpt_OCEANC_317857491b35e163-40000-5625d06f.dmtcp
+[2015-10-20 01:37:07 INFO] Restart1: 19
+[2015-10-20 01:37:07 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/19.stat STATGEN= taskset -c 0-0,16-16  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/19/1/ckpt_OCEANC_317857491b35e163-40000-5625d06f.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 54241
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/19.stat
+[2015-10-20 01:37:18 INFO] Executing /scratch/mohan.ap/chkpts/11/1/ckpt_RADIX_317857491b35e163-40000-5625d0cf.dmtcp
+[2015-10-20 01:37:18 INFO] Restart1: 11
+[2015-10-20 01:37:18 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/11.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/11/1/ckpt_RADIX_317857491b35e163-40000-5625d0cf.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 40118
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/11.stat
+[2015-10-20 01:38:17 INFO] End Time:  2015-10-20 01:38:17
+[2015-10-20 02:33:20 INFO] Begin Time:  2015-10-20 02:33:20
+[2015-10-20 02:33:20 INFO] Executing /scratch/mohan.ap/chkpts/12/1/ckpt_RADIX_317857491b35e163-40000-5625df9b.dmtcp
+[2015-10-20 02:33:20 INFO] Restart1: 12
+[2015-10-20 02:33:20 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/12.stat STATGEN= taskset -c 0-1,16-17  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/12/1/ckpt_RADIX_317857491b35e163-40000-5625df9b.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 49671
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     4 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/12.stat
+[2015-10-20 02:33:49 INFO] Executing /scratch/mohan.ap/chkpts/4/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625df9b.dmtcp
+[2015-10-20 02:33:49 INFO] Restart1: 4
+[2015-10-20 02:33:49 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/4.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/4/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625df9b.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 60757
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/4.stat
+[2015-10-20 02:34:00 INFO] Executing /scratch/mohan.ap/chkpts/1/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625dfad.dmtcp
+[2015-10-20 02:34:00 INFO] Restart1: 1
+[2015-10-20 02:34:00 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/1.stat STATGEN= taskset -c 0-7,16-23  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/1/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625dfad.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 34217
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/1.stat
+[2015-10-20 02:34:11 INFO] Executing /scratch/mohan.ap/chkpts/8/1/ckpt_OCEANC_317857491b35e163-40000-5625df9b.dmtcp
+[2015-10-20 02:34:11 INFO] Restart1: 8
+[2015-10-20 02:34:11 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat STATGEN= taskset -c 0-0,16-16  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/8/1/ckpt_OCEANC_317857491b35e163-40000-5625df9b.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 54697
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+[2015-10-20 02:34:21 INFO] Executing /scratch/mohan.ap/chkpts/2/1/ckpt_RADIX_317857491b35e163-40000-5625dfb5.dmtcp
+[2015-10-20 02:34:21 INFO] Restart1: 2
+[2015-10-20 02:34:21 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/2.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/2/1/ckpt_RADIX_317857491b35e163-40000-5625dfb5.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 59500
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/2.stat
+[2015-10-20 02:35:05 INFO] Executing /scratch/mohan.ap/chkpts/13/1/ckpt_LUNC_317857491b35e163-40000-5625dfb5.dmtcp
+[2015-10-20 02:35:05 INFO] Restart1: 13
+[2015-10-20 02:35:05 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/13.stat STATGEN= taskset -c 0-0,16-16  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/13/1/ckpt_LUNC_317857491b35e163-40000-5625dfb5.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 50659
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     2 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/13.stat
+[2015-10-20 02:35:26 INFO] Executing /scratch/mohan.ap/chkpts/14/1/ckpt_RADIX_317857491b35e163-40000-5625dfc7.dmtcp
+[2015-10-20 02:35:26 INFO] Restart1: 14
+[2015-10-20 02:35:26 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/14.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/14/1/ckpt_RADIX_317857491b35e163-40000-5625dfc7.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 58351
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/14.stat
+[2015-10-20 02:36:13 INFO] Executing /scratch/mohan.ap/chkpts/3/1/ckpt_RADIX_317857491b35e163-40000-5625dfde.dmtcp
+[2015-10-20 02:36:13 INFO] Restart1: 3
+[2015-10-20 02:36:13 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/3.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/3/1/ckpt_RADIX_317857491b35e163-40000-5625dfde.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 38547
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/3.stat
+[2015-10-20 02:37:04 INFO] Executing /scratch/mohan.ap/chkpts/15/1/ckpt_LUNC_317857491b35e163-40000-5625dfb5.dmtcp
+[2015-10-20 02:37:04 INFO] Restart1: 15
+[2015-10-20 02:37:04 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/15.stat STATGEN= taskset -c 0-1,16-17  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/15/1/ckpt_LUNC_317857491b35e163-40000-5625dfb5.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 55543
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     4 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/15.stat
+[2015-10-20 02:37:22 INFO] Executing /scratch/mohan.ap/chkpts/17/1/ckpt_RADIX_317857491b35e163-40000-5625dfe4.dmtcp
+[2015-10-20 02:37:22 INFO] Restart1: 17
+[2015-10-20 02:37:22 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/17.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/17/1/ckpt_RADIX_317857491b35e163-40000-5625dfe4.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 46156
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/17.stat
+[2015-10-20 02:38:16 INFO] Executing /scratch/mohan.ap/chkpts/6/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625dffc.dmtcp
+[2015-10-20 02:38:16 INFO] Restart1: 6
+[2015-10-20 02:38:16 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/6.stat STATGEN= taskset -c 0-7,16-23  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/6/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625dffc.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 46330
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/6.stat
+[2015-10-20 02:38:28 INFO] Executing /scratch/mohan.ap/chkpts/10/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625e004.dmtcp
+[2015-10-20 02:38:28 INFO] Restart1: 10
+[2015-10-20 02:38:28 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/10.stat STATGEN= taskset -c 0-7,16-23  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/10/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625e004.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 54249
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/10.stat
+[2015-10-20 02:38:39 INFO] Executing /scratch/mohan.ap/chkpts/16/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625e00c.dmtcp
+[2015-10-20 02:38:39 INFO] Restart1: 16
+[2015-10-20 02:38:39 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/16.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/16/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625e00c.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 41457
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/16.stat
+[2015-10-20 02:38:50 INFO] Executing /scratch/mohan.ap/chkpts/9/1/ckpt_OCEANC_317857491b35e163-40000-5625e00c.dmtcp
+[2015-10-20 02:38:50 INFO] Restart1: 9
+[2015-10-20 02:38:50 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/9.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/9/1/ckpt_OCEANC_317857491b35e163-40000-5625e00c.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 56835
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 8
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/9.stat
+[2015-10-20 02:39:01 INFO] Executing /scratch/mohan.ap/chkpts/20/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625e014.dmtcp
+[2015-10-20 02:39:01 INFO] Restart1: 20
+[2015-10-20 02:39:01 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/20.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/20/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5625e014.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 52760
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/20.stat
+[2015-10-20 02:39:12 INFO] Executing /scratch/mohan.ap/chkpts/18/1/ckpt_RADIX_317857491b35e163-40000-5625e014.dmtcp
+[2015-10-20 02:39:12 INFO] Restart1: 18
+[2015-10-20 02:39:12 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/18.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/18/1/ckpt_RADIX_317857491b35e163-40000-5625e014.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 57850
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/18.stat
+[2015-10-20 02:40:07 INFO] Executing /scratch/mohan.ap/chkpts/19/1/ckpt_OCEANC_317857491b35e163-40000-5625dfb5.dmtcp
+[2015-10-20 02:40:07 INFO] Restart1: 19
+[2015-10-20 02:40:07 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/19.stat STATGEN= taskset -c 0-0,16-16  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/19/1/ckpt_OCEANC_317857491b35e163-40000-5625dfb5.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 35012
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/19.stat
+[2015-10-20 02:40:17 INFO] Executing /scratch/mohan.ap/chkpts/11/1/ckpt_RADIX_317857491b35e163-40000-5625e01b.dmtcp
+[2015-10-20 02:40:17 INFO] Restart1: 11
+[2015-10-20 02:40:17 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/11.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/11/1/ckpt_RADIX_317857491b35e163-40000-5625e01b.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 41104
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/11.stat
+[2015-10-20 02:41:05 INFO] End Time:  2015-10-20 02:41:05
+[2015-10-20 10:07:02 INFO] Begin Time:  2015-10-20 10:07:02
+[2015-10-20 10:07:03 INFO] Executing /scratch/mohan.ap/chkpts/12/1/ckpt_RADIX_317857491b35e163-40000-56264797.dmtcp
+[2015-10-20 10:07:03 INFO] Restart1: 12
+[2015-10-20 10:07:03 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/12.stat STATGEN= taskset -c 0-1,16-17  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/12/1/ckpt_RADIX_317857491b35e163-40000-56264797.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 56319
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     4 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/12.stat
+[2015-10-20 10:07:42 INFO] Executing /scratch/mohan.ap/chkpts/4/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-56264797.dmtcp
+[2015-10-20 10:07:42 INFO] Restart1: 4
+[2015-10-20 10:07:42 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/4.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/4/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-56264797.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 56499
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/4.stat
+[2015-10-20 10:07:53 INFO] Executing /scratch/mohan.ap/chkpts/1/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-562647ad.dmtcp
+[2015-10-20 10:07:53 INFO] Restart1: 1
+[2015-10-20 10:07:53 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/1.stat STATGEN= taskset -c 0-7,16-23  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/1/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-562647ad.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 41267
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/1.stat
+[2015-10-20 10:08:05 INFO] Executing /scratch/mohan.ap/chkpts/8/1/ckpt_OCEANC_317857491b35e163-40000-56264797.dmtcp
+[2015-10-20 10:08:05 INFO] Restart1: 8
+[2015-10-20 10:08:05 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat STATGEN= taskset -c 0-0,16-16  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/8/1/ckpt_OCEANC_317857491b35e163-40000-56264797.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 36184
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/8.stat
+[2015-10-20 10:08:17 INFO] Executing /scratch/mohan.ap/chkpts/2/1/ckpt_RADIX_317857491b35e163-40000-562647b5.dmtcp
+[2015-10-20 10:08:17 INFO] Restart1: 2
+[2015-10-20 10:08:17 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/2.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/2/1/ckpt_RADIX_317857491b35e163-40000-562647b5.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 54563
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/2.stat
+[2015-10-20 10:09:06 INFO] Executing /scratch/mohan.ap/chkpts/13/1/ckpt_LUNC_317857491b35e163-40000-562647b5.dmtcp
+[2015-10-20 10:09:06 INFO] Restart1: 13
+[2015-10-20 10:09:06 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/13.stat STATGEN= taskset -c 0-0,16-16  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/13/1/ckpt_LUNC_317857491b35e163-40000-562647b5.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 48487
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     2 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/13.stat
+[2015-10-20 10:09:30 INFO] Executing /scratch/mohan.ap/chkpts/14/1/ckpt_RADIX_317857491b35e163-40000-562647c6.dmtcp
+[2015-10-20 10:09:30 INFO] Restart1: 14
+[2015-10-20 10:09:30 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/14.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/14/1/ckpt_RADIX_317857491b35e163-40000-562647c6.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 36581
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/14.stat
+[2015-10-20 10:10:24 INFO] Executing /scratch/mohan.ap/chkpts/3/1/ckpt_RADIX_317857491b35e163-40000-562647ca.dmtcp
+[2015-10-20 10:10:24 INFO] Restart1: 3
+[2015-10-20 10:10:24 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/3.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/3/1/ckpt_RADIX_317857491b35e163-40000-562647ca.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 44546
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/3.stat
+[2015-10-20 10:11:15 INFO] Executing /scratch/mohan.ap/chkpts/15/1/ckpt_LUNC_317857491b35e163-40000-562647b5.dmtcp
+[2015-10-20 10:11:15 INFO] Restart1: 15
+[2015-10-20 10:11:15 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/15.stat STATGEN= taskset -c 0-1,16-17  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/15/1/ckpt_LUNC_317857491b35e163-40000-562647b5.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 50786
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Blocked Dense LU Factorization
+     9500 by 9500 Matrix
+     4 Processors
+     8 by 8 Element Blocks
+
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/15.stat
+[2015-10-20 10:11:38 INFO] Executing /scratch/mohan.ap/chkpts/17/1/ckpt_RADIX_317857491b35e163-40000-562647e1.dmtcp
+[2015-10-20 10:11:38 INFO] Restart1: 17
+[2015-10-20 10:11:38 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/17.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/17/1/ckpt_RADIX_317857491b35e163-40000-562647e1.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 51033
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/17.stat
+[2015-10-20 10:12:27 INFO] Executing /scratch/mohan.ap/chkpts/6/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-562647f7.dmtcp
+[2015-10-20 10:12:27 INFO] Restart1: 6
+[2015-10-20 10:12:27 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/6.stat STATGEN= taskset -c 0-7,16-23  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/6/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-562647f7.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 36903
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/6.stat
+[2015-10-20 10:12:39 INFO] Executing /scratch/mohan.ap/chkpts/10/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-562647ff.dmtcp
+[2015-10-20 10:12:39 INFO] Restart1: 10
+[2015-10-20 10:12:39 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/10.stat STATGEN= taskset -c 0-7,16-23  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/10/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-562647ff.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 39140
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/10.stat
+[2015-10-20 10:12:51 INFO] Executing /scratch/mohan.ap/chkpts/16/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-56264807.dmtcp
+[2015-10-20 10:12:51 INFO] Restart1: 16
+[2015-10-20 10:12:51 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/16.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/16/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-56264807.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 40544
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/16.stat
+[2015-10-20 10:13:02 INFO] Executing /scratch/mohan.ap/chkpts/9/1/ckpt_OCEANC_317857491b35e163-40000-56264807.dmtcp
+[2015-10-20 10:13:02 INFO] Restart1: 9
+[2015-10-20 10:13:02 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/9.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/9/1/ckpt_OCEANC_317857491b35e163-40000-56264807.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 48182
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 8
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/9.stat
+[2015-10-20 10:13:14 INFO] Executing /scratch/mohan.ap/chkpts/20/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5626480f.dmtcp
+[2015-10-20 10:13:14 INFO] Restart1: 20
+[2015-10-20 10:13:14 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/20.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/20/1/ckpt_WATER-NSQUARED_317857491b35e163-40000-5626480f.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 44678
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/20.stat
+[2015-10-20 10:13:25 INFO] Executing /scratch/mohan.ap/chkpts/18/1/ckpt_RADIX_317857491b35e163-40000-5626480f.dmtcp
+[2015-10-20 10:13:25 INFO] Restart1: 18
+[2015-10-20 10:13:25 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/18.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/18/1/ckpt_RADIX_317857491b35e163-40000-5626480f.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 56259
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/18.stat
+[2015-10-20 10:14:10 INFO] Executing /scratch/mohan.ap/chkpts/19/1/ckpt_OCEANC_317857491b35e163-40000-562647b5.dmtcp
+[2015-10-20 10:14:10 INFO] Restart1: 19
+[2015-10-20 10:14:10 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/19.stat STATGEN= taskset -c 0-0,16-16  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/19/1/ckpt_OCEANC_317857491b35e163-40000-562647b5.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 55315
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 2
+    Error tolerance                    : 1e-07
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/19.stat
+[2015-10-20 10:14:21 INFO] Executing /scratch/mohan.ap/chkpts/11/1/ckpt_RADIX_317857491b35e163-40000-56264817.dmtcp
+[2015-10-20 10:14:21 INFO] Restart1: 11
+[2015-10-20 10:14:21 INFO] STATFILE=/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/11.stat STATGEN= taskset -c 0-3,16-19  /home/mohan.ap/ipdps/ieeeclusterproject/dmtcp/bin/dmtcp_restart --new-coordinator -i 10 /scratch/mohan.ap/chkpts/11/1/ckpt_RADIX_317857491b35e163-40000-56264817.dmtcp >> /home/mohan.ap/ipdps/ieeeclusterproject/log/ht.log 2>&1 
+dmtcp_coordinator starting...
+    Host: compute-2-002 (10.100.9.32)
+    Port: 39246
+    Checkpoint Interval: 10
+    Exit on last client: 1
+Backgrounding...
+
+Integer Radix Sort
+     2121440000 Keys
+     8 Processors
+     Radix = 16
+     Max key = 15
+
+
+/home/mohan.ap/ipdps/ieeeclusterproject/data/parallel_dmtcp/stats/queued/11.stat
+[2015-10-20 10:15:10 INFO] End Time:  2015-10-20 10:15:10
