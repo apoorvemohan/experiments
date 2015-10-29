@@ -31,7 +31,6 @@ def get_next(totalthreads):
 	next_runnable = {}
 	max_wall_time = 0
 	sorted_by_arrival = sorted(app_stats_map.items(), key=lambda x: x[1]['ARRIVAL'])
-	print sorted_by_arrival
 
 	for app in sorted_by_arrival:
 		if wall_count != 0:
@@ -54,14 +53,17 @@ def get_next(totalthreads):
 	return next_runnable
 
 def get_queue_stats():
-	global runnable, app_stats_map
+	global runnable, app_stats_map, runnable_map
 	for app in runnable:
 		tree = ET.parse(c.PARALLEL_APP_INSTANCE_DIR + '/' + app + '.xml')
 		root = tree.getroot()
 		app_stats_map.update({app: {'THREADS':  int(root.findall('THREADS')[0].text)}})
 		app_stats_map[app].update({'WALL':  int(root.findall('WALL')[0].text)})
 		app_stats_map[app].update({'ARRIVAL':  int(root.findall('ARRIVAL')[0].text)})
-		
+
+		print runnable_map[app]
+		print app_stats_map[app]
+	sys.exit()
 
 def group_exec_completed(app_statfile_list):
 
@@ -142,8 +144,6 @@ def main():
 				status = subprocess.Popen('perf stat ' + runnable_map[app], shell=True, stdout=statfile, stderr=statfile)
 				app_statfile_list.append([status, statfile, app, next_runnable[app]])
 				totalthreads -= next_runnable[app]
-
-			print "Total Thread: " + str(totalthreads)
 
 			while True:
 

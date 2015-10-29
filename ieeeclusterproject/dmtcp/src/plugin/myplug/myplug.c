@@ -116,7 +116,7 @@ void read_ctrs()
         char buff[20];
         time_t now = time(NULL);
         strftime(buff, 20, "%Y-%m-%d %H:%M:%S", localtime(&now));
-        fprintf(outfp, "[TIMESTAMP] %s\n\n", buff);
+        fprintf(outfp, "[TIMESTAMP] %s\n", buff);
 }
 
 static long perf_event_open1(struct perf_event_attr *hw_event, pid_t pid,
@@ -170,11 +170,26 @@ void dmtcp_event_hook(DmtcpEvent_t event, DmtcpEventData_t *data)
 {
   /* NOTE:  See warning in plugin/README about calls to printf here. */
   switch (event) {
-  
+ 
+	  case DMTCP_EVENT_EXIT:
+	  {
+	  	if(flag){
+			outfp = fopen(filename, "w+");
+			if (!outfp) {
+				perror("Error opening stats file in w+ mode");
+				assert(0);
+			}
+			read_ctrs();
+			fprintf(outfp, "ELAPSED_TIME: %lld\n", (time(NULL) - begin));
+			fclose(outfp);
+			printf("Stats Written: %s\n", filename);
+			fclose(fopen(strcat(filename, ".done"), "w+"));
+		}
+	  }
+	  break;
 	  case DMTCP_EVENT_WRITE_CKPT:
 	  {
 		filename = getenv("STATFILE");
-		printf("%s\n", filename);
 		if(isrestart){
 			end = time(NULL);
 			#if 0
@@ -199,6 +214,8 @@ void dmtcp_event_hook(DmtcpEvent_t event, DmtcpEventData_t *data)
 		} else {
 			writechkpttime = 0;
 		}
+
+		flag = 0;
 	  }
 	  break;
 
@@ -224,6 +241,7 @@ void dmtcp_event_hook(DmtcpEvent_t event, DmtcpEventData_t *data)
 			filename = getenv("STATFILE");
 			begin = time(NULL);
 			setup_perf_ctr();
+			flag = 1;
 	  }
 
 	  break;
@@ -233,11 +251,9 @@ void dmtcp_event_hook(DmtcpEvent_t event, DmtcpEventData_t *data)
 	  }
 	  break;
 
-	    default:
-	    break;
+	  default:
+	  break;
   }
-
   DMTCP_NEXT_EVENT_HOOK(event, data);
-
 }
                              

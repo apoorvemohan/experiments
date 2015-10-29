@@ -1,0 +1,20 @@
+[2015-10-26 14:31:44 INFO] Begin Time:  2015-10-26 14:31:44
+[2015-10-26 14:31:50 INFO] Begin Time:  2015-10-26 14:31:50
+[2015-10-26 14:31:50 INFO] Total Threads Selected: 28
+[2015-10-26 14:31:50 INFO] Executing: perf stat /home/jiajun/apoorve/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/lu/non_contiguous_blocks/LUNC -n9500 -p2 -b8
+[2015-10-26 14:31:50 INFO] Executing appid: 13
+[2015-10-26 14:31:50 INFO] Executing: perf stat /home/jiajun/apoorve/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/radix/RADIX -p8 -r16 -n2121440000 -m15
+[2015-10-26 14:31:50 INFO] Executing appid: 2
+[2015-10-26 14:31:50 INFO] Executing: perf stat /home/jiajun/apoorve/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/lu/contiguous_blocks/LUC -n9500 -p1 -b8
+[2015-10-26 14:31:50 INFO] Executing appid: 5
+[2015-10-26 14:31:51 INFO] Executing: perf stat echo "1.5e-16 216 90000 6 0 0 10000 0 8 6.212752" > /tmp/input ; /home/jiajun/apoorve/ipdps/ieeeclusterproject/splash2_bench/codes/apps/water-nsquared/WATER-NSQUARED < /tmp/input
+[2015-10-26 14:31:51 INFO] Executing appid: 4
+[2015-10-26 14:31:51 INFO] Executing: perf stat /home/jiajun/apoorve/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/lu/contiguous_blocks/LUC -n9500 -p1 -b8
+[2015-10-26 14:31:51 INFO] Executing appid: 7
+[2015-10-26 14:31:51 INFO] Executing: perf stat /home/jiajun/apoorve/ipdps/ieeeclusterproject/splash2_bench/codes/apps/ocean/contiguous_partitions/OCEANC -n258 -p2 -e1e-07 -r20000 -t2
+[2015-10-26 14:31:51 INFO] Executing appid: 19
+[2015-10-26 14:31:51 INFO] Executing: perf stat /home/jiajun/apoorve/ipdps/ieeeclusterproject/splash2_bench/codes/apps/ocean/contiguous_partitions/OCEANC -n258 -p2 -e1e-07 -r20000 -t2
+[2015-10-26 14:31:51 INFO] Executing appid: 8
+[2015-10-26 14:31:51 INFO] Executing: perf stat /home/jiajun/apoorve/ipdps/ieeeclusterproject/splash2_bench/codes/kernels/radix/RADIX -p4 -r16 -n2121440000 -m15
+[2015-10-26 14:31:51 INFO] Executing appid: 12
+[2015-10-26 14:33:24 INFO] Begin Time:  2015-10-26 14:33:24

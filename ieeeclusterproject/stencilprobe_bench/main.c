@@ -83,5 +83,6 @@ int main(int argc,char *argv[])
   /* free arrays */
   free(Anext);
   free(A0);
+  exit(0);
   return EXIT_SUCCESS;
 }

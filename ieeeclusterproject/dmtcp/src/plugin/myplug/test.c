@@ -4,7 +4,7 @@
 
 int main(){
 
-int a=20;
+int a=10;
 
 while(a--){
 	sleep(1);

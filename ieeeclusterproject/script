@@ -1,0 +1,16 @@
+make clean
+bin/init_app_and_chkpt -p
+bin/parallel_dmtcp rule17
+make clean
+bin/init_app_and_chkpt -p
+bin/parallel_dmtcp rule17
+make clean
+bin/init_app_and_chkpt -p
+bin/parallel_dmtcp rule17
+make clean
+bin/init_app_and_chkpt -p
+bin/parallel_dmtcp rule17
+make clean
+bin/init_app_and_chkpt -p
+bin/parallel_dmtcp rule17
+make clean

@@ -97,8 +97,6 @@ def update_app_stats_map(appid, statfile):
 			app_stats_map[appid][stat.split(':')[0].strip()] = stat.split(':')[1].strip()
 	fp.close()
 	os.remove(statfile)
-	print statfile
-	print app_stats_map[appid]
 
 def generate_stats_and_enqueue():
 	global app_stats_map, MICRO_TIME, stats_map, wtimer, wall_count
@@ -179,7 +177,6 @@ def get_next_runnable_map(retval):
 			update_app_stats_map(app.split('.')[0], c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app)
 		else:
 			print "Problem: " + str(app)
-			sys.exit()
 
 	if ((len(sys.argv) == 1) or (sys.argv[1] == None) or (sys.argv[1] == '') or (sys.argv[1] == '-r') or (sys.argv[1] == '--random')):
 		
@@ -189,23 +186,15 @@ def get_next_runnable_map(retval):
 
 
 def clean_completed(timer):
-	global running_pid_port, TIME, total_passes, app_stats_map
-	print "In Clean Completed!!!"
+	global running_pid_port
 	freed_threads = 0
-	completed = []
 	for app in running_pid_port:
-	
-		if timer == TIME:
-			app[1].wait()
-			
-		print 'APP:' + str(app)
-		print os.system("ls " + c.PARALLEL_DMTCP_RUNNING_DIR)
-
+		app[1].wait()
+		#if (app[1].poll() == 0) and (os.path.exists(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app[0] + '.stat.done')):
 		if(os.path.exists(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app[0] + '.stat.done')):
-			app[1].poll()
 			os.system('touch ' + c.PARALLEL_DMTCP_COMPLETED_DIR + '/' + app[0] + '.' + u.gettimestamp().replace(' ', '_'))
+			running_pid_port.remove(app)
 			app_stats_map.pop(app[0])
-			completed.append(app)
 			tree = ET.parse(c.PARALLEL_DMTCP_APP_INSTANCE_DIR + '/' + app[0] + '.xml')
 			root = tree.getroot()
 			freed_threads += int(root.findall('THREADS')[0].text)
@@ -215,34 +204,35 @@ def clean_completed(timer):
 			fp.close()
 			comp = {}
 			comp[stats[-1].split(':')[0].strip()] = float(stats[-1].split(':')[1].strip())
-			comp[stats[-2].split(':')[0].strip()] = float(stats[-2].split(':')[1].strip())
-			for stat in stats[0:-2]:
+			for stat in stats[0:-3]:
 				if stat.split(':')[0].strip() in ['CPU_CYCLES', 'INSTRUCTIONS']:
 					if comp['ELAPSED_TIME'] == 0:
 						comp['ELAPSED_TIME'] = 1
 					comp[stat.split(':')[0].strip()] = float(stat.split(':')[1].strip())/comp['ELAPSED_TIME']
 			stats_history_map[app[0]]['INSTRUCTIONS'].append(comp['INSTRUCTIONS'])
 			stats_history_map[app[0]]['CPU_CYCLES'].append(comp['CPU_CYCLES'])
-			print os.remove(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app[0] + '.stat')
-			print os.remove(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app[0] + '.stat.done')
-			print os.system("ls " + c.PARALLEL_DMTCP_RUNNING_DIR)
-		elif (timer == TIME) and (total_passes > 0):
-			stats_history_map[app[0]]['INSTRUCTIONS'].append(app_stats_map[app[0]]['INSTRUCTIONS'])
-			stats_history_map[app[0]]['CPU_CYCLES'].append(app_stats_map[app[0]]['CPU_CYCLES'])
-			stats_history_map[app[0]]['CACHE_MISSES'].append(app_stats_map[app[0]]['CACHE_MISSES'])
-			stats_history_map[app[0]]['ELAPSED_TIME'].append(app_stats_map[app[0]]['ELAPSED_TIME'])
-			stats_history_map[app[0]]['CHECKPOINT_TIME'].append(app_stats_map[app[0]]['CHECKPOINT_TIME'])
-	
-	for app in completed:
-		print app
-		print running_pid_port
-		running_pid_port.remove(app)
+			print 'Removing Stats File for App:' + str(app[0])
+			print os.path.exists(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app[0] + '.stat.done')
+			print os.path.exists(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app[0] + '.stat')
+			os.remove(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app[0] + '.stat')
+			os.remove(c.PARALLEL_DMTCP_RUNNING_DIR + '/' + app[0] + '.stat.done')
+			print app_stats_map.keys()
 
 	return freed_threads
 
+def stop_running(next_runnable=None):
+	global running_pid_port
+
+	for app in running_pid_port: 
+		app[1].wait()
+		stats_history_map[app[0]]['INSTRUCTIONS'].append(app_stats_map[app[0]]['INSTRUCTIONS'])
+		stats_history_map[app[0]]['CPU_CYCLES'].append(app_stats_map[app[0]]['CPU_CYCLES'])
+		stats_history_map[app[0]]['CACHE_MISSES'].append(app_stats_map[app[0]]['CACHE_MISSES'])
+		stats_history_map[app[0]]['ELAPSED_TIME'].append(app_stats_map[app[0]]['ELAPSED_TIME'])
+		stats_history_map[app[0]]['CHECKPOINT_TIME'].append(app_stats_map[app[0]]['CHECKPOINT_TIME'])
 
 def start_next(next_runnable):
-	global timer, stats_map, running_pid_port
+	global timer, stats_map
 	to_restart = next_runnable[0]
 	runnable = get_runnable_instance_map()
 
@@ -256,7 +246,6 @@ def start_next(next_runnable):
 		a = s.Popen(cmd, shell=True, stdout=logfile, stderr=logfile)
 		running_pid_port.append([app, a, port])
 		os.chdir(cwd)
-	print 'Running PID Port: ' + str(running_pid_port)
 
 def main():
 	import time
@@ -281,42 +270,45 @@ def main():
 
 	total_passes = 0
 	micro_passes = 0
+	print app_stats_map
 	print app_stats_map.keys()
 	while(len(app_stats_map) > 0):
 		micro_passes += 1
 		if timer == 0:
+			print 'time to stop'
+			stop_running([])
 			timer = TIME
-		print timer
+
 		completed = clean_completed(timer)
 
 		if timer == TIME:
-			running_pid_port = []
+			del running_pid_port[:]
+			running_pid_port[:] = []
+
 			if len(running_history_map) > 0:
 				for app in running_history_map[total_passes][0]:
 					if app not in app_stats_map.keys():
 						completed = None
 						print 'Some app completed after midway'
+
 			if completed == 0:
 				completed = -1
 				print 'No App completed at the end of the interval'
 
 		if (timer >= (MICRO_TIME*3)) and (completed != 0):
+				print running_history_map
+				print timer
 				if completed > 0:
 					print 'Some app completed before midway'
+#			if (completed == None) or ((completed != 0) and (completed != None)):
 				next_runnable = get_next_runnable_map(completed)
-				print 'Next Runnable: ' + str(next_runnable)
-				u.loginfo('Next Runnable: ' + str(next_runnable))
-				print 'Running History: ' + str(running_history_map)
-				u.loginfo('Running History: ' + str(running_history_map))
-				print 'App_stats: ' + str(app_stats_map.keys())
-
 				total_passes = total_passes + 1
 				if (completed == -1) or (completed == None):
 					u.loginfo('Next Runnable List: ' + str(next_runnable))
 					running_history_map[total_passes] = next_runnable
 				else:
 					u.loginfo('Appending new job to current running: ' + str(next_runnable))
-					running_history_map[total_passes] = [[],[],[],[]]
+					running_history_map[total_passes] = [[],[]]
 
 					for app in next_runnable[0]:
 						running_history_map[total_passes][0].append(app)
@@ -324,15 +316,6 @@ def main():
 					for app in running_history_map[total_passes - 1][0]:
 						if app in app_stats_map:
 							running_history_map[total_passes][0].append(app)
-					for app in running_history_map[total_passes - 1][1]:
-						if app in app_stats_map:
-							running_history_map[total_passes][1].append(app)
-					for app in running_history_map[total_passes - 1][2]:
-						if app in app_stats_map:
-							running_history_map[total_passes][2].append(app)
-					for app in running_history_map[total_passes - 1][3]:
-						if app in app_stats_map:
-							running_history_map[total_passes][3].append(app)
 
 				start_next(next_runnable)
 		u.loginfo(running_history_map)
